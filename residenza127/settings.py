@@ -34,7 +34,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'residenza127-cdaf6f72e867.herokuapp.com',
     'localhost',
-    '127.0.0.1',  # Add this for local development, especially if you use IP instead of 'localhost'
+    '127.0.0.1',  
 ]
 
 
@@ -43,6 +43,10 @@ ALLOWED_HOSTS = [
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -54,7 +58,20 @@ INSTALLED_APPS = [
     'profiles',
     'contact',
     'construction',
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4' 
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Keep this if you have other auth backends
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
