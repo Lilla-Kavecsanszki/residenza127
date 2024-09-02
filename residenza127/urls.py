@@ -7,6 +7,7 @@ from .views import language_switch, handler404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
     path('properties/', include('properties.urls')),
     path('construction/', include('construction.urls')),
     path('profiles/', include('profiles.urls')),
