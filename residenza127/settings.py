@@ -61,6 +61,14 @@ INSTALLED_APPS = [
     'crispy_forms',
 ]
 
+# Cloudinary settings
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
+}
+
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4' 
 
 SITE_ID = 1
@@ -153,19 +161,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-# Cloudinary settings
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.environ.get('CLOUDINARY_URL').split('@')[1],  # Extract the cloud name from the CLOUDINARY_URL
-    'API_KEY': os.environ.get('CLOUDINARY_URL').split('://')[1].split(':')[0],  # Extract the API key
-    'API_SECRET': os.environ.get('CLOUDINARY_URL').split(':')[2].split('@')[0],  # Extract the API secret
-}
-
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
 STATIC_URL = '/static/'
 
-STATICFILES_STORAGE = \
-    'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
