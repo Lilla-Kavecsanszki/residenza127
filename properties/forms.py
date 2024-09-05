@@ -42,6 +42,7 @@ class PropertyVideoForm(forms.ModelForm):
         widgets = {
             'video': forms.ClearableFileInput(attrs={'class': 'form-control'}),
         }
+        
 
 # Formsets
 PropertyImageFormSet = inlineformset_factory(
