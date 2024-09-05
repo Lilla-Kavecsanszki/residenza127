@@ -4,6 +4,8 @@ from django.contrib import messages
 from .forms import ContactForm
 from .models import Contact
 import logging
+import sendgrid
+from sendgrid.helpers.mail import Mail, Email, To, Content
 
 # Set up logging
 logger = logging.getLogger(__name__)
@@ -27,7 +29,7 @@ def contact_us(request):
                     f"<{form.cleaned_data['email']}>\n\n"
                     f"{form.cleaned_data['message']}",  # Message
                     None,  # From email (use default from email in settings.py)
-                    ['earthalchemynaturals@example.com'],  # Recipient email
+                    ['buildingsardinia.example.com'],  # Recipient email
                 )
                 messages.success(
                     request,
