@@ -52,7 +52,7 @@
                             {% if property.main_video %}
                                 <!-- Render video if available -->
                                 <a href="{% url 'property_detail' property.id %}">
-                                    <video class="card-img-top img-fluid" autoplay muted loop>
+                                    <video class="card-img-top img-fluid" autoplay muted playsinline loop>
                                         <source src="{{ property.main_video.url }}" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>

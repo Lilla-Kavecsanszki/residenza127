@@ -35,7 +35,7 @@
                         <!-- Check if a main video exists -->
                         {% if property.main_video %}
                             <a href="{% url 'property_detail' property.id %}">
-                                <video class="img-fluid" autoplay muted loop>
+                                <video class="img-fluid" autoplay muted playsinline loop>
                                     <source src="{{ property.main_video.url }}" type="video/mp4">
                                     {% trans "Your browser does not support the video tag." %}
                                 </video>
@@ -92,7 +92,7 @@
         <!-- Company Video -->
         <div class="col-lg-4 mb-4">
             <div class="company text-center p-4">
-                <video class="media-item mb-3" autoplay muted loop>
+                <video class="media-item mb-3" autoplay muted playsinline loop>
                     <source src="{% static 'videos/entervideo.mp4' %}" type="video/mp4">
                     {% trans "Your browser does not support the video tag." %}
                 </video>
@@ -140,7 +140,7 @@
             </div>
             <!-- Video Content -->
             <div class="col-lg-5 text-center about-video">
-                <video class="company-video" autoplay muted loop>
+                <video class="company-video" autoplay muted playsinline loop>
                     <source src="{% static 'videos/balconyenter.mp4' %}" type="video/mp4">
                     {% trans "Your browser does not support the video tag." %}
                 </video>

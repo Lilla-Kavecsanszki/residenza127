@@ -42,7 +42,7 @@
     <div class="property-carousel mt-4 owl-carousel owl-theme">
         {% if property.main_video %}
         <div class="item">
-            <video class="w-100" autoplay muted loop>
+            <video class="w-100" autoplay muted playsinline loop>
                 <source src="{{ property.main_video.url }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -60,7 +60,7 @@
         {% endfor %}
         {% for video in property.videos.all %}
         <div class="item">
-            <video class="w-100" autoplay muted loop>
+            <video class="w-100" autoplay muted playsinline loop>
                 <source src="{{ video.video.url }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
