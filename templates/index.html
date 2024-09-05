@@ -34,16 +34,22 @@
                     <div class="property-media">
                         <!-- Check if a main video exists -->
                         {% if property.main_video %}
-                            <video class="img-fluid" autoplay muted loop>
-                                <source src="{{ property.main_video.url }}" type="video/mp4">
-                                {% trans "Your browser does not support the video tag." %}
-                            </video>
+                            <a href="{% url 'property_detail' property.id %}">
+                                <video class="img-fluid" autoplay muted loop>
+                                    <source src="{{ property.main_video.url }}" type="video/mp4">
+                                    {% trans "Your browser does not support the video tag." %}
+                                </video>
+                            </a>
                         <!-- Check if a main image exists -->
                         {% elif property.main_image %}
-                            <img src="{{ property.main_image.url }}" alt="{{ property.name }}" class="img-fluid">
+                            <a href="{% url 'property_detail' property.id %}">
+                                <img src="{{ property.main_image.url }}" alt="{{ property.name }}" class="img-fluid">
+                            </a>
                         <!-- Fallback image or placeholder -->
                         {% else %}
-                            <img src="{% static 'images/noimage.png' %}" alt="{% trans 'Placeholder' %}" class="img-fluid">
+                            <a href="{% url 'property_detail' property.id %}">
+                                <img src="{% static 'images/noimage.png' %}" alt="{% trans 'Placeholder' %}" class="img-fluid">
+                            </a>
                         {% endif %}
                     </div>
                     

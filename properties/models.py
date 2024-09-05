@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 class Property(models.Model):
     PROPERTY_TYPES = [
@@ -20,8 +21,8 @@ class Property(models.Model):
     name = models.CharField(max_length=255, default='')
     description = models.TextField(default='')
     features = models.TextField(default='')
-    main_image = models.ImageField(upload_to='images/', blank=True, null=True)  # Main image for cards
-    main_video = models.FileField(upload_to='videos/', blank=True, null=True)  # Main video for cards
+    main_image = CloudinaryField('image', blank=True, null=True)  # Main image for cards
+    main_video = CloudinaryField('video', blank=True, null=True)  # Main video for cards
     bedrooms = models.PositiveIntegerField(default=0)
     bathrooms = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
@@ -49,7 +50,7 @@ class Property(models.Model):
 
 class PropertyImage(models.Model):
     property = models.ForeignKey(Property, related_name='images', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='property_images/')
+    image = CloudinaryField('image')
 
     def __str__(self):
         return f"Image for {self.property.name}"
@@ -57,8 +58,7 @@ class PropertyImage(models.Model):
 
 class PropertyVideo(models.Model):
     property = models.ForeignKey(Property, related_name='videos', on_delete=models.CASCADE)
-    video = models.FileField(upload_to='property_videos/')
+    video = CloudinaryField('video')
 
     def __str__(self):
         return f"Video for {self.property.name}"
-    
