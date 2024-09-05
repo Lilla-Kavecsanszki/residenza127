@@ -10,6 +10,8 @@ from .models import Property, PropertyImage, PropertyVideo
 from profiles.models import UserProfile
 from .forms import PropertyForm, PropertyImageFormSet, PropertyVideoFormSet
 from django.forms import modelformset_factory
+from .decorators import superuser_required
+
 
 @login_required
 def like_property(request, property_id):
@@ -37,7 +39,7 @@ def like_property(request, property_id):
         return redirect(reverse('home'))
 
 
-class AllProperties(LoginRequiredMixin, View):
+class AllProperties(View):
     def get(self, request, *args, **kwargs):
         """A view to show all properties, including sorting and search queries."""
         properties = Property.objects.all()
@@ -100,7 +102,7 @@ class AllProperties(LoginRequiredMixin, View):
         return render(request, 'properties/properties.html', context)
 
 
-class PropertyDetail(LoginRequiredMixin, View):
+class PropertyDetail(View):
     def get(self, request, property_id, *args, **kwargs):
         """A view to show individual property details."""
         property = get_object_or_404(Property, pk=property_id)
@@ -116,6 +118,7 @@ class PropertyDetail(LoginRequiredMixin, View):
 
 
 @login_required
+@superuser_required
 def property_management(request):
     if request.method == 'POST':
         property_form = PropertyForm(request.POST, request.FILES)
