@@ -5,21 +5,20 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from .views import language_switch, handler404
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
-    path('properties/', include('properties.urls')),
-    path('construction/', include('construction.urls')),
-    path('profiles/', include('profiles.urls')),
-    path('contact/', include('contact.urls')),
     path('switch-language/<str:lang_code>/', language_switch, name='language_switch'),
 ]
 
 # Adding i18n_patterns to handle language prefixes
 urlpatterns += i18n_patterns(
-    path('', include('residenza.urls')),  # Include your app's URLs with language prefixes
-    prefix_default_language=False  # Optional: Set to True to remove default language prefix
+    path('accounts/', include('allauth.urls')),  # Include Django Allauth URLs with language prefixes
+    path('properties/', include('properties.urls')),
+    path('construction/', include('construction.urls')),
+    path('profiles/', include('profiles.urls')),
+    path('contact/', include('contact.urls')),
+    path('', include('residenza.urls')),  # Your main app URLs with language prefixes
+    prefix_default_language=False  # Optional: Set to True to remove the default language prefix
 )
 
 # Serve static files (only in development; for production use a web server)

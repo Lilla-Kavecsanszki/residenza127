@@ -151,7 +151,7 @@ LANGUAGE_CODE = 'en-us'
 LANGUAGES = [
     ('en', _('English')),
     ('it', _('Italian')),
-    # add other languages here as needed
+    # Add other languages here as needed
 ]
 
 TIME_ZONE = 'Europe/Berlin'
