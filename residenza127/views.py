@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.utils import translation
+from django.utils.translation import get_language_from_request
 from django.conf import settings
 import logging
 

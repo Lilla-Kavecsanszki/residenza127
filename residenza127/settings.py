@@ -5,6 +5,7 @@ import dj_database_url
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+from django.utils.translation import gettext_lazy as _
 
 if os.path.isfile("env.py"):
     import env
@@ -143,6 +144,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
+
+LANGUAGES = [
+    ('en', _('English')),
+    ('it', _('Italian')),
+    # add other languages here as needed
+]
 
 TIME_ZONE = 'Europe/Berlin'
 
