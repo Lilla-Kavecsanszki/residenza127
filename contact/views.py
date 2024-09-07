@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import ContactForm
 from .models import Contact
-
+import os
 
 def contact_us(request):
     if request.method == 'POST':
@@ -23,7 +23,7 @@ def contact_us(request):
                 f"<{form.cleaned_data['email']}>\n\n"
                 f"{form.cleaned_data['message']}",  # message
                 None,  # from email
-                ['buildingoristano@example.com'],
+                [os.environ.get('CONTACT_EMAIL_RECIPIENT')],
             )
             messages.success(
                 request,

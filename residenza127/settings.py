@@ -194,6 +194,7 @@ else:
     EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')  # Use the SendGrid API key
     DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
     
+CONTACT_EMAIL_RECIPIENT = os.environ.get('CONTACT_EMAIL_RECIPIENT')
 
 
 AUTHENTICATION_BACKENDS = [
