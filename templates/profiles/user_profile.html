@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static i18n %}
 
 <!-- Extra CSS -->
 {% block extra_css %}
@@ -9,42 +9,42 @@
 {% block content %}
 <div class="container my-5">
     <div class="mb-5 tab">
-                            <div class="main-card mirror-silver-background p-3">
-                                <h2 class="card-title text-center">Profile of {{ user.username }}</h2>
-                                <div class="profile-info">
-                                    <p class="larger font-weight-bold">Details:</p>
-                                    <p class="larger">First Name: <strong>{{ user.first_name }}</strong></p>
-                                    <p class="larger">Last Name: <strong>{{ user.last_name }}</strong></p>
-                                    <p class="larger">Email: <strong>{{ user.email }}</strong></p>
-                                    <p class="small">Change your password <a href="{% url 'password_change' %}">here</a></p>
-                                    <p class="larger">Phone Number: <strong>{{ profile.default_phone_number|default:"Not provided" }}</strong></p>
-                                </div>
-                                <p class="small">If you would like to register or update your details, please do so below:</p>
-                                <form method="post" action="{% url 'update_user_profile' %}" class="mirror-silver-background user-profile-form">
-                                    {% csrf_token %}
-                                    <div class="form-group">
-                                        {{ form.first_name.label_tag }}
-                                        {{ form.first_name }}
-                                        {{ form.first_name.errors }}
-                                    </div>
-                                    <div class="form-group">
-                                        {{ form.last_name.label_tag }}
-                                        {{ form.last_name }}
-                                        {{ form.last_name.errors }}
-                                    </div>
-                                    <div class="form-group">
-                                        {{ form.default_phone_number.label_tag }}
-                                        {{ form.default_phone_number }}
-                                        {{ form.default_phone_number.errors }}
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Update</button>
-                                </form>
-                                
-                            </div>
+        <div class="main-card mirror-silver-background p-3">
+            <h2 class="card-title text-center">{% trans "Profile of" %} {{ user.username }}</h2>
+            <div class="profile-info">
+                <p class="larger font-weight-bold">{% trans "Details" %}:</p>
+                <p class="larger">{% trans "First Name" %}: <strong>{{ user.first_name }}</strong></p>
+                <p class="larger">{% trans "Last Name" %}: <strong>{{ user.last_name }}</strong></p>
+                <p class="larger">{% trans "Email" %}: <strong>{{ user.email }}</strong></p>
+                <p class="small">{% trans "Change your password" %} <a href="{% url 'password_change' %}">{% trans "here" %}</a></p>
+                <p class="larger">{% trans "Phone Number" %}: <strong>{{ profile.default_phone_number|default:_("Not provided") }}</strong></p>
+            </div>
+            <p class="small">{% trans "If you would like to register or update your details, please do so below" %}:</p>
+            <form method="post" action="{% url 'update_user_profile' %}" class="mirror-silver-background user-profile-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.first_name.label_tag }}
+                    {{ form.first_name }}
+                    {{ form.first_name.errors }}
+                </div>
+                <div class="form-group">
+                    {{ form.last_name.label_tag }}
+                    {{ form.last_name }}
+                    {{ form.last_name.errors }}
+                </div>
+                <div class="form-group">
+                    {{ form.default_phone_number.label_tag }}
+                    {{ form.default_phone_number }}
+                    {{ form.default_phone_number.errors }}
+                </div>
+                <button type="submit" class="btn btn-primary">{% trans "Update" %}</button>
+            </form>
+        </div>
     </div>
+
     <div>
         <div class="main-card mirror-silver-background p-3">
-            <h2 class="text-center">My Favourites <i class="fas fa-star fa-star-base light-base"></i></h2>
+            <h2 class="text-center">{% trans "My Favourites" %} <i class="fas fa-star fa-star-base light-base"></i></h2>
             <div class="row">
                 {% for property in liked_properties %}
                     <div class="col-md-6 mb-3">
@@ -54,7 +54,7 @@
                                 <a href="{% url 'property_detail' property.id %}">
                                     <video class="card-img-top img-fluid" autoplay muted playsinline loop>
                                         <source src="{{ property.main_video.url }}" type="video/mp4">
-                                        Your browser does not support the video tag.
+                                        {% trans "Your browser does not support the video tag." %}
                                     </video>
                                 </a>
                             {% elif property.main_image %}
@@ -79,7 +79,7 @@
                                     <div class="col-6">
                                         {% if property.size %}
                                             <p class="mb-0">
-                                                <i class="fas fa-ruler mr-1"></i>{{ property.size }} sq ft
+                                                <i class="fas fa-ruler mr-1"></i>{{ property.size }} {% trans "sq ft" %}
                                             </p>
                                         {% endif %}
                                         {% if property.location %}
@@ -91,12 +91,12 @@
                                     <div class="col-6">
                                         {% if property.bedrooms %}
                                             <p class="mb-0">
-                                                <i class="fas fa-bed mr-1"></i>{{ property.bedrooms }} Bedrooms
+                                                <i class="fas fa-bed mr-1"></i>{{ property.bedrooms }} {% trans "Bedrooms" %}
                                             </p>
                                         {% endif %}
                                         {% if property.bathrooms %}
                                             <p class="mb-0">
-                                                <i class="fas fa-bath mr-1"></i>{{ property.bathrooms }} Bathrooms
+                                                <i class="fas fa-bath mr-1"></i>{{ property.bathrooms }} {% trans "Bathrooms" %}
                                             </p>
                                         {% endif %}
                                     </div>
@@ -124,10 +124,10 @@
                                 <!-- Text and button aligned in a row -->
                                 <div class="row w-100">
                                     <div class="col-md-6 text-center">
-                                        <p class="card-text not-yet mb-0">No liked properties yet.</p>
+                                        <p class="card-text not-yet mb-0">{% trans "No liked properties yet." %}</p>
                                     </div>
                                     <div class="col-md-6 text-center">
-                                        <a href="{% url 'all_properties' %}" class="btn btn-primary">View Properties</a>
+                                        <a href="{% url 'all_properties' %}" class="btn btn-primary">{% trans "View Properties" %}</a>
                                     </div>
                                 </div>
                             </div>

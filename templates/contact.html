@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %} <!-- Load translation tags -->
 
 <!-- Extra CSS -->
 {% block extra_css %}
@@ -8,12 +9,12 @@
 
 {% block content %}
 <div class="container">
-    <h1>Contact Us</h1>
+    <h1>{% trans "Contact Us" %}</h1>
 
     <!-- Display form errors -->
     {% if form.errors %}
         <div class="alert alert-danger">
-            <strong>Please correct the errors below:</strong>
+            <strong>{% trans "Please correct the errors below:" %}</strong>
             <ul>
                 {% for field in form %}
                     {% for error in field.errors %}
@@ -42,34 +43,34 @@
             {% csrf_token %}
             <!-- Name Field -->
             <div class="form-group">
-                <label for="{{ form.name.id_for_label }}">Name</label>
+                <label for="{{ form.name.id_for_label }}">{% trans "Name" %}</label>
                 {{ form.name }}
                 <span class="text-danger">{{ form.name.errors }}</span>
             </div>
 
             <!-- Email Field -->
             <div class="form-group">
-                <label for="{{ form.email.id_for_label }}">Email</label>
+                <label for="{{ form.email.id_for_label }}">{% trans "Email" %}</label>
                 {{ form.email }}
                 <span class="text-danger">{{ form.email.errors }}</span>
             </div>
 
             <!-- Subject Field -->
             <div class="form-group">
-                <label for="{{ form.subject.id_for_label }}">Subject</label>
+                <label for="{{ form.subject.id_for_label }}">{% trans "Subject" %}</label>
                 {{ form.subject }}
                 <span class="text-danger">{{ form.subject.errors }}</span>
             </div>
 
             <!-- Message Field -->
             <div class="form-group">
-                <label for="{{ form.message.id_for_label }}">Message</label>
+                <label for="{{ form.message.id_for_label }}">{% trans "Message" %}</label>
                 {{ form.message }}
                 <span class="text-danger">{{ form.message.errors }}</span>
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary">Send</button>
+            <button type="submit" class="btn btn-primary">{% trans "Send" %}</button>
         </form>
     </div>
 
@@ -77,10 +78,10 @@
     <div class="contact-details-map-wrapper">
         <!-- Office Information -->
         <div class="contact-details">
-            <h2>Our Office</h2>
-            <p><strong>Address:</strong> Via Roma 123, 09170 Oristano, Sardinia, Italy</p>
-            <p><strong>Telephone:</strong> +39 0783 123456</p>
-            <p><strong>Email:</strong> info@building-sardinia.com</p>
+            <h2>{% trans "Our Office" %}</h2>
+            <p><strong>{% trans "Address:" %}</strong> Via Roma 123, 09170 Oristano, Sardinia, Italy</p>
+            <p><strong>{% trans "Telephone:" %}</strong> +39 0783 123456</p>
+            <p><strong>{% trans "Email:" %}</strong> info@building-sardinia.com</p>
         </div>
 
         <!-- Map -->

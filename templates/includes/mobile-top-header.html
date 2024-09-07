@@ -18,7 +18,7 @@
                 <a href="{% url 'property_management' %}" class="dropdown-item">{% trans "Property Management" %}</a>
                 {% endif %}
                 <a href="{% url 'user_profile' %}" class="dropdown-item">
-                    {% trans 'My Favourites' %} 
+                    {% trans "My Favourites" %}
                     <i class="fas fa-star light"></i>
                 </a>
                 <a href="{% url 'account_logout' %}" class="dropdown-item">{% trans "Logout" %}</a>
@@ -40,7 +40,7 @@
         <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
             <form class="form" method="GET" action="{% url 'all_properties' %}">
                 <div class="input-group w-100">
-                    <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="{% trans 'Search by Name' %}" />
+                    <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="{% trans "Search by Name" %}" />
                     <div class="input-group-append">
                         <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
                             <span class="icon">

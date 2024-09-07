@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static i18n %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/property_detail.css' %}" />
@@ -13,30 +13,30 @@
     <div class="row justify-content-between">
         <div class="col-md-5">
             <div class="property-details">
-                <p><strong>Location:</strong> {{ property.location }}</p>
-                <p><strong>Size:</strong> {{ property.size }} sq ft</p>
-                <p><strong>Type:</strong> {{ property.property_type }}</p>
-                <p><strong>Bedrooms:</strong> {{ property.bedrooms }}</p>
-                <p><strong>Bathrooms:</strong> {{ property.bathrooms }}</p>
+                <p><strong>{% trans "Location:" %}</strong> {{ property.location }}</p>
+                <p><strong>{% trans "Size:" %}</strong> {{ property.size }} sq ft</p>
+                <p><strong>{% trans "Type:" %}</strong> {{ property.property_type }}</p>
+                <p><strong>{% trans "Bedrooms:" %}</strong> {{ property.bedrooms }}</p>
+                <p><strong>{% trans "Bathrooms:" %}</strong> {{ property.bathrooms }}</p>
             </div>
         </div>
         <div class="col-md-5">
             <div class="property-features">
-                <h4>Features:</h4>
+                <h4>{% trans "Features:" %}</h4>
                 <ul>
                     {% if property.features %}
                     {% for feature in property.features.splitlines %}
                     <li>{{ feature }}</li>
                     {% endfor %}
                     {% else %}
-                    <li>No features listed.</li>
+                    <li>{% trans "No features listed." %}</li>
                     {% endif %}
                 </ul>
             </div>
         </div>
     </div>
     <div class="property-description text-center mt-4">
-        <h4>Description:</h4>
+        <h4>{% trans "Description:" %}</h4>
         <p>{{ property.description }}</p>
     </div>
     <div class="property-carousel mt-4 owl-carousel owl-theme">
@@ -44,7 +44,7 @@
         <div class="item">
             <video class="w-100" autoplay muted playsinline loop>
                 <source src="{{ property.main_video.url }}" type="video/mp4">
-                Your browser does not support the video tag.
+                {% trans "Your browser does not support the video tag." %}
             </video>
         </div>
         {% endif %}
@@ -62,14 +62,14 @@
         <div class="item">
             <video class="w-100" autoplay muted playsinline loop>
                 <source src="{{ video.video.url }}" type="video/mp4">
-                Your browser does not support the video tag.
+                {% trans "Your browser does not support the video tag." %}
             </video>
         </div>
         {% endfor %}
     </div>
     
     <div class="text-center back-button mt-4">
-        <a href="{% url 'all_properties' %}" class="btn back-btn btn-primary">Back to Properties</a>
+        <a href="{% url 'all_properties' %}" class="btn back-btn btn-primary">{% trans "Back to Properties" %}</a>
     </div>
 </div>
 {% endblock %}

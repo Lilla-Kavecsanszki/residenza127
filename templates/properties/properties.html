@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static i18n %}
 
 <!-- Extra CSS -->
 {% block extra_css %}
@@ -8,7 +8,7 @@
 
 {% block content %}
 <div class="container">
-    <h2 class="property-title">Properties{% if current_locations %}
+    <h2 class="property-title">{% trans "Properties" %}{% if current_locations %}
         - {{ current_locations.0 }}
         {% endif %}
     </h2>
@@ -19,14 +19,14 @@
         <div class="search-banner mb-4">
             <form class="form-inline" method="GET" action="{% url 'all_properties' %}">
                 <div class="form-group mr-2">
-                    <input type="text" class="form-control" placeholder="Search by Name" name="q" value="{{ search_query }}">
+                    <input type="text" class="form-control" placeholder="{% trans 'Search by Name' %}" name="q" value="{{ search_query }}">
                     <button class="form-control btn" type="submit">
                         <span class="icon"><i class="fas fa-search fa-lg" style="color: #051c2c;"></i></span>
                     </button>
                 </div>
                 <div class="form-group mr-2">
                     <select class="form-control" name="location">
-                        <option value="">Location</option>
+                        <option value="">{% trans "Location" %}</option>
                         {% for loc in location_choices %}
                             <option value="{{ loc.0 }}" {% if loc.0 in current_locations %}selected{% endif %}>
                                 {{ loc.1 }}
@@ -36,7 +36,7 @@
                 </div>
                 <div class="form-group mr-2">
                     <select class="form-control" name="type">
-                        <option value="">Type</option>
+                        <option value="">{% trans "Type" %}</option>
                         {% for type in property_types_choices %}
                             <option value="{{ type.0 }}" {% if type.0 in current_property_types %}selected{% endif %}>
                                 {{ type.1 }}
@@ -44,7 +44,7 @@
                         {% endfor %}
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Filter</button>
+                <button type="submit" class="btn btn-primary">{% trans "Filter" %}</button>
             </form>
         </div>
     </div>
@@ -54,19 +54,19 @@
             <div class="sort-select-wrapper">
                 <select id="sort-selector"
                     class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                    <option value="size_asc" {% if current_sorting == 'size_asc' %}selected{% endif %}>Size (smaller to larger)</option>
-                    <option value="size_desc" {% if current_sorting == 'size_desc' %}selected{% endif %}>Size (larger to smaller)</option>
-                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                    <option value="size_asc" {% if current_sorting == 'size_asc' %}selected{% endif %}>{% trans "Size (smaller to larger)" %}</option>
+                    <option value="size_desc" {% if current_sorting == 'size_desc' %}selected{% endif %}>{% trans "Size (larger to smaller)" %}</option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>{% trans "Price (low to high)" %}</option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>{% trans "Price (high to low)" %}</option>
                 </select>
             </div>
         </div>
         <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
             <p class="text-muted mb-0 text-center text-md-left">
                 {% if search_query or current_locations or current_sorting != 'None_None' %}
-                <span class="small text-white"><a class="text-white" href="{% url 'all_properties' %}">All Properties</a> | </span>
+                <span class="small text-white"><a class="text-white" href="{% url 'all_properties' %}">{% trans "All Properties" %}</a> | </span>
                 {% endif %}
-                {{ properties|length }} Properties{% if search_query %} found for <strong>"{{ search_query }}"</strong>{% endif %}
+                {{ properties|length }} {% trans "Properties" %}{% if search_query %} {% trans "found for" %} <strong>"{{ search_query }}"</strong>{% endif %}
             </p>
         </div>
     </div>
@@ -81,7 +81,7 @@
                     <a href="{% url 'property_detail' property.id %}">
                         <video class="card-img-top img-fluid" autoplay muted playsinline loop>
                             <source src="{{ property.main_video.url }}" type="video/mp4">
-                            Your browser does not support the video tag.
+                            {% trans "Your browser does not support the video tag." %}
                         </video>
                     </a>
                     {% elif property.main_image %}
@@ -111,7 +111,7 @@
                                         <div class="col-6">
                                             {% if property.size %}
                                             <p class="mb-0">
-                                                <i class="fas fa-ruler mr-1"></i>{{ property.size }} sq ft
+                                                <i class="fas fa-ruler mr-1"></i>{{ property.size }} {% trans "sq ft" %}
                                             </p>
                                             {% endif %}
                                             {% if property.location %}
@@ -125,12 +125,12 @@
                                         <div class="col-6">
                                             {% if property.bedrooms %}
                                             <p class="mb-0">
-                                                <i class="fas fa-bed mr-1"></i>{{ property.bedrooms }} Bedrooms
+                                                <i class="fas fa-bed mr-1"></i>{{ property.bedrooms }} {% trans "Bedrooms" %}
                                             </p>
                                             {% endif %}
                                             {% if property.bathrooms %}
                                             <p class="mb-0">
-                                                <i class="fas fa-bath mr-1"></i>{{ property.bathrooms }} Bathrooms
+                                                <i class="fas fa-bath mr-1"></i>{{ property.bathrooms }} {% trans "Bathrooms" %}
                                             </p>
                                             {% endif %}
                                         </div>
@@ -216,7 +216,7 @@
     });
     
     function showLoginPrompt() {
-        alert('Please log in to add a property to your favourites.');
+        alert('{% trans "Please log in to add a property to your favourites." %}');
     }
     
 </script>
