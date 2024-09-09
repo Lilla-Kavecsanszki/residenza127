@@ -24,7 +24,7 @@ urlpatterns += [
 
 # Adding i18n_patterns to handle language prefixes
 urlpatterns += i18n_patterns(
-    # Your main app URLs with language prefixes
+    path('accounts/', include('allauth.urls')), 
     path('properties/', include('properties.urls')),
     path('construction/', include('construction.urls')),
     path('profiles/', include('profiles.urls')),
