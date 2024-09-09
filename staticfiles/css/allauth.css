@@ -71,6 +71,20 @@ body {
     margin-bottom: 1.5em;
 }
 
+.verify-form {
+    background-color: transparent;
+    padding: 2em;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Adjusted shadow for visibility */
+    border-radius: 3px; /* Rounded corners for better aesthetics */
+    margin: 1em auto; 
+    max-width: 600px;
+    color: #051c2c;
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between form elements */
+}
+
 .form-control {
     border-radius: 2px;
     border: 1px solid #ddd;
@@ -117,6 +131,28 @@ body {
     box-shadow: 0 0 0 3px rgba(5, 28, 44, 0.3);
 }
 
+.back-button {
+    background-color: #051c2c;
+    color: white;
+    border: 3px solid white;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center; /* Center the text */
+}
+
+.back-button:hover {
+    background-color: #033b58;
+    color: #fff;
+    border-color: #033b58;
+}
+
+.back-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(5, 28, 44, 0.3);
+}
+
 /* Form Actions */
 .primaryAction {
     background-color: #051c2c;
@@ -125,12 +161,19 @@ body {
     padding: 0.75em 1.5em;
     font-size: 1em;
     text-transform: uppercase;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-align: center; /* Center the text */
     width: 100%; /* Make the link take the full width of its container */
     max-width: 300px; /* Add a maximum width to control its size */
+}
+
+.reset-primaryAction:hover {
+    background-color: white;
+    color: #051c2c;
+    font-weight: bolder;
+    border: 3px solid #051c2c;
 }
 
 .primaryAction:hover {
@@ -185,6 +228,11 @@ body {
         padding: 0.5em 1em; /* Adjust padding for smaller screens */
         font-size: 0.9em; /* Slightly smaller font size */
     }
+}
+
+.password_reset .form-control {
+    border-radius: 2px;
+    border: 2px solid #051c2c;
 }
 
 
