@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     
     <!-- Additional CSS from block -->
-    {% block extra_css %}{% endblock %}
+    {% block extra_css %}{% endblock %}            
 </head>
 <body>
     <!-- Header Section -->
@@ -98,16 +98,15 @@
                             <a class="text-black nav-link dropdown-toggle" href="#" id="language-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center icon">
                                     <i class="fas fa-globe fa-lg"></i>
-                                    <p class="my-0">{% trans "EN" %}</p> <!-- Shows current language -->
+                                    <p class="my-0">{{ LANGUAGE_CODE|upper }}</p>
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="language-options">
-                                <a href="{% url 'language_switch' 'en' %}" class="dropdown-item {% if LANGUAGE_CODE == 'en' %}active{% endif %}">{% trans 'EN' %}</a>
-                                <a href="{% url 'language_switch' 'it' %}" class="dropdown-item {% if LANGUAGE_CODE == 'it' %}active{% endif %}">{% trans 'IT' %}</a>
-
+                                <a href="#" class="dropdown-item {% if LANGUAGE_CODE == 'en' %}active{% endif %}" onclick="switchLanguage('en')">EN</a>
+                                <a href="#" class="dropdown-item {% if LANGUAGE_CODE == 'it' %}active{% endif %}" onclick="switchLanguage('it')">IT</a>
                             </div>
                         </li>
-                    </ul>
+                    </ul>                                                                               
                 </div>
             </div>
         </div>
@@ -279,6 +278,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+    <!-- Custom JavaScript for messages -->
     <script>
         setTimeout(function() {
             let messages = document.getElementById("msg");
@@ -287,6 +287,28 @@
         }, 3000);
     </script>
 
+    <!-- Custom JavaScript for Language Switching -->
+    <script>
+        function switchLanguage(langCode) {
+            sessionStorage.setItem('preferredLanguage', langCode);
+            window.location.reload(); // Reload the page to apply the new language
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var preferredLanguage = sessionStorage.getItem('preferredLanguage');
+            if (preferredLanguage) {
+                var currentUrl = window.location.pathname;
+                var segments = currentUrl.split('/').filter(Boolean); // Split and filter out empty segments
+                var basePath = segments.slice(1).join('/'); // Exclude the current language prefix
+                if (segments[0] !== preferredLanguage) { // Check if the first segment is not the preferred language
+                    var newUrl = '/' + preferredLanguage + '/' + basePath;
+                    window.location.href = newUrl;
+                }
+            }
+        });
+    </script>
+                    
     {% block extra_scripts %}{% endblock %}
 </body>
 </html>
