@@ -3,8 +3,14 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
-from .views import language_switch, handler404
-from . import views
+from .views import language_switch
+from residenza127.views import handler404 as custom_handler404  # Correct import
+from django.conf.urls import handler404  # Import handler404
+
+
+# Custom 404 error handler
+handler404 = 'residenza127.views.handler404'  # This is the correct way to set it
+
 
 # Define the URL patterns for the app
 urlpatterns = [
@@ -38,5 +44,3 @@ if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-# Custom 404 error handler
-handler404 = 'residenza127.views.handler404'
