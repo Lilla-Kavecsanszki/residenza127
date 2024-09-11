@@ -15,43 +15,116 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Property',
+            name="Property",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(default='', max_length=255)),
-                ('description', models.TextField(default='')),
-                ('features', models.TextField(default='')),
-                ('main_image', models.ImageField(blank=True, null=True, upload_to='images/')),
-                ('main_video', models.FileField(blank=True, null=True, upload_to='videos/')),
-                ('bedrooms', models.PositiveIntegerField(default=0)),
-                ('bathrooms', models.PositiveIntegerField(default=0)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('price', models.DecimalField(decimal_places=2, max_digits=10)),
-                ('size', models.PositiveIntegerField()),
-                ('location', models.CharField(choices=[('Oristano', 'Oristano'), ('Torregrande', 'Torregrande'), ('Nolosodove', 'Nolosodove')], default='Oristano', max_length=100)),
-                ('property_type', models.CharField(choices=[('House', 'House'), ('Apartment', 'Apartment'), ('Villa', 'Villa')], default='House', max_length=50)),
-                ('liked_by', models.ManyToManyField(blank=True, related_name='liked_properties', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(default="", max_length=255)),
+                ("description", models.TextField(default="")),
+                ("features", models.TextField(default="")),
+                (
+                    "main_image",
+                    models.ImageField(blank=True, null=True, upload_to="images/"),
+                ),
+                (
+                    "main_video",
+                    models.FileField(blank=True, null=True, upload_to="videos/"),
+                ),
+                ("bedrooms", models.PositiveIntegerField(default=0)),
+                ("bathrooms", models.PositiveIntegerField(default=0)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("price", models.DecimalField(decimal_places=2, max_digits=10)),
+                ("size", models.PositiveIntegerField()),
+                (
+                    "location",
+                    models.CharField(
+                        choices=[
+                            ("Oristano", "Oristano"),
+                            ("Torregrande", "Torregrande"),
+                            ("Nolosodove", "Nolosodove"),
+                        ],
+                        default="Oristano",
+                        max_length=100,
+                    ),
+                ),
+                (
+                    "property_type",
+                    models.CharField(
+                        choices=[
+                            ("House", "House"),
+                            ("Apartment", "Apartment"),
+                            ("Villa", "Villa"),
+                        ],
+                        default="House",
+                        max_length=50,
+                    ),
+                ),
+                (
+                    "liked_by",
+                    models.ManyToManyField(
+                        blank=True,
+                        related_name="liked_properties",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Property',
-                'verbose_name_plural': 'Properties',
-                'ordering': ['-created_at'],
+                "verbose_name": "Property",
+                "verbose_name_plural": "Properties",
+                "ordering": ["-created_at"],
             },
         ),
         migrations.CreateModel(
-            name='PropertyImage',
+            name="PropertyImage",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to='property_images/')),
-                ('property', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='images', to='properties.property')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image", models.ImageField(upload_to="property_images/")),
+                (
+                    "property",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="images",
+                        to="properties.property",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='PropertyVideo',
+            name="PropertyVideo",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('video', models.FileField(upload_to='property_videos/')),
-                ('property', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='videos', to='properties.property')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("video", models.FileField(upload_to="property_videos/")),
+                (
+                    "property",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="videos",
+                        to="properties.property",
+                    ),
+                ),
             ],
         ),
     ]

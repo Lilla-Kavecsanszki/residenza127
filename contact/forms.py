@@ -1,10 +1,12 @@
-from django import forms  
+from django import forms
+
 from .models import Contact
+
 
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = ['name', 'email', 'subject', 'message']
+        fields = ["name", "email", "subject", "message"]
         widgets = {
-            'message': forms.Textarea(attrs={'rows': 4}),
+            "message": forms.Textarea(attrs={"rows": 4}),
         }

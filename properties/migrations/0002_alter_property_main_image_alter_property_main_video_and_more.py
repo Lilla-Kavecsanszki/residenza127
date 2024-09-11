@@ -7,28 +7,36 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('properties', '0001_initial'),
+        ("properties", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='property',
-            name='main_image',
-            field=cloudinary.models.CloudinaryField(blank=True, max_length=255, null=True, verbose_name='image'),
+            model_name="property",
+            name="main_image",
+            field=cloudinary.models.CloudinaryField(
+                blank=True, max_length=255, null=True, verbose_name="image"
+            ),
         ),
         migrations.AlterField(
-            model_name='property',
-            name='main_video',
-            field=cloudinary.models.CloudinaryField(blank=True, max_length=255, null=True, verbose_name='video'),
+            model_name="property",
+            name="main_video",
+            field=cloudinary.models.CloudinaryField(
+                blank=True, max_length=255, null=True, verbose_name="video"
+            ),
         ),
         migrations.AlterField(
-            model_name='propertyimage',
-            name='image',
-            field=cloudinary.models.CloudinaryField(max_length=255, verbose_name='image'),
+            model_name="propertyimage",
+            name="image",
+            field=cloudinary.models.CloudinaryField(
+                max_length=255, verbose_name="image"
+            ),
         ),
         migrations.AlterField(
-            model_name='propertyvideo',
-            name='video',
-            field=cloudinary.models.CloudinaryField(max_length=255, verbose_name='video'),
+            model_name="propertyvideo",
+            name="video",
+            field=cloudinary.models.CloudinaryField(
+                max_length=255, verbose_name="video"
+            ),
         ),
     ]

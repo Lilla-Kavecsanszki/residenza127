@@ -8,13 +8,21 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('properties', '0002_alter_property_main_image_alter_property_main_video_and_more'),
+        (
+            "properties",
+            "0002_alter_property_main_image_alter_property_main_video_and_more",
+        ),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='propertyvideo',
-            name='video',
-            field=models.FileField(blank=True, storage=cloudinary_storage.storage.VideoMediaCloudinaryStorage(), upload_to='videos/', validators=[cloudinary_storage.validators.validate_video]),
+            model_name="propertyvideo",
+            name="video",
+            field=models.FileField(
+                blank=True,
+                storage=cloudinary_storage.storage.VideoMediaCloudinaryStorage(),
+                upload_to="videos/",
+                validators=[cloudinary_storage.validators.validate_video],
+            ),
         ),
     ]
