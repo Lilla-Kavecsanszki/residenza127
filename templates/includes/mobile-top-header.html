@@ -56,6 +56,8 @@
     </li>
     
     <!-- Mobile Language Dropdown -->
+    <!-- Conditionally render the language dropdown only on the homepage -->
+    {% if request.path == homepage_url %}
     <li class="list-inline-item dropdown">
         <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-language" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
@@ -68,5 +70,6 @@
             <a href="#" class="dropdown-item {% if LANGUAGE_CODE == 'it' %}active{% endif %}" onclick="switchLanguage('it')">IT</a>
         </div>
     </li>
+    {% endif %}
 </ul>
 
