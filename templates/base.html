@@ -3,8 +3,14 @@
 <!DOCTYPE html>
 <html lang="{% get_current_language as LANGUAGE_CODE %}">
 <head>
+    {% block meta %}
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Building Sardinia - Your premier resource for real estate, construction, and renovation in Sardinia. Discover exceptional properties, expert construction services, and renovation solutions to build your dream home.">
+    <meta name="keywords" content="real estate, construction, renovation, Sardinia, property, dream home, building services, property management, home improvement">
+    {% endblock %} {% block extra_meta %} {% endblock %}
+
     <title>{% block title %}{% trans "Building Oristano" %}{% endblock %}</title>
     
     <!-- Bootstrap CSS -->
