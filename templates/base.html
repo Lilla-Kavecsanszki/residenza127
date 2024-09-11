@@ -99,7 +99,7 @@
                     </ul>
                 </div>
                 <!-- Conditionally render the language dropdown only on the homepage -->
-                {% if request.path == homepage_url %}
+                {% if request.path == homepage_url or request.path == '/' %}
                 <div class="d-flex justify-content-end align-items-center">
                     <!-- Language Dropdown -->
                     <ul class="list-inline mb-0">
