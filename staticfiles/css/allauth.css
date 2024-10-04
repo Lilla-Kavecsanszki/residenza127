@@ -1,7 +1,7 @@
 body {
     font-family: "Cormorant Garamond", serif;
-    background-color: #f9f9f9; /* Light background for better contrast */
-    color: #051c2c;
+    background-color: #ffffff; /* Light background for better contrast */
+    color: #182d5f;
 }
 
 /* Container and Row Layout */
@@ -34,7 +34,7 @@ body {
 
 /* Logo and Headings */
 .logo-font {
-    color: #051c2c;
+    color: #182d5f;
     font-family: "Italiana", sans-serif;
     /* text-transform: uppercase;  */
     margin-bottom: 1em;
@@ -54,13 +54,13 @@ body {
 
 /* Form Styles */
 .form {
-    background-color: #051c2c;
+    background-color: #182d5f;
     padding: 2em;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Adjusted shadow for visibility */
     border-radius: 5px; /* Rounded corners for better aesthetics */
     margin: 1em auto; 
     max-width: 600px;
-    color: #fff;
+    color: #ffffff;
     font-size: 1.1em;
     display: flex;
     flex-direction: column;
@@ -77,20 +77,20 @@ body {
     padding: 0.75em;
     box-shadow: none;
     font-size: 1em;
-    color: #051c2c; 
+    color: #182d5f; 
 }
 
 .form-control:focus {
-    border-color: #fff;
+    border-color: #ffffff;
     box-shadow: 0 0 0 3px rgba(221, 221, 221, 0.5);
 }
 
 /* Button Styles */
 .btn.home-button {
     display: inline-block;
-    background-color: #051c2c;
+    background-color: #182d5f;
     color: #fff;
-    border: 1px solid #051c2c;
+    border: 1px solid #182d5f;
     padding: 0.75em 1.5em;
     font-size: 1em;
     border-radius: 5px; /* Rounded corners */
@@ -106,9 +106,9 @@ body {
 
 /* Hover effect */
 .btn.home-button:hover {
-    background-color: #033b58;
+    background-color: #182d5f;
     color: #fff;
-    border-color: #033b58;
+    border-color: #182d5f;
 }
 
 /* Focus effect */
@@ -119,7 +119,7 @@ body {
 
 /* Form Actions */
 .primaryAction {
-    background-color: #051c2c;
+    background-color: #182d5f;
     color: white;
     border: 3px solid white;
     padding: 0.75em 1.5em;
@@ -135,7 +135,7 @@ body {
 
 .primaryAction:hover {
     background-color: white;
-    color: #051c2c;
+    color: #182d5f;
     font-weight: bolder;
 }
 
@@ -151,7 +151,7 @@ body {
 }
 
 .secondaryAction:hover {
-    background-color: #051c2c;
+    background-color: #182d5f;
     color: #fff;
 }
 
@@ -237,7 +237,7 @@ body {
 .login-or {
     text-align: center;
     margin: 1.5em 0;
-    color: #051c2c;
+    color: #182d5f;
     font-size: 1.2em;
     font-weight: bold;
 }
@@ -262,11 +262,11 @@ body {
     margin-top: 1.5em;
     text-align: center;
     font-size: 0.9em;
-    color: #051c2c;
+    color: #182d5f;
 }
 
 .login-margin a {
-    color: #051c2c;
+    color: #182d5f;
     text-decoration: none;
 }
 
@@ -294,13 +294,13 @@ body {
 /* Sign Up page */
 
 .outer-form {
-    background-color: #051c2c;
+    background-color: #182d5f;
     margin: 1em auto;
     border-radius: 3px;
 }
 
 #signup_form {
-    background-color: #051c2c;
+    background-color: #182d5f;
     padding: 2em;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
     border-radius: 5px; 
@@ -335,7 +335,7 @@ body {
 /* Button Styles */
 .primaryAction,
 .home-button {
-    background-color: #051c2c;
+    background-color: #182d5f;
     color: white;
     border: 3px solid white;
     padding: 0.75em 1.5em;
@@ -350,7 +350,7 @@ body {
 .primaryAction:hover,
 .home-button:hover {
     background-color: white;
-    color: #051c2c;
+    color: #182d5f;
     font-weight: bolder;
 }
 

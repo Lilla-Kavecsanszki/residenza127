@@ -131,7 +131,10 @@ o	As a project manager, I want to gather feedback from the client and end users 
 
 Favicon: https://favicon.io/
 
-
+based on new logo; the navy: #163573 - rgb(22,53,115)
+                   the silver: #a9a9a9 - rgb(169, 169, 169)
+                   the dark navy (text): #182d5f - rgb(24, 45, 95)
+                   white
 
 Colours used for the logo: #FFCC33 – Sunglow, 
 rgb(52, 61, 22) - nav fonts - #343d16
@@ -173,3 +176,7 @@ Faster Indexing: Search engines can discover and index your pages more quickly.
 Improved SEO: Helps search engines understand the structure of your site, potentially improving search rankings.
 Error Reporting: Search engines provide feedback on issues with your sitemap or site that might affect indexing.
 Using these tools is a good practice for improving your site's visibility in search engines and is part of regular SEO maintenance.
+
+
+
+https://favicon.io/favicon-converter/ - used to create the favicon from logo

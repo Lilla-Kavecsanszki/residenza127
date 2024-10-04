@@ -8,15 +8,15 @@ body {
     font-family: "Cormorant Garamond", serif;
     margin: 0;
     padding: 0;
-    background-color: whitesmoke;
-    color: #ffff;
+    background-color: #ffffff;
+    color: #182d5f;
 }
 
 /* Header styles */
 header {
     background-color: rgba(255, 255, 255, 0.6);
     font-family: "Playfair Display", serif;
-    color: #051c2c;
+    color: #182d5f;
     padding: 0.3em;
     position: fixed;
     width: 100%;
@@ -36,7 +36,7 @@ header {
 .logo-font {
     font-size: 2rem;
     white-space: nowrap;
-    color: #051c2c;
+    color: #182d5f;
 }
 
 .logo {
@@ -56,7 +56,7 @@ header {
 }
 
 #user-name {
-    color: #051c2c
+    color: #182d5f
 }
 
 /* Dropdown menu styles */
@@ -68,12 +68,12 @@ header {
 }
 
 .dropdown-item {
-    color: #051c2c; /* Ensure dropdown items have text color */
+    color: #182d5f; /* Ensure dropdown items have text color */
 }
 
 .dropdown-item:hover {
     background-color: #f8f9fa; /* Change background color on hover */
-    color: #051c2c; /* Ensure text color remains consistent */
+    color: #182d5f; /* Ensure text color remains consistent */
 }
 
 /* Ensure that dropdown toggle is properly displayed */
@@ -82,11 +82,11 @@ header {
 }
 
 #language-options {
-    color: #051c2c;
+    color: #182d5f;
 }
 
 .navbar-nav a {
-    color: #051c2c;
+    color: #182d5f;
     text-decoration: none;
     font-size: large;
 }
@@ -94,11 +94,11 @@ header {
 /* Icon styles */
 .icon {
     display: inline-block;
-    color: #051c2c;
+    color: #182d5f;
 }
 
 .icon:hover {
-    color: #fefefe;
+    color: #a9a9a9;
     
 }
 
@@ -203,11 +203,11 @@ main {
     margin-bottom: 2em;
     margin-top: 2em;
     text-align: center;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .property-listings h2 {
-    color: #051c2c;
+    color: #182d5f;
     font-family: "Italiana", sans-serif;
     text-transform: uppercase; 
     margin-bottom: 1em;
@@ -271,7 +271,7 @@ main {
 .property {
     flex: 1 0 33.333%;
     height: 400px;
-    background-color: #051c2c;
+    background-color: #182d5f;
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
@@ -286,7 +286,7 @@ main {
 .property-media {
     width: 100%;
     height: 400px; /* Set a consistent height for media */
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     overflow: hidden;
 }
 
@@ -310,7 +310,7 @@ main {
 
 .property-details h3 {
     font-family: "Cinzel", serif;
-    color: #051c2c;
+    color: #182d5f;
     font-size: 1.2rem;
     margin: 0;
     line-height: 1.2;
@@ -363,7 +363,7 @@ main {
     text-align: center;
     text-transform: uppercase;
     color: #ffffff; /* White text color for contrast */
-    background: #051c2c; /* Light semi-transparent background with #051c2c */
+    background: #182d5f; /* Light semi-transparent background with #051c2c */
     border: 1px solid rgba(5, 28, 44, 0.5); /* Slightly opaque border with #051c2c */
     border-radius: 3px;
     backdrop-filter: blur(8px); /* Slight blur effect for the glass look */
@@ -375,9 +375,9 @@ main {
 
 .glass-button:hover {
     background: #fefefe;
-    color: #051c2c;
+    color: #233b75;
     text-decoration: none;
-    border-color: 3px solid #051c2c;
+    border-color: 3px solid #182d5f;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 1); 
     transform: scale(1.05); /* Slight scale-up on hover */
 }
@@ -392,7 +392,7 @@ main {
 
 /* About Section Styles */
 .about {
-    background-color: #051c2c; 
+    background-color: #182d5f; 
     padding: 5em; /* Reduced padding for better responsiveness */
     margin-bottom: 3em;      
     text-align: center;      
@@ -431,7 +431,7 @@ main {
 /* Company Card Styles */
 .company {
     background-color: white;   
-    border: 1px solid #051c2c;
+    border: 1px solid #182d5f;
     border-radius: 1px;      
     padding: 1.5em;              /* Increased padding for a more luxurious feel */
     margin: 1.5em;             /* Adjusted margin for spacing between cards */
@@ -453,7 +453,7 @@ main {
 
 /* Description Styling */
 .company-description {
-    color: #051c2c;            
+    color: #182d5f;            
     font-size: 1.3em;          
     margin-top: 0.5em;           /* Space above the description */
     font-weight: 500;         
@@ -464,7 +464,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 3px solid #051c2c;
+    border: 3px solid #182d5f;
     border-radius: 5px;
 }
 
@@ -474,28 +474,28 @@ main {
 
 .stats-number {
     font-size: 3em;            /* Large font size for numbers */
-    color: #051c2c;            /* Dark color for emphasis */
+    color: #182d5f;            /* Dark color for emphasis */
     font-weight: 700;          /* Bold for prominence */
     display: block;            /* Block display for better alignment */
 }
 
 .stats-label {
     font-size: 1.2em;          /* Slightly larger font size for labels */
-    color: #051c2c;            /* Dark color for consistency */
+    color: #182d5f;            /* Dark color for consistency */
     font-weight: 400;          /* Normal weight for labels */
     text-transform: uppercase; /* Uppercase for a classic feel */
 }
 
 /* Company Story Section Styles */
 .company-story {
-    background-color: #f9f9f9; 
+    background-color: #ffffff; 
     padding: 1em;                
     margin-top: 2em;           
     text-align: center;       
 }
 
 .company-story h2 {
-    color: #051c2c;    
+    color: #182d5f;    
     font-family: "Cormorant Garamond", serif;    
     text-align: justify;  
     margin-bottom: 1em;        
@@ -504,7 +504,7 @@ main {
 }
 
 .company-story p {
-    color: #051c2c;    
+    color: #182d5f;    
     font-family: "Cormorant Garamond", serif; 
     text-align: justify;       
     line-height: 1.6;          
@@ -533,7 +533,7 @@ main {
 
 /* Footer styles */
 .footer-cover {
-    background-color: #1d220c;
+    background-color: #182d5f;
 }
 
 footer .footer-content {
@@ -576,7 +576,7 @@ footer a .icon {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #f00;
+    background: transparent;
     transition: .5s;
     z-index: 2;
   }
@@ -596,6 +596,10 @@ footer a .icon {
 .insta:before {
     background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d)
   }
+
+.whatsapp:before{
+    background: #5dc958;
+}
   
 footer a {
     color: white;
@@ -642,6 +646,10 @@ footer a .icon {
 .linkedin:before{
     background: #55acee;
   }
+
+.whatsapp:before{
+    background: #5dc958;
+}
 
 .insta:before {
     background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d)
