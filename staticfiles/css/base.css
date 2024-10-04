@@ -171,6 +171,14 @@ header {
     z-index: 1;
 }
 
+.hero-content h1 {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Stronger shadow for h1 */
+}
+
+.hero-content p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Stronger shadow for p */
+}
+
 .hero h1 {
     font-size: 3em;
     margin: 0;
