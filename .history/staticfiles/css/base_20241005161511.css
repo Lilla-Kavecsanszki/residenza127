@@ -180,13 +180,13 @@ header {
 }
 
 .hero h1 {
-    font-size: 3.5em;
+    font-size: 3em;
     margin: 0;
     font-family: "Cinzel", serif;
 }
 
 .hero p {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 /* Main content styles */
@@ -194,6 +194,15 @@ main {
     width: 100%;
     padding: 0;
     margin: 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
 }
 
 /* Property listings styles */
@@ -538,28 +547,6 @@ main {
 footer .footer-content {
     max-width: 1000px;
     margin: 0 auto;
-}
-
-.footer-content {
-    text-align: center;
-}
-
-.lilla, .email-link {
-    margin-bottom: 5px; /* Reduces space between elements */
-    display: block;
-}
-
-p.lilla a.email-link {
-    text-decoration: none; /* Optional: Removes underline from the link */
-    color: inherit; /* Keeps the same text color */
-}
-
-.footer-content p:last-child {
-    margin-top: 5px; /* Reduces space between last element and the previous ones */
-}
-
-.footer-content p {
-    margin: 0; /* Ensures default margin is removed */
 }
 
 .links {

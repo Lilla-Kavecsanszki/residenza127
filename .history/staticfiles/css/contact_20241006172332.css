@@ -16,6 +16,7 @@ body {
     max-width: 1200px;    
     color: #182d5f;
     border-radius: 3px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
 }
 
 h1 {
@@ -29,7 +30,6 @@ h1 {
 .mirror-silver-background {
 background: linear-gradient(135deg, #e6e6e6, #cccccc, #d3d3d3, #a9a9a9, #bfbfbf);
 padding: 1em;
-box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
 background-size: 400% 400%; /* Enhance gradient movement */
 animation: shiny-effect 5s ease-in-out infinite;
 }
@@ -61,9 +61,8 @@ animation: shiny-effect 5s ease-in-out infinite;
 }
 
 .contact-form input:focus {
-    border-color: #a9a9a9;
-    box-shadow: 0 0 0 3px rgba(169, 169, 169, 0.5);
-    outline: none; /* Removes the green default outline */
+    border-color: #fff;
+    box-shadow: 0 0 0 3px rgba(221, 221, 221, 0.5);
 }
 
 .contact-form textarea {
@@ -71,18 +70,12 @@ animation: shiny-effect 5s ease-in-out infinite;
     height: 150px;
 }
 
-.contact-form textarea:focus {
-    border-color: #a9a9a9;
-    box-shadow: 0 0 0 3px rgba(169, 169, 169, 0.5);
-    outline: none; /* Removes the green default outline */
-}
-
 .contact-form button {
-    background-color: #ffffff;
+    background-color: #fff;
     color: #182d5f;
     font-weight: bolder;
     text-transform: uppercase;
-    border: solid 2px #182d5f;
+    border: none;
     padding: 1em 2em;
     font-size: 1em;
     border-radius: 3px;
@@ -106,15 +99,16 @@ animation: shiny-effect 5s ease-in-out infinite;
 /* Contact Details Section */
 .contact-details {
     flex: 1;
-    padding: 2%;
     font-family: "Italiana", sans-serif;
     font-size: 1.3em;
-    color: #182d5f;
+    background-color: #182d5f;
+    color: #fff;
     padding: 1em;
     border-radius: 3px;
+    box-shadow: 0 4px 8px #fff(0, 0, 0, 0.1);
 }
 
-.contact-details h3 {
+.contact-details h2 {
     font-family: "Cinzel", serif;
     margin-bottom: 1em;
 }
@@ -127,19 +121,14 @@ animation: shiny-effect 5s ease-in-out infinite;
 /* Map Container */
 .map-container {
     flex: 1;
-    width: 100%; /* Ensures the map container takes full width of its parent */
-    height: 400px; /* Set a fixed height for the container */
-    border-radius: 4px; /* Slightly round the corners of the container */
-    overflow: hidden; /* Ensures anything that overflows is hidden */
-    border: solid 1px #a9a9a9; 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Shadow for the container */
+    height: 400px;
 }
 
 .map-container iframe {
-    width: 100%; /* Full width of the container */
-    height: 100%; /* Full height of the container */
-    border-radius: 0; /* Match the parent's border radius */
-    border: solid 1px #a9a9a9;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
 }
 
 /* Responsive Styles */

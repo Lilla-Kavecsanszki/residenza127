@@ -39,7 +39,7 @@
     {% endif %}
 
     <!-- Contact Form -->
-    <div class="contact-form">
+    <div class="contact-form mirror-silver-background">
         <form method="post">
             {% csrf_token %}
             <!-- Name Field -->
@@ -80,10 +80,10 @@
     <!-- Office Information and Map Wrapper -->
     <div class="contact-details-map-wrapper">
         <!-- Office Information -->
-        <div class="contact-details mirror-silver-background">
-            <h3 class="mt-5"><strong>Armando Siuni amministratore</strong></h3>
-            <h3>Ar.Gis.r.l.s.</h3>
-            <p class="mt-5"><strong>{% trans "Address:" %}</strong> Via Cagliari, 47 - Oristano, Sardinia, Italy</p>
+        <div class="contact-details">
+            <p><strong>Armando Siuni amministratore</strong></p>
+            <p><strong>Ar.Gis.r.l.s.</strong></p>
+            <p><strong>{% trans "Address:" %}</strong> Via Cagliari, 47 - Oristano, Sardinia, Italy</p>
             <p><strong>{% trans "Telephone:" %}</strong> +39/3333951557</p>
             <p><strong>{% trans "Email:" %}</strong> ar.gi.srls@pec.it</p>
         </div>

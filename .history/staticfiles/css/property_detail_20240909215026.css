@@ -1,7 +1,7 @@
 body {
     font-family: "Cormorant Garamond", serif;
     background-color: white;
-    color: #182d5f;
+    color: #051c2c;
 }
 
 .container {
@@ -66,7 +66,7 @@ body {
 .owl-nav button.owl-prev,
 .owl-nav button.owl-next {
     font-size: 1.5em;
-    color: #182d5f;
+    color: #333;
 }
 
 /* Back button */
@@ -82,7 +82,7 @@ body {
     font-size: 1rem; /* Sets a font size for readability */
     font-weight: 500; /* Makes the button text slightly bolder */
     color: #fff; /* Sets the text color to white */
-    background-color: #182d5f; /* Sets a primary color for the button */
+    background-color: #051c2c; /* Sets a primary color for the button */
     border: none; /* Removes the default border */
     border-radius: 1px; /* Adds rounded corners to the button */
     transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions for background color and shadow */
@@ -93,19 +93,19 @@ body {
     background-color: #fff; /* Changes the button color on hover and focus */
     box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.1); /* Adds a subtle shadow on hover and focus */
     text-decoration: none; /* Ensures the button text is not underlined */
-    color: #182d5f;
+    color: #051c2c;
     font-weight: bolder;
     font-size: 1.1rem;
-    border: 2px solid #182d5f;
+    border: 2px solid #051c2c;
 }
 
 .back-button .btn:active {
     background-color: #fff; /* Darker color when the button is actively pressed */
     box-shadow: inset 0 0 0.125rem rgba(0, 0, 0, 0.1); /* Inset shadow to indicate a pressed state */
-    color: #182d5f;
+    color: #051c2c;
     font-size: 1.1rem;
     font-weight: bolder;
-    border: 2px solid #182d5f; /* Adds a border to the button when pressed */
+    border: 2px solid #051c2c; /* Adds a border to the button when pressed */
 }
 
 

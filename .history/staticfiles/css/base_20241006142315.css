@@ -180,13 +180,13 @@ header {
 }
 
 .hero h1 {
-    font-size: 3.5em;
+    font-size: 3em;
     margin: 0;
     font-family: "Cinzel", serif;
 }
 
 .hero p {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 /* Main content styles */
@@ -194,6 +194,15 @@ main {
     width: 100%;
     padding: 0;
     margin: 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
 }
 
 /* Property listings styles */

@@ -112,6 +112,7 @@ animation: shiny-effect 5s ease-in-out infinite;
     color: #182d5f;
     padding: 1em;
     border-radius: 3px;
+    box-shadow: 0 4px 8px #fff(0, 0, 0, 0.1);
 }
 
 .contact-details h3 {
@@ -127,19 +128,15 @@ animation: shiny-effect 5s ease-in-out infinite;
 /* Map Container */
 .map-container {
     flex: 1;
-    width: 100%; /* Ensures the map container takes full width of its parent */
-    height: 400px; /* Set a fixed height for the container */
-    border-radius: 4px; /* Slightly round the corners of the container */
-    overflow: hidden; /* Ensures anything that overflows is hidden */
-    border: solid 1px #a9a9a9; 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Shadow for the container */
+    height: 400px;
 }
 
 .map-container iframe {
-    width: 100%; /* Full width of the container */
-    height: 100%; /* Full height of the container */
-    border-radius: 0; /* Match the parent's border radius */
-    border: solid 1px #a9a9a9;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px #fff(0, 0, 0, 0.1);
 }
 
 /* Responsive Styles */

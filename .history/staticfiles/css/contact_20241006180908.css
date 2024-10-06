@@ -112,6 +112,7 @@ animation: shiny-effect 5s ease-in-out infinite;
     color: #182d5f;
     padding: 1em;
     border-radius: 3px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
 }
 
 .contact-details h3 {
@@ -139,7 +140,6 @@ animation: shiny-effect 5s ease-in-out infinite;
     width: 100%; /* Full width of the container */
     height: 100%; /* Full height of the container */
     border-radius: 0; /* Match the parent's border radius */
-    border: solid 1px #a9a9a9;
 }
 
 /* Responsive Styles */

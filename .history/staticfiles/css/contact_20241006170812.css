@@ -7,38 +7,30 @@ body {
 /* Container for Contact Page */
 .container {
     padding: 2em;
-    margin-top: 12%;
+    margin-top: 12;
 }
 
-.contact-container{
-    padding: 2em;
-    margin-bottom: 2em;
-    max-width: 1200px;    
-    color: #182d5f;
-    border-radius: 3px;
-}
-
-h1 {
-    color: #182d5f;
-    font-family: "Cinzel", serif;
-    font-weight: 700;
-    margin-bottom: 1em;
+/* Heading Styles */
+h1, h2 {
     text-align: center;
+    font-family: "Cinzel", serif;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    /* background-color: #182d5f; */
+    padding: 2em;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px #fff(0, 0, 0, 0.1);
+    margin-bottom: 2em;
 }
 
 .mirror-silver-background {
-background: linear-gradient(135deg, #e6e6e6, #cccccc, #d3d3d3, #a9a9a9, #bfbfbf);
+background: linear-gradient(135deg, #f2f2f2, #d9d9d9, #e6e6e6, #bfbfbf, #f2f2f2);
+color: #333; /* Text color for contrast */
 padding: 1em;
-box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
 background-size: 400% 400%; /* Enhance gradient movement */
 animation: shiny-effect 5s ease-in-out infinite;
-}
-
-/* Animation to create a moving shine effect */
-@keyframes shiny-effect {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 .contact-form label {
@@ -61,9 +53,8 @@ animation: shiny-effect 5s ease-in-out infinite;
 }
 
 .contact-form input:focus {
-    border-color: #a9a9a9;
-    box-shadow: 0 0 0 3px rgba(169, 169, 169, 0.5);
-    outline: none; /* Removes the green default outline */
+    border-color: #fff;
+    box-shadow: 0 0 0 3px rgba(221, 221, 221, 0.5);
 }
 
 .contact-form textarea {
@@ -71,18 +62,12 @@ animation: shiny-effect 5s ease-in-out infinite;
     height: 150px;
 }
 
-.contact-form textarea:focus {
-    border-color: #a9a9a9;
-    box-shadow: 0 0 0 3px rgba(169, 169, 169, 0.5);
-    outline: none; /* Removes the green default outline */
-}
-
 .contact-form button {
-    background-color: #ffffff;
+    background-color: #fff;
     color: #182d5f;
     font-weight: bolder;
     text-transform: uppercase;
-    border: solid 2px #182d5f;
+    border: none;
     padding: 1em 2em;
     font-size: 1em;
     border-radius: 3px;
@@ -106,15 +91,16 @@ animation: shiny-effect 5s ease-in-out infinite;
 /* Contact Details Section */
 .contact-details {
     flex: 1;
-    padding: 2%;
     font-family: "Italiana", sans-serif;
     font-size: 1.3em;
-    color: #182d5f;
+    background-color: #182d5f;
+    color: #fff;
     padding: 1em;
     border-radius: 3px;
+    box-shadow: 0 4px 8px #fff(0, 0, 0, 0.1);
 }
 
-.contact-details h3 {
+.contact-details h2 {
     font-family: "Cinzel", serif;
     margin-bottom: 1em;
 }
@@ -127,19 +113,14 @@ animation: shiny-effect 5s ease-in-out infinite;
 /* Map Container */
 .map-container {
     flex: 1;
-    width: 100%; /* Ensures the map container takes full width of its parent */
-    height: 400px; /* Set a fixed height for the container */
-    border-radius: 4px; /* Slightly round the corners of the container */
-    overflow: hidden; /* Ensures anything that overflows is hidden */
-    border: solid 1px #a9a9a9; 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Shadow for the container */
+    height: 400px;
 }
 
 .map-container iframe {
-    width: 100%; /* Full width of the container */
-    height: 100%; /* Full height of the container */
-    border-radius: 0; /* Match the parent's border radius */
-    border: solid 1px #a9a9a9;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
 }
 
 /* Responsive Styles */
