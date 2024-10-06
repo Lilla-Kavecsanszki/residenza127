@@ -199,7 +199,7 @@ h2 {
 .card-footer {
     display: flex;
     flex-direction: column;
-    /* background-color: #fff; */
+    background-color: #fff;
     padding: 1em;
     border-top: none;
 }

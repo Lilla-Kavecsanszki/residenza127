@@ -199,25 +199,10 @@ h2 {
 .card-footer {
     display: flex;
     flex-direction: column;
-    /* background-color: #fff; */
+    background-color: #fff;
     padding: 1em;
     border-top: none;
 }
-
-.mirror-silver-background {
-    background: linear-gradient(135deg, #e6e6e6, #cccccc, #d3d3d3, #a9a9a9, #bfbfbf);
-    padding: 1em;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
-    background-size: 400% 400%; /* Enhance gradient movement */
-    animation: shiny-effect 5s ease-in-out infinite;
-    }
-    
-    /* Animation to create a moving shine effect */
-    @keyframes shiny-effect {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
 
 .card-footer .property-details p {
     margin-bottom: 0.25em; /* Adjust spacing between property details */

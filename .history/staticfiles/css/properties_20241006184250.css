@@ -152,7 +152,7 @@ h1, h2 {
 /* Property card styles */
 .card {
     border-radius: 5px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
     transition: transform 0.2s ease-in-out;
 }
 
@@ -168,7 +168,7 @@ h1, h2 {
 
 /* Card body styling */
 .card-body {
-    /* background-color: #fff; */
+    background-color: #fff;
     padding: 1em;
 }
 
@@ -189,7 +189,7 @@ h1, h2 {
 .mirror-silver-background {
     background: linear-gradient(135deg, #e6e6e6, #cccccc, #d3d3d3, #a9a9a9, #bfbfbf);
     padding: 1em;
-    border: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
     background-size: 400% 400%; /* Enhance gradient movement */
     animation: shiny-effect 5s ease-in-out infinite;
     }
@@ -216,11 +216,6 @@ h1, h2 {
     font-size: 1.25rem;
 }
 
-.property-details{
-    background: transparent;
-    border: none;
-}
-
 .property-details .row {
     display: flex;
     justify-content: space-between; /* Adjusts spacing between the two columns */
@@ -232,6 +227,7 @@ h1, h2 {
 }
 
 .property-details .small {
+    color: red;
     margin-bottom: 0.5em; /* Adds spacing between items */
 }
 

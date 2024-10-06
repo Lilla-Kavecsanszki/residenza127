@@ -189,7 +189,6 @@ h1, h2 {
 .mirror-silver-background {
     background: linear-gradient(135deg, #e6e6e6, #cccccc, #d3d3d3, #a9a9a9, #bfbfbf);
     padding: 1em;
-    border: none;
     background-size: 400% 400%; /* Enhance gradient movement */
     animation: shiny-effect 5s ease-in-out infinite;
     }
@@ -214,11 +213,6 @@ h1, h2 {
 .price {
     font-weight: bold;
     font-size: 1.25rem;
-}
-
-.property-details{
-    background: transparent;
-    border: none;
 }
 
 .property-details .row {

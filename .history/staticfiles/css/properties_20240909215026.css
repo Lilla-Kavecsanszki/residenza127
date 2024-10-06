@@ -1,7 +1,7 @@
 body {
     font-family: "Cormorant Garamond", serif;
-    background-color: #ffffff;
-    color: #182d5f;
+    background-color: #051c2c;
+    color: whitesmoke;
 }
 
 .container {
@@ -14,7 +14,7 @@ body {
 h1, h2 {
     text-align: center;
     font-family: "Italiana", sans-serif;
-    color: #182d5f;
+    color: #fff;
     font-size: 2.5em;          /* Larger font size for a bold presence */
     font-weight: 400;
 }
@@ -30,10 +30,9 @@ h1, h2 {
 }
 
 .search-banner {
-    background-color: #ffffff; /* Dark blue background */
+    background-color: #051c2c; /* Dark blue background */
     padding: 20px; /* Padding around the content */
     margin-bottom: 20px; /* Space below the banner */
-    border: solid 1px #182d5f;
     border-radius: 5px; /* Rounded corners */
     display: flex;
     align-items: center;
@@ -52,7 +51,7 @@ h1, h2 {
 /* Form Controls */
 .search-banner .form-control {
     background-color: transparent; /* Transparent background */
-    color: #182d5f; /* White text color */
+    color: #fff; /* White text color */
     border: 1px solid #d4a256; /* Gold border */
     border-radius: 5px; /* Slightly rounded corners */
     padding: 10px 15px; /* Padding inside inputs */
@@ -63,7 +62,7 @@ h1, h2 {
 /* Buttons */
 .search-banner .btn {
     background-color: #d4a256; /* Gold background */
-    color: #182d5f; /* White text color */
+    color: #fff; /* White text color */
     border: none; /* No border */
     padding: 10px 20px; /* Padding inside buttons */
     cursor: pointer;
@@ -81,7 +80,7 @@ h1, h2 {
 
 /* Search Icon */
 .search-banner .fa-search {
-    color: #182d5f; /* Dark blue icon color */
+    color: #051c2c; /* Dark blue icon color */
     font-size: 16px; /* Icon size */
 }
 
@@ -89,7 +88,7 @@ h1, h2 {
 .search-banner input[type="text"] {
     flex: 1; /* Makes the input take up remaining space */
     max-width: 250px; /* Maximum width for the search input */
-    border-bottom: 1px solid #182d5f; /* Bottom border for the search input */
+    border-bottom: 1px solid #051c2c; /* Bottom border for the search input */
     background-color: transparent; /* Transparent background */
     color: #fff; /* White text color */
 }
@@ -120,12 +119,12 @@ h1, h2 {
 .sort-select-wrapper {
     max-width: 100%; /* Ensure select does not exceed its container */
     max-width: 400px;
-    color: #182d5f;
+    color: #051c2c;
 }
 
 .custom-select {
     max-width: 400px;
-    color: #182d5f;
+    color: #051c2c;
 }
 
 /* Ensure proper alignment of sort-select and text */
@@ -152,7 +151,7 @@ h1, h2 {
 /* Property card styles */
 .card {
     border-radius: 5px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
     transition: transform 0.2s ease-in-out;
 }
 
@@ -168,57 +167,37 @@ h1, h2 {
 
 /* Card body styling */
 .card-body {
-    /* background-color: #fff; */
+    background-color: #fff;
     padding: 1em;
 }
 
 .card-body p {
     margin-bottom: 0.5em;
-    color: #182d5f;
+    color: #051c2c;
 }
 
 /* Card footer styles for property details */
 .card-footer {
     display: flex;
     flex-direction: column;
-    /* background-color: #fff; */
+    background-color: #fff;
     padding: 1em;
     border-top: none;
 }
 
-.mirror-silver-background {
-    background: linear-gradient(135deg, #e6e6e6, #cccccc, #d3d3d3, #a9a9a9, #bfbfbf);
-    padding: 1em;
-    border: none;
-    background-size: 400% 400%; /* Enhance gradient movement */
-    animation: shiny-effect 5s ease-in-out infinite;
-    }
-    
-    /* Animation to create a moving shine effect */
-    @keyframes shiny-effect {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-
 .card-footer .property-details p {
     margin-bottom: 0.25em; /* Adjust spacing between property details */
-    color: #182d5f;
+    color: #051c2c;
 }
 
 .card-footer .property-details .small {
-    color: #182d5f;
+    color: #051c2c;
 }
 
 /* Price styling */
 .price {
     font-weight: bold;
     font-size: 1.25rem;
-}
-
-.property-details{
-    background: transparent;
-    border: none;
 }
 
 .property-details .row {
@@ -232,6 +211,7 @@ h1, h2 {
 }
 
 .property-details .small {
+    color: #777;
     margin-bottom: 0.5em; /* Adds spacing between items */
 }
 
