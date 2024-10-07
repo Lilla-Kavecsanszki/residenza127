@@ -8,8 +8,9 @@ from django.db import models
 
 class Property(models.Model):
     PROPERTY_TYPES = [
-        ("Bilocali", "Bilocali"),
-        ("Trilocali", "Trilocali"),
+        ("House", "House"),
+        ("Apartment", "Apartment"),
+        ("Villa", "Villa"),
         # Add other types as needed
     ]
 
@@ -37,7 +38,7 @@ class Property(models.Model):
 
     location = models.CharField(max_length=100, choices=LOCATIONS, default="Oristano")
     property_type = models.CharField(
-        max_length=50, choices=PROPERTY_TYPES, default="Trilocali"
+        max_length=50, choices=PROPERTY_TYPES, default="House"
     )
 
     # Adding a ManyToManyField to track which users have liked this property

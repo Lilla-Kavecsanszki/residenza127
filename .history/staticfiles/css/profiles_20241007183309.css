@@ -192,7 +192,7 @@ h2 {
 
 .card-body p {
     margin-bottom: 0.5em;
-    color: #182d5f;
+    color: #051c2c;
 }
 
 /* Card footer styles for property details */
@@ -221,11 +221,11 @@ h2 {
 
 .card-footer .property-details p {
     margin-bottom: 0.25em; /* Adjust spacing between property details */
-    color: #182d5f;
+    color: #051c2c;
 }
 
 .card-footer .property-details .small {
-    color: #182d5f;
+    color: #051c2c;
 }
 
 /* Price styling */

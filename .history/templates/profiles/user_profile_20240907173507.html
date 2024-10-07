@@ -20,7 +20,7 @@
                 <p class="larger">{% trans "Phone Number" %}: <strong>{{ profile.default_phone_number|default:_("Not provided") }}</strong></p>
             </div>
             <p class="small">{% trans "If you would like to register or update your details, please do so below" %}:</p>
-            <form method="post" action="{% url 'update_user_profile' %}" class="user-profile-form">
+            <form method="post" action="{% url 'update_user_profile' %}" class="mirror-silver-background user-profile-form">
                 {% csrf_token %}
                 <div class="form-group">
                     {{ form.first_name.label_tag }}

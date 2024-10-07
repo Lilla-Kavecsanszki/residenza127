@@ -37,7 +37,7 @@ class Property(models.Model):
 
     location = models.CharField(max_length=100, choices=LOCATIONS, default="Oristano")
     property_type = models.CharField(
-        max_length=50, choices=PROPERTY_TYPES, default="Trilocali"
+        max_length=50, choices=PROPERTY_TYPES, default=None
     )
 
     # Adding a ManyToManyField to track which users have liked this property
