@@ -2,7 +2,7 @@
 body {
     font-family: "Cormorant Garamond", serif;
     background-color: #fff;
-    color: #051c2c;;
+    color: #182d5f;;
     padding-top: 60px; /* Adjust based on your header height */
 }
 
@@ -12,7 +12,7 @@ body {
     margin-top: 10%;
     margin-bottom: 2%;
     max-width: 1200px;
-    color: #051c2c;
+    color: #182d5f;
     border-radius: 3px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
 }
@@ -33,7 +33,7 @@ body {
 }
 
 h1 {
-    color: #051c2c;
+    color: #182d5f;
     font-family: "Cinzel", serif;
     font-weight: 700;
     margin-bottom: 1.5em;
@@ -55,7 +55,7 @@ fieldset {
 
 legend {
     font-weight: bold;
-    color: #051c2c;
+    color: #182d5f;
 }
 
 /* Form Group Styling */
@@ -67,7 +67,7 @@ legend {
 .form-group label {
     display: block;
     margin-bottom: 0.5em;
-    color: #051c2c;
+    color: #182d5f;
 }
 
 .form-group input,
@@ -75,14 +75,14 @@ legend {
 .form-group textarea {
     width: 100%;
     padding: 0.75em;
-    border: 1px solid #051c2c; 
+    border: 1px solid #182d5f; 
     border-radius: 5px; /* Rounded corners for fields */
     box-sizing: border-box; /* Ensures padding is included in the total width/height */
     transition: border-color 0.3s ease; /* Smooth transition for border color */
 }
 
 .form-group input[type="file"] {
-    border: 1px solid #051c2c; /* Border for file inputs */
+    border: 1px solid #182d5f; /* Border for file inputs */
     border-radius: 5px; /* Rounded corners for file inputs */
     padding: 0.75em; /* Padding for better appearance */
 }
@@ -91,13 +91,13 @@ legend {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    border-color: #051c2c; /* Dark blue border on focus */
+    border-color: #182d5f; /* Dark blue border on focus */
     outline: none; /* Remove default outline */
 }
 
 /* Button Styling */
 button.btn-primary {
-    background-color: #051c2c;
+    background-color: #182d5f;
     color: white;
     border: 3px solid transparent; /* Start with a transparent border */
     padding: 0.75em 1.5em;
@@ -110,8 +110,8 @@ button.btn-primary {
 /* Hover state with animated border */
 button.btn-primary:hover {
     background-color: white;
-    border: 3px solid #051c2c; /* Border color changes on hover */
-    color: #051c2c;
+    border: 3px solid #182d5f; /* Border color changes on hover */
+    color: #182d5f;
 }
 
 /* Target <p> tags within the first fieldset */
@@ -123,7 +123,7 @@ form fieldset:first-of-type p {
 
 form fieldset:first-of-type p label {
     margin-bottom: 0.5em;
-    color: #051c2c;
+    color: #182d5f;
     font-weight: bolder;
 }
 
@@ -133,7 +133,7 @@ form fieldset:first-of-type p textarea {
     width: 100%;
     height: auto;
     padding: 0.75em;
-    border: 1px solid #051c2c;
+    border: 1px solid #182d5f;
     border-radius: 5px;
     box-sizing: border-box;
     transition: border-color 0.3s ease;

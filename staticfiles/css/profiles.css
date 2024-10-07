@@ -120,9 +120,9 @@ h2 {
 }
 
 .btn-primary:hover {
-    background-color: #033b58;
-    color: #fff;
-    border-color: #033b58;
+    background-color: #ffffff;
+    color: #182d5f;
+    border: solid 3px #182d5f;
 }
 
 /* Liked Properties */

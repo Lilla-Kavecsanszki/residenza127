@@ -87,7 +87,7 @@
 </section>
 
 <!-- Contact Us and Brochure Download Section -->
-<section id="contact-us" class="contact-us py-5">
+<section id="contact-us" class="contact-us py-5" style="background-color: #e4e4e4;">
     <div class="container">
         <div class="row">
             <!-- Brochure Download (Left side) -->
@@ -155,7 +155,7 @@
 </section>
 
 <!-- Property Listings Section -->
-<section class="property-listings py-5">
+<section class="property-listings py-5" style="background-color: #e4e4e4;">
     <h2 class="text-center mb-4">{% trans "Property Listings" %}</h2>
     <div class="carousel">
         <div class="frames">
@@ -207,57 +207,8 @@
     </div>
 </section>
 
-
-
 <!-- About Section -->
-<section id="about" class="about py-5">
-    <h2 class="text-center mb-4">{% trans "About the Company" %}</h2>
-    <div class="row justify-content-center">
-        <!-- Company Owner Image -->
-        <div class="col-lg-4 mb-4">
-            <div class="company text-center p-4">
-                <img src="{% static 'images/team-member-2.jpg' %}" alt="{% trans "Company Owner" %}" class="media-item mb-3">
-                <div class="company-description">{% trans "Team" %}</div>
-            </div>
-        </div>
-        
-        <!-- Company Video -->
-        <div class="col-lg-4 mb-4">
-            <div class="company text-center p-4">
-                <video class="media-item mb-3" autoplay muted playsinline loop>
-                    <source src="{% static 'videos/entervideo.mp4' %}" type="video/mp4">
-                    {% trans "Your browser does not support the video tag." %}
-                </video>
-                <div class="company-description">{% trans "The First Building" %}</div>
-            </div>
-        </div>
-        
-        <!-- Statistics Card -->
-        <div class="col-lg-4 mb-4">
-            <div class="company text-center p-4">
-                <div class="stats-card">
-                    <div class="stats-item">
-                        <span class="stats-number">50+</span>
-                        <span class="stats-label">{% trans "Buildings Built" %}</span>
-                    </div>
-                    <div class="stats-item">
-                        <span class="stats-number">200+</span>
-                        <span class="stats-label">{% trans "Apartments Available" %}</span>
-                    </div>
-                    <div class="stats-item">
-                        <span class="stats-number">30%</span>
-                        <span class="stats-label">{% trans "Faster Turnaround" %}</span>
-                    </div>
-                    <!-- Add more statistics as needed -->
-                </div>
-                <div class="company-description">{% trans "Our Achievements" %}</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Company Story Section -->
-<section class="company-story py-5">
+<section id="about" class="company-story py-5">
     <div class="container">
         <div class="row align-items-center">
             <!-- Text Content -->
