@@ -92,21 +92,24 @@
         <div class="row">
             <!-- Brochure Download (Left side) -->
             <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center mb-4 mb-lg-0">
-                <div class="help-button rounded-0" style="width: 120px; height: 120px;">
-                    <a href="{% static 'files/brochure.pdf' %}" class="d-flex h-100" download>
-                        <img src="{% static 'images/brochure.png' %}" alt="Download Brochure" class="mb-2 img-fluid m-auto brochure-icon">
+                <div class="help-button rounded-0" style="width: 150px; height: 150px;">
+                    <a href="path-to-your-brochure.pdf" class="d-flex h-100" download>
+                        <img src="{% static 'images/brochure.png' %}" alt="Download Brochure" class="img-fluid m-auto" style="max-width: 100px;">
                     </a>
                 </div>
-                <a href="{% static 'files/brochure.pdf' %}" class="mt-2 text-center" download style="color: #182d5f; text-decoration: none;">
-                    <p class="mt-2">{% trans "Download Brochure" %}</p>
+                <a href="path-to-your-brochure.pdf" class="mt-2 text-center" download style="color: #182d5f; text-decoration: none;">
+                    <p>{% trans "Download Brochure" %}</p>
                 </a>
             </div>
 
-            <!-- Contact Us Button (Right side) -->
+            <!-- Contact Us Button with Video (Right side) -->
             <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
                 <div class="help-button rounded-0" style="width: 150px; height: 150px;">
                     <a class="help-link d-flex h-100" href="{% url 'contact_us' %}">
-                        <img src="{% static 'images/contact.png' %}" alt="Contact page" class="mb-1 img-fluid m-auto contact-icon">
+                        <video class="m-auto" style="max-width: 120px;" autoplay muted playsinline loop>
+                            <source src="{% static 'videos/contact.mp4' %}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </a>
                 </div>
                 <a href="{% url 'contact_us' %}" class="mt-2 text-center" style="color: #182d5f; text-decoration: none;">

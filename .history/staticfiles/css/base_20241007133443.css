@@ -96,7 +96,7 @@ header {
 }
 
 .navbar-nav a:hover {
-    text-decoration: overline;
+    text-decoration: underline;
 }
 
 /* Icon styles */
@@ -203,31 +203,6 @@ main {
     padding: 0;
     margin: 0;
 }
-
-/* Contact Us and Brochure Download Section */
-    /* Brochure Animation */
-    @keyframes floatDown {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(10px); }
-        100% { transform: translateY(0); }
-    }
-
-    .brochure-icon {
-        animation: floatDown 2s ease-in-out infinite; /* Floating effect */
-    }
-
-    /* Shake Animation */
-    @keyframes shake {
-        0% { transform: translateX(0); }
-        25% { transform: translateX(-5px); }
-        50% { transform: translateX(5px); }
-        75% { transform: translateX(-5px); }
-        100% { transform: translateX(0); }
-    }
-
-    .contact-icon {
-        animation: shake 0.5s ease-in-out infinite; /* Shaking effect */
-    }
 
 /* Property listings styles */
 .property-listings {

@@ -91,27 +91,19 @@
     <div class="container">
         <div class="row">
             <!-- Brochure Download (Left side) -->
-            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center mb-4 mb-lg-0">
-                <div class="help-button rounded-0" style="width: 120px; height: 120px;">
-                    <a href="{% static 'files/brochure.pdf' %}" class="d-flex h-100" download>
-                        <img src="{% static 'images/brochure.png' %}" alt="Download Brochure" class="mb-2 img-fluid m-auto brochure-icon">
-                    </a>
-                </div>
-                <a href="{% static 'files/brochure.pdf' %}" class="mt-2 text-center" download style="color: #182d5f; text-decoration: none;">
-                    <p class="mt-2">{% trans "Download Brochure" %}</p>
+            <div class="col-lg-6 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                <a href="path-to-your-brochure.pdf" class="d-flex" download>
+                    <img src="{% static 'images/brochure.png' %}" alt="Download Brochure" class="img-fluid" style="width: 100px; height: auto;">
                 </a>
             </div>
 
             <!-- Contact Us Button (Right side) -->
-            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
-                <div class="help-button rounded-0" style="width: 150px; height: 150px;">
+            <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                <div class="help-button shadow-sm rounded-0">
                     <a class="help-link d-flex h-100" href="{% url 'contact_us' %}">
-                        <img src="{% static 'images/contact.png' %}" alt="Contact page" class="mb-1 img-fluid m-auto contact-icon">
+                        <img src="{% static 'images/contact.gif' %}" alt="Contact Us" class="img-fluid" style="width: 60px; height: auto; margin: auto;">
                     </a>
                 </div>
-                <a href="{% url 'contact_us' %}" class="mt-2 text-center" style="color: #182d5f; text-decoration: none;">
-                    <p>{% trans "Reach Out" %}</p>
-                </a>
             </div>
         </div>
     </div>

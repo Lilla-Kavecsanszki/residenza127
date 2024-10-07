@@ -216,7 +216,7 @@ main {
         animation: floatDown 2s ease-in-out infinite; /* Floating effect */
     }
 
-    /* Shake Animation */
+    /* Video Shake Animation */
     @keyframes shake {
         0% { transform: translateX(0); }
         25% { transform: translateX(-5px); }
