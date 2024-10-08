@@ -212,69 +212,6 @@ main {
     margin: 0;
 }
 
-/* Container for images and the map */
-.img-container, .map-container {
-    aspect-ratio: 1;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 3px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 1); /* Shadow for both images and map */
-}
-
-/* Ensure the hover effect applies to both images and map */
-.hover-zoom {
-    aspect-ratio: 1/1;
-    overflow: hidden;  /* Hide any overflow during zoom */
-    position: relative;
-    width: 100%;
-    height: auto;
-    transition: transform 0.4s ease-in-out; /* Smooth zoom effect */
-}
-
-/* Ensure images fill their container and zoom correctly */
-.hover-zoom img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* Ensure images don't distort */
-    transition: transform 0.4s ease-in-out; /* Smooth zoom effect */
-    display: block; /* Ensures no extra space around the image */
-}
-
-/* Apply zoom effect to images on hover */
-.hover-zoom:hover img {
-    transform: scale(1.1); /* Zoom effect */
-}
-
-/* Ensure iframe fills container and zoom works for the map */
-.hover-zoom iframe {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.4s ease-in-out;
-}
-
-/* Apply zoom effect to iframe (map) on hover */
-.hover-zoom:hover iframe {
-    transform: scale(1.1); /* Zoom effect */
-}
-
-/* Map-specific styling */
-.map-container {
-    border-radius: 3px; /* Same rounded corners as images */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 1); /* Same shadow as images */
-}
-
-/* Apartment types section */
-.apartment-types img {
-    max-width: 100%; /* Ensures the image is responsive */
-    height: auto;    /* Keeps aspect ratio */
-}
-
-.d-flex.justify-content-center {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Vertically center content if needed */
-}
-
 /* Contact Us and Brochure Download Section */
     /* Brochure Animation */
     @keyframes floatDown {
@@ -522,18 +459,26 @@ main {
 .company-story .company-video {
     width: 100%;
     height: auto;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Reduced shadow opacity for balance */
     border-radius: 5px;
 }
 
 .about-video {
-    padding-left: 5em;
+    padding-left: 5em; /* This will be adjusted in the media queries for smaller screens */
 }
 
 @media (max-width: 991px) {
     .company-story .col-lg-7,
     .company-story .col-lg-5 {
-        text-align: justify;
+        text-align: center; /* Change to center on smaller screens */
+    }
+
+    .company-story h2 {
+        font-size: 1.8em; /* Adjust heading size for tablets and smaller screens */
+    }
+
+    .company-story p {
+        font-size: 0.9em; /* Adjust font size for better readability on smaller screens */
     }
 
     .about-video {
@@ -543,6 +488,19 @@ main {
 }
 
 @media (max-width: 768px) {
+    .company-story {
+        padding: 1em; /* Reduce padding on smaller screens */
+    }
+
+    .company-story h2 {
+        font-size: 1.6em; /* Further reduce heading size on smaller screens */
+    }
+
+    .company-story p {
+        font-size: 0.85em; /* Smaller font for mobile devices */
+        line-height: 1.4;  /* Tighter line spacing for mobile readability */
+    }
+
     .about-video {
         padding-left: 0; /* No padding on mobile screens */
         margin-top: 1.5em; /* Ensure video has breathing space on top */
@@ -550,11 +508,20 @@ main {
 }
 
 @media (max-width: 576px) {
+    .company-story h2 {
+        font-size: 1.4em; /* Smaller heading on very small screens */
+    }
+
+    .company-story p {
+        font-size: 0.8em; /* Smaller font for very small mobile devices */
+    }
+
     .about-video {
         padding-left: 0; /* No padding for very small screens */
         margin-top: 1em;  /* Add margin on top of the video */
     }
 }
+
 
 /* Footer styles */
 .footer-cover {

@@ -212,68 +212,58 @@ main {
     margin: 0;
 }
 
-/* Container for images and the map */
-.img-container, .map-container {
-    aspect-ratio: 1;
+/* Hover effect for images and map */
+
+.img-container{
+    aspect-ratio: 1/1;
     width: 100%;
     overflow: hidden;
-    border-radius: 3px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 1); /* Shadow for both images and map */
+    border-radius: 3px; /* Rounded corners for aesthetics */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Ensure the hover effect applies to both images and map */
 .hover-zoom {
-    aspect-ratio: 1/1;
-    overflow: hidden;  /* Hide any overflow during zoom */
+    aspect-ratio: 1/1; /* Ensure equal aspect ratio */
+    overflow: hidden;  /* Hide any overflow when zooming */
     position: relative;
     width: 100%;
     height: auto;
     transition: transform 0.4s ease-in-out; /* Smooth zoom effect */
 }
 
-/* Ensure images fill their container and zoom correctly */
 .hover-zoom img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* Ensure images don't distort */
+    object-fit: cover;  /* Ensures images don't distort */
     transition: transform 0.4s ease-in-out; /* Smooth zoom effect */
-    display: block; /* Ensures no extra space around the image */
 }
 
-/* Apply zoom effect to images on hover */
+/* Apply hover zoom effect to both images and iframes */
 .hover-zoom:hover img {
-    transform: scale(1.1); /* Zoom effect */
+    transform: scale(1.1); /* Zoom in effect on hover */
 }
 
-/* Ensure iframe fills container and zoom works for the map */
+/* Map-specific hover zoom */
 .hover-zoom iframe {
     width: 100%;
     height: 100%;
     transition: transform 0.4s ease-in-out;
 }
 
-/* Apply zoom effect to iframe (map) on hover */
+/* Apply zoom on hover for the map */
 .hover-zoom:hover iframe {
-    transform: scale(1.1); /* Zoom effect */
+    transform: scale(1.1); /* Zoom in effect on hover for map */
 }
 
-/* Map-specific styling */
+/* Map container */
 .map-container {
-    border-radius: 3px; /* Same rounded corners as images */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 1); /* Same shadow as images */
+    aspect-ratio: 1/1;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 3px; /* Rounded corners for aesthetics */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow effect */
 }
 
-/* Apartment types section */
-.apartment-types img {
-    max-width: 100%; /* Ensures the image is responsive */
-    height: auto;    /* Keeps aspect ratio */
-}
-
-.d-flex.justify-content-center {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Vertically center content if needed */
-}
 
 /* Contact Us and Brochure Download Section */
     /* Brochure Animation */

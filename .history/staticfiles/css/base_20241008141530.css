@@ -212,69 +212,6 @@ main {
     margin: 0;
 }
 
-/* Container for images and the map */
-.img-container, .map-container {
-    aspect-ratio: 1;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 3px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 1); /* Shadow for both images and map */
-}
-
-/* Ensure the hover effect applies to both images and map */
-.hover-zoom {
-    aspect-ratio: 1/1;
-    overflow: hidden;  /* Hide any overflow during zoom */
-    position: relative;
-    width: 100%;
-    height: auto;
-    transition: transform 0.4s ease-in-out; /* Smooth zoom effect */
-}
-
-/* Ensure images fill their container and zoom correctly */
-.hover-zoom img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* Ensure images don't distort */
-    transition: transform 0.4s ease-in-out; /* Smooth zoom effect */
-    display: block; /* Ensures no extra space around the image */
-}
-
-/* Apply zoom effect to images on hover */
-.hover-zoom:hover img {
-    transform: scale(1.1); /* Zoom effect */
-}
-
-/* Ensure iframe fills container and zoom works for the map */
-.hover-zoom iframe {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.4s ease-in-out;
-}
-
-/* Apply zoom effect to iframe (map) on hover */
-.hover-zoom:hover iframe {
-    transform: scale(1.1); /* Zoom effect */
-}
-
-/* Map-specific styling */
-.map-container {
-    border-radius: 3px; /* Same rounded corners as images */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 1); /* Same shadow as images */
-}
-
-/* Apartment types section */
-.apartment-types img {
-    max-width: 100%; /* Ensures the image is responsive */
-    height: auto;    /* Keeps aspect ratio */
-}
-
-.d-flex.justify-content-center {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Vertically center content if needed */
-}
-
 /* Contact Us and Brochure Download Section */
     /* Brochure Animation */
     @keyframes floatDown {
@@ -494,6 +431,102 @@ main {
 
 
 /* About Section Styles */
+.about {
+    background-color: #182d5f; 
+    padding: 5em; /* Reduced padding for better responsiveness */
+    margin-bottom: 3em;      
+    text-align: center;      
+}
+
+.about h2 {
+    color: white;
+    font-family: "Italiana", sans-serif;
+    text-transform: uppercase;             
+    margin-bottom: 1.5em;      
+    font-size: 2.5em;         
+    font-weight: 600;         
+}
+
+/* Make the .about section more responsive */
+@media (max-width: 992px) {
+    .about {
+        padding: 3em 1em; /* Adjust padding for medium devices */
+    }
+
+    .about h2 {
+        font-size: 2em; /* Adjust font size for medium devices */
+    }
+}
+
+@media (max-width: 576px) {
+    .about {
+        padding: 2em 1em; /* Adjust padding for small devices */
+    }
+
+    .about h2 {
+        font-size: 1.5em; /* Adjust font size for small devices */
+    }
+}
+
+/* Company Card Styles */
+.company {
+    background-color: white;   
+    border: 1px solid #182d5f;
+    border-radius: 1px;      
+    padding: 1.5em;              /* Increased padding for a more luxurious feel */
+    margin: 1.5em;             /* Adjusted margin for spacing between cards */
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+    text-align: center;  
+    height: 450px;              
+}
+
+/* Media Styling for Uniformity */
+.company img, 
+.media-item {
+    width: 100%;         
+    height: 350px;            
+    object-fit: cover;         /* Cover to maintain aspect ratio and fill the space */
+    border-radius: 5px;       
+    display: block;            /* Ensure block-level rendering */
+    margin: 0 auto;            /* Center the media within its container */
+}
+
+/* Description Styling */
+.company-description {
+    color: #182d5f;            
+    font-size: 1.3em;          
+    margin-top: 0.5em;           /* Space above the description */
+    font-weight: 500;         
+}
+
+.stats-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #182d5f;
+    border-radius: 5px;
+}
+
+.stats-item {
+    margin-bottom: 1em;
+}
+
+.stats-number {
+    font-size: 3em;            /* Large font size for numbers */
+    color: #182d5f;            /* Dark color for emphasis */
+    font-weight: 700;          /* Bold for prominence */
+    display: block;            /* Block display for better alignment */
+}
+
+.stats-label {
+    font-size: 1.2em;          /* Slightly larger font size for labels */
+    color: #182d5f;            /* Dark color for consistency */
+    font-weight: 400;          /* Normal weight for labels */
+    text-transform: uppercase; /* Uppercase for a classic feel */
+}
+
+/* Company Story Section Styles */
 .company-story {
     background-color: #ffffff; 
     padding: 1em;                
@@ -535,26 +568,8 @@ main {
     .company-story .col-lg-5 {
         text-align: justify;
     }
-
-    .about-video {
-        padding-left: 0; /* Remove padding to center the video on smaller screens */
-        margin-top: 2em;  /* Add some margin above the video on smaller screens */
-    }
 }
 
-@media (max-width: 768px) {
-    .about-video {
-        padding-left: 0; /* No padding on mobile screens */
-        margin-top: 1.5em; /* Ensure video has breathing space on top */
-    }
-}
-
-@media (max-width: 576px) {
-    .about-video {
-        padding-left: 0; /* No padding for very small screens */
-        margin-top: 1em;  /* Add margin on top of the video */
-    }
-}
 
 /* Footer styles */
 .footer-cover {

@@ -27,19 +27,19 @@
     <div class="container">
         <div class="row align-items-center">
             <!-- Right side: Title and Text -->
-            <div class="col-lg-6 order-1 order-lg-2"> <!-- Text column -->
+            <div class="col-lg-6 order-1 order-lg-1">
                 <h1>Residenza 126</h1>
                 <h2 class="mb-4">{% trans "Discover Our Unparalleled Experiences" %}</h2>
                 <p>
                     {% blocktrans %}
                         Just a few steps away from all the essential amenities and services, this exclusive residence offers a private and relaxing environment, guaranteeing you maximum privacy. Each apartment has been designed to adapt to your needs, conceived for your daily relaxation. Choose your new home and customize it according to your style, without sacrificing the tranquility and comfort of living in a convenient and central location.
                     {% endblocktrans %}
-                </p>
+                </p>                
                 <p>{% trans "Bright environments with top-of-the-range Finstral brand fixtures, airy and cared for in every detail with the best Made in Italy coverings and high-quality materials." %}</p>
             </div>
 
             <!-- Left side: Photo of Residenza126 -->
-            <div class="col-lg-6 order-2 order-lg-1"> <!-- Image column -->
+            <div class="col-lg-6 order-2 order-lg-2">
                 <img src="{% static 'images/filler.jpg' %}" alt="Residenza126 Building" class="img-fluid" />
             </div>
         </div>
@@ -133,31 +133,31 @@
 
         <!-- First Apartment Type -->
         <div id="bilocali" class="row mb-4">
-            <!-- Text Section (First on small screens) -->
-            <div class="col-lg-6 col-12 d-flex flex-column justify-content-center order-1 order-lg-1">
+            <!-- Text Section (Left) -->
+            <div class="col-lg-6 d-flex flex-column justify-content-center">
                 <h3>{% trans "Two-room Apartments" %}</h3>
                 <p>
                     {% trans "designed down to the smallest details to offer maximum comfort and make the most of all the spaces. combination of style and comfort with a private terrace of 20 square meters and an exclusive Jacuzzi, offering a personal oasis of relaxation. Designed with attention to detail, they are an excellent solution for those looking for a smart investment or an elegant urban refuge of serenity." %}
                 </p>
             </div>
-            <!-- Image Section (Second on small screens) -->
-            <div class="col-lg-6 col-12 d-flex justify-content-center order-2 order-lg-2">
+            <!-- Image Section (Right) -->
+            <div class="col-lg-6">
                 <img src="{% static 'images/filler.jpg' %}" alt="Apartment Type 1" class="img-fluid">
             </div>
         </div>
 
         <!-- Second Apartment Type -->
         <div id="trilocali" class="row mb-4">
-            <!-- Text Section (First on small screens) -->
-            <div class="col-lg-6 col-12 d-flex flex-column justify-content-center order-1 order-lg-2">
+            <!-- Image Section (Left) -->
+            <div class="col-lg-6">
+                <img src="{% static 'images/filler.jpg' %}" alt="Apartment Type 2" class="img-fluid">
+            </div>
+            <!-- Text Section (Right) -->
+            <div class="col-lg-6 d-flex flex-column justify-content-center">
                 <h3>{% trans "Three-room Apartments" %}</h3>
                 <p>
                     {% trans "of different sizes and customizable according to your needs. A rare opportunity that combines elegance, comfort and practicality in a single housing solution. Fall in love with the large living room with integrated kitchen, the environment designed specifically to experience convivial and intimate moments, accompanied by the exposed silver fir wood roof that gives warmth and refinement to the interiors." %}
                 </p>
-            </div>
-            <!-- Image Section (Second on small screens) -->
-            <div class="col-lg-6 col-12 d-flex justify-content-center order-2 order-lg-1">
-                <img src="{% static 'images/filler.jpg' %}" alt="Apartment Type 2" class="img-fluid">
             </div>
         </div>
     </div>

@@ -219,15 +219,6 @@
                 </a>
             </div>
 
-            <!-- Column 2: Residenza 126 -->
-            <div class="col-md-2 mb-3 mb-md-0">
-                <p class="lilla mb-2"><strong>Residenza 126:</strong></p>
-                <p>
-                    <a href="{% url 'home' %}#building" class="footer-link building-link">Building Info</a><br>
-                    <a href="{% url 'home' %}#location" class="footer-link location-link">View Location</a>
-                </p>
-            </div>
-
             <!-- Column 3: Apartment Types -->
             <div class="col-md-2 mb-3 mb-md-0">
                 <p class="lilla mb-2"><strong>Apartment Types:</strong></p>
@@ -235,6 +226,15 @@
                     <li><a href="{% url 'home' %}#bilocali" class="footer-link apartment-link">Bilocali</a></li>
                     <li><a href="{% url 'home' %}#trilocali" class="footer-link apartment-link">Trilocali</a></li>
                 </ul>
+            </div>
+
+            <!-- Column 2: Residenza 126 -->
+            <div class="col-md-2 mb-3 mb-md-0">
+                <p class="lilla mb-2"><strong>Residenza 126:</strong></p>
+                <p>
+                    <a href="{% url 'home' %}#building" class="footer-link building-link">Building Info</a><br>
+                    <a href="{% url 'home' %}#location" class="footer-link location-link">View Location</a>
+                </p>
             </div>
 
             <!-- Column 4: Social Media Links -->
@@ -247,7 +247,10 @@
                     </span>
                 </p>
             </div>
+        </div>
 
+        <!-- Row for Contact Information -->
+        <div class="row mt-4 text-center text-md-left"> <!-- Centering text on mobile -->
             <!-- Column 5: Contact Information -->
             <div class="col-md-2 mb-3 mb-md-0">
                 <p class="lilla mb-2"><strong>Contact Information:</strong></p>
@@ -267,7 +270,6 @@
         </div>
     </div>
 </footer>
-
 
     <!-- JavaScript Files -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

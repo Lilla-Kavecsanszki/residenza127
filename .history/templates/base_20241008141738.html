@@ -211,16 +211,16 @@
 <!-- Footer Section -->
 <footer class="footer-cover text-white py-4">
     <div class="footer-content container-fluid">
-        <div class="row justify-content-between text-center text-md-left"> <!-- Centering text on mobile -->
+        <div class="row justify-content-between"> <!-- Add justify-content-between to distribute evenly -->
             <!-- Column 1: Logo -->
-            <div class="col-md-2 mb-3 mb-md-0"> <!-- Added margin for mobile -->
-                <a href="{% url 'home' %}">
-                    <img src="{% static 'images/logo.png' %}" alt="Logo" class="footer-logo"> 
+            <div class="col-md-2 text-left">
+                <a href="{% url 'home' %}">  <!-- Link to homepage -->
+                    <img src="{% static 'images/logo.png' %}" alt="Logo" class="footer-logo">  <!-- Replace with your logo's path -->
                 </a>
             </div>
 
             <!-- Column 2: Residenza 126 -->
-            <div class="col-md-2 mb-3 mb-md-0">
+            <div class="col-md-2 text-left">
                 <p class="lilla mb-2"><strong>Residenza 126:</strong></p>
                 <p>
                     <a href="{% url 'home' %}#building" class="footer-link building-link">Building Info</a><br>
@@ -229,7 +229,7 @@
             </div>
 
             <!-- Column 3: Apartment Types -->
-            <div class="col-md-2 mb-3 mb-md-0">
+            <div class="col-md-2 text-left">
                 <p class="lilla mb-2"><strong>Apartment Types:</strong></p>
                 <ul class="list-unstyled">
                     <li><a href="{% url 'home' %}#bilocali" class="footer-link apartment-link">Bilocali</a></li>
@@ -238,7 +238,7 @@
             </div>
 
             <!-- Column 4: Social Media Links -->
-            <div class="col-md-2 mb-3 mb-md-0">
+            <div class="col-md-2 text-left">
                 <p class="socials mb-3">
                     <span class="icon-container">
                         <a class="links whatsapp" href="https://wa.me/393333951557"><i class="fab fa-whatsapp icon"></i></a>
@@ -248,8 +248,9 @@
                 </p>
             </div>
 
+
             <!-- Column 5: Contact Information -->
-            <div class="col-md-2 mb-3 mb-md-0">
+            <div class="col-md-2 text-left">
                 <p class="lilla mb-2"><strong>Contact Information:</strong></p>
                 <p class="mb-1"><strong>Phone:</strong> <a href="tel:+393333951557" class="footer-link email-link">+39 333 395 1557</a></p>
                 <p class="mb-1"><strong>Email:</strong> <a href="mailto:ar.gi.srls@pec.it" class="footer-link email-link">ar.gi.srls@pec.it</a></p>
@@ -267,7 +268,6 @@
         </div>
     </div>
 </footer>
-
 
     <!-- JavaScript Files -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

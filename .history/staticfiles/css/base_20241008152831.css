@@ -263,18 +263,6 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 1); /* Same shadow as images */
 }
 
-/* Apartment types section */
-.apartment-types img {
-    max-width: 100%; /* Ensures the image is responsive */
-    height: auto;    /* Keeps aspect ratio */
-}
-
-.d-flex.justify-content-center {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Vertically center content if needed */
-}
-
 /* Contact Us and Brochure Download Section */
     /* Brochure Animation */
     @keyframes floatDown {

@@ -212,67 +212,37 @@ main {
     margin: 0;
 }
 
-/* Container for images and the map */
-.img-container, .map-container {
-    aspect-ratio: 1;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 3px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 1); /* Shadow for both images and map */
-}
-
-/* Ensure the hover effect applies to both images and map */
+/* Ensure images and the map are the same size using aspect ratio */
 .hover-zoom {
-    aspect-ratio: 1/1;
-    overflow: hidden;  /* Hide any overflow during zoom */
+    aspect-ratio: 1/1; /* This creates a square aspect ratio */
+    overflow: hidden; /* Hide any overflow due to the hover effect */
     position: relative;
-    width: 100%;
+    width: 100%; /* Ensure they take full width */
     height: auto;
     transition: transform 0.4s ease-in-out; /* Smooth zoom effect */
 }
 
-/* Ensure images fill their container and zoom correctly */
-.hover-zoom img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* Ensure images don't distort */
-    transition: transform 0.4s ease-in-out; /* Smooth zoom effect */
-    display: block; /* Ensures no extra space around the image */
-}
-
-/* Apply zoom effect to images on hover */
-.hover-zoom:hover img {
-    transform: scale(1.1); /* Zoom effect */
-}
-
-/* Ensure iframe fills container and zoom works for the map */
+.hover-zoom img,
 .hover-zoom iframe {
     width: 100%;
     height: 100%;
+    object-fit: cover; /* This ensures the images and map fill the container while maintaining aspect ratio */
     transition: transform 0.4s ease-in-out;
 }
 
-/* Apply zoom effect to iframe (map) on hover */
+/* Hover effect: slight zoom-in */
+.hover-zoom:hover img,
 .hover-zoom:hover iframe {
-    transform: scale(1.1); /* Zoom effect */
+    transform: scale(1.1); /* Zoom effect on hover */
 }
 
-/* Map-specific styling */
+/* Map container should have the same sizing */
 .map-container {
-    border-radius: 3px; /* Same rounded corners as images */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 1); /* Same shadow as images */
-}
-
-/* Apartment types section */
-.apartment-types img {
-    max-width: 100%; /* Ensures the image is responsive */
-    height: auto;    /* Keeps aspect ratio */
-}
-
-.d-flex.justify-content-center {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Vertically center content if needed */
+    aspect-ratio: 1/1; /* Same aspect ratio as the images */
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px; /* Optional: adds a rounded border to the map */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add a shadow effect to the map for aesthetics */
 }
 
 /* Contact Us and Brochure Download Section */
