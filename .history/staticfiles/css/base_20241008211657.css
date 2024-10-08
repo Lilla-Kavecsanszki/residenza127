@@ -206,7 +206,69 @@ header {
 }
 
 /* hero text animation */
-
+:root {
+    --primary-color: #c8dc71;
+    --gradient-color: linear-gradient(180deg, #d2ff00 0%, #00d2ff 100%);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #16181b;
+  }
+  
+  .hero {
+    position: relative; /* Needed to position child elements */
+    color: white; /* Adjust to your design */
+  }
+  
+  .hero-content {
+    position: absolute; /* Position it relative to .hero */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering */
+    text-align: center;
+  }
+  
+  /* Custom */
+  
+  h1 {
+    color: #dbd56e;
+    background: -webkit-linear-gradient(25deg, #eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  
+  /* Typing Effect for the paragraph */
+  .hero-text {
+    overflow: hidden; /* Hide text that hasn't been "typed" */
+    white-space: nowrap; /* Prevent text from wrapping */
+    border-right: 2px solid; /* Cursor effect */
+    animation: type 4s steps(40, end), cursor 0.75s step-end infinite; /* Adjust timing to your needs */
+  }
+  
+  @keyframes type {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes cursor {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
 
 /* Main content styles */
 main {

@@ -205,8 +205,40 @@ header {
     font-size: 2em;
 }
 
-/* hero text animation */
+/* Hero text animation */
+.typing-text {
+    border-right: 2px solid white; /* Cursor effect */
+    display: inline-block; /* Change to inline-block for width control */
+    overflow: hidden; /* Hide text that hasn't been "typed" */
+    white-space: nowrap; /* Prevent text from wrapping within the typing effect */
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+    max-width: 100%; /* Ensures it doesn’t exceed the container width */
+}
 
+@keyframes typing {
+    from {
+        width: 0; /* Start with no width */
+    }
+    to {
+        width: 100%; /* Expand to full width */
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white; /* Adjust to match text color */
+    }
+}
+
+/* Allow the text to wrap after the typing effect */
+.typing-text-wrap {
+    display: block; /* Make it a block element for wrapping */
+    white-space: normal; /* Allow wrapping */
+    overflow: visible; /* Ensure overflow is visible */
+}
 
 /* Main content styles */
 main {

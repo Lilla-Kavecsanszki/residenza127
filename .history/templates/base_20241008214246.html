@@ -311,6 +311,34 @@
             }
         });
     </script>
+    <script>
+        gsap.set(".title", {autoAlpha:1});
+
+        // split title
+        function setupSplits() {
+        
+          let tlSplitGreat = gsap.timeline({
+            onComplete: () => { SplitGreat.revert(); }
+          });
+        
+          let SplitGreat = new SplitText(".title", { type:"words,chars" }), 
+              chars = SplitGreat.chars;
+        
+          tlSplitGreat.from(chars, {
+            duration: 0.6,
+            opacity:0,
+            y: 10,
+            ease: "circ.out",
+            stagger: 0.02,
+          }, "+=0");
+        
+        };
+        
+        $(document).ready(function() {
+          console.log("document ready");
+          setupSplits();
+        });
+    </script>
     {% block extra_scripts %}{% endblock %}
 </body>
 </html>

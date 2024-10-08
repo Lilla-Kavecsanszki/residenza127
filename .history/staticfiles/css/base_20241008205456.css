@@ -203,10 +203,55 @@ header {
 
 .hero p {
     font-size: 2em;
+    justify-content: center;
 }
 
-/* hero text animation */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em; /* Adjust size for tablets */
+    }
 
+    .hero p {
+        font-size: 1.5em; /* Adjust size for tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2em; /* Adjust size for mobile phones */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Adjust size for mobile phones */
+    }
+}
+
+/* Hero text animation */
+.typing-text {
+    border-right: 2px solid white; /* Cursor effect */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide text that hasn't been "typed" */
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white; /* Adjust to match text color */
+    }
+}
 
 /* Main content styles */
 main {

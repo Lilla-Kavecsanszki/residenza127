@@ -205,8 +205,32 @@ header {
     font-size: 2em;
 }
 
-/* hero text animation */
+/* Hero text animation */
+.typing-text {
+    border-right: 2px solid white; /* Cursor effect */
+    white-space: pre-wrap; /* Allow text to wrap */
+    overflow: hidden; /* Hide text that hasn't been "typed" */
+    max-width: 100%; /* Ensure it fits within the container */
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
 
+@keyframes typing {
+    from {
+        width: 0; /* Start with no width */
+    }
+    to {
+        width: 100%; /* Expand to full width */
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white; /* Adjust to match text color */
+    }
+}
 
 /* Main content styles */
 main {
