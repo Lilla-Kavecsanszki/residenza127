@@ -806,7 +806,6 @@ footer a .icon {
     /* Style for the links inside the dropdown */
     .navbar-nav .nav-link {
         color: #182d5f; /* Text color for the links */
-        text-shadow: white 1px 1px;
     }
 
     /* Style when the user hovers over the links */

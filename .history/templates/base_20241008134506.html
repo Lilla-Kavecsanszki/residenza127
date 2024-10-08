@@ -133,7 +133,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
                     <i class="fas fa-bars"></i>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="main-nav">
+                <div class="collapse dropdown-menu navbar-collapse justify-content-end" id="main-nav">
                     <ul class="navbar-nav">
                         {% if request.user.is_authenticated %}
                             <!-- Check if user is superuser -->
@@ -193,7 +193,6 @@
                 </div>
                 {% endfor %}
             </div>
-        </div>
     </header>
 
     <!-- Main content -->

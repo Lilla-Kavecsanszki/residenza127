@@ -799,14 +799,13 @@ footer a .icon {
 /* Change the background of the collapsed navbar (mobile view) */
 @media (max-width: 991.98px) { /* Bootstrap breakpoint for medium screens and smaller */
     .navbar-collapse {
-        background-color: #a9a9a9; /* Replace this with your desired background color */
+        background-color: #f8f9fa; /* Replace this with your desired background color */
         padding: 1rem; /* Optional: add some padding inside the menu */
     }
 
     /* Style for the links inside the dropdown */
     .navbar-nav .nav-link {
-        color: #182d5f; /* Text color for the links */
-        text-shadow: white 1px 1px;
+        color: #000; /* Text color for the links */
     }
 
     /* Style when the user hovers over the links */

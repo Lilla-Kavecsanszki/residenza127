@@ -795,32 +795,3 @@ footer a .icon {
         background-position: 200%;
     }
 }
-
-/* Change the background of the collapsed navbar (mobile view) */
-@media (max-width: 991.98px) { /* Bootstrap breakpoint for medium screens and smaller */
-    .navbar-collapse {
-        background-color: #a9a9a9; /* Replace this with your desired background color */
-        padding: 1rem; /* Optional: add some padding inside the menu */
-    }
-
-    /* Style for the links inside the dropdown */
-    .navbar-nav .nav-link {
-        color: #182d5f; /* Text color for the links */
-        text-shadow: white 1px 1px;
-    }
-
-    /* Style when the user hovers over the links */
-    .navbar-nav .nav-link:hover {
-        background-color: rgba(0, 0, 0, 0.1); /* Background color on hover */
-        color: #000; /* Text color on hover */
-    }
-}
-
-/* Optional: Style the hamburger icon */
-.navbar-toggler {
-    border-color: #ccc; /* Change the border color of the hamburger button */
-}
-
-.navbar-toggler .fas.fa-bars {
-    color: #333; /* Change the icon color */
-}
