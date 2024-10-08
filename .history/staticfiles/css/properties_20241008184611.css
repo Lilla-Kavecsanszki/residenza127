@@ -91,7 +91,7 @@ h1, h2 {
     max-width: 250px; /* Maximum width for the search input */
     border-bottom: 1px solid #182d5f; /* Bottom border for the search input */
     background-color: transparent; /* Transparent background */
-    color: #182d5f; 
+    color: #fff; /* White text color */
 }
 
 /* Responsive Design */
