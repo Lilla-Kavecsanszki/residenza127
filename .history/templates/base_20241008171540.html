@@ -211,21 +211,12 @@
 <!-- Footer Section -->
 <footer class="footer-cover text-white py-4">
     <div class="footer-content container-fluid">
-        <div class="row justify-content-between text-center text-md-left"> <!-- Centering text on mobile -->
+        <div class="row justify-content-center justify-content-md-between text-center text-md-left">
             <!-- Column 1: Logo -->
-            <div class="col-md-2 mb-3 mb-md-0"> <!-- Added margin for mobile -->
+            <div class="col-md-2 mb-3 mb-md-0">
                 <a href="{% url 'home' %}">
                     <img src="{% static 'images/logo.png' %}" alt="Logo" class="footer-logo"> 
                 </a>
-            </div>
-
-            <!-- Column 2: Residenza 126 -->
-            <div class="col-md-2 mb-3 mb-md-0">
-                <p class="lilla mb-2"><strong>Residenza 126:</strong></p>
-                <p>
-                    <a href="{% url 'home' %}#building" class="footer-link building-link">Building Info</a><br>
-                    <a href="{% url 'home' %}#location" class="footer-link location-link">View Location</a>
-                </p>
             </div>
 
             <!-- Column 3: Apartment Types -->
@@ -237,10 +228,19 @@
                 </ul>
             </div>
 
+            <!-- Column 2: Residenza 126 -->
+            <div class="col-md-2 mb-3 mb-md-0">
+                <p class="lilla mb-2"><strong>Residenza 126:</strong></p>
+                <p>
+                    <a href="{% url 'home' %}#building" class="footer-link building-link">Building Info</a><br>
+                    <a href="{% url 'home' %}#location" class="footer-link location-link">View Location</a>
+                </p>
+            </div>
+
             <!-- Column 4: Social Media Links -->
             <div class="col-md-2 mb-3 mb-md-0">
                 <p class="socials mb-3">
-                    <span class="icon-container">
+                    <span class="icon-container d-flex justify-content-around"> <!-- Flexbox for equal distance -->
                         <a class="links whatsapp" href="https://wa.me/393333951557"><i class="fab fa-whatsapp icon"></i></a>
                         <a class="links insta" href="https://www.instagram.com/ar.gi.costruzioni_/?hl=en"><i class="fab fa-instagram icon"></i></a>
                         <a class="links location" href="https://www.google.com/maps/search/?api=1&query=Via+Cagliari+126,+Oristano"><i class="fa-solid fa-location-dot icon"></i></a>
@@ -251,14 +251,8 @@
             <!-- Column 5: Contact Information -->
             <div class="col-md-2 mb-3 mb-md-0">
                 <p class="lilla mb-2"><strong>Contact Information:</strong></p>
-                <p class="mb-1">
-                    <strong>Phone:</strong><br> <!-- Added <br> for line break -->
-                    <a href="tel:+393333951557" class="footer-link email-link">+39 333 395 1557</a>
-                </p>
-                <p class="mb-1">
-                    <strong>Email:</strong><br> <!-- Added <br> for line break -->
-                    <a href="mailto:ar.gi.srls@pec.it" class="footer-link email-link">ar.gi.srls@pec.it</a>
-                </p>
+                <p class="mb-1"><strong>Phone:</strong> <a href="tel:+393333951557" class="footer-link email-link">+39 333 395 1557</a></p>
+                <p class="mb-1"><strong>Email:</strong> <a href="mailto:ar.gi.srls@pec.it" class="footer-link email-link">ar.gi.srls@pec.it</a></p>
             </div>
         </div>
 

@@ -678,18 +678,6 @@ footer a .icon {
     margin-top: 5px;
 }
 
-@media (max-width: 1076px) {
-    .links:last-child {
-        margin-left: 10px;
-    }
-}
-
-@media (max-width: 767px) {
-    .links:last-child {
-        margin-left: 10px;
-    }
-}
-
   /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

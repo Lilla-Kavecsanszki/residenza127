@@ -678,18 +678,6 @@ footer a .icon {
     margin-top: 5px;
 }
 
-@media (max-width: 1076px) {
-    .links:last-child {
-        margin-left: 10px;
-    }
-}
-
-@media (max-width: 767px) {
-    .links:last-child {
-        margin-left: 10px;
-    }
-}
-
   /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -821,3 +809,16 @@ footer a .icon {
     color: #333; /* Change the icon color */
 }
 
+.footer-cover {
+    background-color: #000; /* Set your desired background color */
+}
+
+.icon-container a {
+    color: white; /* Ensure icons are white for visibility */
+    font-size: 1.5em; /* Adjust size as needed */
+}
+
+.footer-logo {
+    max-width: 100%; /* Ensure the logo is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
