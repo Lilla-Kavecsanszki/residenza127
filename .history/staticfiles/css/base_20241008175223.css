@@ -206,28 +206,17 @@ header {
 }
 
 /* Hero text animation */
-.typing-text {
-    border-right: 2px solid white; /* Cursor effect */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide text that hasn't been "typed" */
-    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+.scale-fade-text {
+    opacity: 0; /* Start hidden */
+    transform: scale(0.8); /* Start slightly smaller */
+    animation: scaleFadeIn 1s forwards; /* Animation name and duration */
+    animation-delay: 0.5s; /* Delay to allow video to load */
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
+@keyframes scaleFadeIn {
     to {
-        width: 100%;
-    }
-}
-
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: white; /* Adjust to match text color */
+        opacity: 1; /* Final opacity */
+        transform: scale(1); /* Final scale */
     }
 }
 
