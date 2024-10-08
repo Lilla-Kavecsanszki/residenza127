@@ -242,7 +242,7 @@
                     <span class="icon-container">
                         <a class="links whatsapp" href="https://wa.me/393333951557"><i class="fab fa-whatsapp icon"></i></a>
                         <a class="links insta" href="https://www.instagram.com/ar.gi.costruzioni_/?hl=en"><i class="fab fa-instagram icon"></i></a>
-                        <a class="links location" href="https://www.google.com/maps/search/?api=1&query=Via+Cagliari+126,+Oristano"><i class="fa-solid fa-location-dot icon"></i></a>
+                        <a class="links location" href="https://www.google.com/maps/search/?api=1&query=Via+Cagliari+126,+Oristano"><i class="fas fa-map-marker-alt icon"></i></a>
                     </span>
                 </p>
             </div>
@@ -305,21 +305,25 @@
         });
     </script>
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Get the height of the navbar dynamically
-        const navbarHeight = document.querySelector('nav').offsetHeight;
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
     
-        // Set padding and margin for each section
-        const sections = ['apartment-types', 'about', 'contact']; // Add your section IDs here
-        sections.forEach(section => {
-            const sectionElement = document.getElementById(section);
-            if (sectionElement) {
-                sectionElement.style.paddingTop = `${navbarHeight}px`;
-                sectionElement.style.marginTop = `-${navbarHeight}px`;
-            }
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+    
+                if (targetElement) {
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight; // Get the height of your navbar
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
+    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth' // Smooth scroll
+                    });
+                }
+            });
         });
-    });
-    </script>
+    </script>       
     {% block extra_scripts %}{% endblock %}
 </body>
 </html>

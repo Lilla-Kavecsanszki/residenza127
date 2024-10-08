@@ -68,7 +68,7 @@
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <div class="text-center nav-icon">
+                                <div class="text-center icon">
                                     {% if request.user.is_authenticated %}
                                     <div><i class="fas fa-solid fa-user fa-lg"></i></div>
                                     <p class="my-0">{{ request.user.username }}</p>
@@ -104,8 +104,8 @@
                     <!-- Language Dropdown -->
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="language-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <div class="text-center nav-icon">
+                            <a class="text-black nav-link dropdown-toggle" href="#" id="language-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center icon">
                                     <i class="fas fa-globe fa-lg"></i>
                                     <p class="my-0">{{ LANGUAGE_CODE|upper }}</p>
                                 </div>
@@ -147,9 +147,6 @@
                                 <a class="nav-link" href="{% url 'home' %}">{% trans 'Home' %}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'home' %}#apartment-types">{% trans 'Solutions' %}</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="{% url 'all_properties' %}">{% trans 'Apartments' %}</a>
                             </li>
                             <li class="nav-item">
@@ -165,9 +162,6 @@
                             <!-- Display items for non-authenticated users -->
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'home' %}">{% trans 'Home' %}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'home' %}#apartment-types">{% trans 'Solutions' %}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'all_properties' %}">{% trans 'Apartments' %}</a>
@@ -222,8 +216,8 @@
             <div class="col-md-2 text-left">
                 <p class="lilla mb-2"><strong>Residenza 126:</strong></p>
                 <p>
-                    <a href="{% url 'home' %}#building" class="footer-link building-link">Building Info</a><br>
-                    <a href="{% url 'home' %}#location" class="footer-link location-link">View Location</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Residenza+126,+Oristano" class="location-link">View Location</a><br>
+                    <a href="{% url 'home' %}#about" class="building-link">Building Info</a> <!-- Replace with actual link -->
                 </p>
             </div>
 
@@ -231,28 +225,26 @@
             <div class="col-md-2 text-left">
                 <p class="lilla mb-2"><strong>Apartment Types:</strong></p>
                 <ul class="list-unstyled">
-                    <li><a href="{% url 'home' %}#bilocali" class="footer-link apartment-link">Bilocali</a></li>
-                    <li><a href="{% url 'home' %}#trilocali" class="footer-link apartment-link">Trilocali</a></li>
+                    <li><a href="#bilocali" class="apartment-link">Bilocali</a></li>
+                    <li><a href="#trilocali" class="apartment-link">Trilocali</a></li>
                 </ul>
             </div>
 
             <!-- Column 4: Social Media Links -->
             <div class="col-md-2 text-left">
+                <p class="lilla mb-2"><strong>Follow Us:</strong></p>
                 <p class="socials mb-3">
-                    <span class="icon-container">
-                        <a class="links whatsapp" href="https://wa.me/393333951557"><i class="fab fa-whatsapp icon"></i></a>
-                        <a class="links insta" href="https://www.instagram.com/ar.gi.costruzioni_/?hl=en"><i class="fab fa-instagram icon"></i></a>
-                        <a class="links location" href="https://www.google.com/maps/search/?api=1&query=Via+Cagliari+126,+Oristano"><i class="fa-solid fa-location-dot icon"></i></a>
-                    </span>
+                    <a class="links whatsapp" href="https://wa.me/393333951557"><i class="fab fa-whatsapp icon"></i></a>
+                    <a class="links insta" href="https://www.instagram.com/ar.gi.costruzioni_/?hl=en"><i class="fab fa-instagram icon"></i></a>
+                    <a class="links location" href="https://www.google.com/maps/search/?api=1&query=Via+Cagliari+126,+Oristano"><i class="fas fa-map-marker-alt icon"></i></a> <!-- Location link -->
                 </p>
             </div>
-
 
             <!-- Column 5: Contact Information -->
             <div class="col-md-2 text-left">
                 <p class="lilla mb-2"><strong>Contact Information:</strong></p>
-                <p class="mb-1"><strong>Phone:</strong> <a href="tel:+393333951557" class="footer-link email-link">+39 333 395 1557</a></p>
-                <p class="mb-1"><strong>Email:</strong> <a href="mailto:ar.gi.srls@pec.it" class="footer-link email-link">lilla-kavecsanszki@outlook.com</a></p>
+                <p class="mb-1"><strong>Phone:</strong> <a href="tel:+393333951557" class="email-link">+39 333 395 1557</a></p>
+                <p class="mb-1"><strong>Email:</strong> <a href="mailto:lilla-kavecsanszki@outlook.com" class="email-link">lilla-kavecsanszki@outlook.com</a></p>
             </div>
         </div>
 
@@ -304,22 +296,7 @@
             }
         });
     </script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Get the height of the navbar dynamically
-        const navbarHeight = document.querySelector('nav').offsetHeight;
-    
-        // Set padding and margin for each section
-        const sections = ['apartment-types', 'about', 'contact']; // Add your section IDs here
-        sections.forEach(section => {
-            const sectionElement = document.getElementById(section);
-            if (sectionElement) {
-                sectionElement.style.paddingTop = `${navbarHeight}px`;
-                sectionElement.style.marginTop = `-${navbarHeight}px`;
-            }
-        });
-    });
-    </script>
+                    
     {% block extra_scripts %}{% endblock %}
 </body>
 </html>

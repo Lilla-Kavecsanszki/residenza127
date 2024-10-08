@@ -63,14 +63,6 @@ header {
     color: #a9a9a9;
 }
 
-.nav-icon {
-    color: #182d5f;
-}
-
-.nav-icon:hover {
-    color: #a9a9a9;
-}
-
 /* Dropdown menu styles */
 .dropdown-menu {
     background-color: #ffffff; /* Ensure the dropdown has a background color */
@@ -574,93 +566,69 @@ main {
 /* Footer styles */
 .footer-cover {
     background-color: #182d5f;
-    padding: 2rem 0; /* Adjust padding as needed */
 }
 
-/* Footer content layout */
 footer .footer-content {
-    width: 100%;
-    max-width: 1200px; /* Adjust for desired maximum width */
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0 2rem; /* Add some padding to the sides */
 }
 
-/* Ensure text is aligned to the left */
-.text-left {
-    text-align: left !important;
+.footer-content {
+    text-align: center;
 }
 
-/* Column content adjustments */
 .footer-logo {
     max-width: 100px; /* Set a reasonable width for the logo */
     height: auto; /* Ensure the height scales proportionally */
     margin-bottom: 20px; /* Add some spacing below the logo */
 }
 
-/* Padding for all columns */
-.footer-content p,
-.footer-content ul {
-    margin: 0;
-}
-
-.footer-link{
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-link:hover {
-    color: #fff;
-    text-decoration: overline;
+.lilla, .email-link {
+    margin-bottom: 5px; /* Reduces space between elements */
+    display: block;
 }
 
 p.lilla a.email-link {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none; /* Optional: Removes underline from the link */
+    color: inherit; /* Keeps the same text color */
 }
 
-p.lilla a.email-link:hover {
-    text-decoration: underline;
+.footer-content p:last-child {
+    margin-top: 5px; /* Reduces space between last element and the previous ones */
 }
 
-/* Social media links styles */
+.footer-content p {
+    margin: 0; /* Ensures default margin is removed */
+}
 
 .links {
     width: 50px;
-    height: 50px;
-    background-color: #fff;
-    text-align: center;
-    line-height: 50px;
-    font-size: 35px;
-    margin: 0 10px;
-    border-radius: 50%;
-    display: inline-block;
-    overflow: hidden;
-    border: 2px solid #fff;
-    position: relative;
-}
-
-.links:last-child {
-    margin-left: 28%;
-}
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 35px;
+  margin: 0 10px;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border: 2px solid #fff;
+  z-index: 1;
+} 
 
 footer a .icon {
     position: relative;
     color: #1d220c;
     transition: .5s;
     z-index: 3;
-}
-
-.icon {
-    color: #1d220c;
-    transition: .5s;
-}
+  }
 
 .icon:hover {
     color: white;
     transform: rotateY(360deg);
 }
 
-/* Social media hover effects */
 .links:before {
     content: "";
     position: absolute;
@@ -670,28 +638,83 @@ footer a .icon {
     height: 100%;
     background: transparent;
     transition: .5s;
-}
+    z-index: 2;
+  }
 
 .links:hover:before {
     top: 0;
-}
+  }
+  
+.facebook:before{
+    background: #3b5999;
+  }
+  
+.linkedin:before{
+    background: #55acee;
+  }
 
 .insta:before {
-    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d)
+  }
+
+.whatsapp:before{
+    background: #5dc958;
+}
+  
+footer a {
+    color: white;
+    margin: 0 0.5em;
+    text-decoration: none;
+} 
+
+footer a:hover {
+    text-decoration: underline;
+} 
+
+footer a .icon {
+    position: relative;
+    color: #1d220c;
+    transition: .5s;
+    z-index: 3;
+  }
+
+.icon:hover {
+    color: white;
+    transform: rotateY(360deg);
 }
 
-.whatsapp:before {
+.links:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+  }
+
+.links:hover:before {
+    top: 0;
+  }
+  
+.facebook:before{
+    background: #3b5999;
+  }
+  
+.linkedin:before{
+    background: #55acee;
+  }
+
+.whatsapp:before{
     background: #5dc958;
 }
 
-.location:before {
-    background: #f00;
-}
-
-/* "Made by" section adjustments */
-.footer-content p:last-child {
-    margin-top: 5px;
-}
+.insta:before {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d)
+  }
+  
 
   /* -------------------------------- Media Queries */
 

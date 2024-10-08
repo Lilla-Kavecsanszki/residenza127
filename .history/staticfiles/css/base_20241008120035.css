@@ -623,6 +623,27 @@ p.lilla a.email-link:hover {
 }
 
 /* Social media links styles */
+.icon-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.icons-row {
+    display: flex; /* Create a row for WhatsApp and Instagram icons */
+    justify-content: center; /* Center the icons in the row */
+    margin-bottom: 10px; /* Space between row and location icon */
+}
+
+.second-row {
+    display: flex; /* Use flexbox for the second row */
+    justify-content: center; /* Center the location icon */
+    width: 100%; /* Ensure it takes the full width of the container */
+}
+
+.icons-row .links {
+    height: 50px; /* Set a fixed height for alignment */
+}
 
 .links {
     width: 50px;
@@ -633,14 +654,14 @@ p.lilla a.email-link:hover {
     font-size: 35px;
     margin: 0 10px;
     border-radius: 50%;
-    display: inline-block;
+    display: flex;
     overflow: hidden;
     border: 2px solid #fff;
     position: relative;
 }
 
 .links:last-child {
-    margin-left: 28%;
+    margin-top: 10px; /* Add top margin for the location icon */
 }
 
 footer a .icon {

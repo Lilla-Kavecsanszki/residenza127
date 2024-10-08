@@ -63,14 +63,6 @@ header {
     color: #a9a9a9;
 }
 
-.nav-icon {
-    color: #182d5f;
-}
-
-.nav-icon:hover {
-    color: #a9a9a9;
-}
-
 /* Dropdown menu styles */
 .dropdown-menu {
     background-color: #ffffff; /* Ensure the dropdown has a background color */
@@ -603,16 +595,6 @@ footer .footer-content {
     margin: 0;
 }
 
-.footer-link{
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-link:hover {
-    color: #fff;
-    text-decoration: overline;
-}
-
 p.lilla a.email-link {
     text-decoration: none;
     color: inherit;
@@ -623,7 +605,6 @@ p.lilla a.email-link:hover {
 }
 
 /* Social media links styles */
-
 .links {
     width: 50px;
     height: 50px;
@@ -639,16 +620,12 @@ p.lilla a.email-link:hover {
     position: relative;
 }
 
-.links:last-child {
-    margin-left: 28%;
-}
-
 footer a .icon {
     position: relative;
     color: #1d220c;
     transition: .5s;
     z-index: 3;
-}
+  }
 
 .icon {
     color: #1d220c;

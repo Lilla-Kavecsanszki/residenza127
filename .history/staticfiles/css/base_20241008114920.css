@@ -623,6 +623,21 @@ p.lilla a.email-link:hover {
 }
 
 /* Social media links styles */
+.icon-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.icons-row {
+    display: flex; /* Create a row for WhatsApp and Instagram icons */
+    /* justify-content: center;  */
+    margin-bottom: 10px; /* Space between row and location icon */
+}
+
+.second-row{
+    display: block;
+}
 
 .links {
     width: 50px;
@@ -640,7 +655,7 @@ p.lilla a.email-link:hover {
 }
 
 .links:last-child {
-    margin-left: 28%;
+    margin-top: 10px; /* Add top margin for the location icon */
 }
 
 footer a .icon {

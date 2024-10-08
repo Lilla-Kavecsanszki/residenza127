@@ -623,7 +623,6 @@ p.lilla a.email-link:hover {
 }
 
 /* Social media links styles */
-
 .links {
     width: 50px;
     height: 50px;
@@ -635,12 +634,8 @@ p.lilla a.email-link:hover {
     border-radius: 50%;
     display: inline-block;
     overflow: hidden;
-    border: 2px solid #fff;
+    border: 2px solid red;
     position: relative;
-}
-
-.links:last-child {
-    margin-left: 28%;
 }
 
 footer a .icon {

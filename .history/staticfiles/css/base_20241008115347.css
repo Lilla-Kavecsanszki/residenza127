@@ -623,6 +623,14 @@ p.lilla a.email-link:hover {
 }
 
 /* Social media links styles */
+.icon-container {
+    display: flex; /* Use flexbox for layout */
+     /* Stack elements vertically */
+}
+
+.second-row{
+    justify-content: center;
+}
 
 .links {
     width: 50px;
@@ -640,7 +648,7 @@ p.lilla a.email-link:hover {
 }
 
 .links:last-child {
-    margin-left: 28%;
+    margin-top: 10px; /* Add top margin for the location icon */
 }
 
 footer a .icon {
