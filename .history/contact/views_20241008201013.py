@@ -39,10 +39,7 @@ def contact_us(request):
             # Prepare the email to the user
             user_email = EmailMultiAlternatives(
                 subject="Your Contact Form Submission",
-                body=f"Dear {form.cleaned_data['name']},\n\n"
-                     "Thank you for reaching out! Please find the attached brochure.\n\n"
-                     "Best regards,\n"
-                     "Your Company Name",
+                body="Thank you for reaching out! Please find the attached brochure.",
                 from_email=None,  # Default from email
                 to=[form.cleaned_data['email']],
             )
