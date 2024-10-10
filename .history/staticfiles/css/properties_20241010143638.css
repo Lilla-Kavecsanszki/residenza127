@@ -33,8 +33,7 @@ h1, h2 {
     background-color: #ffffff; /* Dark blue background */
     padding: 20px; /* Padding around the content */
     margin-bottom: 20px; /* Space below the banner */
-    border: solid 2px #182d5f;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    border: solid 1px #182d5f;
     border-radius: 5px; /* Rounded corners */
     display: flex;
     align-items: center;
@@ -121,9 +120,7 @@ h1, h2 {
 .sort-select-wrapper {
     max-width: 100%; /* Ensure select does not exceed its container */
     max-width: 400px;
-    border: solid 2px #182d5f;
-    border-radius: 5px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    color: #182d5f;
 }
 
 .custom-select {
@@ -184,7 +181,7 @@ h1, h2 {
 .card-footer {
     display: flex;
     flex-direction: column;
-    background-color: transparent;
+    background-color: transparent
     padding: 1em;
     border-top: none;
 }
@@ -211,10 +208,6 @@ h1, h2 {
 
 .card-footer .property-details .small {
     color: #182d5f;
-}
-
-#border {
-    border: none;
 }
 
 /* Price styling */

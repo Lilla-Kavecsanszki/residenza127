@@ -60,7 +60,7 @@
                 </select>
             </div>
         </div>
-        <div class="col-12 col-md-6 d-flex justify-content-center counter align-items-center">
+        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
             <p class="text-muted mb-0 text-center text-md-left">
                 {% if search_query or current_locations or current_sorting != 'None_None' %}
                 <span class="small text-white"><a class="text-white" href="{% url 'all_properties' %}">{% trans "All Properties" %}</a> | </span>
@@ -99,8 +99,8 @@
                             <div class="row">
                                 <div class="col-12">
                                     <!-- Property Details -->
-                                    <div id="border" class="property-details">
-                                        <div class="row">
+                                    <div class="property-details">
+                                        <div class="row border">
                                             <!-- Left Column: Size and Location -->
                                             <div class="col-6">
                                                 {% if property.size %}

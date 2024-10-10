@@ -33,8 +33,7 @@ h1, h2 {
     background-color: #ffffff; /* Dark blue background */
     padding: 20px; /* Padding around the content */
     margin-bottom: 20px; /* Space below the banner */
-    border: solid 2px #182d5f;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    border: solid 1px #182d5f;
     border-radius: 5px; /* Rounded corners */
     display: flex;
     align-items: center;
@@ -111,24 +110,73 @@ h1, h2 {
 }
 
 /* Responsive alignment and spacing */
+/* Style for the select dropdown */
+.sort-select-wrapper select {
+    max-width: 400px;
+    background-color: #182d5f; /* Navy blue background */
+    color: #fff; /* White text */
+    border: none; /* Remove default border */
+    padding: 0.6rem;
+    font-size: 1rem;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Add shadow like existing wrapper */
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Custom arrow for the dropdown */
+.sort-select-wrapper {
+    position: relative;
+}
+
+.sort-select-wrapper select {
+    padding-right: 2rem; /* Space for custom arrow */
+}
+
+.sort-select-wrapper::after {
+    content: '\25BC'; /* Downward arrow symbol */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Ensure it's not clickable */
+    color: #fff; /* Arrow color */
+}
+
+/* Hover effect on the select dropdown */
+.sort-select-wrapper select:hover {
+    background-color: #14448e; /* Darker blue on hover */
+}
+
+/* Styling the options inside the dropdown */
+.sort-select-wrapper select option {
+    background-color: #fff; /* White background for options */
+    color: #182d5f; /* Navy blue text */
+}
+
+/* Hover effect on the options */
+.sort-select-wrapper select option:hover {
+    background-color: #28a745; /* Green background on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Optional: Active state for the dropdown */
+.sort-select-wrapper select:focus {
+    outline: none; /* Remove the focus outline */
+    background-color: #14448e; /* Darker background when focused */
+    border-color: #28a745; /* Green border when focused */
+}
+
+/* Additional spacing and alignment if necessary */
 .sorting-box {
     display: flex;
     flex-wrap: wrap;
     align-items: center; /* Vertically center items */
     justify-content: center; /* Center items horizontally */
-}
-
-.sort-select-wrapper {
-    max-width: 100%; /* Ensure select does not exceed its container */
-    max-width: 400px;
-    border: solid 2px #182d5f;
-    border-radius: 5px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
-}
-
-.custom-select {
-    max-width: 400px;
-    color: #182d5f;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 /* Ensure proper alignment of sort-select and text */

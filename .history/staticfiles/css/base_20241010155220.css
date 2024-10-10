@@ -383,12 +383,12 @@ main {
     background-color: white;
 }
 
-.title {
+.property-listings h2 {
     color: #182d5f;
     font-family: "Italiana", sans-serif;
     text-transform: uppercase; 
-    /* margin-bottom: 1em; */
-    font-size: 2.5em;          
+    margin-bottom: 1em;
+    font-size: 2.5em;          /* Larger font size for a bold presence */
     font-weight: 600;
 }
 
@@ -630,7 +630,51 @@ main {
     }
 }
 
+/* Contact Form */
 /* Contact Form Section */
+.contact-form {
+    background-color: #f7f7f7; /* Light grey background */
+    padding: 60px 0; /* Padding for top and bottom */
+}
+
+.contact-form h2 {
+    color: #182d5f; /* Navy blue text color for heading */
+    font-weight: 700;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px; /* Spacing between form groups */
+}
+
+.contact-form .form-group label {
+    font-weight: 600; /* Bold labels */
+    color: #182d5f; /* Navy blue for labels */
+}
+
+.contact-form .form-control {
+    border-radius: 5px;
+    border: 2px solid #182d5f; /* Navy blue border */
+    padding: 10px;
+    font-size: 1rem;
+    color: #182d5f; /* Navy blue text */
+}
+
+.contact-form .form-control:focus {
+    border-color: #28a745; /* Green border on focus */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); /* Green glow effect */
+}
+
+.contact-form .btn-primary {
+    background-color: #182d5f; /* Navy blue button */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: #14448e; /* Darker blue on hover */
+}
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {

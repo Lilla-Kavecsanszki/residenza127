@@ -33,8 +33,7 @@ h1, h2 {
     background-color: #ffffff; /* Dark blue background */
     padding: 20px; /* Padding around the content */
     margin-bottom: 20px; /* Space below the banner */
-    border: solid 2px #182d5f;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    border: solid 1px #182d5f;
     border-radius: 5px; /* Rounded corners */
     display: flex;
     align-items: center;
@@ -118,12 +117,28 @@ h1, h2 {
     justify-content: center; /* Center items horizontally */
 }
 
-.sort-select-wrapper {
-    max-width: 100%; /* Ensure select does not exceed its container */
-    max-width: 400px;
-    border: solid 2px #182d5f;
-    border-radius: 5px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+/* Hover effect on the select dropdown */
+.sort-select-wrapper select:hover {
+    background-color: #14448e; /* Darker blue on hover */
+}
+
+/* Style for the options inside the dropdown */
+.sort-select-wrapper select option {
+    background-color: #fff; /* White background for options */
+    color: #182d5f; /* Navy blue text */
+}
+
+/* Hover effect on the dropdown options */
+.sort-select-wrapper select option:hover {
+    background-color: #28a745; /* Green background on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Focus state (when user clicks on the dropdown) */
+.sort-select-wrapper select:focus {
+    outline: none; /* Remove default focus outline */
+    background-color: #14448e; /* Darker background when focused */
+    border-color: #28a745; /* Green border when focused */
 }
 
 .custom-select {

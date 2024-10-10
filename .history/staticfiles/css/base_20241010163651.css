@@ -631,6 +631,56 @@ main {
 }
 
 /* Contact Form Section */
+.contact-form {
+    background-color: #182d5f; 
+    padding: 20px 0; /* Padding for top and bottom */
+}
+
+.contact-form h2 {
+    color: #ffffff;
+    font-family: "Italiana", sans-serif;
+    text-transform: uppercase; 
+    margin-bottom: 1em;
+    font-size: 2.5em;      
+    font-weight: 600;
+}
+
+.contact-form .form-group {
+    margin-bottom: 10px; /* Spacing between form groups */
+}
+
+.contact-form .form-group label {
+    font-weight: 600; /* Bold labels */
+    color: #ffffff; 
+}
+
+.contact-form .form-control {
+    border: none; /* Remove border around the input */
+    border-bottom: 2px solid #ffffff; /* Add a white bottom border */
+    background-color: transparent; /* Make the background transparent */
+    padding: 10px;
+    font-size: 1rem;
+    color: #ffffff; /* White text */
+}
+
+.contact-form .form-control:focus {
+    border-color: #ffffff; /* White bottom border on focus */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* White glow effect */
+    outline: none; /* Remove default outline */
+}
+
+.contact-form .btn-primary {
+    background-color: #ffffff; /* Navy blue button */
+    border: none;
+    color: #182d5f; /* Navy blue text color */
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: #a9a9a9; /* Darker blue on hover */
+}
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {

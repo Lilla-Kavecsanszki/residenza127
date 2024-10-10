@@ -28,7 +28,7 @@
         <div class="row align-items-center">
             <!-- Right side: Title and Text -->
             <div class="col-lg-6 order-1 order-lg-2"> <!-- Text column -->
-                <h1 class="title">Residenza 126</h1>
+                <h1>Residenza 126</h1>
                 <h2 class="mb-4">{% trans "Discover Our Unparalleled Experiences" %}</h2>
                 <p>
                     {% blocktrans %}
@@ -52,7 +52,7 @@
         <div class="row">
             <!-- Left side: Text about Oristano -->
             <div class="col-lg-6">
-                <h2 class="mb-4 title">{% trans "Oristano" %}</h2>
+                <h2 class="mb-4">{% trans "Oristano" %}</h2>
                 <p>{% trans "Oristano is one of the safest cities in Italy, and certainly one of the safest in Sardinia. Known for its rich history, stunning architecture, and beautiful surroundings, it offers a tranquil yet vibrant lifestyle." %}</p>
                 <p>{% trans "Located on the western coast of Sardinia, Oristano combines cultural heritage with modern living, making it the perfect place to experience the best of both worlds." %}</p>
             </div>
@@ -129,7 +129,7 @@
 <!-- Apartment Types Section -->
 <section id="apartment-types" class="apartment-types py-5">
     <div class="container">
-        <h2 class="mb-4 title mt-4" style="text-align: left;">{% trans "Our Apartment Types" %}</h2>
+        <h2 class="mb-4 mt-4" style="text-align: left;">{% trans "Our Apartment Types" %}</h2>
 
         <!-- First Apartment Type -->
         <div id="bilocali" class="row mb-4">
@@ -236,6 +236,36 @@
                     <source src="{% static 'videos/balconyenter.mp4' %}" type="video/mp4">
                     {% trans "Your browser does not support the video tag." %}
                 </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section id="contact" class="contact-form py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">{% trans "Get in Touch With Us" %}</h2>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <form method="POST" action="{% url 'contact_us' %}">
+                    {% csrf_token %}
+                    {% for field in form %}
+                    <div class="form-group">
+                        {{ field.label_tag }}
+                        {{ field }}
+                        {% if field.help_text %}
+                        <small class="form-text text-muted">{{ field.help_text }}</small>
+                        {% endif %}
+                        {% for error in field.errors %}
+                        <div class="text-danger">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">{% trans "Submit" %}</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

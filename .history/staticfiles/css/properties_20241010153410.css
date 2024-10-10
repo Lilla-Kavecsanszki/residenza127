@@ -33,7 +33,7 @@ h1, h2 {
     background-color: #ffffff; /* Dark blue background */
     padding: 20px; /* Padding around the content */
     margin-bottom: 20px; /* Space below the banner */
-    border: solid 2px #182d5f;
+    border: solid 1px #182d5f;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
     border-radius: 5px; /* Rounded corners */
     display: flex;

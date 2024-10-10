@@ -33,8 +33,7 @@ h1, h2 {
     background-color: #ffffff; /* Dark blue background */
     padding: 20px; /* Padding around the content */
     margin-bottom: 20px; /* Space below the banner */
-    border: solid 2px #182d5f;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    border: solid 1px #182d5f;
     border-radius: 5px; /* Rounded corners */
     display: flex;
     align-items: center;
@@ -121,14 +120,13 @@ h1, h2 {
 .sort-select-wrapper {
     max-width: 100%; /* Ensure select does not exceed its container */
     max-width: 400px;
-    border: solid 2px #182d5f;
-    border-radius: 5px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    color: green;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
 }
 
 .custom-select {
     max-width: 400px;
-    color: #182d5f;
+    color: red;
 }
 
 /* Ensure proper alignment of sort-select and text */
