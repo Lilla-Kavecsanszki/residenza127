@@ -205,8 +205,6 @@ header {
     font-size: 2em;
 }
 
-/* hero text animation */
-
 
 /* Main content styles */
 main {
@@ -222,6 +220,35 @@ main {
     overflow: hidden;
     border-radius: 3px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 1); /* Shadow for both images and map */
+}
+
+/* Introduction Section */
+.img-fluid-residenza {
+    display: block;
+    margin: 0 auto;
+    transform-origin: right center; /* Origin from where the page "turns" */
+}
+        
+/* Page-turn effect */
+.page-turn-effect {
+    transform: rotateY(-180deg); /* Initially flipped */
+    opacity: 0; /* Initially invisible */
+    animation: pageTurn 1.5s ease-in-out forwards; /* Page-turn animation */
+}
+
+/* Keyframes for page turn */
+@keyframes pageTurn {
+    0% {
+        transform: rotateY(-180deg); /* Start from the backside */
+        opacity: 0; /* Invisible */
+    }
+    50% {
+        opacity: 1; /* Gradually become visible */
+    }
+    100% {
+        transform: rotateY(0deg); /* Turn the page fully */
+        opacity: 1; /* Fully visible */
+    }
 }
 
 /* Ensure the hover effect applies to both images and map */
@@ -276,6 +303,50 @@ main {
     display: flex;
     justify-content: center;
     align-items: center; /* Vertically center content if needed */
+}
+
+/* Base image styling */
+.img-fluid-apartment {
+    opacity: 0; /* Start with images hidden */
+    transition: all 1s ease-in-out; /* Smooth transition for opacity and movement */
+}
+
+/* Slide and fade effect for images coming from the right (first apartment) */
+.fade-slide-right {
+    transform: translateX(50px); /* Start shifted 50px to the right */
+    animation: fadeSlideRight 1s forwards ease-in-out;
+    animation-delay: 0.2s; /* Add slight delay if needed */
+}
+
+/* Slide and fade effect for images coming from the left (second apartment) */
+.fade-slide-left {
+    transform: translateX(-50px); /* Start shifted 50px to the left */
+    animation: fadeSlideLeft 1s forwards ease-in-out;
+    animation-delay: 0.2s; /* Add slight delay if needed */
+}
+
+/* Keyframe for sliding right to normal position and fading in */
+@keyframes fadeSlideRight {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframe for sliding left to normal position and fading in */
+@keyframes fadeSlideLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 /* Contact Us and Brochure Download Section */
