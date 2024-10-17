@@ -1,15 +1,3 @@
-body {
-    font-family: "Cormorant Garamond", serif;
-    background-color: white;
-    color: #182d5f;
-}
-
-/* Container for Contact Page */
-.container {
-    padding: 2em;
-    margin-top: 12%;
-}
-
 .contact-container{
     padding: 2em;
     margin-bottom: 2em;
@@ -18,7 +6,7 @@ body {
     border-radius: 3px;
 }
 
-h1 {
+.contact-h1 {
     color: #182d5f;
     font-family: "Cinzel", serif;
     font-weight: 700;
@@ -46,6 +34,7 @@ animation: shiny-effect 5s ease-in-out infinite;
     font-size: 1.2em;
     margin-bottom: 0.5em;
     color: #182d5f;
+    text-align: left;
 }
 
 .contact-form input, 

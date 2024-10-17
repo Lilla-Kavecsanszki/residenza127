@@ -25,7 +25,6 @@ urlpatterns = [
     path("properties/", include("properties.urls")),
     path("construction/", include("construction.urls")),
     path("profiles/", include("profiles.urls")),
-    path("contact/", include("contact.urls")),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
     path('', include('residenza.urls')),
 ]
@@ -42,7 +41,6 @@ urlpatterns += i18n_patterns(
     path("properties/", include("properties.urls")),
     path("construction/", include("construction.urls")),
     path("profiles/", include("profiles.urls")),
-    path("contact/", include("contact.urls")),
     path('', include('residenza.urls')),
     prefix_default_language=True,
 )

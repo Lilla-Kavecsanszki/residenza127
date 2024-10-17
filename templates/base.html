@@ -160,7 +160,7 @@
                                 <a class="nav-link" href="{% url 'home' %}#about">{% trans 'About' %}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'contact_us' %}">{% trans 'Contact' %}</a>
+                                <a class="nav-link" href="{% url 'home' %}#contact-us">{% trans 'Contact' %}</a>
                             </li>
                         {% else %}
                             <!-- Display items for non-authenticated users -->
@@ -177,7 +177,7 @@
                                 <a class="nav-link" href="{% url 'home' %}#about">{% trans 'About' %}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'contact_us' %}">{% trans 'Contact' %}</a>
+                                <a class="nav-link" href="{% url 'home' %}#contact-us">{% trans 'Contact' %}</a>
                             </li>
                         {% endif %}
                     </ul>                    
