@@ -779,6 +779,30 @@ footer a .icon {
     }
 }
 
+.privacy {
+    display: inline-block; /* Makes the link behave like a button */
+    padding: 5px 10px; 
+    background-color: #182d5f; 
+    color: white; 
+    font-size: 16px; 
+    font-weight: bold;
+    text-decoration: none; 
+    border-radius: 3px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.privacy:hover {
+    background-color: #ffffff;
+    color: #182d5f;
+    text-decoration: none;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.privacy:active {
+    transform: translateY(1px); /* Slight push down effect on click */
+}
+
   /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
