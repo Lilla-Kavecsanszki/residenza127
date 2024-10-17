@@ -73,7 +73,7 @@
     <div class="property-container mb-3">
         <div class="row">
             {% for property in properties %}
-            <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="col-12 mb-4"> <!-- Each property card takes the full width -->
                 <div class="card h-100 border-0 property-card">
                     <a href="{% url 'property_detail' property.id %}" class="card-link">
                         {% if property.main_video %}
@@ -148,16 +148,10 @@
                         {% endif %}
                     </div>                    
                 </div>
-                
             </div>
-            {% if forloop.counter|divisibleby:3 and not forloop.last %}
-            <div class="col-12 d-none d-lg-block mb-5">
-                <hr>
-            </div>
-            {% endif %}
             {% endfor %}
         </div>
-    </div>
+    </div>    
 
     <div class="help-button shadow-sm rounded-0">
         <a class="help-link d-flex h-100" href="{% url 'home' %}#contact-us">
