@@ -141,6 +141,10 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{% url 'admin:index' %}">{% trans 'Admin' %}</a>
                                 </li>
+                                <!-- Display Construction link only for superuser -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'construction' %}">{% trans 'Construction' %}</a>
+                                </li>
                             {% endif %}
                             <!-- Always display the following items for authenticated users -->
                             <li class="nav-item">
@@ -151,9 +155,6 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'all_properties' %}">{% trans 'Apartments' %}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'construction' %}">{% trans 'Construction' %}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'home' %}#about">{% trans 'About' %}</a>
@@ -173,16 +174,13 @@
                                 <a class="nav-link" href="{% url 'all_properties' %}">{% trans 'Apartments' %}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'construction' %}">{% trans 'Construction' %}</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="{% url 'home' %}#about">{% trans 'About' %}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'contact_us' %}">{% trans 'Contact' %}</a>
                             </li>
                         {% endif %}
-                    </ul>
+                    </ul>                    
                 </div>
             </nav>
             <div class="col-md-8 offset-md-2">
