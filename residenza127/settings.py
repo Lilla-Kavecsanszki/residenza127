@@ -54,7 +54,6 @@ INSTALLED_APPS = [
     "residenza",
     "properties",
     "profiles.apps.ProfilesConfig",
-    "contact",
     "construction",
     "crispy_forms",
 ]
@@ -157,7 +156,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Email settings
 if "DEVELOPMENT" in os.environ:
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-    DEFAULT_FROM_EMAIL = "buildingsardinia.example.com@example.com"
+    DEFAULT_FROM_EMAIL = "armando@argicostruzioni.com"
 else:
     EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
     EMAIL_USE_TLS = True
