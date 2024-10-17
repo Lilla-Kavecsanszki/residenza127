@@ -94,8 +94,24 @@ class AllProperties(View):
 
         # Handle search query
         if query:
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
-            properties = properties.filter(queries)
+            query = query.strip()  # Trim leading and trailing whitespace
+            words = query.split()  # Split the query into individual words to allow searching for each one
+            
+            # Initialize an empty Q object to hold our queries
+            queries = Q()
+            
+            # Construct queries for each word across multiple fields
+            for word in words:
+                queries |= (
+                    Q(name__icontains=word) | 
+                    Q(description__icontains=word) | 
+                    Q(features__icontains=word) | 
+                    Q(location__icontains=word) | 
+                    Q(property_type__icontains=word)
+                )
+            
+            # Filter properties based on the constructed queries
+            properties = Property.objects.filter(queries)
 
         # Get distinct choices for filters
         location_choices = Property.LOCATIONS
