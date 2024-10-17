@@ -1,4 +1,14 @@
-{% extends "account/base.html" %} {% load i18n %} {% block head_title %}
+{% extends "account/base.html" %}
+{% load i18n crispy_forms_tags %}
+{% load account socialaccount %}
+{% load static %}
+
+<!-- Extra CSS -->
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/allauth.css' %}" />
+{% endblock %}
+
+{% block head_title %}
 <!-- trans sign up closed -->
 {% trans "Sign Up Closed" %}{% endblock %} {% block inner_content %}
 <hr />

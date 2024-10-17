@@ -6,7 +6,7 @@
 <!-- Extra CSS -->
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/allauth.css' %}" />
-{% endblock %} 
+{% endblock %}
 
 {% block head_title %}
 <!-- trans email verification -->
@@ -15,10 +15,10 @@
 {% block inner_content %}
 <div class="container-fluid">
     <div class="row verify-form justify-content-center">
-<h2 class="logo-font mt-2 mb-4">{% trans "Verify Your E-mail Address" %}</h2>
+<h2 class="logo-font mt-5 mb-5">{% trans "Verify Your E-mail Address" %}</h2>
 <hr />
 
-<p class="account_pages">
+<p class="mt-5 mb-5 account_pages">
   {% blocktrans %}We have sent an e-mail to you for verification. Follow the
   link provided to finalize the signup process. Please contact us if you do not
   receive it within a few minutes.{% endblocktrans %}

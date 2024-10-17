@@ -151,7 +151,7 @@ Dark lux navy: #051c2c
 #051c2c color RGB value is (5,28,44)
 
 
- 
+https://www.freeprivacypolicy.com/free-privacy-policy-generator/
 
 Carouse:l https://codepen.io/chingy/pen/yLLZRbj
 
