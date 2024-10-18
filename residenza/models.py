@@ -1,5 +1,6 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
+from django.utils.translation import gettext_lazy as _
 
 class Contact(models.Model):
     name = models.CharField(max_length=100)

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-07 18:14+0200\n"
+"POT-Creation-Date: 2024-10-18 12:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,81 +18,73 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: properties/widgets.py:5 templates/allauth/account/email.html:43
+#: properties/widgets.py:6 templates/allauth/account/email.html:52
 #: templates/allauth/socialaccount/connections.html:35
 msgid "Remove"
 msgstr "Rimuovi"
 
-#: properties/widgets.py:6
+#: properties/widgets.py:7
 msgid "Current Image"
 msgstr "Immagine Corrente"
 
-#: properties/widgets.py:7
+#: properties/widgets.py:8
 msgid "Browse"
 msgstr "Sfoglia"
 
-#: residenza127/settings.py:150
-msgid "English"
-msgstr "Inglese"
-
-#: residenza127/settings.py:151
-msgid "Italian"
-msgstr "Italiano"
-
-#: templates/allauth/account/account_inactive.html:4
+#: templates/allauth/account/account_inactive.html:13
 msgid "Account Inactive"
 msgstr "Account Inattivo"
 
-#: templates/allauth/account/account_inactive.html:7
+#: templates/allauth/account/account_inactive.html:16
 msgid "This account is inactive."
 msgstr "Questo account è inattivo."
 
-#: templates/allauth/account/email.html:3 templates/base.html:70
-#: templates/base.html:127 templates/includes/mobile-top-header.html:11
+#: templates/allauth/account/email.html:12 templates/base.html:77
+#: templates/includes/mobile-top-header.html:13
 msgid "Account"
 msgstr "Account"
 
-#: templates/allauth/account/email.html:5
+#: templates/allauth/account/email.html:14
 msgid "E-mail Addresses"
 msgstr "Indirizzi E-mail"
 
-#: templates/allauth/account/email.html:9
+#: templates/allauth/account/email.html:18
 msgid "The following e-mail addresses are associated with your account:"
 msgstr "I seguenti indirizzi e-mail sono associati al tuo account:"
 
-#: templates/allauth/account/email.html:25
+#: templates/allauth/account/email.html:34
 msgid "Verified"
 msgstr "Verificato"
 
-#: templates/allauth/account/email.html:27
+#: templates/allauth/account/email.html:36
 msgid "Unverified"
 msgstr "Non Verificato"
 
-#: templates/allauth/account/email.html:29
+#: templates/allauth/account/email.html:38
 msgid "Primary"
 msgstr "Primario"
 
-#: templates/allauth/account/email.html:37
+#: templates/allauth/account/email.html:46
 msgid "Make Primary"
 msgstr "Rendi Primario"
 
-#: templates/allauth/account/email.html:40
+#: templates/allauth/account/email.html:49
 msgid "Re-send Verification"
 msgstr "Invia Nuovamente la Verifica"
 
-#: templates/allauth/account/email.html:51
+#: templates/allauth/account/email.html:60
 msgid "Warning:"
 msgstr "Attenzione:"
 
-#: templates/allauth/account/email.html:58
+#: templates/allauth/account/email.html:67
 msgid "Add E-mail Address"
 msgstr "Aggiungi Indirizzo E-mail"
 
-#: templates/allauth/account/email.html:62
+#: templates/allauth/account/email.html:71
 msgid "Add E-mail"
 msgstr "Aggiungi E-mail"
 
-#: templates/allauth/account/email.html:69
+#: templates/allauth/account/email.html:78
 msgid "Do you really want to remove the selected e-mail address?"
 msgstr "Vuoi davvero rimuovere l'indirizzo e-mail selezionato?"
 
@@ -138,10 +130,10 @@ msgid ""
 msgstr ""
 "Ciao da %(site_name)s!\n"
 "\n"
-"Ricevi questa e-mail perché tu o qualcun altro avete richiesto una "
-"password per il tuo account utente.\n"
-"Può essere ignorata in sicurezza se non hai richiesto un reset della password. "
-"Clicca il link sottostante per reimpostare la tua password."
+"Ricevi questa e-mail perché tu o qualcun altro avete richiesto una password "
+"per il tuo account utente.\n"
+"Può essere ignorata in sicurezza se non hai richiesto un reset della "
+"password. Clicca il link sottostante per reimpostare la tua password."
 
 #: templates/allauth/account/email/password_reset_key_message.txt:8
 #, python-format
@@ -161,12 +153,12 @@ msgstr ""
 msgid "Password Reset E-mail"
 msgstr "E-mail di Reset Password"
 
-#: templates/allauth/account/email_confirm.html:3
-#: templates/allauth/account/email_confirm.html:7
+#: templates/allauth/account/email_confirm.html:11
+#: templates/allauth/account/email_confirm.html:16
 msgid "Confirm E-mail Address"
 msgstr "Conferma Indirizzo E-mail"
 
-#: templates/allauth/account/email_confirm.html:15
+#: templates/allauth/account/email_confirm.html:24
 #, python-format
 msgid ""
 "Please confirm\n"
@@ -174,14 +166,15 @@ msgid ""
 "  user %(user_display)s."
 msgstr ""
 "Per favore conferma\n"
-"  che <a href=\"mailto:%(email)s\">%(email)s</a> sia un indirizzo e-mail per\n"
+"  che <a href=\"mailto:%(email)s\">%(email)s</a> sia un indirizzo e-mail "
+"per\n"
 "  l'utente %(user_display)s."
 
-#: templates/allauth/account/email_confirm.html:22
+#: templates/allauth/account/email_confirm.html:31
 msgid "Confirm"
 msgstr "Conferma"
 
-#: templates/allauth/account/email_confirm.html:28
+#: templates/allauth/account/email_confirm.html:37
 #, python-format
 msgid ""
 "This e-mail confirmation link expired or is invalid. Please\n"
@@ -225,7 +218,8 @@ msgid ""
 "              <a class=\"signin\" href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
 "Se non hai ancora creato un account, per favore\n"
-"              <a class=\"signin\" href=\"%(signup_url)s\">registrati</a> prima."
+"              <a class=\"signin\" href=\"%(signup_url)s\">registrati</a> "
+"prima."
 
 #: templates/allauth/account/login.html:55
 msgid "Forgot Password?"
@@ -240,13 +234,13 @@ msgstr "Esci"
 msgid "Are you sure you want to sign out?"
 msgstr "Sei sicuro di voler uscire?"
 
-#: templates/allauth/account/logout.html:26 templates/base.html:206
-#: templates/base.html:223
+#: templates/allauth/account/logout.html:26 templates/base.html:151
+#: templates/base.html:168
 msgid "Home"
 msgstr "Home"
 
-#: templates/allauth/account/logout.html:27 templates/base.html:85
-#: templates/base.html:140 templates/includes/mobile-top-header.html:24
+#: templates/allauth/account/logout.html:27 templates/base.html:92
+#: templates/includes/mobile-top-header.html:26
 msgid "Logout"
 msgstr "Disconnetti"
 
@@ -295,36 +289,36 @@ msgstr "Indirizzo e-mail primario impostato."
 msgid "Your primary e-mail address must be verified."
 msgstr "Il tuo indirizzo e-mail primario deve essere verificato."
 
-#: templates/allauth/account/password_change.html:3
-#: templates/allauth/account/password_change.html:5
-#: templates/allauth/account/password_change.html:17
-#: templates/allauth/account/password_reset_from_key.html:3
-#: templates/allauth/account/password_reset_from_key.html:8
-#: templates/allauth/account/password_reset_from_key_done.html:3
-#: templates/allauth/account/password_reset_from_key_done.html:5
+#: templates/allauth/account/password_change.html:13
+#: templates/allauth/account/password_change.html:15
+#: templates/allauth/account/password_change.html:27
+#: templates/allauth/account/password_reset_from_key.html:13
+#: templates/allauth/account/password_reset_from_key.html:18
+#: templates/allauth/account/password_reset_from_key_done.html:13
+#: templates/allauth/account/password_reset_from_key_done.html:15
 msgid "Change Password"
 msgstr "Cambia Password"
 
-#: templates/allauth/account/password_reset.html:3
-#: templates/allauth/account/password_reset.html:8
-#: templates/allauth/account/password_reset_done.html:3
-#: templates/allauth/account/password_reset_done.html:7
+#: templates/allauth/account/password_reset.html:12
+#: templates/allauth/account/password_reset.html:17
+#: templates/allauth/account/password_reset_done.html:12
+#: templates/allauth/account/password_reset_done.html:17
 msgid "Password Reset"
 msgstr "Reimpostazione Password"
 
-#: templates/allauth/account/password_reset.html:15
+#: templates/allauth/account/password_reset.html:24
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
 msgstr ""
-" Hai dimenticato la tua password? Inserisci il tuo indirizzo e-mail qui sotto, e ti "
-" invieremo un'e-mail che ti permetterà di reimpostarla."
+" Hai dimenticato la tua password? Inserisci il tuo indirizzo e-mail qui "
+"sotto, e ti  invieremo un'e-mail che ti permetterà di reimpostarla."
 
-#: templates/allauth/account/password_reset.html:27
+#: templates/allauth/account/password_reset.html:36
 msgid "Reset My Password"
 msgstr "Reimposta la Mia Password"
 
-#: templates/allauth/account/password_reset.html:31
+#: templates/allauth/account/password_reset.html:40
 msgid ""
 "Please contact us if you have any trouble resetting your\n"
 "  password."
@@ -332,7 +326,7 @@ msgstr ""
 "Per favore contattaci se hai problemi a reimpostare la tua\n"
 "  password."
 
-#: templates/allauth/account/password_reset_done.html:15
+#: templates/allauth/account/password_reset_done.html:25
 msgid ""
 "We have sent you an e-mail. Please contact us if you do not\n"
 "  receive it within a few minutes."
@@ -340,33 +334,34 @@ msgstr ""
 "Ti abbiamo inviato un'e-mail. Per favore contattaci se non\n"
 "  la ricevi entro pochi minuti."
 
-#: templates/allauth/account/password_reset_from_key.html:6
+#: templates/allauth/account/password_reset_from_key.html:16
 msgid "Bad Token"
 msgstr "Token Non Valido"
 
-#: templates/allauth/account/password_reset_from_key.html:14
+#: templates/allauth/account/password_reset_from_key.html:24
 #, python-format
 msgid ""
 "The password reset link was invalid, possibly because it has\n"
 "  already been used. Please request a\n"
 "  <a href=\"%(passwd_reset_url)s\">new password reset</a>."
 msgstr ""
-"Il link per la reimpostazione della password non è valido, probabilmente perché è\n"
+"Il link per la reimpostazione della password non è valido, probabilmente "
+"perché è\n"
 "  già stato utilizzato. Per favore richiedi una\n"
 "  <a href=\"%(passwd_reset_url)s\">nuova reimpostazione password</a>."
 
-#: templates/allauth/account/password_reset_from_key.html:24
+#: templates/allauth/account/password_reset_from_key.html:34
 msgid "change password"
 msgstr "cambia password"
 
-#: templates/allauth/account/password_reset_from_key.html:27
-#: templates/allauth/account/password_reset_from_key_done.html:7
+#: templates/allauth/account/password_reset_from_key.html:37
+#: templates/allauth/account/password_reset_from_key_done.html:17
 msgid "Your password is now changed."
 msgstr "La tua password è ora cambiata."
 
-#: templates/allauth/account/password_set.html:3
-#: templates/allauth/account/password_set.html:5
-#: templates/allauth/account/password_set.html:14
+#: templates/allauth/account/password_set.html:13
+#: templates/allauth/account/password_set.html:15
+#: templates/allauth/account/password_set.html:24
 msgid "Set Password"
 msgstr "Imposta Password"
 
@@ -391,12 +386,12 @@ msgstr ""
 "Hai già un account? Allora per favore\n"
 "  <a href=\"%(login_url)s\">accedi</a>."
 
-#: templates/allauth/account/signup_closed.html:3
-#: templates/allauth/account/signup_closed.html:5
+#: templates/allauth/account/signup_closed.html:13
+#: templates/allauth/account/signup_closed.html:15
 msgid "Sign Up Closed"
 msgstr "Registrazione Chiusa"
 
-#: templates/allauth/account/signup_closed.html:8
+#: templates/allauth/account/signup_closed.html:18
 msgid "We are sorry, but the sign up is currently closed."
 msgstr "Ci dispiace, ma la registrazione è attualmente chiusa."
 
@@ -410,13 +405,13 @@ msgid "you are already logged in as %(user_display)s."
 msgstr "sei già loggato come %(user_display)s."
 
 #: templates/allauth/account/verification_sent.html:13
-#: templates/allauth/account/verification_sent.html:15
-#: templates/allauth/account/verified_email_required.html:3
-#: templates/allauth/account/verified_email_required.html:5
+#: templates/allauth/account/verification_sent.html:18
+#: templates/allauth/account/verified_email_required.html:13
+#: templates/allauth/account/verified_email_required.html:15
 msgid "Verify Your E-mail Address"
 msgstr "Verifica il Tuo Indirizzo E-mail"
 
-#: templates/allauth/account/verification_sent.html:19
+#: templates/allauth/account/verification_sent.html:22
 msgid ""
 "We have sent an e-mail to you for verification. Follow the\n"
 "  link provided to finalize the signup process. Please contact us if you do "
@@ -424,20 +419,21 @@ msgid ""
 "  receive it within a few minutes."
 msgstr ""
 "Ti abbiamo inviato un'e-mail per la verifica. Segui il\n"
-"  link fornito per completare il processo di registrazione. Per favore contattaci se non\n"
+"  link fornito per completare il processo di registrazione. Per favore "
+"contattaci se non\n"
 "  la ricevi entro pochi minuti."
 
-#: templates/allauth/account/verified_email_required.html:11
+#: templates/allauth/account/verified_email_required.html:21
 msgid ""
 "This part of the site requires us to verify that you are who\n"
 "  you claim to be. For this purpose, we require that you verify ownership "
 "of\n"
 "  your e-mail address. "
 msgstr ""
-"Questa parte del sito richiede che verifichiamo la tua identità. Per questo motivo, "
-"è necessario verificare la proprietà del tuo indirizzo e-mail."
+"Questa parte del sito richiede che verifichiamo la tua identità. Per questo "
+"motivo, è necessario verificare la proprietà del tuo indirizzo e-mail."
 
-#: templates/allauth/account/verified_email_required.html:17
+#: templates/allauth/account/verified_email_required.html:27
 msgid ""
 "We have sent an e-mail to you for verification. Please click\n"
 "  on the link inside this e-mail. Please contact us if you do not receive "
@@ -445,10 +441,11 @@ msgid ""
 "  within a few minutes."
 msgstr ""
 "Ti abbiamo inviato un'e-mail per la verifica. Per favore clicca\n"
-"  sul link all'interno di questa e-mail. Per favore contattaci se non ricevi\n"
+"  sul link all'interno di questa e-mail. Per favore contattaci se non "
+"ricevi\n"
 "  l'e-mail entro pochi minuti."
 
-#: templates/allauth/account/verified_email_required.html:23
+#: templates/allauth/account/verified_email_required.html:33
 #, python-format
 msgid ""
 "<strong>Note:</strong> you can still\n"
@@ -478,8 +475,8 @@ msgstr "Errore di Accesso con il Social Network"
 msgid ""
 "An error occurred while attempting to login via your social network account."
 msgstr ""
-"Si è verificato un errore durante il tentativo di accesso tramite il tuo account "
-"social network."
+"Si è verificato un errore durante il tentativo di accesso tramite il tuo "
+"account social network."
 
 #: templates/allauth/socialaccount/connections.html:5
 #: templates/allauth/socialaccount/connections.html:8
@@ -491,13 +488,15 @@ msgid ""
 "You can sign in to your account using any of the following third party "
 "accounts:"
 msgstr ""
-"Puoi accedere al tuo account utilizzando uno dei seguenti account di terze parti:"
+"Puoi accedere al tuo account utilizzando uno dei seguenti account di terze "
+"parti:"
 
 #: templates/allauth/socialaccount/connections.html:43
 msgid ""
 "You currently have no social network accounts connected to this account."
 msgstr ""
-"Attualmente non hai alcun account di social network collegato a questo account."
+"Attualmente non hai alcun account di social network collegato a questo "
+"account."
 
 #: templates/allauth/socialaccount/connections.html:46
 msgid "Add a 3rd Party Account"
@@ -540,91 +539,113 @@ msgstr ""
 "Stai per utilizzare il tuo account %(provider_name)s per accedere a\n"
 "%(site_name)s. Come ultimo passaggio, per favore completa il modulo seguente:"
 
-#: templates/base.html:8 templates/index.html:20
+#: templates/base.html:15
 msgid "Building Oristano"
 msgstr "Edificio Oristano"
 
-#: templates/base.html:42
+#: templates/base.html:49
 msgid "Logo"
 msgstr "Logo"
 
-#: templates/base.html:50 templates/includes/mobile-top-header.html:43
-#: templates/properties/properties.html:22
-msgid "Search by Name"
-msgstr "Cerca per Nome"
+#: templates/base.html:57 templates/includes/mobile-top-header.html:39
+#: templates/properties/properties.html:21
+msgid "Search"
+msgstr "Cerca"
 
-#: templates/base.html:79 templates/base.html:134
-#: templates/includes/mobile-top-header.html:18
+#: templates/base.html:86 templates/includes/mobile-top-header.html:20
 #: templates/properties/property_management.html:11
 msgid "Property Management"
 msgstr "Gestione Immobili"
 
-#: templates/base.html:82 templates/base.html:137
-#: templates/includes/mobile-top-header.html:21
+#: templates/base.html:89 templates/includes/mobile-top-header.html:23
 #: templates/profiles/user_profile.html:47
 msgid "My Favourites"
 msgstr "I Miei Preferiti"
 
-#: templates/base.html:87 templates/base.html:142
-#: templates/includes/mobile-top-header.html:26
+#: templates/base.html:94 templates/includes/mobile-top-header.html:28
 msgid "Register"
 msgstr "Registrati"
 
-#: templates/base.html:88 templates/base.html:143
-#: templates/includes/mobile-top-header.html:27
+#: templates/base.html:95 templates/includes/mobile-top-header.html:29
 msgid "Login"
 msgstr "Accedi"
 
-#: templates/base.html:101 templates/base.html:105 templates/base.html:177
-#: templates/base.html:181
-msgid "EN"
-msgstr "EN"
-
-#: templates/base.html:106 templates/base.html:182
-msgid "IT"
-msgstr "IT"
-
-#: templates/base.html:153 templates/includes/mobile-top-header.html:37
-msgid "Search"
-msgstr "Cerca"
-
-#: templates/base.html:159
-msgid "Search our site"
-msgstr "Cerca nel nostro sito"
-
-#: templates/base.html:192
+#: templates/base.html:133
 msgid "Toggle navigation"
 msgstr "Attiva/Disattiva navigazione"
 
-#: templates/base.html:201
+#: templates/base.html:142
 msgid "Admin"
 msgstr "Admin"
 
-#: templates/base.html:209 templates/base.html:226
-#: templates/properties/properties.html:11
-#: templates/properties/properties.html:69
-msgid "Properties"
-msgstr "Proprietà"
-
-#: templates/base.html:212 templates/base.html:229
+#: templates/base.html:146
 msgid "Construction"
 msgstr "Costruzione"
 
-#: templates/base.html:215 templates/base.html:232
+#: templates/base.html:154 templates/base.html:171
+msgid "Solutions"
+msgstr "Soluzioni"
+
+#: templates/base.html:157 templates/base.html:174
+#: templates/properties/properties.html:11
+#, fuzzy
+#| msgid "Apartments Available"
+msgid "Apartments"
+msgstr "Appartamenti"
+
+#: templates/base.html:160 templates/base.html:177
 msgid "About"
 msgstr "Chi Siamo"
 
-#: templates/base.html:218 templates/base.html:235
+#: templates/base.html:163 templates/base.html:180
 msgid "Contact"
 msgstr "Contatti"
 
-#: templates/base.html:266
-msgid "Follow us on social media:"
-msgstr "Seguici sui social media:"
+#: templates/base.html:224
+#, fuzzy
+#| msgid "Building Oristano"
+msgid "Building Info"
+msgstr "Informazioni sull'edificio"
 
-#: templates/base.html:272
-msgid "Building Sardinia. All rights reserved."
-msgstr "Building Sardinia. Tutti i diritti riservati."
+#: templates/base.html:225
+#, fuzzy
+#| msgid "Location"
+msgid "View Location"
+msgstr "Visualizza posizione"
+
+#: templates/base.html:231
+#, fuzzy
+#| msgid "Our Apartment Types"
+msgid "Apartment Types:"
+msgstr "Tipologie di appartamenti:"  # Updated to reflect footer change
+
+#: templates/base.html:233
+msgid "Two-room"
+msgstr "Bilocali"
+
+#: templates/base.html:234
+msgid "Three-room"
+msgstr "Trilocali"
+
+#: templates/base.html:251
+msgid "Contact Information:"
+msgstr "Informazioni di contatto:"
+
+#: templates/base.html:253
+#, fuzzy
+#| msgid "Telephone:"
+msgid "Phone:"
+msgstr "Telefono:"
+
+#: templates/base.html:257 templates/index.html:328
+msgid "Email:"
+msgstr "Email:"
+
+#: templates/base.html:270
+#, fuzzy
+#| msgid "All rights reserved."
+msgid "All rights reserved."
+msgstr "Tutti i diritti riservati."
 
 #: templates/construction/construction.html:6
 msgid "Construction Projects - Building Oristano"
@@ -647,8 +668,8 @@ msgid ""
 "A luxurious skyscraper in the heart of the city, with completion expected by "
 "mid-2025."
 msgstr ""
-"Un lussuoso grattacielo nel cuore della città, con completamento previsto per "
-"metà 2025."
+"Un lussuoso grattacielo nel cuore della città, con completamento previsto "
+"per metà 2025."
 
 #: templates/construction/construction.html:31
 msgid "Upcoming Building 2"
@@ -663,8 +684,8 @@ msgid ""
 "An eco-friendly residential complex featuring modern amenities. Estimated "
 "launch: Early 2026."
 msgstr ""
-"Un complesso residenziale eco-sostenibile con servizi moderni. Lancio previsto: "
-"inizio 2026."
+"Un complesso residenziale eco-sostenibile con servizi moderni. Lancio "
+"previsto: inizio 2026."
 
 #: templates/construction/construction.html:40
 msgid "Upcoming Building 3"
@@ -682,151 +703,268 @@ msgstr ""
 "Appartamenti di lusso con splendide viste sull'oceano. La costruzione inizia "
 "nella seconda metà del 2024."
 
-#: templates/contact.html:12
-msgid "Contact Us"
-msgstr "Contattaci"
-
-#: templates/contact.html:17
-msgid "Please correct the errors below:"
-msgstr "Per favore correggi gli errori qui sotto:"
-
-#: templates/contact.html:46
-msgid "Name"
-msgstr "Nome"
-
-#: templates/contact.html:53 templates/profiles/user_profile.html:18
-msgid "Email"
-msgstr "Email"
-
-#: templates/contact.html:60
-msgid "Subject"
-msgstr "Oggetto"
-
-#: templates/contact.html:67
-msgid "Message"
-msgstr "Messaggio"
-
-#: templates/contact.html:73
-msgid "Send"
-msgstr "Invia"
-
-#: templates/contact.html:81
-msgid "Our Office"
-msgstr "Il Nostro Ufficio"
-
-#: templates/contact.html:82
-msgid "Address:"
-msgstr "Indirizzo:"
-
-#: templates/contact.html:83
-msgid "Telephone:"
-msgstr "Telefono:"
-
-#: templates/contact.html:84
-msgid "Email:"
-msgstr "Email:"
-
-#: templates/errors/404.html:14
+#: templates/errors/404.html:21
 msgid "The page you are looking for isn't available"
 msgstr "La pagina che stai cercando non è disponibile"
 
-#: templates/errors/404.html:19
+#: templates/errors/404.html:26
 msgid "Return to the homepage"
 msgstr "Torna alla homepage"
 
-#: templates/index.html:10
+#: templates/includes/mobile-top-header.html:45
+#, fuzzy
+#| msgid "Search our site"
+msgid "Search our site"
+msgstr "Cerca nel nostro sito"
+
+#: templates/index.html:11
 msgid "Homepage"
 msgstr "Homepage"
 
-#: templates/index.html:17
+#: templates/index.html:18
 msgid "Your browser does not support HTML5 video."
 msgstr "Il tuo browser non supporta il video HTML5."
 
 #: templates/index.html:21
-msgid "Your captivating introduction here."
-msgstr "La tua introduzione accattivante qui."
+msgid "Residenza 126"
+msgstr "Residenza 126"  # No changes needed, this is correct.
 
-#: templates/index.html:27
+#: templates/index.html:22
+msgid "Elegance and Tranquility in the Heart of the City"
+msgstr "Eleganza e Tranquillità nel Cuore della Città"  # No changes needed, this is correct.
+
+#: templates/index.html:34
+msgid ""
+"\n"
+"                    <strong>Residenza 126</strong> is an exclusive project "
+"located in the heart of Oristano, designed for those who want to live in a "
+"modern environment without giving up peace and privacy. This elegant "
+"residential complex, consisting of 8 apartments, combines contemporary "
+"architecture with cutting-edge technological solutions, offering a "
+"personalized and high-quality experience.\n"
+"\n"
+"                    Each apartment has been designed to meet the highest "
+"standards of design and functionality, with premium finishes and extensive "
+"customization options. Whether you are looking for an investment or your new "
+"home, <strong>Residenza 126</strong> represents a unique opportunity where "
+"comfort, style, and innovation come together to create living spaces that "
+"match your desires.\n"
+"                    \n"
+"                    Schedule a visit and discover why <strong>Residenza 126</strong> "
+"is the perfect choice for your future.\n"
+msgstr ""
+"\n"
+"Residenza 126 è un progetto esclusivo situato nel cuore di Oristano, "
+"conceputo per chi desidera vivere in un ambiente moderno senza rinunciare "
+"alla pace e alla privacy. Questo elegante complesso residenziale, composto "
+"da 8 appartamenti, combina architettura contemporanea e soluzioni tecnologiche "
+"all'avanguardia, offrendo un'esperienza personalizzata e di alta qualità.\n"
+"\n"
+"Ogni appartamento è stato progettato per soddisfare i più elevati "
+"standard di design e funzionalità, con finiture di pregio e ampie "
+"opzioni di personalizzazione. Che tu stia cercando un investimento o la "
+"tua nuova casa, <strong>Residenza 126</strong> rappresenta un'opportunità "
+"unica dove comfort, stile e innovazione si fondono per creare spazi "
+"abitativi che soddisfano i tuoi desideri.\n"
+"Prenota una visita e scopri perché <strong>Residenza 126</strong> è la "
+"scelta perfetta per il tuo futuro.\n"
+
+#: templates/index.html:42
+msgid ""
+"Bright environments with top-of-the-range Finstral brand fixtures, airy and "
+"cared for in every detail with the best Made in Italy coverings and high-"
+"quality materials."
+msgstr ""
+"Ambienti luminosi con infissi di alta gamma del marchio Finstral, ariosi e "
+"curati in ogni dettaglio con le migliori coperture Made in Italy e materiali "
+"di alta qualità."
+
+#: templates/index.html:59
+msgid "Living in the heart of the city - Oristano"
+msgstr "Vivere nel cuore della città - Oristano"
+
+#: templates/index.html:61
+msgid ""
+"\n"
+"                    Just two minutes from the historic center of Oristano, "
+"<strong>Residenza 126</strong> combines the best of urban living with an "
+"oasis of tranquility. The building is designed to let you enjoy the "
+"convenience of the city without compromising on peace and privacy. It's "
+"perfect for those seeking a retreat from the hustle and bustle of city life "
+"without sacrificing comfort.\n"
+msgstr ""
+"\n"
+"A soli due minuti dal centro storico di Oristano, <strong>Residenza 126</strong> "
+"unisce il meglio della vita urbana con un'oasi di tranquillità. L'edificio "
+"è progettato per permetterti di godere della comodità della città senza "
+"compromettere la pace e la privacy. È perfetto per chi cerca un rifugio "
+"dalla frenesia della vita cittadina senza rinunciare al comfort.\n"
+
+#: templates/index.html:117
+msgid "Download Brochure"
+msgstr "Scarica la Brochure"
+
+#: templates/index.html:129
+msgid "Reach Out"
+msgstr "Contattaci"
+
+#: templates/index.html:139
+msgid "Our Apartment Types"
+msgstr "I Nostri Tipi di Appartamenti"
+
+#: templates/index.html:140
+msgid "Tailored Living Solutions:"
+msgstr "Soluzioni Abitative su Misura:"
+
+#: templates/index.html:142
+msgid ""
+"\n"
+"            <strong>Residenza 126</strong> offers two different types of "
+"homes to meet all needs. The one-bedroom and three-bedroom apartments are "
+"designed to provide maximum comfort and flexibility, with spaces "
+"customizable according to your preferences. The apartments feature high-"
+"quality finishes, designer accessories, and advanced technological solutions "
+"to ensure security and convenience. Whether you're looking for a cozy one-"
+"bedroom apartment or a spacious three-bedroom home for your family, you'll "
+"find the perfect residence at <strong>Residenza 126</strong>.\n"
+msgstr ""
+"\n"
+"<strong>Residenza 126</strong> offre due diverse tipologie di abitazioni "
+"per soddisfare ogni esigenza. Gli appartamenti bilocali e trilocali sono "
+"progettati per garantire il massimo comfort e flessibilità, con spazi "
+"personalizzabili in base alle tue preferenze. Gli appartamenti sono dotati "
+"di finiture di alta qualità, accessori di design e soluzioni tecnologiche "
+"avanzate per garantire sicurezza e comodità. Che tu stia cercando un "
+"accogliente appartamento bilocale o una spaziosa soluzione trilocale per "
+"la tua famiglia, troverai la residenza perfetta presso <strong>Residenza "
+"126</strong>.\n"
+
+#: templates/index.html:151
+msgid "Two-room Apartments"
+msgstr "Bilocali"
+
+#: templates/index.html:153
+msgid ""
+"\n"
+"                    The <strong>two-bedroom apartments</strong> at "
+"<strong>Residenza 126</strong> are ideal for those seeking a functional "
+"apartment without compromising on style. Each apartment offers a spacious "
+"living room with an open-plan kitchen, a master bedroom, and a large, modern "
+"bathroom. The real highlight is the 25 sqm private terrace, perfect for "
+"outdoor relaxation or entertaining guests, equipped with a Jacuzzi setup for "
+"moments of pure relaxation. This type of home is perfect for couples, young "
+"professionals, or investors looking for a versatile and high-quality "
+"property.\n"
+msgstr ""
+"\n"
+"I bilocali di <strong>Residenza 126</strong> sono ideali per chi cerca un "
+"appartamento funzionale senza compromettere lo stile. Ogni bilocale offre "
+"un ampio soggiorno con cucina a vista, una camera matrimoniale e un bagno "
+"spazioso e moderno. Il vero punto di forza è l'ampia terrazza privata di "
+"25 mq, perfetta per rilassarsi all'aperto o intrattenere ospiti, dotata "
+"di predisposizione per una Jacuzzi per momenti di puro relax. Questa "
+"tipologia abitativa è perfetta per coppie, giovani professionisti o "
+"investitori in cerca di una proprietà versatile e di alta qualità.\n"
+
+#: templates/index.html:158
+msgid ""
+"\n"
+"                    By choosing a two-bedroom apartment at <strong>Residenza "
+"126</strong>, you can be sure of a secure investment in an exclusive "
+"location.\n"
+msgstr ""
+"\n"
+"Scegliendo un bilocale in <strong>Residenza 126</strong>, avrai la "
+"certezza di un investimento sicuro in una location esclusiva.\n"
+
+#: templates/index.html:173
+msgid "Three-room Apartments"
+msgstr "Trilocali"
+
+#: templates/index.html:175
+msgid ""
+"\n"
+"                    The <strong>three-bedroom apartments</strong> at "
+"<strong>Residenza 126</strong> offer spacious and bright rooms, designed to "
+"meet the needs of family life. The large living area with an open-plan "
+"kitchen creates a welcoming and functional atmosphere, while the two master "
+"bedrooms and the spacious bathroom ensure comfort and convenience. Each "
+"apartment features a private balcony or terrace, perfect for enjoying "
+"moments of outdoor relaxation. High-end finishes and advanced technologies "
+"complete a living experience that combines elegance and exclusivity.\n"
+msgstr ""
+"\n"
+"I trilocali di <strong>Residenza 126</strong> offrono ambienti ampi e "
+"luminosi, pensati.\n"
+
+#: templates/index.html:190
 msgid "Property Listings"
 msgstr "Annunci Immobiliari"
 
-#: templates/index.html:40 templates/index.html:97 templates/index.html:145
-#: templates/profiles/user_profile.html:57
-#: templates/properties/properties.html:84
+#: templates/index.html:203 templates/profiles/user_profile.html:57
+#: templates/properties/properties.html:83
 #: templates/properties/property_details.html:47
 #: templates/properties/property_details.html:65
 msgid "Your browser does not support the video tag."
 msgstr "Il tuo browser non supporta il tag video."
 
-#: templates/index.html:51
+#: templates/index.html:214
 msgid "Placeholder"
 msgstr "Segnaposto"
 
-#: templates/index.html:65
+#: templates/index.html:228
 msgid "No properties available at the moment."
 msgstr "Nessuna proprietà disponibile al momento."
 
-#: templates/index.html:74
-msgid "View All Properties"
-msgstr "Visualizza Tutte le Proprietà"
+#: templates/index.html:237
+#, fuzzy
+#| msgid "View All Properties"
+msgid "View All Apartments"
+msgstr "Visualizza Tutti gli Appartamenti"
 
-#: templates/index.html:82
-msgid "About the Company"
-msgstr "Chi Siamo"
+#: templates/index.html:245
+msgid "Contact Us"
+msgstr "Contattaci"
 
-#: templates/index.html:87
-msgid "Company Owner"
-msgstr "Proprietario dell'Azienda"
+#: templates/index.html:250
+msgid "Please correct the errors below:"
+msgstr "Per favore correggi gli errori qui sotto:"
 
-#: templates/index.html:88
-msgid "Team"
-msgstr "Team"
+#: templates/index.html:279
+msgid "Name"
+msgstr "Nome"
 
-#: templates/index.html:99
-msgid "The First Building"
-msgstr "Il Primo Edificio"
+#: templates/index.html:286 templates/profiles/user_profile.html:18
+msgid "Email"
+msgstr "Email"
 
-#: templates/index.html:109
-msgid "Buildings Built"
-msgstr "Edifici Costruiti"
+#: templates/index.html:293 templates/profiles/user_profile.html:20
+msgid "Phone Number"
+msgstr "Numero di Telefono"
 
-#: templates/index.html:113
-msgid "Apartments Available"
-msgstr "Appartamenti Disponibili"
+#: templates/index.html:300
+msgid "Subject"
+msgstr "Oggetto"
 
-#: templates/index.html:117
-msgid "Faster Turnaround"
-msgstr "Tempi di Risposta più Rapidi"
+#: templates/index.html:307
+msgid "Message"
+msgstr "Messaggio"
 
-#: templates/index.html:121
-msgid "Our Achievements"
-msgstr "I Nostri Successi"
+#: templates/index.html:313
+msgid "Send"
+msgstr "Invia"
 
-#: templates/index.html:133
-msgid "How It All Started & How We Are Going"
-msgstr "Come è Tutto Iniziato & Come Stiamo Andando"
+#: templates/index.html:325
+msgid "Address:"
+msgstr "Indirizzo:"
 
-#: templates/index.html:135
-msgid ""
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac tortor nec "
-"justo posuere dignissim. Aliquam erat volutpat. Nam at vestibulum magna. "
-"Integer fermentum urna ut lacus auctor, vel aliquam odio blandit."
-msgstr ""
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac tortor nec "
-"justo posuere dignissim. Aliquam erat volutpat. Nam at vestibulum magna. "
-"Integer fermentum urna ut lacus auctor, vel aliquam odio blandit."
+#: templates/index.html:326
+msgid "Tax code:"
+msgstr "Partita iva:"
 
-#: templates/index.html:138
-msgid ""
-"Ut lacinia cursus tortor non egestas. Donec a felis at sapien sollicitudin "
-"aliquet. Sed tempus nisl vel tortor malesuada, ut faucibus mi efficitur. "
-"Nulla facilisi. Vestibulum viverra arcu et enim varius, eget dictum velit "
-"egestas."
-msgstr ""
-"Ut lacinia cursus tortor non egestas. Donec a felis at sapien sollicitudin "
-"aliquet. Sed tempus nisl vel tortor malesuada, ut faucibus mi efficitur. "
-"Nulla facilisi. Vestibulum viverra arcu et enim varius, eget dictum velit "
-"egestas."
+#: templates/index.html:327
+msgid "Telephone:"
+msgstr "Telefono:"
 
 #: templates/profiles/user_profile.html:13
 msgid "Profile of"
@@ -853,10 +991,6 @@ msgid "here"
 msgstr "qui"
 
 #: templates/profiles/user_profile.html:20
-msgid "Phone Number"
-msgstr "Numero di Telefono"
-
-#: templates/profiles/user_profile.html:20
 msgid "Not provided"
 msgstr "Non fornito"
 
@@ -871,17 +1005,17 @@ msgid "Update"
 msgstr "Aggiorna"
 
 #: templates/profiles/user_profile.html:82
-#: templates/properties/properties.html:114
+#: templates/properties/properties.html:108
 msgid "sq ft"
 msgstr "mq"
 
 #: templates/profiles/user_profile.html:94
-#: templates/properties/properties.html:128
+#: templates/properties/properties.html:122
 msgid "Bedrooms"
 msgstr "Camere da Letto"
 
 #: templates/profiles/user_profile.html:99
-#: templates/properties/properties.html:133
+#: templates/properties/properties.html:127
 msgid "Bathrooms"
 msgstr "Bagni"
 
@@ -893,45 +1027,50 @@ msgstr "Nessuna proprietà preferita ancora."
 msgid "View Properties"
 msgstr "Visualizza Proprietà"
 
-#: templates/properties/properties.html:29
+#: templates/properties/properties.html:28
 msgid "Location"
 msgstr "Posizione"
 
-#: templates/properties/properties.html:39
+#: templates/properties/properties.html:38
 msgid "Type"
 msgstr "Tipo"
 
-#: templates/properties/properties.html:47
+#: templates/properties/properties.html:46
 msgid "Filter"
 msgstr "Filtra"
 
-#: templates/properties/properties.html:57
+#: templates/properties/properties.html:56
 msgid "Size (smaller to larger)"
 msgstr "Dimensione (dal più piccolo al più grande)"
 
-#: templates/properties/properties.html:58
+#: templates/properties/properties.html:57
 msgid "Size (larger to smaller)"
 msgstr "Dimensione (dal più grande al più piccolo)"
 
-#: templates/properties/properties.html:59
+#: templates/properties/properties.html:58
 msgid "Price (low to high)"
 msgstr "Prezzo (dal più basso al più alto)"
 
-#: templates/properties/properties.html:60
+#: templates/properties/properties.html:59
 msgid "Price (high to low)"
 msgstr "Prezzo (dal più alto al più basso)"
 
-#: templates/properties/properties.html:67
+#: templates/properties/properties.html:66
 msgid "All Properties"
 msgstr "Tutte le Proprietà"
 
-#: templates/properties/properties.html:69
+#: templates/properties/properties.html:68
+msgid "Properties"
+msgstr "Proprietà"
+
+#: templates/properties/properties.html:68
 msgid "found for"
 msgstr "trovate per"
 
-#: templates/properties/properties.html:219
+#: templates/properties/properties.html:209
 msgid "Please log in to add a property to your favourites."
-msgstr "Per aggiungere una proprietà ai tuoi preferiti, per favore effettua il login."
+msgstr ""
+"Per aggiungere una proprietà ai tuoi preferiti, per favore effettua il login."
 
 #: templates/properties/property_details.html:16
 msgid "Location:"
@@ -984,6 +1123,296 @@ msgstr "Video della Proprietà"
 #: templates/properties/property_management.html:70
 msgid "Save Property"
 msgstr "Salva Proprietà"
+
+#: venv/lib/python3.12/site-packages/click/_termui_impl.py:518
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr "{editor}: Modifica non riuscita"
+
+#: venv/lib/python3.12/site-packages/click/_termui_impl.py:522
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr "{editor}: Modifica non riuscita: {e}"
+
+#: venv/lib/python3.12/site-packages/click/core.py:1120
+msgid "Aborted!"
+msgstr "Interrotto!"
+
+#: venv/lib/python3.12/site-packages/click/core.py:1309
+#: venv/lib/python3.12/site-packages/click/decorators.py:559
+msgid "Show this message and exit."
+msgstr "Mostra questo messaggio e esci."
+
+#: venv/lib/python3.12/site-packages/click/core.py:1340
+#: venv/lib/python3.12/site-packages/click/core.py:1370
+#, python-brace-format
+msgid "(Deprecated) {text}"
+msgstr "(Deprecato) {text}"
+
+#: venv/lib/python3.12/site-packages/click/core.py:1387
+msgid "Options"
+msgstr "Opzioni"
+
+#: venv/lib/python3.12/site-packages/click/core.py:1413
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] "Argomento extra inaspettato ({args})"
+msgstr[1] "Argomenti extra inaspettati ({args})"
+
+#: venv/lib/python3.12/site-packages/click/core.py:1429
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr "Avviso di deprecazione: il comando {name!r} è deprecato."
+
+#: venv/lib/python3.12/site-packages/click/core.py:1636
+msgid "Commands"
+msgstr "Comandi"
+
+#: venv/lib/python3.12/site-packages/click/core.py:1668
+msgid "Missing command."
+msgstr "Comando mancante."
+
+#: venv/lib/python3.12/site-packages/click/core.py:1746
+msgid "No such command {name!r}."
+msgstr "Nessun comando del tipo {name!r}."
+
+#: venv/lib/python3.12/site-packages/click/core.py:2310
+#, fuzzy
+#| msgid "Value must be valid JSON."
+msgid "Value must be an iterable."
+msgstr "Il valore deve essere un iterabile."
+
+#: venv/lib/python3.12/site-packages/click/core.py:2331
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] "Richiede {nargs} valori, ma ne è stato fornito 1."
+msgstr[1] "Richiede {nargs} valori, ma ne sono stati forniti {len}."
+
+#: venv/lib/python3.12/site-packages/click/core.py:2778
+#, python-brace-format
+msgid "env var: {var}"
+msgstr "variabile ambiente: {var}"
+
+#: venv/lib/python3.12/site-packages/click/core.py:2808
+msgid "(dynamic)"
+msgstr "(dinamico)"
+
+#: venv/lib/python3.12/site-packages/click/core.py:2821
+#, python-brace-format
+msgid "default: {default}"
+msgstr "predefinito: {default}"
+
+#: venv/lib/python3.12/site-packages/click/core.py:2834
+msgid "required"
+msgstr "obbligatorio"
+
+#: venv/lib/python3.12/site-packages/click/decorators.py:465
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr "%(prog)s, versione %(version)s"
+
+#: venv/lib/python3.12/site-packages/click/decorators.py:528
+msgid "Show the version and exit."
+msgstr "Mostra la versione ed esci."
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:44
+#: venv/lib/python3.12/site-packages/click/exceptions.py:80
+#, python-brace-format
+msgid "Error: {message}"
+msgstr "Errore: {message}"
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:72
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr "Prova '{command} {option}' per aiuto."
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:121
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr "Valore non valido: {message}"
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:123
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr "Valore non valido per {param_hint}: {message}"
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:179
+msgid "Missing argument"
+msgstr "Argomento mancante"
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:181
+msgid "Missing option"
+msgstr "Opzione mancante"
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:183
+msgid "Missing parameter"
+msgstr "Parametro mancante"
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:185
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr "Manca {param_type}"
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:192
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr "Parametro mancante: {param_name}"
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:212
+#, python-brace-format
+msgid "No such option: {name}"
+msgstr "Nessuna opzione del tipo: {name}"
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:224
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] "Intendevi {possibility}?"
+msgstr[1] "(Opzioni possibili: {possibilities})"
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:262
+#, fuzzy
+#| msgid "Unknown"
+msgid "unknown error"
+msgstr "Errore sconosciuto"
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:269
+msgid "Could not open file {filename!r}: {message}"
+msgstr "Impossibile aprire il file {filename!r}: {message}"
+
+#: venv/lib/python3.12/site-packages/click/parser.py:231
+msgid "Argument {name!r} takes {nargs} values."
+msgstr "L'argomento {name!r} richiede {nargs} valori."
+
+#: venv/lib/python3.12/site-packages/click/parser.py:413
+msgid "Option {name!r} does not take a value."
+msgstr "L'opzione {name!r} non accetta un valore."
+
+#: venv/lib/python3.12/site-packages/click/parser.py:474
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] "L'opzione {name!r} richiede un argomento."
+msgstr[1] "L'opzione {name!r} richiede {nargs} argomenti."
+
+#: venv/lib/python3.12/site-packages/click/shell_completion.py:319
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+"Il completamento della shell non è supportato per le versioni di Bash "
+"precedenti alla 4.4."
+
+#: venv/lib/python3.12/site-packages/click/shell_completion.py:326
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+"Impossibile rilevare la versione di Bash, il completamento della shell non è "
+"supportato."
+
+#: venv/lib/python3.12/site-packages/click/termui.py:158
+msgid "Repeat for confirmation"
+msgstr "Ripeti per confermare"
+
+#: venv/lib/python3.12/site-packages/click/termui.py:174
+msgid "Error: The value you entered was invalid."
+msgstr "Errore: Il valore inserito non è valido."
+
+#: venv/lib/python3.12/site-packages/click/termui.py:176
+#, python-brace-format
+msgid "Error: {e.message}"
+msgstr "Errore: {e.message}"
+
+#: venv/lib/python3.12/site-packages/click/termui.py:187
+msgid "Error: The two entered values do not match."
+msgstr "Errore: I due valori inseriti non corrispondono."
+
+#: venv/lib/python3.12/site-packages/click/termui.py:243
+msgid "Error: invalid input"
+msgstr "Errore: input non valido"
+
+#: venv/lib/python3.12/site-packages/click/termui.py:773
+msgid "Press any key to continue..."
+msgstr "Premi un tasto per continuare..."
+
+#: venv/lib/python3.12/site-packages/click/types.py:266
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+"Scegli tra:\n"
+"\t{choices}"
+
+#: venv/lib/python3.12/site-packages/click/types.py:298
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] "{value!r} non è {choice}."
+msgstr[1] "{value!r} non è uno dei {choices}."
+
+#: venv/lib/python3.12/site-packages/click/types.py:392
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] "{value!r} non corrisponde al formato {format}."
+msgstr[1] "{value!r} non corrisponde ai formati {formats}."
+
+#: venv/lib/python3.12/site-packages/click/types.py:414
+msgid "{value!r} is not a valid {number_type}."
+msgstr "{value!r} non è un {number_type} valido."
+
+#: venv/lib/python3.12/site-packages/click/types.py:470
+#, python-brace-format
+msgid "{value} is not in the range {range}."
+msgstr "{value} non è nell'intervallo {range}."
+
+#: venv/lib/python3.12/site-packages/click/types.py:611
+msgid "{value!r} is not a valid boolean."
+msgstr "{value!r} non è un booleano valido."
+
+#: venv/lib/python3.12/site-packages/click/types.py:635
+msgid "{value!r} is not a valid UUID."
+msgstr "{value!r} non è un UUID valido."
+
+#: venv/lib/python3.12/site-packages/click/types.py:822
+msgid "file"
+msgstr "file"
+
+#: venv/lib/python3.12/site-packages/click/types.py:824
+msgid "directory"
+msgstr "directory"
+
+#: venv/lib/python3.12/site-packages/click/types.py:826
+msgid "path"
+msgstr "percorso"
+
+#: venv/lib/python3.12/site-packages/click/types.py:877
+msgid "{name} {filename!r} does not exist."
+msgstr "{name} {filename!r} non esiste."
+
+#: venv/lib/python3.12/site-packages/click/types.py:886
+msgid "{name} {filename!r} is a file."
+msgstr "{name} {filename!r} è un file."
+
+#: venv/lib/python3.12/site-packages/click/types.py:894
+#, python-brace-format
+msgid "{name} '{filename}' is a directory."
+msgstr "{name} '{filename}' è una directory."
+
+#: venv/lib/python3.12/site-packages/click/types.py:903
+msgid "{name} {filename!r} is not readable."
+msgstr "{name} {filename!r} non è leggibile."
+
+#: venv/lib/python3.12/site-packages/click/types.py:912
+msgid "{name} {filename!r} is not writable."
+msgstr "{name} {filename!r} non è scrivibile."
+
+#: venv/lib/python3.12/site-packages/click/types.py:921
+msgid "{name} {filename!r} is not executable."
+msgstr "{name} {filename!r} non è eseguibile."
+
+#: venv/lib/python3.12/site-packages/click/types.py:988
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] "Sono richiesti valori {len_type}, ma è stato dato {len_value}."
+msgstr[1] "Sono richiesti valori {len_type}, ma sono stati dati {len_value}."
 
 #: venv/lib/python3.12/site-packages/cloudinary/forms.py:55
 #: venv/lib/python3.12/site-packages/cloudinary/forms.py:124
@@ -1065,15 +1494,16 @@ msgstr "Inserisci un indirizzo email valido."
 msgid ""
 "Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
 msgstr ""
-"Inserisci uno “slug” valido composto da lettere, numeri, trattini bassi o trattini."
+"Inserisci uno “slug” valido composto da lettere, numeri, trattini bassi o "
+"trattini."
 
 #: venv/lib/python3.12/site-packages/django/core/validators.py:315
 msgid ""
 "Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
 "hyphens."
 msgstr ""
-"Inserisci uno “slug” valido composto da lettere Unicode, numeri, trattini bassi o "
-"trattini."
+"Inserisci uno “slug” valido composto da lettere Unicode, numeri, trattini "
+"bassi o trattini."
 
 #: venv/lib/python3.12/site-packages/django/core/validators.py:327
 #: venv/lib/python3.12/site-packages/django/core/validators.py:336
@@ -1118,7 +1548,8 @@ msgstr "Assicurati che questo valore sia maggiore o uguale a %(limit_value)s."
 #: venv/lib/python3.12/site-packages/django/core/validators.py:452
 #, python-format
 msgid "Ensure this value is a multiple of step size %(limit_value)s."
-msgstr "Assicurati che questo valore sia un multiplo del passo %(limit_value)s."
+msgstr ""
+"Assicurati che questo valore sia un multiplo del passo %(limit_value)s."
 
 #: venv/lib/python3.12/site-packages/django/core/validators.py:459
 #, python-format
@@ -1126,8 +1557,9 @@ msgid ""
 "Ensure this value is a multiple of step size %(limit_value)s, starting from "
 "%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
 msgstr ""
-"Assicurati che questo valore sia un multiplo del passo %(limit_value)s, partendo da "
-"%(offset)s, ad esempio %(offset)s, %(valid_value1)s, %(valid_value2)s, e così via."
+"Assicurati che questo valore sia un multiplo del passo %(limit_value)s, "
+"partendo da %(offset)s, ad esempio %(offset)s, %(valid_value1)s, "
+"%(valid_value2)s, e così via."
 
 #: venv/lib/python3.12/site-packages/django/core/validators.py:491
 #, python-format
@@ -1153,11 +1585,11 @@ msgid_plural ""
 "Ensure this value has at most %(limit_value)d characters (it has "
 "%(show_value)d)."
 msgstr[0] ""
-"Assicurati che questo valore abbia al massimo %(limit_value)d carattere (ne ha "
-"%(show_value)d)."
+"Assicurati che questo valore abbia al massimo %(limit_value)d carattere (ne "
+"ha %(show_value)d)."
 msgstr[1] ""
-"Assicurati che questo valore abbia al massimo %(limit_value)d caratteri (ne ha "
-"%(show_value)d)."
+"Assicurati che questo valore abbia al massimo %(limit_value)d caratteri (ne "
+"ha %(show_value)d)."
 
 #: venv/lib/python3.12/site-packages/django/core/validators.py:532
 #: venv/lib/python3.12/site-packages/django/forms/fields.py:359
@@ -1169,19 +1601,15 @@ msgstr "Inserisci un numero."
 #, python-format
 msgid "Ensure that there are no more than %(max)s digit in total."
 msgid_plural "Ensure that there are no more than %(max)s digits in total."
-msgstr[0] ""
-"Assicurati che ci siano al massimo %(max)s cifra in totale."
-msgstr[1] ""
-"Assicurati che ci siano al massimo %(max)s cifre in totale."
+msgstr[0] "Assicurati che ci siano al massimo %(max)s cifra in totale."
+msgstr[1] "Assicurati che ci siano al massimo %(max)s cifre in totale."
 
 #: venv/lib/python3.12/site-packages/django/core/validators.py:539
 #, python-format
 msgid "Ensure that there are no more than %(max)s decimal place."
 msgid_plural "Ensure that there are no more than %(max)s decimal places."
-msgstr[0] ""
-"Assicurati che ci siano al massimo %(max)s decimale."
-msgstr[1] ""
-"Assicurati che ci siano al massimo %(max)s decimali."
+msgstr[0] "Assicurati che ci siano al massimo %(max)s decimale."
+msgstr[1] "Assicurati che ci siano al massimo %(max)s decimali."
 
 #: venv/lib/python3.12/site-packages/django/core/validators.py:544
 #, python-format
@@ -1200,8 +1628,8 @@ msgid ""
 "File extension “%(extension)s” is not allowed. Allowed extensions are: "
 "%(allowed_extensions)s."
 msgstr ""
-"L'estensione del file “%(extension)s” non è consentita. Le estensioni permesse sono: "
-"%(allowed_extensions)s."
+"L'estensione del file “%(extension)s” non è consentita. Le estensioni "
+"permesse sono: %(allowed_extensions)s."
 
 #: venv/lib/python3.12/site-packages/django/core/validators.py:677
 msgid "Null characters are not allowed."
@@ -1287,7 +1715,8 @@ msgid ""
 "“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
 "format."
 msgstr ""
-"Il valore “%(value)s” ha un formato di data non valido. Deve essere nel formato YYYY-MM-DD."
+"Il valore “%(value)s” ha un formato di data non valido. Deve essere nel "
+"formato YYYY-MM-DD."
 
 #: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1425
 #: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1560
@@ -1296,7 +1725,8 @@ msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
 "date."
 msgstr ""
-"Il valore “%(value)s” ha il formato corretto (YYYY-MM-DD) ma è una data non valida."
+"Il valore “%(value)s” ha il formato corretto (YYYY-MM-DD) ma è una data non "
+"valida."
 
 #: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1429
 msgid "Date (without time)"
@@ -1308,7 +1738,8 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
 "uuuuuu]][TZ] format."
 msgstr ""
-"Il valore “%(value)s” ha un formato non valido. Deve essere nel formato YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]."
+"Il valore “%(value)s” ha un formato non valido. Deve essere nel formato YYYY-"
+"MM-DD HH:MM[:ss[.uuuuuu]][TZ]."
 
 #: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1564
 #, python-format
@@ -1316,7 +1747,8 @@ msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
 "[TZ]) but it is an invalid date/time."
 msgstr ""
-"Il valore “%(value)s” ha il formato corretto (YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]) ma è una data/ora non valida."
+"Il valore “%(value)s” ha il formato corretto (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) ma è una data/ora non valida."
 
 #: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1569
 msgid "Date (with time)"
@@ -1337,7 +1769,8 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
 "uuuuuu] format."
 msgstr ""
-"Il valore “%(value)s” ha un formato non valido. Deve essere nel formato [DD] [[HH:]MM:]ss[.uuuuuu]."
+"Il valore “%(value)s” ha un formato non valido. Deve essere nel formato [DD] "
+"[[HH:]MM:]ss[.uuuuuu]."
 
 #: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1863
 msgid "Duration"
@@ -1422,7 +1855,8 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
 "format."
 msgstr ""
-"Il valore “%(value)s” ha un formato non valido. Deve essere nel formato HH:MM[:ss[.uuuuuu]]."
+"Il valore “%(value)s” ha un formato non valido. Deve essere nel formato HH:"
+"MM[:ss[.uuuuuu]]."
 
 #: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2525
 #, python-format
@@ -1430,7 +1864,8 @@ msgid ""
 "“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
 "invalid time."
 msgstr ""
-"Il valore “%(value)s” ha il formato corretto (HH:MM[:ss[.uuuuuu]]) ma è un'ora non valida."
+"Il valore “%(value)s” ha il formato corretto (HH:MM[:ss[.uuuuuu]]) ma è "
+"un'ora non valida."
 
 #: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2529
 msgid "Time"
@@ -1544,27 +1979,36 @@ msgstr "Il file inviato è vuoto."
 #: venv/lib/python3.12/site-packages/django/forms/fields.py:637
 #, python-format
 msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
-msgid_plural "Ensure this filename has at most %(max)d characters (it has %(length)d)."
-msgstr[0] "Assicurati che questo nome file abbia al massimo %(max)d carattere (ne ha %(length)d)."
-msgstr[1] "Assicurati che questo nome file abbia al massimo %(max)d caratteri (ne ha %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+"Assicurati che questo nome file abbia al massimo %(max)d carattere (ne ha "
+"%(length)d)."
+msgstr[1] ""
+"Assicurati che questo nome file abbia al massimo %(max)d caratteri (ne ha "
+"%(length)d)."
 
 #: venv/lib/python3.12/site-packages/django/forms/fields.py:642
 msgid "Please either submit a file or check the clear checkbox, not both."
-msgstr "Per favore, invia un file oppure seleziona la casella di controllo per cancellare, non entrambe le opzioni."
+msgstr ""
+"Per favore, invia un file oppure seleziona la casella di controllo per "
+"cancellare, non entrambe le opzioni."
 
 #: venv/lib/python3.12/site-packages/django/forms/fields.py:710
 msgid ""
 "Upload a valid image. The file you uploaded was either not an image or a "
 "corrupted image."
 msgstr ""
-"Carica un'immagine valida. Il file caricato non era un'immagine oppure è un'immagine corrotta."
+"Carica un'immagine valida. Il file caricato non era un'immagine oppure è "
+"un'immagine corrotta."
 
 #: venv/lib/python3.12/site-packages/django/forms/fields.py:882
 #: venv/lib/python3.12/site-packages/django/forms/fields.py:968
 #: venv/lib/python3.12/site-packages/django/forms/models.py:1592
 #, python-format
 msgid "Select a valid choice. %(value)s is not one of the available choices."
-msgstr "Seleziona una scelta valida. %(value)s non è tra le scelte disponibili."
+msgstr ""
+"Seleziona una scelta valida. %(value)s non è tra le scelte disponibili."
 
 #: venv/lib/python3.12/site-packages/django/forms/fields.py:970
 #: venv/lib/python3.12/site-packages/django/forms/fields.py:1089
@@ -1600,8 +2044,9 @@ msgid ""
 "ManagementForm data is missing or has been tampered with. Missing fields: "
 "%(field_names)s. You may need to file a bug report if the issue persists."
 msgstr ""
-"I dati del ManagementForm sono mancanti o sono stati manomessi. Campi mancanti: "
-"%(field_names)s. Potrebbe essere necessario segnalare un bug se il problema persiste."
+"I dati del ManagementForm sono mancanti o sono stati manomessi. Campi "
+"mancanti: %(field_names)s. Potrebbe essere necessario segnalare un bug se il "
+"problema persiste."
 
 #: venv/lib/python3.12/site-packages/django/forms/formsets.py:65
 #, python-format
@@ -1634,7 +2079,8 @@ msgstr "Per favore, correggi i dati duplicati per %(field)s."
 #: venv/lib/python3.12/site-packages/django/forms/models.py:906
 #, python-format
 msgid "Please correct the duplicate data for %(field)s, which must be unique."
-msgstr "Per favore, correggi i dati duplicati per %(field)s, che devono essere unici."
+msgstr ""
+"Per favore, correggi i dati duplicati per %(field)s, che devono essere unici."
 
 #: venv/lib/python3.12/site-packages/django/forms/models.py:913
 #, python-format
@@ -1642,8 +2088,8 @@ msgid ""
 "Please correct the duplicate data for %(field_name)s which must be unique "
 "for the %(lookup)s in %(date_field)s."
 msgstr ""
-"Per favore, correggi i dati duplicati per %(field_name)s che devono essere unici "
-"per il %(lookup)s in %(date_field)s."
+"Per favore, correggi i dati duplicati per %(field_name)s che devono essere "
+"unici per il %(lookup)s in %(date_field)s."
 
 #: venv/lib/python3.12/site-packages/django/forms/models.py:922
 msgid "Please correct the duplicate values below."
@@ -1655,7 +2101,8 @@ msgstr "Il valore inline non corrisponde all'istanza genitore."
 
 #: venv/lib/python3.12/site-packages/django/forms/models.py:1450
 msgid "Select a valid choice. That choice is not one of the available choices."
-msgstr "Seleziona una scelta valida. Quella scelta non è tra le opzioni disponibili."
+msgstr ""
+"Seleziona una scelta valida. Quella scelta non è tra le opzioni disponibili."
 
 #: venv/lib/python3.12/site-packages/django/forms/models.py:1594
 #, python-format
@@ -1668,7 +2115,8 @@ msgid ""
 "%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
 "may be ambiguous or it may not exist."
 msgstr ""
-"%(datetime)s non può essere interpretato nel fuso orario %(current_timezone)s; potrebbe essere ambiguo o potrebbe non esistere."
+"%(datetime)s non può essere interpretato nel fuso orario "
+"%(current_timezone)s; potrebbe essere ambiguo o potrebbe non esistere."
 
 #: venv/lib/python3.12/site-packages/django/forms/widgets.py:461
 msgid "Clear"
@@ -2112,9 +2560,9 @@ msgid ""
 "enable them, at least for this site, or for HTTPS connections, or for “same-"
 "origin” requests."
 msgstr ""
-"Se hai configurato il tuo browser per disabilitare le intestazioni “Referer”, "
-"per favore riabilitale, almeno per questo sito, o per le connessioni HTTPS, "
-"o per le richieste di “stesso origine”."
+"Se hai configurato il tuo browser per disabilitare le intestazioni "
+"“Referer”, per favore riabilitale, almeno per questo sito, o per le "
+"connessioni HTTPS, o per le richieste di “stesso origine”."
 
 #: venv/lib/python3.12/site-packages/django/views/csrf.py:45
 msgid ""
@@ -2126,9 +2574,10 @@ msgid ""
 msgstr ""
 "Se stai usando il tag <meta name=\"referrer\" content=\"no-referrer\"> o "
 "includendo l’intestazione “Referrer-Policy: no-referrer”, per favore "
-"rimuovili. La protezione CSRF richiede l’intestazione “Referer” per effettuare "
-"un controllo rigoroso del referer. Se sei preoccupato per la privacy, usa "
-"alternative come <a rel=\"noreferrer\" …> per i link ai siti di terze parti."
+"rimuovili. La protezione CSRF richiede l’intestazione “Referer” per "
+"effettuare un controllo rigoroso del referer. Se sei preoccupato per la "
+"privacy, usa alternative come <a rel=\"noreferrer\" …> per i link ai siti di "
+"terze parti."
 
 #: venv/lib/python3.12/site-packages/django/views/csrf.py:54
 msgid ""
@@ -2137,16 +2586,16 @@ msgid ""
 "that your browser is not being hijacked by third parties."
 msgstr ""
 "Vedi questo messaggio perché questo sito richiede un cookie CSRF quando "
-"invii moduli. Questo cookie è richiesto per motivi di sicurezza, per garantire "
-"che il tuo browser non venga preso di mira da terze parti."
+"invii moduli. Questo cookie è richiesto per motivi di sicurezza, per "
+"garantire che il tuo browser non venga preso di mira da terze parti."
 
 #: venv/lib/python3.12/site-packages/django/views/csrf.py:60
 msgid ""
 "If you have configured your browser to disable cookies, please re-enable "
 "them, at least for this site, or for “same-origin” requests."
 msgstr ""
-"Se hai configurato il tuo browser per disabilitare i cookie, per favore riabilitali, "
-"almeno per questo sito, o per le richieste di “stesso origine”."
+"Se hai configurato il tuo browser per disabilitare i cookie, per favore "
+"riabilitali, almeno per questo sito, o per le richieste di “stesso origine”."
 
 #: venv/lib/python3.12/site-packages/django/views/csrf.py:66
 msgid "More information is available with DEBUG=True."
@@ -2241,7 +2690,8 @@ msgid ""
 "target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
 msgstr ""
 "Consulta <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
-"target=\"_blank\" rel=\"noopener\">le note di rilascio</a> per Django %(version)s"
+"target=\"_blank\" rel=\"noopener\">le note di rilascio</a> per Django "
+"%(version)s"
 
 #: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:208
 #, python-format
@@ -2251,8 +2701,8 @@ msgid ""
 "rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
 "configured any URLs."
 msgstr ""
-"Stai vedendo questa pagina perché <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"Stai vedendo questa pagina perché <a href=\"https://docs.djangoproject.com/"
+"en/%(version)s/ref/settings/#debug\" target=\"_blank\" "
 "rel=\"noopener\">DEBUG=True</a> è nel tuo file di impostazioni e non hai "
 "configurato alcun URL."
 
@@ -2279,3 +2729,75 @@ msgstr "Comunità Django"
 #: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:236
 msgid "Connect, get help, or contribute"
 msgstr "Connettiti, ottieni aiuto o contribuisci"
+
+#: venv/lib/python3.12/site-packages/isort/main.py:158
+msgid "show this help message and exit"
+msgstr "mostra questo messaggio di aiuto e esci"
+
+#~ msgid "Search on our website"
+#~ msgstr "Cerca nel nostro sito web"
+
+#~ msgid "English"
+#~ msgstr "Inglese"
+
+#~ msgid "Italian"
+#~ msgstr "Italiano"
+
+#~ msgid "EN"
+#~ msgstr "EN"
+
+#~ msgid "IT"
+#~ msgstr "IT"
+
+#~ msgid "Follow us on social media:"
+#~ msgstr "Seguici sui social media:"
+
+#~ msgid "Our Office"
+#~ msgstr "Il Nostro Ufficio"
+
+#~ msgid "Your captivating introduction here."
+#~ msgstr "La tua introduzione accattivante qui."
+
+#~ msgid "About the Company"
+#~ msgstr "Chi Siamo"
+
+#~ msgid "Company Owner"
+#~ msgstr "Proprietario dell'Azienda"
+
+#~ msgid "Team"
+#~ msgstr "Team"
+
+#~ msgid "The First Building"
+#~ msgstr "Il Primo Edificio"
+
+#~ msgid "Buildings Built"
+#~ msgstr "Edifici Costruiti"
+
+#~ msgid "Faster Turnaround"
+#~ msgstr "Tempi di Risposta più Rapidi"
+
+#~ msgid "Our Achievements"
+#~ msgstr "I Nostri Successi"
+
+#~ msgid "How It All Started & How We Are Going"
+#~ msgstr "Come è Tutto Iniziato & Come Stiamo Andando"
+
+#~ msgid ""
+#~ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac tortor "
+#~ "nec justo posuere dignissim. Aliquam erat volutpat. Nam at vestibulum "
+#~ "magna. Integer fermentum urna ut lacus auctor, vel aliquam odio blandit."
+#~ msgstr ""
+#~ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac tortor "
+#~ "nec justo posuere dignissim. Aliquam erat volutpat. Nam at vestibulum "
+#~ "magna. Integer fermentum urna ut lacus auctor, vel aliquam odio blandit."
+
+#~ msgid ""
+#~ "Ut lacinia cursus tortor non egestas. Donec a felis at sapien "
+#~ "sollicitudin aliquet. Sed tempus nisl vel tortor malesuada, ut faucibus "
+#~ "mi efficitur. Nulla facilisi. Vestibulum viverra arcu et enim varius, "
+#~ "eget dictum velit egestas."
+#~ msgstr ""
+#~ "Ut lacinia cursus tortor non egestas. Donec a felis at sapien "
+#~ "sollicitudin aliquet. Sed tempus nisl vel tortor malesuada, ut faucibus "
+#~ "mi efficitur. Nulla facilisi. Vestibulum viverra arcu et enim varius, "
+#~ "eget dictum velit egestas."
