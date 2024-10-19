@@ -24,11 +24,16 @@ class PropertyAdmin(admin.ModelAdmin):
         "bedrooms",
         "bathrooms",
         "created_at",
+        "is_sold",
         "number_of_likes",
     )
-    list_filter = ("location", "property_type", "bedrooms", "bathrooms", "created_at")
+    list_filter = ("location", "property_type", "bedrooms", "bathrooms", "created_at", "is_sold", "liked_by")
     search_fields = ("name", "description", "location", "property_type")
     ordering = ("-created_at",)
+    
+    # Make 'is_sold' editable in the list view
+    list_editable = ("is_sold",)
+    
     fieldsets = (
         (
             None,
@@ -41,6 +46,7 @@ class PropertyAdmin(admin.ModelAdmin):
                     "property_type",
                     "price",
                     "size",
+                    "is_sold",
                 )
             },
         ),

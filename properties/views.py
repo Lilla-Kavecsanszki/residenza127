@@ -202,3 +202,17 @@ def property_management(request):
             "video_forms": video_formset,
         },
     )
+
+
+@login_required
+@superuser_required
+def toggle_sold_status(request, property_id):
+    # Get the property object
+    property = get_object_or_404(Property, id=property_id)
+    
+    # Toggle the "is_sold" status
+    property.is_sold = not property.is_sold
+    property.save()
+    
+    # Redirect back to the property list
+    return redirect('all_properties')  # or the name of the property listing page

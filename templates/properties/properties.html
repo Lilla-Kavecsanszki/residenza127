@@ -76,6 +76,12 @@
             <div class="col-12 mb-4"> <!-- Each property card takes the full width -->
                 <div class="card h-100 border-0 property-card">
                     <a href="{% url 'property_detail' property.id %}" class="card-link">
+                        {% if property.is_sold %}
+                        <!-- Display "SOLD" label if the property is sold -->
+                        <div class="sold-label">
+                            <span class="badge badge-danger">{% trans "SOLD" %}</span>
+                        </div>
+                        {% endif %}
                         {% if property.main_video %}
                         <!-- Render video if available -->
                         <video class="card-img-top img-fluid" autoplay muted playsinline loop>
@@ -134,6 +140,16 @@
                             </div>
                         </div>
                     </a>
+                    <!-- Admin toggle button to mark as SOLD -->
+                    {% if user.is_authenticated and user.is_superuser %}
+                    <form action="{% url 'toggle_sold_status' property.id %}" method="post" style="display: inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-link" style="border: none; background: none; padding: 0;">
+                            <i class="fa {% if property.is_sold %}fa-check-circle{% else %}fa-circle{% endif %} text-primary"></i>
+                            <span>{% if property.is_sold %}{% trans "Mark as Available"%}{% else %}{% trans "Mark as SOLD" %}{% endif %}</span>
+                        </button>
+                    </form>
+                    {% endif %}
                     <!-- Like Button outside the link -->
                     <div class="like-container">
                         {% if user.is_authenticated %}

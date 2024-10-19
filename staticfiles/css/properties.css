@@ -379,3 +379,34 @@ h1, h2 {
         max-width: 100%;
     }
 }
+
+
+/* Sold button for admin user */
+.sold-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 10;
+}
+
+.property-card {
+    position: relative;
+}
+
+.card-img-top {
+    position: relative;
+    display: block;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-footer {
+    padding: 10px;
+}
