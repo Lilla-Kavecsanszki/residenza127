@@ -6,6 +6,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.contrib.sitemaps.views import sitemap
 from properties.sitemap import PropertySitemap
+from .views import robots_txt
 
 from residenza127.views import handler404 as custom_handler404
 
@@ -26,6 +27,7 @@ urlpatterns = [
     path("construction/", include("construction.urls")),
     path("profiles/", include("profiles.urls")),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
+    path('robots.txt', robots_txt, name="robots_txt"),  # Map the view to /robots.txt
     path('', include('residenza.urls')),
 ]
 

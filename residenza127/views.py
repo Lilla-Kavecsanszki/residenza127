@@ -2,6 +2,7 @@ import logging
 
 from django.shortcuts import redirect, render
 from django.utils import translation
+from django.http import HttpResponse
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -19,3 +20,13 @@ def language_switch(request, lang_code):
 
     # Redirect to the previous page
     return redirect(request.META.get("HTTP_REFERER", "/"))
+
+# Dynamic robots_txt file generaction
+def robots_txt(request):
+    lines = [
+        "User-Agent: *",
+        "Disallow: /accounts/",
+        "Disallow: /profiles/",
+        "Sitemap: https://www.argicostruzioni.com/sitemap.xml",  # Custom domain
+    ]
+    return HttpResponse("\n".join(lines), content_type="text/plain")
