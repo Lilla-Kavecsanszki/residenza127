@@ -167,6 +167,8 @@ h1, h2 {
     border-radius: 10px 10px 0 0;
     object-fit: cover;
     height: 300px;
+    position: relative; /* Position the sold mark */
+    display: block; /* Display the sold mark */
 }
 
 /* Card body styling */
@@ -254,7 +256,24 @@ h1, h2 {
 /* Property Card */
 .property-card {
     position: relative;
-    /* Other styles for the property card */
+}
+
+/* Sold button for admin user */
+.sold-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg); /* Center and angle the text */
+    z-index: 10;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.sold {
+    color: #daa520;
+    font-family: font-family: "Cinzel", serif;
+    font-size: 90px;
+    font-weight: 900;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
 }
 
 /* Like Container */
@@ -378,35 +397,4 @@ h1, h2 {
         flex: 0 0 100%; /* 1 card per row on extra-small screens */
         max-width: 100%;
     }
-}
-
-
-/* Sold button for admin user */
-.sold-label {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #ff4d4d;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    z-index: 10;
-}
-
-.property-card {
-    position: relative;
-}
-
-.card-img-top {
-    position: relative;
-    display: block;
-}
-
-.card-body {
-    padding: 10px;
-}
-
-.card-footer {
-    padding: 10px;
 }
