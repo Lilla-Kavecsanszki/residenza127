@@ -263,15 +263,59 @@ h1, h2 {
     position: absolute;
     top: 50%;
     left: 50%;
+    background-color: #182d5f; /* No background */
+    border-radius: 5px;
     transform: translate(-50%, -50%) rotate(-45deg); /* Center and angle the text */
     z-index: 10;
     white-space: nowrap; /* Prevent text from wrapping */
+    padding: 10px; /* Space for the inner border */
+    font-size: 30px; /* Example font size */
+    color: #182d5f; /* Inner text color */
+    font-weight: bold;
+    font-family: "Cinzel", serif;
+    
+    /* The first (outer) border */
+    border: solid 6px #182d5f; /* Outer border color */
+    box-sizing: border-box;
 }
 
+.sold-label::before {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute;
+    top: -10px; /* Offset to create a transparent gap */
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    
+    /* Second (inner) border */
+    border: solid 6px transparent; /* Transparent gap */
+    border-radius: 10px; /* Match the border-radius of the label */
+    z-index: -1; /* Place behind the original label */
+    box-sizing: border-box;
+}
+
+.sold-label::after {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute;
+    top: -20px; /* Offset to create the transparent gap */
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    
+    /* Third (inner) border */
+    border: solid 6px #182d5f; /* Inner border color */
+    border-radius: 15px; /* Match the border-radius of the label */
+    z-index: -2; /* Behind the transparent gap and first border */
+    box-sizing: border-box;
+}
+
+
 .sold {
-    color: #daa520;
+    color: transparent;
     font-family: font-family: "Cinzel", serif;
-    font-size: 90px;
+    font-size: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-weight: 900;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
