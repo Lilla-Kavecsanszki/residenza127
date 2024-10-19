@@ -258,7 +258,7 @@ h1, h2 {
     position: relative;
 }
 
-/* Sold button for admin user */
+/* Sold sign for admin user */
 .sold-label {
     position: absolute;
     top: 50%;
@@ -440,5 +440,59 @@ h1, h2 {
     .property-container .col-12 {
         flex: 0 0 100%; /* 1 card per row on extra-small screens */
         max-width: 100%;
+    }
+}
+
+/* Media Query for tablets and smaller screens */
+@media (max-width: 768px) {
+    .sold-label {
+        font-size: 24px; /* Reduce font size */
+        padding: 8px; /* Adjust padding for smaller screens */
+        border-width: 4px; /* Reduce border width */
+    }
+    .sold-label::before {
+        top: -8px; /* Adjust the gap */
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+    }
+    .sold-label::after {
+        top: -16px; /* Adjust the gap */
+        left: -16px;
+        right: -16px;
+        bottom: -16px;
+    }
+    .sold {
+        font-size: 50px; /* Smaller font size for mobile */
+        padding-left: 10px; /* Adjust padding */
+        padding-right: 10px;
+        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Media Query for smaller screens (phones) */
+@media (max-width: 480px) {
+    .sold-label {
+        font-size: 20px; /* Even smaller font for small phones */
+        padding: 5px; /* Less padding for small screens */
+        border-width: 2px; /* Thinner borders */
+    }
+    .sold-label::before {
+        top: -5px; /* Adjust the gap */
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+    }
+    .sold-label::after {
+        top: -10px; /* Adjust the gap */
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+    }
+    .sold {
+        font-size: 35px; /* Very small font for very small screens */
+        padding-left: 5px; /* Smaller padding */
+        padding-right: 5px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
 }
