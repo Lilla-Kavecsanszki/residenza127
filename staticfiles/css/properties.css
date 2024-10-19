@@ -273,7 +273,7 @@ h1, h2 {
     font-family: font-family: "Cinzel", serif;
     font-size: 90px;
     font-weight: 900;
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Like Container */
