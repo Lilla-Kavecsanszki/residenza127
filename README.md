@@ -376,7 +376,6 @@ In summary, **Residenza126** provides a high-end, user-focused experience for th
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/residenza127#contents)
 
-
 # Planning
 
 The planning process for **Residenza 126** began with identifying the ideal clientele for the properties, which involved creating a Persona Profile using Code Institute's template and applying design thinking principles. This Persona Profile helped us better understand the needs, expectations, and preferences of the potential buyers or investors, allowing us to tailor the website experience specifically to them. The website was designed with these user personas in mind, ensuring the presentation and functionality catered to the right audience.
@@ -580,6 +579,111 @@ How the Features align with and fulfill the User Stories by providing the necess
 [Back to top](https://github.com/Lilla-Kavecsanszki/residenza127#contents)
 
 # Deployment
+
+## Github & Heroku Steps
+
+### 1. Create a Heroku application:
+- Go to the [Heroku Dashboard](https://dashboard.heroku.com/).
+- Click **"New"** in the top-right corner.
+- Select **"Create new app"** from the dropdown.
+- Fill in the following details:
+  - **App name**: Your desired app name.
+  - **Region**: Choose a region (United States or Europe).
+- Click **"Create app"** to finalize the Heroku app creation.
+
+### 2. Configure your Heroku app:
+- Navigate to the **Settings** tab.
+- Scroll to **Config Vars**, and click **"Reveal Config Vars"**.
+- Add the following environment variables:
+  - `DATABASE_URL`
+  - `SECRET_KEY`
+  - `SENDGRID_API_KEY`
+  - `CLOUDINARY_URL`
+  - `DISABLE_COLLECTSTATIC` (set this to `1` to avoid static files collection during deployment).
+  - `PORT` (set to `8000`).
+
+### 3. Set up your environment variables:
+- **`DATABASE_URL`:**
+  - Log into Heroku and go to [Heroku Postgres](https://elements.heroku.com/addons/heroku-postgresql).
+  - Create a new PostgreSQL instance, and copy the `DATABASE_URL` provided.
+- **`SECRET_KEY`:**
+  - Use a Django Secret Key generator (like [Django Secret Key Generator](https://djecrety.ir/)) to generate a secure key.
+  - Copy and use this key for the `SECRET_KEY`.
+- **`CLOUDINARY_URL`:**
+  - Log into [Cloudinary](https://cloudinary.com/), go to the dashboard, and copy the API URL to use for `CLOUDINARY_URL`.
+- **`SENDGRID_API_KEY`:**
+  - Log into [SendGrid](https://sendgrid.com/), go to the dashboard and copy the API code to use for `SENDGRID_API_KEY` in the Config Vars.
+
+### 4. Set up your GitHub repository (Version Control):
+- Create a new **GitHub repository** through the GitHub UI.
+- Initialize the repository in **VS Code** by opening the terminal in your workspace.
+- **Push** the project to GitHub:
+  ```bash
+  git init
+  git add .
+  git commit -m "Initial commit"
+  git remote add origin <your-repository-url>
+  git push -u origin master
+
+### 5. Install dependencies:
+In your **VS Code** terminal, install the necessary dependencies
+
+### 6. Set up the Django project:
+Create a **`requirements.txt`** file to list your project dependencies and save them.
+
+Start the Django project and application:
+- django-admin startproject PROJ_NAME .
+- python3 manage.py startapp APP_NAME
+
+### 7. Configure environment variables in `env.py`:
+Create a file named **`env.py`** in the root directory of your project, and define the necessary environment variables
+
+### 8. Create the Procfile:
+In the root directory, create the Procfile (no file extension)
+
+### 9. Deploy to Heroku using GitHub:
+1. Go to the **Deploy** tab on the Heroku dashboard for your app.
+2. Under **Deployment method**, select **GitHub**.
+3. Search for and select your GitHub repository.
+4. You can enable **Automatic Deploys** or deploy manually:
+   - **Automatic Deploys**: This will automatically deploy your app whenever you push changes to the selected branch.
+   - **Manual Deploy**: To deploy manually, select the branch (e.g., **main**) and press **"Deploy Branch"**.
+
+### 10. Build and deployment:
+- Once the build process is complete, you’ll see **"Your app was successfully deployed"**.
+- Click **"View"** to visit your live project.
+
+## Final steps of deployment:
+1. **Update Django settings for production**:
+   - Set `DEBUG = False` in **`settings.py`**:
+     - For security purposes, **`DEBUG`** should be set to **`False`** when deploying to production.
+     - This prevents detailed error pages from being exposed to end-users.
+   - Set `X_FRAME_OPTIONS = 'SAMEORIGIN'` in `settings.py` for added security:
+      - This setting is important for preventing **clickjacking** attacks. **Clickjacking** occurs when a malicious site embeds your website inside a hidden iframe, tricking users into interacting with your site without their knowledge. This could lead to unintended actions, such as submitting forms or clicking on sensitive elements, potentially compromising user security. By setting `X_FRAME_OPTIONS = 'SAMEORIGIN'` in **`settings.py`**, you ensure that your site can only be embedded in iframes on the same domain, thereby reducing the risk of clickjacking attacks. This improves the security of your application by preventing other websites from embedding your pages within their own frames.
+
+    - Add SendGrid to the email backend configuration in settings.py
+
+2. **Ensure `requirements.txt` is up-to-date**:
+    - Run the following command to make sure all dependencies are listed:
+
+```bash
+pip3 freeze --local > requirements.txt
+```
+
+3. **Clean up**:
+
+    - Remove the DISABLE_COLLECTSTATIC config var in Heroku.
+    - Ensure WhiteNoise is set up for serving static files
+    - PostgreSQL will be used for the database through Heroku.
+
+4. **Custom Domain Configuration (Squarespace)**:
+
+    - If you're using a custom domain through Squarespace, configure your DNS settings to point to Heroku. Heroku provides DNS targets in the Settings tab.
+    - Ensure that the ALLOWED_HOSTS setting in your settings.py includes your custom domain.
+    ```bash
+    ALLOWED_HOSTS = ['yourdomain.com', 'www.yourdomain.com']
+    ```
+      This tells Django to accept requests from your custom domain and ensures proper domain handling by Heroku.
 
 #### The live link to the application can be found here - [www.argicostruzioni.com](https://www.argicostruzioni.com/)
 
