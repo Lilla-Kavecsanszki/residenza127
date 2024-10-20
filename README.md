@@ -12,7 +12,7 @@ Web marketing strategies for Residenza126 focus on organic social media marketin
 
 The platform is built with Django, Python, HTML, Bootstrap, and CSS, ensuring a modern, responsive user experience. It is deployed via Heroku, with PostgreSQL used for database management. Cloudinary is utilized for media storage, and Whitenoise is integrated for efficient static file management.
 
-![Application](README_docs/images/responsive.png "Application")
+![Application](staticfiles/README_docs/images/responsive.png "Application")
 
 [Link to the live project](https://www.argicostruzioni.com/)
 
@@ -224,7 +224,7 @@ The following ER diagrams detail these relationships:
 - Atlantic Navy - #16357
 - Fibonacci Blue - #182d5f
 
-![colour_palette](README_docs/images/colorkit.png "colour_palette")
+![colour_palette](staticfiles/README_docs/images/colorkit.png "colour_palette")
 
 The color palette for the Residenza126 website has been carefully selected to reflect the brand's core values of purity, elegance, and natural well-being. It harmoniously blends neutral tones with vibrant accents, conveying a sense of freshness and tranquility that aligns with the nature of the products. The color scheme is designed to highlight key elements for better user engagement and readability while staying true to the aesthetic of the company’s logo.
 
@@ -233,22 +233,22 @@ The color palette for the Residenza126 website has been carefully selected to re
 - Cormorant Garamond (Secondary Font for Body and Subheadings):
   - Cormorant Garamond is a serif font that blends modern and classical design elements. Its elegant and readable design makes it perfect for body text and subheadings. This font ensures readability while maintaining a refined and luxurious aesthetic.
 
-![Cormorant_Garamond](README_docs/images/Cormorant_Garamond.png "cormorant_garamond")
+![Cormorant_Garamond](staticfiles/README_docs/images/Cormorant_Garamond.png "cormorant_garamond")
 
 - Italiana (Accent Font):
   - Italiana adds a touch of refined elegance with its flowing, cursive style. Used sparingly for emphasis or in specific design elements, it adds a distinctive charm to the overall design while maintaining a sophisticated tone.
 
-![Italiana](README_docs/images/Italiana.png "italiana")
+![Italiana](staticfiles/README_docs/images/Italiana.png "italiana")
 
 - Playfair Display (Navbar Font):
   - Playfair Display is used in the navbar to give the site an elegant, upscale look. Its high contrast and bold characteristics make it stand out in the navigation, enhancing visibility and ensuring a refined aesthetic. The serif details add a touch of sophistication while maintaining clarity, guiding users smoothly through the website's sections.
 
-![Playfair_Display](README_docs/images/Playfair_Display.png "playfair_display")
+![Playfair_Display](staticfiles/README_docs/images/Playfair_Display.png "playfair_display")
 
 - Cinzel (Primary Font for Headings):
   - Cinzel is a classic serif font inspired by Roman inscriptions, offering an elegant and timeless look. It adds a touch of sophistication and grandeur to headings and titles, aligning with the brand's focus on natural, luxurious products.
 
-![Cinzel](README_docs/images/Cinzel.png "cinzel")
+![Cinzel](staticfiles/README_docs/images/Cinzel.png "cinzel")
 
 Overall, this combination of fonts creates a harmonious balance between elegance and readability, ensuring that both the body text and headers stand out clearly while maintaining the sophisticated and clean aesthetic of the site. The fonts work together to enhance the user experience and support the brand's identity, providing a visually pleasing and engaging environment.
 
