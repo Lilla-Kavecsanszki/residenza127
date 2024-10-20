@@ -20,7 +20,7 @@ The platform is built with Django, Python, HTML, Bootstrap, and CSS, ensuring a 
 
 - [User Experience (UX)](https://github.com/Lilla-Kavecsanszki/residenza127#user-experience-ux)
   - [Ideal Client](https://github.com/Lilla-Kavecsanszki/residenza127#ideal-client)
-  - [User Stories & Epics](https://github.com/Lilla-Kavecsanszki/residenza127#user-stories-and-epics)
+- [User Stories & Epics](https://github.com/Lilla-Kavecsanszki/residenza127#user-stories-and-epics)
 - [Planning](https://github.com/Lilla-Kavecsanszki/residenza127#planning)
 - [Design](https://github.com/Lilla-Kavecsanszki/residenza127#design)
   - [Wireframes](https://github.com/Lilla-Kavecsanszki/residenza127#wireframes)
@@ -76,69 +76,303 @@ In summary, **Residenza126** provides a high-end, user-focused experience for th
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/residenza127#contents)
 
-### User stories and Epics
+# User Stories and Epics
 
-#### Epic 1: User Management
+## Epic 1: User Management
 
-- **US101: User Registration:** As a new user, I can register for an account with my email and password so that I can save my preferences and access property details.
-- **US102: User Authentication:** As a returning user, I can log in using my existing credentials or log out so that I can access my personal details in a secure way.
-- **US103: Receive Verification Email After Registration:** As a new user, I can receive an email confirmation after submitting the registration form so that I can verify my email address and complete the registration process.
-- **US104: Personal User Profile:** As a site user, I can access my personalized user profile so that I can view my saved properties and preferences.
+### US101: User Registration:
+**As a new user,** I can register for an account with my email and password so that I can save my preferences and access property details.
 
-#### Epic 2: Property Management
+#### Acceptance Criteria:
+- The registration form must include fields for email and password.
+- The email must be unique, and if not, an error message must be shown.
+- A confirmation email must be sent upon successful registration.
 
-- **US201: Purpose of Website and Navigation:** As a site user, I can quickly understand that the website showcases available apartments for sale, and I can navigate to various sections such as property listings, details, and contact information.
-- **US202: Add New Property Listing:** As an admin, I can add new apartment listings to the website so that I can showcase the latest available apartments to prospective buyers.
-- **US203: Update Property Information:** As an admin, I can edit property information such as pricing, floor plans, and availability to ensure the website reflects accurate and up-to-date listings.
-- **US204: Delete Property Listing:** As an admin, I can remove properties that are no longer available or sold, so that users are not confused by outdated listings.
-- **US205: View Apartment Listings:** As a user, I can view a list of available apartments, so that I can browse and compare different properties.
-- **US206: View Detailed Property Information:** As a user, I can view detailed information about each property, including floor plans, features, and location, so that I can make an informed decision.
-- **US207: Search for Properties:** As a user, I can search for apartments using keywords or filters (e.g., price, size, location) so that I can quickly find properties that match my criteria.
-- **US208: Filter Properties:** As a user, I can filter apartments based on different criteria such as price range, number of bedrooms, and location, so that I can narrow down my search to the most relevant properties.
-- **US209: Sort Properties:** As a user, I can sort the list of available apartments based on price, size, or other criteria to help me find the best match faster.
-- **US210: View Multimedia for Each Property (Property Carousel):** As a user, I can view a carousel of images and videos for a property on the property details page, so that I can visually assess the property.
-- **US211: Handle 404 Error:** As a user, if I encounter a broken link or missing property page, I can be redirected back to the homepage or property listings, ensuring a seamless browsing experience.
+### US102: User Authentication:
+**As a returning user,** I can log in using my existing credentials or log out so that I can access my personal details in a secure way.
 
-#### Epic 3: Contact and Inquiry Management
+#### Acceptance Criteria:
+- The login form must include fields for email and password.
+- If the credentials are incorrect, an error message should appear.
+- The user must be redirected to their profile page upon successful login.
 
-- **US301: Request Property Information:** As a user, I can request additional information about a property via a contact form or inquiry button, so that I can get more details before deciding to schedule a viewing.
-- **US302: Schedule a Property Visit:** As a user, I can submit a request to schedule a visit for a specific apartment, and a representative can follow up with available times for a viewing.
-- **US303: View Contact Details:** As a user, I can view contact details for the real estate agents or property managers so that I can easily reach out with questions or inquiries.
-- **US304: Send Inquiry:** As a user, I can send an inquiry about a specific apartment to the admin or agent via email or contact form so that I can get more information or arrange a visit.
-- **US305: Download Brochure:** As a user, I can download the latest brochure for Residenza 126, so that I can review all details, floor plans, and pricing offline or share it with others.
+### US103: Receive Verification Email After Registration:
+**As a new user,** I can receive an email confirmation after submitting the registration form so that I can verify my email address and complete the registration process.
 
-#### Epic 4: Language and Accessibility
+#### Acceptance Criteria:
+- A confirmation email must be sent to the user upon successful registration.
+- The email must contain a verification link.
+- Clicking the verification link must activate the user's account.
 
-- **US401: Language Switch**: As a user, I can switch between English and Italian so that I can view the website in my preferred language, improving accessibility and user experience.
-- **US402: Display Content in Preferred Language**: As a user, I want the website content (such as property listings, navigation, etc.) to display in my selected language, ensuring consistent translation across the site.
+### US104: Personal User Profile:
+**As a site user,** I can access my personalized user profile so that I can view my saved properties and preferences.
 
-#### Epic 5: User Profile Management
+#### Acceptance Criteria:
+- The user must be able to view their profile from the dashboard.
+- The profile must display saved properties, preferences, and contact details.
+- The user must be able to update their profile details.
 
-- **US601: View Profile Details**: As a registered user, I can view my personal details such as name, email, and phone number, to stay informed about my profile.
-- **US602: Update Profile Information**: As a registered user, I can update my personal information like name and phone number to keep my profile current.
-- **US603: Change Password**: As a user, I can change my password securely to maintain the privacy and security of my account.
-- **US604: View Favourites**: As a user, I can view a list of properties I have marked as favourites, so that I can easily revisit them later.
+## Epic 2: Property Management
 
-#### Epic 6: Admin Panel and Management
+### US201: Purpose of Website and Navigation:
+**As a site user,** I can quickly understand that the website showcases available apartments for sale, and I can navigate to various sections such as property listings, details, and contact information.
 
-- **US601: Admin Dashboard:** As an admin, I can access a dashboard to manage properties, users, and inquiries so that I can stay organized and ensure the site operates smoothly.
-- **US602: Manage Property Listings:** As an admin, I can edit, update, or remove listings through the admin panel to keep the site accurate and up-to-date with available properties.
-- **US603: Manage User Inquiries:** As an admin, I can review and respond to inquiries sent by site users about properties so that I can provide the necessary information to prospective buyers.
+#### Acceptance Criteria:
+- The website must have clear navigation links for property listings, contact, and other relevant sections.
+- The homepage should clearly indicate that the site lists available apartments.
+- Navigation to property listings must be quick and responsive.
 
-#### Epic 7: SEO and Web Marketing
+### US202: Add New Property Listing:
+**As an admin,** I can add new apartment listings to the website so that I can showcase the latest available apartments to prospective buyers.
 
-- **US701: SEO Optimization:** As a site user, I can easily find the site through web searches, ensuring that prospective buyers can discover the website easily when searching for properties in Oristano.
-- **US702: View Privacy Policy:** As a site user, I can access and view the company’s privacy policy so that I can understand how my data is handled in compliance with GDPR and other regulations.
-- **US703: Contact Support:** As a user, I can easily access clear contact information or support options to get help with any issues related to the website or property inquiries.
-- **US704: Leave Reviews and Feedback:** As a user, I can leave reviews or feedback about properties I have visited so that I can share my experiences and help others in their decision-making process.
+#### Acceptance Criteria:
+- The admin must be able to fill out fields for property details, such as price, location, and description.
+- The property listing must be immediately visible on the website after submission.
+- The admin must receive a confirmation message upon successfully adding a new listing.
 
-#### Epic 8: Construction Projects
+### US203: Update Property Information:
+**As an admin,** I can edit property information such as pricing, floor plans, and availability to ensure the website reflects accurate and up-to-date listings.
 
-- **US801: View Construction Projects (Construction Page):** 
-  - As a user, I can view upcoming construction projects, including their descriptions, images, and expected completion dates, so that I can stay informed about future developments.
-  
-- **US802: Browse Construction Project Details:** 
-  - As a user, I can browse detailed information about each upcoming project, including its location, type of development, and any associated multimedia (images, videos), so that I can better understand future real estate opportunities.
+#### Acceptance Criteria:
+- The admin must be able to edit property details.
+- Changes must be reflected immediately on the property listing.
+- The admin must receive a confirmation message upon updating a listing.
+
+### US204: Delete Property Listing:
+**As an admin,** I can remove properties that are no longer available or sold, so that users are not confused by outdated listings.
+
+#### Acceptance Criteria:
+- The admin must be able to delete properties from the listings.
+- Deleted properties must no longer be visible to users.
+- A confirmation message should be shown to the admin after deleting a property.
+
+### US205: View Apartment Listings:
+**As a user,** I can view a list of available apartments, so that I can browse and compare different properties.
+
+#### Acceptance Criteria:
+- The user must be able to view a list of apartments.
+- The list should display basic information like price, location, and size.
+- The user must be able to click on each listing to view detailed property information.
+
+### US206: View Detailed Property Information:
+**As a user,** I can view detailed information about each property, including floor plans, features, and location, so that I can make an informed decision.
+
+#### Acceptance Criteria:
+- The property details page must show comprehensive information about the property.
+- Multimedia elements (photos, videos) should be included on the property page.
+- The user must be able to contact the admin or agent directly from the property page.
+
+### US207: Search for Properties:
+**As a user,** I can search for apartments using keywords or filters (e.g., price, size, location) so that I can quickly find properties that match my criteria.
+
+#### Acceptance Criteria:
+- The user must be able to enter keywords or apply filters to search for properties.
+- Search results must be displayed in real-time.
+- The search results must accurately match the user’s criteria.
+
+### US208: Filter Properties:
+**As a user,** I can filter apartments based on different criteria such as price range, number of bedrooms, and location, so that I can narrow down my search to the most relevant properties.
+
+#### Acceptance Criteria:
+- The user must be able to apply multiple filters.
+- Filtered results must reflect the selected criteria.
+- The user should be able to remove or modify filters easily.
+
+### US209: Sort Properties:
+**As a user,** I can sort the list of available apartments based on price, size, or other criteria to help me find the best match faster.
+
+#### Acceptance Criteria:
+- The user must be able to sort the property list by different criteria.
+- Sorting must be responsive and update the listings in real-time.
+- The user must be able to toggle between ascending/descending order.
+
+### US210: View Multimedia for Each Property (Property Carousel):
+**As a user,** I can view a carousel of images and videos for a property on the property details page, so that I can visually assess the property.
+
+#### Acceptance Criteria:
+- The property details page must include a carousel of images and/or videos.
+- The user should be able to navigate through the multimedia elements.
+- The multimedia must load quickly and be of high quality.
+
+### US211: Handle 404 Error:
+**As a user,** if I encounter a broken link or missing property page, I can be redirected back to the homepage or property listings, ensuring a seamless browsing experience.
+
+#### Acceptance Criteria:
+- If the user encounters a broken link, a 404 error page must be displayed.
+- The 404 page must provide a link back to the homepage or property listings.
+- The user must be able to continue browsing the website without disruption.
+
+## Epic 3: Contact and Inquiry Management
+
+### US301: Request Property Information:
+**As a user,** I can request additional information about a property via a contact form or inquiry button, so that I can get more details before deciding to schedule a viewing.
+
+#### Acceptance Criteria:
+- The user must be able to submit an inquiry through a contact form or inquiry button.
+- The inquiry must be sent to the admin or agent.
+- The user must receive a confirmation that their inquiry has been submitted.
+
+### US302: Schedule a Property Visit:
+**As a user,** I can submit a request to schedule a visit for a specific apartment, and a representative can follow up with available times for a viewing.
+
+#### Acceptance Criteria:
+- The user must be able to submit a request to schedule a property visit.
+- A confirmation email with proposed viewing times must be sent to the user.
+- The request must be visible to the admin for follow-up.
+
+### US303: View Contact Details:
+**As a user,** I can view contact details for the real estate agents or property managers so that I can easily reach out with questions or inquiries.
+
+#### Acceptance Criteria:
+- Contact details (name, phone, email) must be displayed on the website.
+- The contact details must be easily accessible on property pages.
+- Users must be able to contact agents directly from the contact details.
+
+### US304: Send Inquiry:
+**As a user,** I can send an inquiry about a specific apartment to the admin or agent via email or contact form so that I can get more information or arrange a visit.
+
+#### Acceptance Criteria:
+- The user must be able to send an inquiry through a form or email link.
+- The admin or agent must receive the inquiry.
+- The user must receive a confirmation that their inquiry has been sent.
+
+### US305: Download Brochure:
+**As a user,** I can download the latest brochure for Residenza 126, so that I can review all details, floor plans, and pricing offline or share it with others.
+
+#### Acceptance Criteria:
+- The user must be able to download the latest brochure in PDF format.
+- The download link must be accessible on the property page.
+- The brochure must be up-to-date with the latest property details.
+
+## Epic 4: Language and Accessibility
+
+### US401: Language Switch:
+**As a user,** I can switch between English and Italian so that I can view the website in my preferred language, improving accessibility and user experience.
+
+#### Acceptance Criteria:
+- The website must have a language switcher option.
+- The user must be able to switch between English and Italian seamlessly.
+- The language switch must affect all website content.
+
+### US402: Display Content in Preferred Language:
+**As a user,** I want the website content (such as property listings, navigation, etc.) to display in my selected language, ensuring consistent translation across the site.
+
+#### Acceptance Criteria:
+- All website content must be translated consistently when the language is switched.
+- Property details must appear in the selected language.
+- Language-specific content must be stored and accessible for both languages.
+
+## Epic 5: User Profile Management
+
+### US601: View Profile Details:
+**As a registered user,** I can view my personal details such as name, email, and phone number, to stay informed about my profile.
+
+#### Acceptance Criteria:
+- The user must be able to view personal details from their profile.
+- The profile page must show name, email, and phone number.
+- The information must be accurate and up-to-date.
+
+### US602: Update Profile Information:
+**As a registered user,** I can update my personal information like name and phone number to keep my profile current.
+
+#### Acceptance Criteria:
+- The user must be able to update their personal information.
+- The changes must be reflected immediately after saving.
+- A confirmation message must be shown upon successful update.
+
+### US603: Change Password:
+**As a user,** I can change my password securely to maintain the privacy and security of my account.
+
+#### Acceptance Criteria:
+- The user must be able to change their password from the profile settings.
+- The new password must meet security criteria.
+- The user must receive a confirmation message upon successful password change.
+
+### US604: View Favourites:
+**As a user,** I can view a list of properties I have marked as favourites, so that I can easily revisit them later.
+
+#### Acceptance Criteria:
+- The user must be able to view a list of favourite properties.
+- The list must be updated when the user adds or removes properties from favourites.
+- The user must be able to click on a favourite to view the property details.
+
+## Epic 6: Admin Panel and Management
+
+### US601: Admin Dashboard:
+**As an admin,** I can access a dashboard to manage properties, users, and inquiries so that I can stay organized and ensure the site operates smoothly.
+
+#### Acceptance Criteria:
+- The admin must be able to access a dashboard with an overview of properties, users, and inquiries.
+- The dashboard must allow easy navigation between sections.
+- The admin must be able to filter and sort data on the dashboard.
+
+### US602: Manage Property Listings:
+**As an admin,** I can edit, update, or remove listings through the admin panel to keep the site accurate and up-to-date with available properties.
+
+#### Acceptance Criteria:
+- The admin must be able to edit, update, or delete property listings from the panel.
+- Changes must be reflected immediately on the site.
+- A confirmation message must be shown after making updates.
+
+### US603: Manage User Inquiries:
+**As an admin,** I can review and respond to inquiries sent by site users about properties so that I can provide the necessary information to prospective buyers.
+
+#### Acceptance Criteria:
+- The admin must be able to view all user inquiries.
+- The admin must be able to respond to inquiries through the panel.
+- The user must receive a notification when their inquiry is responded to.
+
+## Epic 7: SEO and Web Marketing
+
+### US701: SEO Optimization:
+**As a site user,** I can easily find the site through web searches, ensuring that prospective buyers can discover the website easily when searching for properties in Oristano.
+
+#### Acceptance Criteria:
+- The site must be optimized for search engines with relevant keywords.
+- Property pages must be indexed by search engines.
+- The site must load quickly to enhance SEO ranking.
+
+### US702: View Privacy Policy:
+**As a site user,** I can access and view the company’s privacy policy so that I can understand how my data is handled in compliance with GDPR and other regulations.
+
+#### Acceptance Criteria:
+- The privacy policy must be easily accessible from the homepage.
+- The policy must be up-to-date and cover data handling practices.
+- Users must be able to download or print the policy if needed.
+
+### US703: Contact Support:
+**As a user,** I can easily access clear contact information or support options to get help with any issues related to the website or property inquiries.
+
+#### Acceptance Criteria:
+- Contact information must be easily accessible from the website.
+- The user must be able to submit a support ticket or email.
+- The user must receive a confirmation that their support request has been received.
+
+### US704: Leave Reviews and Feedback:
+**As a user,** I can leave reviews or feedback about properties I have visited so that I can share my experiences and help others in their decision-making process.
+
+#### Acceptance Criteria:
+- The user must be able to leave a review or feedback on property pages.
+- Reviews must be submitted and visible to other users immediately.
+- The user must be able to rate properties with a star system (e.g., 1-5 stars).
+
+## Epic 8: Construction Projects
+
+### US801: View Construction Projects (Construction Page):
+**As a user,** I can view upcoming construction projects, including their descriptions, images, and expected completion dates, so that I can stay informed about future developments.
+
+#### Acceptance Criteria:
+- The user must be able to view a list of construction projects.
+- Each project must have a description, images, and expected completion dates.
+- The user must be able to click on a project to view detailed information.
+
+### US802: Browse Construction Project Details:
+**As a user,** I can browse detailed information about each upcoming project, including its location, type of development, and any associated multimedia (images, videos), so that I can better understand future real estate opportunities.
+
+#### Acceptance Criteria:
+- Each project page must include location, type, and other relevant details.
+- The page must display images and videos about the project.
+- The user must be able to return to the project list after viewing a project.
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/residenza127#contents)
 
@@ -153,11 +387,10 @@ Given the increasing reliance on mobile devices for browsing and searching for p
 
 ### Agile Methodology
 
-In this project, we applied an **Agile** approach using **GitHub issues** to create **User Stories**, which were then grouped into **Epics** and **Milestones** in a GitHub Project. This served as the Agile project management tool to track progress and ensure the team remained on course. The development of issues was managed through a **Kanban board**, which helped us track tasks in stages from **To Do** to **Done**.
+In this project, I applied an **Agile** approach using **GitHub issues** to create **User Stories**, which were then grouped into **Epics** and **Milestones** in a GitHub Project. This served as the Agile project management tool to track progress and ensure the team remained on course. The development of issues was managed through a **Kanban board**, which helped me track tasks in stages from **To Do** to **Done**.
 
-Currently, all major issues are marked as **"Done"**, except for a minor task (#42) which is labeled as **"Could have"** and **"Won't be included this time - next sprint"**, according to the **MoSCoW prioritization**. This means the task is desirable but not critical for the current sprint and will be addressed in a future sprint.
-
-For easy access, you can view the **Epics**, **Issues/User Stories** with their **Acceptance Criteria**, and the **Kanban board** [HERE](https://github.com/users/Lilla-Kavecsanszki/projects/6).
+Currently, all major issues are marked as **'Done,'** except for Epic 8: Construction Projects, which is labeled as **'Could Have'** and **'Won't be Included This Time - Next Sprint'**, according to the **MoSCoW prioritization**. 
+This means that the functionality is fully working and set up, but at the moment, it is hidden from the public. Only the admin user can see it, as we are currently waiting on news and content material for the page.
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/residenza127#contents)
 
