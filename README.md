@@ -98,7 +98,8 @@ In summary, **Residenza126** provides a high-end, user-focused experience for th
 - **US207: Search for Properties:** As a user, I can search for apartments using keywords or filters (e.g., price, size, location) so that I can quickly find properties that match my criteria.
 - **US208: Filter Properties:** As a user, I can filter apartments based on different criteria such as price range, number of bedrooms, and location, so that I can narrow down my search to the most relevant properties.
 - **US209: Sort Properties:** As a user, I can sort the list of available apartments based on price, size, or other criteria to help me find the best match faster.
-- **US210: Handle 404 Error:** As a user, if I encounter a broken link or missing property page, I can be redirected back to the homepage or property listings, ensuring a seamless browsing experience.
+- **US210: View Multimedia for Each Property (Property Carousel):** As a user, I can view a carousel of images and videos for a property on the property details page, so that I can visually assess the property.
+- **US211: Handle 404 Error:** As a user, if I encounter a broken link or missing property page, I can be redirected back to the homepage or property listings, ensuring a seamless browsing experience.
 
 #### Epic 3: Contact and Inquiry Management
 
@@ -125,7 +126,6 @@ In summary, **Residenza126** provides a high-end, user-focused experience for th
 - **US601: Admin Dashboard:** As an admin, I can access a dashboard to manage properties, users, and inquiries so that I can stay organized and ensure the site operates smoothly.
 - **US602: Manage Property Listings:** As an admin, I can edit, update, or remove listings through the admin panel to keep the site accurate and up-to-date with available properties.
 - **US603: Manage User Inquiries:** As an admin, I can review and respond to inquiries sent by site users about properties so that I can provide the necessary information to prospective buyers.
-- **US604: Manage Property Customization:** As an admin, I can track which apartment configurations (e.g., floor plans, interior options) are most popular among users to ensure we provide the best possible options.
 
 #### Epic 7: SEO and Web Marketing
 
@@ -134,6 +134,13 @@ In summary, **Residenza126** provides a high-end, user-focused experience for th
 - **US703: Contact Support:** As a user, I can easily access clear contact information or support options to get help with any issues related to the website or property inquiries.
 - **US704: Leave Reviews and Feedback:** As a user, I can leave reviews or feedback about properties I have visited so that I can share my experiences and help others in their decision-making process.
 
+#### Epic 8: Construction Projects
+
+- **US801: View Construction Projects (Construction Page):** 
+  - As a user, I can view upcoming construction projects, including their descriptions, images, and expected completion dates, so that I can stay informed about future developments.
+  
+- **US802: Browse Construction Project Details:** 
+  - As a user, I can browse detailed information about each upcoming project, including its location, type of development, and any associated multimedia (images, videos), so that I can better understand future real estate opportunities.
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/residenza127#contents)
 
