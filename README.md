@@ -78,8 +78,6 @@ In summary, **Residenza126** provides a high-end, user-focused experience for th
 
 ### User stories and Epics
 
-### User Stories and Epics
-
 #### Epic 1: User Management
 
 - **US101: User Registration:** As a new user, I can register for an account with my email and password so that I can save my preferences and access property details.
