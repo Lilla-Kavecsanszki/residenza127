@@ -75,25 +75,22 @@
             {% for property in properties %}
             <div class="col-12 mb-4"> <!-- Each property card takes the full width -->
                 <div class="card h-100 border-0 property-card">
-                    <a href="{% url 'property_detail' property.id %}" class="card-link">
+                    {% if property.is_sold %}
+                    <!-- If property is sold, don't make it a clickable link -->
+                    <div class="card-link disabled">
                         <div class="card-img-top-wrapper">
-                            {% if property.is_sold %}
                             <!-- Display "SOLD" label if the property is sold -->
                             <div class="sold-label">
                                 <span class="sold fa-star-base">{% trans "SOLD" %}</span>
                             </div>
-                            {% endif %}
                             {% if property.main_video %}
-                            <!-- Render video if available -->
                             <video class="card-img-top img-fluid" autoplay muted playsinline loop>
                                 <source src="{{ property.main_video.url }}" type="video/mp4">
                                 {% trans "Your browser does not support the video tag." %}
                             </video>
                             {% elif property.main_image %}
-                            <!-- Render image if video is not available -->
                             <img class="card-img-top img-fluid" src="{{ property.main_image.url }}" alt="{{ property.name }}">
                             {% else %}
-                            <!-- Fallback image if neither video nor image is available -->
                             <img class="card-img-top img-fluid" src="{% static 'media/noimage.png' %}" alt="{{ property.name }}">
                             {% endif %}
                         </div>
@@ -109,7 +106,6 @@
                                     <!-- Property Details -->
                                     <div id="border" class="property-details">
                                         <div class="row">
-                                            <!-- Left Column: Size and Location -->
                                             <div class="col-6">
                                                 {% if property.size %}
                                                 <p class="mb-0">
@@ -122,8 +118,63 @@
                                                 </p>
                                                 {% endif %}
                                             </div>
-                                        
-                                            <!-- Right Column: Bedrooms and Bathrooms -->
+                                            <div class="col-6">
+                                                {% if property.bedrooms %}
+                                                <p class="mb-0">
+                                                    <i class="fas fa-bed mr-1"></i>{{ property.bedrooms }} {% trans "Bedrooms" %}
+                                                </p>
+                                                {% endif %}
+                                                {% if property.bathrooms %}
+                                                <p class="mb-0">
+                                                    <i class="fas fa-bath mr-1"></i>{{ property.bathrooms }} {% trans "Bathrooms" %}
+                                                </p>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                    <!-- If the property is not sold, keep it as a clickable link -->
+                    <a href="{% url 'property_detail' property.id %}" class="card-link">
+                        <div class="card-img-top-wrapper">
+                            {% if property.main_video %}
+                            <video class="card-img-top img-fluid" autoplay muted playsinline loop>
+                                <source src="{{ property.main_video.url }}" type="video/mp4">
+                                {% trans "Your browser does not support the video tag." %}
+                            </video>
+                            {% elif property.main_image %}
+                            <img class="card-img-top img-fluid" src="{{ property.main_image.url }}" alt="{{ property.name }}">
+                            {% else %}
+                            <img class="card-img-top img-fluid" src="{% static 'media/noimage.png' %}" alt="{{ property.name }}">
+                            {% endif %}
+                        </div>
+                        <div class="card-body mirror-silver-background pb-0">
+                            <p class="mb-0 d-flex justify-content-between price align-items-baseline">
+                                {{ property.name }}
+                                <span class="price">€{{ property.price }}</span>
+                            </p>
+                        </div>
+                        <div class="card-footer mirror-silver-background pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col-12">
+                                    <!-- Property Details -->
+                                    <div id="border" class="property-details">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                {% if property.size %}
+                                                <p class="mb-0">
+                                                    <i class="fas fa-ruler mr-1"></i>{{ property.size }} {% trans "sq ft" %}
+                                                </p>
+                                                {% endif %}
+                                                {% if property.location %}
+                                                <p class="mb-0">
+                                                    <i class="fas fa-map-marker-alt mr-1"></i>{{ property.location }}
+                                                </p>
+                                                {% endif %}
+                                            </div>
                                             <div class="col-6">
                                                 {% if property.bedrooms %}
                                                 <p class="mb-0">
@@ -142,34 +193,13 @@
                             </div>
                         </div>
                     </a>
-                    <!-- Admin toggle button to mark as SOLD -->
-                    {% if user.is_authenticated and user.is_superuser %}
-                    <form action="{% url 'toggle_sold_status' property.id %}" method="post" style="display: inline;">
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-link" style="border: none; background: none; padding: 0;">
-                            <i class="fa {% if property.is_sold %}fa-check-circle{% else %}fa-circle{% endif %} text-primary"></i>
-                            <span>{% if property.is_sold %}{% trans "Mark as Available"%}{% else %}{% trans "Mark as SOLD" %}{% endif %}</span>
-                        </button>
-                    </form>
                     {% endif %}
-                    <!-- Like Button outside the link -->
-                    <div class="like-container">
-                        {% if user.is_authenticated %}
-                            <form action="{% url 'like_property' property.id %}" method="post" style="display: inline;">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-link" style="border: none; background: none; padding: 0;">
-                                    <i class="fa-star like {% if user in property.liked_by.all %}fas light-base{% else %}far{% endif %}" id="like-icon-{{ property.id }}"></i>
-                                </button>
-                            </form>
-                        {% else %}
-                            <i class="far fa-star like" id="like-icon-{{ property.id }}" onclick="showLoginPrompt()"></i>
-                        {% endif %}
-                    </div>                    
                 </div>
             </div>
             {% endfor %}
         </div>
-    </div>    
+    </div>
+        
 
     <div class="help-button shadow-sm rounded-0">
         <a class="help-link d-flex h-100" href="{% url 'home' %}#contact-us">
