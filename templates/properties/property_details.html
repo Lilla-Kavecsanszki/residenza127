@@ -46,12 +46,12 @@
         {% endif %}
         {% if property.main_image %}
         <div class="item">
-            <img src="{{ property.main_image.url }}" alt="{{ property.name }}">
+            <img src="{{ property.main_image.url }}" loading="lazy" alt="{{ property.name }}">
         </div>
         {% endif %}
         {% for img in property.images.all %}
         <div class="item">
-            <img src="{{ img.image.url }}" alt="{{ property.name }}">
+            <img src="{{ img.image.url }}" loading="lazy" alt="{{ property.name }}">
         </div>
         {% endfor %}
         {% for video in property.videos.all %}

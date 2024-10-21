@@ -89,9 +89,9 @@
                                 {% trans "Your browser does not support the video tag." %}
                             </video>
                             {% elif property.main_image %}
-                            <img class="card-img-top img-fluid" src="{{ property.main_image.url }}" alt="{{ property.name }}">
+                            <img class="card-img-top img-fluid" src="{{ property.main_image.url }}" loading="lazy" alt="{{ property.name }}">
                             {% else %}
-                            <img class="card-img-top img-fluid" src="{% static 'media/noimage.png' %}" alt="{{ property.name }}">
+                            <img class="card-img-top img-fluid" src="{% static 'media/noimage.png' %}" loading="lazy" alt="{{ property.name }}">
                             {% endif %}
                         </div>
                         <div class="card-body mirror-silver-background pb-0">

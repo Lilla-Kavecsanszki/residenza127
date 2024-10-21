@@ -13,6 +13,8 @@
     {% endblock %} {% block extra_meta %} {% endblock %}
 
     <title>{% block title %}{% trans "Building Oristano" %}{% endblock %}</title>
+
+    <link rel="canonical" href="{% if request.path == '/' %}{{ request.build_absolute_uri|slice:':-1' }}{% else %}{{ request.build_absolute_uri }}{% endif %}">
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -39,6 +41,10 @@
     {% block extra_css %}{% endblock %}            
 </head>
 <body>
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <img src="{% static 'images/logo.png' %}" alt="{% trans 'Logo' %}" alt="Logo" loading="lazy" class="loading-logo">
+    </div>
     <!-- Header Section -->
     <header>
         <!-- Main Desktop Header -->
@@ -46,7 +52,7 @@
             <div class="col-lg-6 d-flex justify-content-start align-items-center">
                 <!-- Logo -->
                 <a href="{% url 'home' %}" class="nav-link main-logo-link logo">
-                    <img src="{% static 'images/logo.png' %}" alt="{% trans 'Logo' %}" class="logo-image">
+                    <img src="{% static 'images/logo.png' %}" alt="{% trans 'Logo' %}" loading="lazy" class="logo-image">
                 </a>
             </div>
             <div class="col-lg-6 d-flex justify-content-end">
@@ -213,7 +219,7 @@
             <!-- Column 1: Logo -->
             <div class="col-md-2 mb-3 mb-md-0"> <!-- Added margin for mobile -->
                 <a href="{% url 'home' %}">
-                    <img src="{% static 'images/logo.png' %}" alt="Logo" class="footer-logo"> 
+                    <img src="{% static 'images/logo.png' %}" alt="Logo" loading="lazy" class="footer-logo"> 
                 </a>
             </div>
 
@@ -296,6 +302,22 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://argicostruzioni.com/js/script.js" async></script>
+
+    <!-- Custom JavaScript for Loading Overlay -->
+    <script>
+    window.addEventListener('load', function () {
+        var overlay = document.getElementById('loading-overlay');
+        
+        // Fade out the overlay
+        overlay.style.opacity = 0;
+    
+        overlay.addEventListener('transitionend', function() {
+            overlay.style.display = 'none';
+            document.querySelector('.content').style.display = 'block';
+        });
+    });
+    </script>
 
     <!-- Custom JavaScript for messages -->
     <script>
