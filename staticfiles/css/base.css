@@ -939,11 +939,8 @@ footer a .icon {
 
 
 /* Star sign - Gold shimmer - https: //codepen.io/Amarjit/pen/mrbjNy */
+/* Base shimmer effect */
 .fa-star-base {
-    color: #daa520;
-}
-
-.light-base {
     display: inline-block;
     background: linear-gradient(
         135deg,
@@ -961,6 +958,7 @@ footer a .icon {
     animation: shimmer 1.5s infinite;
 }
 
+/* Shimmer animation */
 @keyframes shimmer {
     0% {
         background-position: -200%;
