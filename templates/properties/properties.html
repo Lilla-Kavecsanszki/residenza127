@@ -76,25 +76,27 @@
             <div class="col-12 mb-4"> <!-- Each property card takes the full width -->
                 <div class="card h-100 border-0 property-card">
                     <a href="{% url 'property_detail' property.id %}" class="card-link">
-                        {% if property.is_sold %}
-                        <!-- Display "SOLD" label if the property is sold -->
-                        <div class="sold-label">
-                            <span class="sold fa-star-base">{% trans "SOLD" %}</span>
+                        <div class="card-img-top-wrapper">
+                            {% if property.is_sold %}
+                            <!-- Display "SOLD" label if the property is sold -->
+                            <div class="sold-label">
+                                <span class="sold fa-star-base">{% trans "SOLD" %}</span>
+                            </div>
+                            {% endif %}
+                            {% if property.main_video %}
+                            <!-- Render video if available -->
+                            <video class="card-img-top img-fluid" autoplay muted playsinline loop>
+                                <source src="{{ property.main_video.url }}" type="video/mp4">
+                                {% trans "Your browser does not support the video tag." %}
+                            </video>
+                            {% elif property.main_image %}
+                            <!-- Render image if video is not available -->
+                            <img class="card-img-top img-fluid" src="{{ property.main_image.url }}" alt="{{ property.name }}">
+                            {% else %}
+                            <!-- Fallback image if neither video nor image is available -->
+                            <img class="card-img-top img-fluid" src="{% static 'media/noimage.png' %}" alt="{{ property.name }}">
+                            {% endif %}
                         </div>
-                        {% endif %}
-                        {% if property.main_video %}
-                        <!-- Render video if available -->
-                        <video class="card-img-top img-fluid" autoplay muted playsinline loop>
-                            <source src="{{ property.main_video.url }}" type="video/mp4">
-                            {% trans "Your browser does not support the video tag." %}
-                        </video>
-                        {% elif property.main_image %}
-                        <!-- Render image if video is not available -->
-                        <img class="card-img-top img-fluid" src="{{ property.main_image.url }}" alt="{{ property.name }}">
-                        {% else %}
-                        <!-- Fallback image if neither video nor image is available -->
-                        <img class="card-img-top img-fluid" src="{% static 'media/noimage.png' %}" alt="{{ property.name }}">
-                        {% endif %}
                         <div class="card-body mirror-silver-background pb-0">
                             <p class="mb-0 d-flex justify-content-between price align-items-baseline">
                                 {{ property.name }}
