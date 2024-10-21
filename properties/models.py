@@ -20,7 +20,6 @@ class Property(models.Model):
     ]
 
     name = models.CharField(max_length=255, default="")
-    description = models.TextField(default="")
     features = models.TextField(default="")
     main_image = CloudinaryField("image", blank=True, null=True)  # Main image for cards
     main_video = models.FileField(

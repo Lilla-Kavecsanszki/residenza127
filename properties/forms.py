@@ -9,7 +9,6 @@ class PropertyForm(forms.ModelForm):
         model = Property
         fields = [
             "name",
-            "description",
             "features",
             "main_image",
             "main_video",
@@ -21,7 +20,6 @@ class PropertyForm(forms.ModelForm):
             "size",
         ]
         widgets = {
-            "description": forms.Textarea(attrs={"rows": 3}),
             "features": forms.Textarea(attrs={"rows": 3}),
             "location": forms.Select(attrs={"class": "form-control"}),
             "property_type": forms.Select(attrs={"class": "form-control"}),
