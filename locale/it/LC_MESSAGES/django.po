@@ -798,7 +798,7 @@ msgid "Two-room Apartments"
 msgstr "Bilocali"
 
 #: templates/index.html:153
-msgid "The <strong>two-bedroom apartments</strong> at <strong>Residenza 126</strong> are ideal for those seeking a functional apartment without compromising on style. Each apartment offers a spacious living room with an open-plan kitchen, a master bedroom, and a large, modern bathroom." 
+msgid "The <strong>one-bedroom apartments</strong> at <strong>Residenza 126</strong> are ideal for those seeking a functional apartment without compromising on style. Each apartment offers a spacious living room with an open-plan kitchen, a master bedroom, and a large, modern bathroom." 
 msgstr "I bilocali di <strong>Residenza 126</strong> sono l’ideale per chi cerca un appartamento funzionale ma non rinuncia allo stile. Ogni bilocale offre un ampio soggiorno con cucina a vista, una camera matrimoniale e un bagno spazioso e moderno."
 
 msgid "The real highlight is the 25 sqm private terrace, perfect for outdoor relaxation or entertaining guests, equipped with a Jacuzzi setup for moments of pure relaxation. This type of home is perfect for couples, young professionals, or investors looking for a versatile and high-quality property."
