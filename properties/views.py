@@ -57,7 +57,6 @@ class AllProperties(View):
             "location",
             "property_type",
             "size",
-            "price",
             "created_at",
         ]
         if sort in valid_sort_keys:

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-22 10:01+0200\n"
+"POT-Creation-Date: 2024-10-22 18:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -557,8 +557,8 @@ msgstr ""
 "%(site_name)s. Come ultimo passaggio, per favore completa il modulo seguente:"
 
 #: templates/base.html:15
-msgid "Building Oristano"
-msgstr "Edificio Oristano"
+msgid "Ar.Gi. Costruzioni"
+msgstr "Ar.Gi. Costruzioni"
 
 #: templates/base.html:46 templates/base.html:55
 msgid "Logo"
@@ -604,8 +604,6 @@ msgstr "Soluzioni"
 
 #: templates/base.html:163 templates/base.html:180
 #: templates/properties/properties.html:11
-#, fuzzy
-#| msgid "Apartments Available"
 msgid "Apartments"
 msgstr "Appartamenti"
 
@@ -645,7 +643,7 @@ msgstr "Informazioni di contatto:"
 msgid "Phone:"
 msgstr "Telefono:"
 
-#: templates/base.html:280 templates/index.html:340
+#: templates/base.html:280 templates/index.html:342
 msgid "Email:"
 msgstr "Email:"
 
@@ -718,7 +716,9 @@ msgid "Return to the homepage"
 msgstr "Torna alla homepage"
 
 #: templates/includes/mobile-top-header.html:45
-msgid "Search our site"
+#, fuzzy
+#| msgid "Search our site"
+msgid "Search by Name"
 msgstr "Cerca nel nostro sito"
 
 #: templates/index.html:11
@@ -740,14 +740,44 @@ msgstr "Eleganza e Tranquillità nel Cuore della Città"
 
 # No changes needed, this is correct.
 #: templates/index.html:34
-msgid "<strong>Residenza 126</strong> is an exclusive project located in the heart of Oristano, designed for those who want to live in a modern environment without giving up peace and privacy. This elegant residential complex, consisting of 8 apartments, combines contemporary architecture with cutting-edge technological solutions, offering a personalized and high-quality experience."
-msgstr "Residenza 126 è un progetto esclusivo situato nel cuore di Oristano, concepito per chi desidera abitare in un contesto moderno senza rinunciare alla tranquillità e alla privacy. Questo elegante complesso residenziale, composto da 8 appartamenti, combina architettura contemporanea e soluzioni tecnologiche all'avanguardia, offrendo un’esperienza personalizzata e di altissima qualità."
+msgid ""
+"<strong>Residenza 126</strong> is an exclusive project located in the heart "
+"of Oristano, designed for those who want to live in a modern environment "
+"without giving up peace and privacy. This elegant residential complex, "
+"consisting of 8 apartments, combines contemporary architecture with cutting-"
+"edge technological solutions, offering a personalized and high-quality "
+"experience."
+msgstr ""
+"Residenza 126 è un progetto esclusivo situato nel cuore di Oristano, "
+"concepito per chi desidera abitare in un contesto moderno senza rinunciare "
+"alla tranquillità e alla privacy. Questo elegante complesso residenziale, "
+"composto da 8 appartamenti, combina architettura contemporanea e soluzioni "
+"tecnologiche all'avanguardia, offrendo un’esperienza personalizzata e di "
+"altissima qualità."
 
-msgid "Each apartment has been designed to meet the highest standards of design and functionality, with premium finishes and extensive customization options. Whether you are looking for an investment or your new home, <strong>Residenza 126</strong> represents a unique opportunity where comfort, style, and innovation come together to create living spaces that match your desires."
-msgstr "Ogni appartamento è stato progettato per soddisfare i più elevati standard di design e funzionalità, con finiture di pregio e ampie possibilità di personalizzazione. Che tu stia cercando un investimento o la tua nuova casa, <strong>Residenza 126</strong> rappresenta un’opportunità unica, dove comfort, stile e innovazione si fondono per creare spazi abitativi che rispondano ai tuoi desideri."
+#: templates/index.html:37
+msgid ""
+"Each apartment has been designed to meet the highest standards of design and "
+"functionality, with premium finishes and extensive customization options. "
+"Whether you are looking for an investment or your new home, "
+"<strong>Residenza 126</strong> represents a unique opportunity where "
+"comfort, style, and innovation come together to create living spaces that "
+"match your desires."
+msgstr ""
+"Ogni appartamento è stato progettato per soddisfare i più elevati standard "
+"di design e funzionalità, con finiture di pregio e ampie possibilità di "
+"personalizzazione. Che tu stia cercando un investimento o la tua nuova casa, "
+"<strong>Residenza 126</strong> rappresenta un’opportunità unica, dove "
+"comfort, stile e innovazione si fondono per creare spazi abitativi che "
+"rispondano ai tuoi desideri."
 
-msgid "Schedule a visit and discover why <strong>Residenza 126</strong> is the perfect choice for your future."
-msgstr "Prenota una visita e scopri perché <strong>Residenza 126</strong> è la scelta perfetta per il tuo futuro."
+#: templates/index.html:40
+msgid ""
+"Schedule a visit and discover why <strong>Residenza 126</strong> is the "
+"perfect choice for your future."
+msgstr ""
+"Prenota una visita e scopri perché <strong>Residenza 126</strong> è la "
+"scelta perfetta per il tuo futuro."
 
 #: templates/index.html:42
 msgid ""
@@ -764,70 +794,141 @@ msgid "Living in the heart of the city - Oristano"
 msgstr "Vivere nel cuore della città - Oristano"
 
 #: templates/index.html:61
-msgid "Just two minutes from the historic center of Oristano, <strong>Residenza 126</strong> combines the best of urban living with an oasis of tranquility."
-msgstr "A soli due minuti dal centro storico di Oristano, <strong>Residenza 126</strong> combina il meglio della vita urbana con un’oasi di tranquillità."
+msgid ""
+"Just two minutes from the historic center of Oristano, <strong>Residenza "
+"126</strong> combines the best of urban living with an oasis of tranquility."
+msgstr ""
+"A soli due minuti dal centro storico di Oristano, <strong>Residenza 126</"
+"strong> combina il meglio della vita urbana con un’oasi di tranquillità."
 
-msgid "The building is designed to let you enjoy the convenience of the city without compromising on peace and privacy."
-msgstr "La struttura è studiata per farti godere la comodità della città, senza compromessi in termini di tranquillità e privacy."
+#: templates/index.html:64
+msgid ""
+"The building is designed to let you enjoy the convenience of the city "
+"without compromising on peace and privacy."
+msgstr ""
+"La struttura è studiata per farti godere la comodità della città, senza "
+"compromessi in termini di tranquillità e privacy."
 
-msgid "It's perfect for those seeking a retreat from the hustle and bustle of city life without sacrificing comfort."
-msgstr "Perfetto per chi cerca un rifugio dalla frenesia cittadina senza dover rinunciare alla comodità."
+#: templates/index.html:67
+msgid ""
+"It's perfect for those seeking a retreat from the hustle and bustle of city "
+"life without sacrificing comfort."
+msgstr ""
+"Perfetto per chi cerca un rifugio dalla frenesia cittadina senza dover "
+"rinunciare alla comodità."
 
-#: templates/index.html:117
+#: templates/index.html:121
 msgid "Download Brochure"
 msgstr "Scarica la Brochure"
 
-#: templates/index.html:129
+#: templates/index.html:133
 msgid "Reach Out"
 msgstr "Contattaci"
 
-#: templates/index.html:139
+#: templates/index.html:143
 msgid "Our Apartment Types"
 msgstr "I Nostri Tipi di Appartamenti"
 
-#: templates/index.html:140
+#: templates/index.html:144
 msgid "Tailored Living Solutions:"
 msgstr "Soluzioni Abitative su Misura:"
 
-#: templates/index.html:142
-msgid "<strong>Residenza 126</strong> offers two different types of homes to meet all needs. The one-bedroom and two-bedroom apartments are designed to provide maximum comfort and flexibility, with spaces customizable according to your preferences. The apartments feature high-quality finishes, designer accessories, and advanced technological solutions to ensure security and convenience. Whether you're looking for a cozy one-bedroom apartment or a spacious two-bedroom home for your family, you'll find the perfect residence at <strong>Residenza 126</strong>."
-msgstr "Residenza 126 propone due diverse tipologie abitative per soddisfare tutte le esigenze. I bilocali e i trilocali sono stati pensati per offrire il massimo del comfort e della flessibilità, con spazi personalizzabili in base ai tuoi desideri. Gli appartamenti vantano finiture di alta qualità, accessori di design e soluzioni tecnologiche avanzate per garantire sicurezza e praticità. Che tu stia cercando un accogliente bilocale o un trilocale spazioso per la tua famiglia, troverai in <strong>Residenza 126</strong> l'abitazione che fa per te."
+#: templates/index.html:146
+msgid ""
+"<strong>Residenza 126</strong> offers two different types of homes to meet "
+"all needs. The one-bedroom and two-bedroom apartments are designed to "
+"provide maximum comfort and flexibility, with spaces customizable according "
+"to your preferences. The apartments feature high-quality finishes, designer "
+"accessories, and advanced technological solutions to ensure security and "
+"convenience. Whether you're looking for a cozy one-bedroom apartment or a "
+"spacious two-bedroom home for your family, you'll find the perfect residence "
+"at <strong>Residenza 126</strong>."
+msgstr ""
+"Residenza 126 propone due diverse tipologie abitative per soddisfare tutte "
+"le esigenze. I bilocali e i trilocali sono stati pensati per offrire il "
+"massimo del comfort e della flessibilità, con spazi personalizzabili in base "
+"ai tuoi desideri. Gli appartamenti vantano finiture di alta qualità, "
+"accessori di design e soluzioni tecnologiche avanzate per garantire "
+"sicurezza e praticità. Che tu stia cercando un accogliente bilocale o un "
+"trilocale spazioso per la tua famiglia, troverai in <strong>Residenza 126</"
+"strong> l'abitazione che fa per te."
 
-#: templates/index.html:151
+#: templates/index.html:153
 msgid "Two-room Apartments"
 msgstr "Bilocali"
 
-#: templates/index.html:153
-msgid "The <strong>one-bedroom apartments</strong> at <strong>Residenza 126</strong> are ideal for those seeking a functional apartment without compromising on style. Each apartment offers a spacious living room with an open-plan kitchen, a master bedroom, and a large, modern bathroom." 
-msgstr "I bilocali di <strong>Residenza 126</strong> sono l’ideale per chi cerca un appartamento funzionale ma non rinuncia allo stile. Ogni bilocale offre un ampio soggiorno con cucina a vista, una camera matrimoniale e un bagno spazioso e moderno."
-
-msgid "The real highlight is the 25 sqm private terrace, perfect for outdoor relaxation or entertaining guests, equipped with a Jacuzzi setup for moments of pure relaxation. This type of home is perfect for couples, young professionals, or investors looking for a versatile and high-quality property."
-msgstr "Il vero punto di forza è l'ampia terrazza privata di 25 mq, perfetta per rilassarsi all’aperto o accogliere ospiti, dotata di predisposizione Jacuzzi per momenti di puro relax. Questa tipologia abitativa è perfetta per coppie, giovani professionisti o investitori, alla ricerca di una proprietà versatile e di pregio."
+#: templates/index.html:155
+msgid ""
+"The <strong>one-bedroom apartments</strong> at <strong>Residenza 126</"
+"strong> are ideal for those seeking a functional apartment without "
+"compromising on style. Each apartment offers a spacious living room with an "
+"open-plan kitchen, a master bedroom, and a large, modern bathroom."
+msgstr ""
+"I bilocali di <strong>Residenza 126</strong> sono l’ideale per chi cerca un "
+"appartamento funzionale ma non rinuncia allo stile. Ogni bilocale offre un "
+"ampio soggiorno con cucina a vista, una camera matrimoniale e un bagno "
+"spazioso e moderno."
 
 #: templates/index.html:158
-msgid "By choosing a one-bedroom apartment at <strong>Residenza 126</strong>, you can be sure of a secure investment in an exclusive location."
-msgstr "Scegliendo un bilocale in <strong>Residenza 126</strong>, avrai la certezza di un investimento sicuro in una location esclusiva."
+msgid ""
+"The real highlight is the 25 sqm private terrace, perfect for outdoor "
+"relaxation or entertaining guests, equipped with a Jacuzzi setup for moments "
+"of pure relaxation. This type of home is perfect for couples, young "
+"professionals, or investors looking for a versatile and high-quality "
+"property."
+msgstr ""
+"Il vero punto di forza è l'ampia terrazza privata di 25 mq, perfetta per "
+"rilassarsi all’aperto o accogliere ospiti, dotata di predisposizione Jacuzzi "
+"per momenti di puro relax. Questa tipologia abitativa è perfetta per coppie, "
+"giovani professionisti o investitori, alla ricerca di una proprietà "
+"versatile e di pregio."
 
-#: templates/index.html:173
+#: templates/index.html:161
+msgid ""
+"By choosing a one-bedroom apartment at <strong>Residenza 126</strong>, you "
+"can be sure of a secure investment in an exclusive location."
+msgstr ""
+"Scegliendo un bilocale in <strong>Residenza 126</strong>, avrai la certezza "
+"di un investimento sicuro in una location esclusiva."
+
+#: templates/index.html:174
 msgid "Three-room Apartments"
 msgstr "Trilocali"
 
-#: templates/index.html:175
-msgid "The <strong>two-bedroom apartments</strong> at <strong>Residenza 126</strong> offer spacious and bright rooms, designed to meet the needs of family life. The large living area with an open-plan kitchen creates a welcoming and functional atmosphere, while the two master bedrooms and the spacious bathroom ensure comfort and convenience."
-msgstr "I trilocali di <strong>Residenza 126</strong> offrono ambienti ampi e luminosi, pensati per soddisfare le esigenze della vita familiare. L'ampia zona living con cucina a vista crea un'atmosfera accogliente e funzionale, mentre le due camere da letto matrimoniali e il bagno spazioso garantiscono comfort e praticità."
+#: templates/index.html:176
+msgid ""
+"The <strong>two-bedroom apartments</strong> at <strong>Residenza 126</"
+"strong> offer spacious and bright rooms, designed to meet the needs of "
+"family life. The large living area with an open-plan kitchen creates a "
+"welcoming and functional atmosphere, while the two master bedrooms and the "
+"spacious bathroom ensure comfort and convenience."
+msgstr ""
+"I trilocali di <strong>Residenza 126</strong> offrono ambienti ampi e "
+"luminosi, pensati per soddisfare le esigenze della vita familiare. L'ampia "
+"zona living con cucina a vista crea un'atmosfera accogliente e funzionale, "
+"mentre le due camere da letto matrimoniali e il bagno spazioso garantiscono "
+"comfort e praticità."
 
-msgid "Each apartment features a private balcony or terrace, perfect for enjoying moments of outdoor relaxation. High-end finishes and advanced technologies complete a living experience that combines elegance and exclusivity."
-msgstr "Ogni appartamento dispone di un balcone o terrazzo privato, perfetto per godersi i momenti di relax all'aria aperta. Finiture di pregio e tecnologie avanzate completano un'esperienza abitativa che combina eleganza ed esclusività."
+#: templates/index.html:179
+msgid ""
+"Each apartment features a private balcony or terrace, perfect for enjoying "
+"moments of outdoor relaxation. High-end finishes and advanced technologies "
+"complete a living experience that combines elegance and exclusivity."
+msgstr ""
+"Ogni appartamento dispone di un balcone o terrazzo privato, perfetto per "
+"godersi i momenti di relax all'aria aperta. Finiture di pregio e tecnologie "
+"avanzate completano un'esperienza abitativa che combina eleganza ed "
+"esclusività."
 
-#: templates/index.html:190
+#: templates/index.html:192
 msgid "Property Listings"
 msgstr "Annunci Immobiliari"
 
-#: templates/index.html:202 templates/properties/properties.html:86
+#: templates/index.html:204 templates/properties/properties.html:86
 msgid "SOLD"
 msgstr "VENDUTO"
 
-#: templates/index.html:208 templates/index.html:222
+#: templates/index.html:210 templates/index.html:224
 #: templates/profiles/user_profile.html:57
 #: templates/properties/properties.html:91
 #: templates/properties/properties.html:148
@@ -836,59 +937,59 @@ msgstr "VENDUTO"
 msgid "Your browser does not support the video tag."
 msgstr "Il tuo browser non supporta il tag video."
 
-#: templates/index.html:213 templates/index.html:227
+#: templates/index.html:215 templates/index.html:229
 msgid "Placeholder"
 msgstr "Segnaposto"
 
-#: templates/index.html:240
+#: templates/index.html:242
 msgid "No properties available at the moment."
 msgstr "Nessuna proprietà disponibile al momento."
 
-#: templates/index.html:249
+#: templates/index.html:251
 msgid "View All Apartments"
 msgstr "Visualizza Tutti gli Appartamenti"
 
-#: templates/index.html:257
+#: templates/index.html:259
 msgid "Contact Us"
 msgstr "Contattaci"
 
-#: templates/index.html:262
+#: templates/index.html:264
 msgid "Please correct the errors below:"
 msgstr "Per favore correggi gli errori qui sotto:"
 
-#: templates/index.html:291
+#: templates/index.html:293
 msgid "Name"
 msgstr "Nome"
 
-#: templates/index.html:298 templates/profiles/user_profile.html:18
+#: templates/index.html:300 templates/profiles/user_profile.html:18
 msgid "Email"
 msgstr "Email"
 
-#: templates/index.html:305 templates/profiles/user_profile.html:20
+#: templates/index.html:307 templates/profiles/user_profile.html:20
 msgid "Phone Number"
 msgstr "Numero di Telefono"
 
-#: templates/index.html:312
+#: templates/index.html:314
 msgid "Subject"
 msgstr "Oggetto"
 
-#: templates/index.html:319
+#: templates/index.html:321
 msgid "Message"
 msgstr "Messaggio"
 
-#: templates/index.html:325
+#: templates/index.html:327
 msgid "Send"
 msgstr "Invia"
 
-#: templates/index.html:337
+#: templates/index.html:339
 msgid "Address:"
 msgstr "Indirizzo:"
 
-#: templates/index.html:338
+#: templates/index.html:340
 msgid "Tax code:"
 msgstr "Partita iva:"
 
-#: templates/index.html:339
+#: templates/index.html:341
 msgid "Telephone:"
 msgstr "Telefono:"
 
@@ -992,6 +1093,11 @@ msgstr "trovate per"
 #: templates/properties/properties.html:159
 msgid "Price"
 msgstr "Prezzo"
+
+#: templates/properties/properties.html:102
+#: templates/properties/properties.html:159
+msgid "Upon Request"
+msgstr "Su Richiesta"
 
 #: templates/properties/properties.html:259
 msgid "Please log in to add a property to your favourites."
@@ -2651,6 +2757,12 @@ msgstr "Connettiti, ottieni aiuto o contribuisci"
 #: venv/lib/python3.12/site-packages/isort/main.py:158
 msgid "show this help message and exit"
 msgstr "mostra questo messaggio di aiuto e esci"
+
+#~ msgid "Price:"
+#~ msgstr "Prezzo:"
+
+#~ msgid "Building Oristano"
+#~ msgstr "Edificio Oristano"
 
 #, python-format
 #~ msgid ""

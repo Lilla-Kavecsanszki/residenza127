@@ -19,7 +19,6 @@ class PropertyAdmin(admin.ModelAdmin):
         "name",
         "location",
         "property_type",
-        "price",
         "size",
         "bedrooms",
         "bathrooms",
@@ -43,7 +42,6 @@ class PropertyAdmin(admin.ModelAdmin):
                     "features",
                     "location",
                     "property_type",
-                    "price",
                     "size",
                     "is_sold",
                 )

@@ -16,7 +16,6 @@ class PropertyForm(forms.ModelForm):
             "property_type",
             "bedrooms",
             "bathrooms",
-            "price",
             "size",
         ]
         widgets = {

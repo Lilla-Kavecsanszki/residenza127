@@ -32,7 +32,6 @@ class Property(models.Model):
     bedrooms = models.PositiveIntegerField(default=0)
     bathrooms = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
-    price = models.CharField(max_length=20, default="Upon Request")
     size = models.PositiveIntegerField()
     is_sold = models.BooleanField(default=False, verbose_name="Sold Status")
 
