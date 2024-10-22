@@ -333,17 +333,22 @@
             sessionStorage.setItem('preferredLanguage', langCode);
             window.location.reload(); // Reload the page to apply the new language
         }
-    </script>
-    <script>
+
         document.addEventListener('DOMContentLoaded', function() {
             var preferredLanguage = sessionStorage.getItem('preferredLanguage');
-            if (preferredLanguage) {
+
+            // Default to Italian if there's no preferred language set
+            if (!preferredLanguage) {
+                sessionStorage.setItem('preferredLanguage', 'it'); // Set Italian as default
                 var currentUrl = window.location.pathname;
-                var segments = currentUrl.split('/').filter(Boolean); // Split and filter out empty segments
-                var basePath = segments.slice(1).join('/'); // Exclude the current language prefix
-                if (segments[0] !== preferredLanguage) { // Check if the first segment is not the preferred language
-                    var newUrl = '/' + preferredLanguage + '/' + basePath;
-                    window.location.href = newUrl;
+                if (!currentUrl.startsWith('/it')) {
+                    window.location.href = '/it' + currentUrl; // Redirect to Italian version
+                }
+            } else {
+                var currentUrl = window.location.pathname;
+                // Check if the current URL matches the preferred language
+                if (!currentUrl.startsWith('/' + preferredLanguage)) {
+                    window.location.href = '/' + preferredLanguage + currentUrl; // Redirect to preferred language
                 }
             }
         });

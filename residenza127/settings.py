@@ -93,6 +93,7 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "django.template.context_processors.media",
+                "django.template.context_processors.i18n",
                 "residenza.context_processors.available_languages",
             ],
             "builtins": [
@@ -126,7 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Internationalization
-LANGUAGE_CODE = "en"
+LANGUAGE_CODE = "it"
 LANGUAGES = [
     ("en", "English"),
     ("it", "Italian"),
