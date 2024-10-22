@@ -186,7 +186,7 @@ h2 {
 
 /* Card body styling */
 .card-body {
-    background-color: #fff;
+    background-color: transparent;
     padding: 1em;
 }
 
@@ -199,7 +199,7 @@ h2 {
 .card-footer {
     display: flex;
     flex-direction: column;
-    /* background-color: #fff; */
+    background-color: transparent;
     padding: 1em;
     border-top: none;
 }
@@ -269,4 +269,58 @@ h2 {
     bottom: 10px;
     right: 10px;
     z-index: 10; /* Ensure it appears above other content */
+}
+
+/* Base shimmer effect */
+.fa-star-base {
+    display: inline-block;
+    background: linear-gradient(
+        135deg,
+        #daa520 0%,
+        #daa520 40%,
+        #ffffff 50%,
+        #daa520 60%,
+        #daa520 100%
+    );
+    background-size: 200%;
+    background-position: -200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 1.5s infinite;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+    0% {
+        background-position: -200%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+/* Default star color */
+.fa-star {
+    color: #daa520; /* Default color for the star */
+    position: relative;
+}
+
+/* Shimmer effect on hover */
+.fa-star:hover,
+.fa-star.light-base {
+    background: linear-gradient(
+        135deg,
+        #daa520 0%,
+        #daa520 40%,
+        #ffffff 50%,
+        #daa520 60%,
+        #daa520 100%
+    );
+    background-size: 200%;
+    background-position: -200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 1.5s infinite;
 }
