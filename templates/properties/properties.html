@@ -134,6 +134,31 @@
                                     </div>   
                                 </div>
                             </div>
+                
+                            <!-- Admin toggle button to mark as SOLD -->
+                            {% if user.is_authenticated and user.is_superuser %}
+                            <form action="{% url 'toggle_sold_status' property.id %}" method="post" style="display: inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-link" style="border: none; background: none; padding: 0;">
+                                    <i class="fa {% if property.is_sold %}fa-check-circle{% else %}fa-circle{% endif %} text-primary"></i>
+                                    <span>{% if property.is_sold %}{% trans "Mark as Available"%}{% else %}{% trans "Mark as SOLD" %}{% endif %}</span>
+                                </button>
+                            </form>
+                            {% endif %}
+                
+                            <!-- Like Button outside the link -->
+                            <div class="like-container">
+                                {% if user.is_authenticated %}
+                                    <form action="{% url 'like_property' property.id %}" method="post" style="display: inline;">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-link" style="border: none; background: none; padding: 0;">
+                                            <i class="fa-star like {% if user in property.liked_by.all %}fas light-base{% else %}far{% endif %}" id="like-icon-{{ property.id }}"></i>
+                                        </button>
+                                    </form>
+                                {% else %}
+                                    <i class="far fa-star like" id="like-icon-{{ property.id }}" onclick="showLoginPrompt()"></i>
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                     {% else %}
@@ -188,8 +213,33 @@
                                                 {% endif %}
                                             </div>
                                         </div>
-                                    </div>   
+                                    </div>
                                 </div>
+                            </div>
+
+                            <!-- Admin toggle button to mark as SOLD -->
+                            {% if user.is_authenticated and user.is_superuser %}
+                            <form action="{% url 'toggle_sold_status' property.id %}" method="post" style="display: inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-link" style="border: none; background: none; padding: 0;">
+                                    <i class="fa {% if property.is_sold %}fa-check-circle{% else %}fa-circle{% endif %} text-primary"></i>
+                                    <span>{% if property.is_sold %}{% trans "Mark as Available"%}{% else %}{% trans "Mark as SOLD" %}{% endif %}</span>
+                                </button>
+                            </form>
+                            {% endif %}
+
+                            <!-- Like Button outside the link -->
+                            <div class="like-container">
+                                {% if user.is_authenticated %}
+                                    <form action="{% url 'like_property' property.id %}" method="post" style="display: inline;">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-link" style="border: none; background: none; padding: 0;">
+                                            <i class="fa-star like {% if user in property.liked_by.all %}fas light-base{% else %}far{% endif %}" id="like-icon-{{ property.id }}"></i>
+                                        </button>
+                                    </form>
+                                {% else %}
+                                    <i class="far fa-star like" id="like-icon-{{ property.id }}" onclick="showLoginPrompt()"></i>
+                                {% endif %}
                             </div>
                         </div>
                     </a>
@@ -199,7 +249,6 @@
             {% endfor %}
         </div>
     </div>
-        
 
     <div class="help-button shadow-sm rounded-0">
         <a class="help-link d-flex h-100" href="{% url 'home' %}#contact-us">
