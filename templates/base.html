@@ -328,31 +328,33 @@
     </script>
 
     <!-- Custom JavaScript for Language Switching -->
-    <script>
-        function switchLanguage(langCode) {
-            sessionStorage.setItem('preferredLanguage', langCode);
-            window.location.reload(); // Reload the page to apply the new language
-        }
+<script>
+    function switchLanguage(langCode) {
+        // Store the preferred language in session storage
+        sessionStorage.setItem('preferredLanguage', langCode);
+        // Redirect to the new language URL
+        window.location.href = '/' + langCode + window.location.pathname.substring(3);
+    }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            var preferredLanguage = sessionStorage.getItem('preferredLanguage');
+    document.addEventListener('DOMContentLoaded', function() {
+        var preferredLanguage = sessionStorage.getItem('preferredLanguage');
+        var currentUrl = window.location.pathname;
 
-            // Default to Italian if there's no preferred language set
-            if (!preferredLanguage) {
-                sessionStorage.setItem('preferredLanguage', 'it'); // Set Italian as default
-                var currentUrl = window.location.pathname;
-                if (!currentUrl.startsWith('/it')) {
-                    window.location.href = '/it' + currentUrl; // Redirect to Italian version
-                }
-            } else {
-                var currentUrl = window.location.pathname;
-                // Check if the current URL matches the preferred language
-                if (!currentUrl.startsWith('/' + preferredLanguage)) {
-                    window.location.href = '/' + preferredLanguage + currentUrl; // Redirect to preferred language
-                }
+        // Default to Italian if there's no preferred language set
+        if (!preferredLanguage) {
+            sessionStorage.setItem('preferredLanguage', 'it'); // Set Italian as default
+            // Redirect to Italian version if not already there
+            if (!currentUrl.startsWith('/it')) {
+                window.location.href = '/it' + currentUrl; // Redirect to Italian version
             }
-        });
-    </script>
+        } else {
+            // If the preferred language is not in the URL, update the URL
+            if (!currentUrl.startsWith('/' + preferredLanguage)) {
+                window.location.href = '/' + preferredLanguage + currentUrl.substring(3); // Adjust to preferred language
+            }
+        }
+    });
+</script>
     {% block extra_scripts %}{% endblock %}
 </body>
 </html>
