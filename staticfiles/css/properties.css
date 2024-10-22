@@ -179,7 +179,7 @@ h1, h2 {
     width: 100%;
     height: 100%;
     object-fit: contain;  /* Ensure the whole image/video fits without cropping */
-    object-position: center;
+    object-position: center;  /* Center the media content */
 }
 
 /* Card body styling */
@@ -320,11 +320,10 @@ h1, h2 {
     box-sizing: border-box;
 }
 
-
 .sold {
     color: transparent;
     font-family: font-family: "Cinzel", serif;
-    font-size: 70px;
+    font-size: 60px;
     padding-left: 15px;
     padding-right: 15px;
     font-weight: 900;
