@@ -682,6 +682,10 @@ main {
     }
 }
 
+.contact-details p {
+    text-decoration: none;
+}
+
 /* Contact Form Section */
 
 /* Mobile responsiveness */
