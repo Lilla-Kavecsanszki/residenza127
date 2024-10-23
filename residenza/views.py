@@ -4,6 +4,8 @@ from django.contrib import messages
 import os
 from django.conf import settings
 from .forms import ContactForm
+from django.utils import translation
+from django.utils.translation import gettext as _
 from .models import Contact
 from properties.models import Property
 
@@ -45,9 +47,10 @@ def homepage(request):
             user_email = EmailMultiAlternatives(
                 subject="Your Contact Form Submission",
                 body=f"Dear {form.cleaned_data['name']},\n\n"
-                     "Thank you for reaching out! Please find the attached brochure.\n\n"
-                     "Best regards,\n"
-                     "Your Company Name",
+                    "Thank you for reaching out to us! We appreciate your inquiry and will get back to you as soon as possible.\n\n"
+                    "In the meantime, please find the brochure attached to this email for your review.\n\n"
+                    "Best regards,\n"
+                    "Ar.Gi. Costruzioni",
                 from_email=None,  # Default from email
                 to=[form.cleaned_data['email']],
             )
