@@ -118,6 +118,9 @@ class AllProperties(View):
 
         # Prepare current sorting key
         current_sorting = f"{sort}_{direction}"
+        
+        # Construct the canonical URL for the properties listing
+        canonical_url = request.build_absolute_uri(reverse("all_properties"))
 
         context = {
             "properties": properties,
@@ -127,6 +130,7 @@ class AllProperties(View):
             "current_sorting": current_sorting,
             "location_choices": location_choices,
             "property_types_choices": property_types_choices,
+            "canonical_url": canonical_url,
         }
 
         return render(request, "properties/properties.html", context)
@@ -140,12 +144,16 @@ class PropertyDetail(View):
             request.user.is_authenticated
             and property.liked_by.filter(id=request.user.id).exists()
         )
+        
+        # Construct the canonical URL for the property detail
+        canonical_url = request.build_absolute_uri(property.get_absolute_url())
 
         context = {
             "property": property,
             "images": property.images.all(),  # Fetch related images
             "videos": property.videos.all(),  # Fetch related videos
             "liked": liked,
+            "canonical_url": canonical_url,
         }
         return render(request, "properties/property_details.html", context)
 

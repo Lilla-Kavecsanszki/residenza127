@@ -2,6 +2,7 @@ from cloudinary.models import CloudinaryField
 from cloudinary_storage.storage import VideoMediaCloudinaryStorage
 from cloudinary_storage.validators import validate_video
 from django.conf import settings
+from django.urls import reverse
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -51,6 +52,10 @@ class Property(models.Model):
     def number_of_likes(self):
         """Returns the number of users who liked this property."""
         return self.liked_by.count()
+    
+    def get_absolute_url(self):
+        """Returns the URL for the property detail page."""
+        return reverse('property_detail', kwargs={'property_id': self.id})
 
     class Meta:
         verbose_name = "Property"

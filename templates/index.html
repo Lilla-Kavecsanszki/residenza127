@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
 {% endblock %}
 
+{% block head %}
+    <link rel="canonical" href="{{ canonical_url }}" />
+    {{ block.super }}  <!-- Include any other head tags -->
+{% endblock %}
+
 {% block title %}{% trans "Homepage" %}{% endblock %}
 
 {% block content %}

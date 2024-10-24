@@ -10,6 +10,11 @@
 <link rel="stylesheet" href="{% static 'css/construction.css' %}">
 {% endblock %}
 
+{% block head %}
+    {{ block.super }}  <!-- existing content in the head block of base.html -->
+    <link rel="canonical" href="{{ canonical_url }}">  <!-- canonical URL  -->
+{% endblock %}
+
 {% block content %}
 <section class="construction py-5">
     <div class="container">

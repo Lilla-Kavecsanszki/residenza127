@@ -14,7 +14,11 @@
 
     <title>{% block title %}{% trans "Ar.Gi. Costruzioni" %}{% endblock %}</title>
 
-    <link rel="canonical" href="{% if request.path == '/' %}{{ request.build_absolute_uri|slice:':-1' }}{% else %}{{ request.build_absolute_uri }}{% endif %}">
+    <link rel="canonical" href="{{ canonical_url }}" />
+    
+    <!-- Hreflang Tags -->
+    <link rel="alternate" href="http://www.argicostruzioni.com/" hreflang="it" />
+    <link rel="alternate" href="http://www.argicostruzioni.com/en/" hreflang="en" />
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">

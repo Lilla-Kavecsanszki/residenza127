@@ -6,6 +6,12 @@
 <link rel="stylesheet" href="{% static 'css/properties.css' %}" />
 {% endblock %}
 
+{% block meta %}
+    {{ block.super }}  <!-- Ensures existing meta tags from base.html are included -->
+    <meta name="robots" content="index, follow">  <!-- indexing for properties -->
+    <link rel="canonical" href="{{ canonical_url }}" />  <!-- canonical link -->
+{% endblock %}
+
 {% block content %}
 <div class="container">
     <h1 class="property-title">{% trans "Apartments" %}{% if current_locations %}

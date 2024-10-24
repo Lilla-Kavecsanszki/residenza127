@@ -7,6 +7,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 {% endblock %}
 
+{% block meta %}
+    {{ block.super }}  <!-- Ensure existing meta tags from base.html are included -->
+    <meta name="robots" content="index, follow">  <!-- Allow indexing for individual property -->
+    <link rel="canonical" href="{{ canonical_url }}" />  <!-- Add the canonical link -->
+{% endblock %}
+
 {% block content %}
 <div class="container">
     <h1 class="property-title text-center">{{ property.name }}</h1>

@@ -13,6 +13,15 @@ def homepage(request):
     """Fetch properties and handle contact form submissions."""
     properties = Property.objects.all()  # Fetch all properties
     form = ContactForm()  # Initialize the contact form
+    
+    # Define the canonical URL
+    canonical_url = request.build_absolute_uri('/')  # Get the base URL
+
+    # Set the canonical URL based on the current language
+    if translation.get_language() == 'en':
+        canonical_url = 'http://www.argicostruzioni.com/en/'
+    else:
+        canonical_url = 'http://www.argicostruzioni.com/'
 
     if request.method == "POST":
         form = ContactForm(request.POST)
@@ -74,6 +83,7 @@ def homepage(request):
     context = {
         "property_list": properties,  # Pass properties to the template
         "form": form,  # Pass the contact form to the template
+        "canonical_url": canonical_url,  # Pass the canonical URL to the template
     }
 
     return render(request, "index.html", context)  # Render the homepage template

@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="{% static 'css/allauth.css' %}" />
 {% endblock %}
 
+{% block head %}
+    <link rel="canonical" href="{{ request.build_absolute_uri }}" />
+    {{ block.super }}  <!-- Include any other head tags -->
+{% endblock %}
+
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block inner_content %}
