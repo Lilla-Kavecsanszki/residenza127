@@ -39,10 +39,12 @@ def homepage(request):
             # Prepare the email to the property owner
             owner_email = EmailMultiAlternatives(
                 subject=form.cleaned_data["subject"],
-                body=f"Message from {form.cleaned_data['name']} "
-                     f"<{form.cleaned_data['email']}>\n\n"
-                     f"Phone: {form.cleaned_data['phone_number']}\n\n"
-                     f"{form.cleaned_data['message']}",
+                body = (
+                    f"Messaggio da {form.cleaned_data['name']} "
+                    f"<{form.cleaned_data['email']}>\n\n"
+                    f"Telefono: {form.cleaned_data['phone_number']}\n\n"
+                    f"{form.cleaned_data['message']}"
+                ),
                 from_email=None,  # Default from email
                 to=[os.environ.get("CONTACT_EMAIL_RECIPIENT")],
             )
@@ -55,11 +57,13 @@ def homepage(request):
             # Prepare the email to the user
             user_email = EmailMultiAlternatives(
                 subject="Your Contact Form Submission",
-                body=f"Dear {form.cleaned_data['name']},\n\n"
-                    "Thank you for reaching out to us! We appreciate your inquiry and will get back to you as soon as possible.\n\n"
-                    "In the meantime, please find the brochure attached to this email for your review.\n\n"
-                    "Best regards,\n"
-                    "Ar.Gi. Costruzioni",
+                body = (
+                    f"Gentile {form.cleaned_data['name']},\n\n"
+                    "Grazie per averci contattato! Apprezziamo la sua richiesta e le risponderemo al più presto.\n\n"
+                    "Nel frattempo, troverà in allegato la brochure per la sua consultazione.\n\n"
+                    "Cordiali saluti,\n"
+                    "Ar.Gi. Costruzioni"
+                ),
                 from_email=None,  # Default from email
                 to=[form.cleaned_data['email']],
             )
