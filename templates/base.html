@@ -331,33 +331,48 @@
         }, 3000);
     </script>
 
-    <!-- Custom JavaScript for Language Switching -->
+<!-- Custom JavaScript for Language Switching -->
 <script>
-    function switchLanguage(langCode) {
-        // Store the preferred language in session storage
-        sessionStorage.setItem('preferredLanguage', langCode);
-        // Redirect to the new language URL
-        window.location.href = '/' + langCode + window.location.pathname.substring(3);
-    }
-
     document.addEventListener('DOMContentLoaded', function() {
-        var preferredLanguage = sessionStorage.getItem('preferredLanguage');
+        var preferredLanguage = localStorage.getItem('preferredLanguage') || 'it';
         var currentUrl = window.location.pathname;
-
-        // Default to Italian if there's no preferred language set
-        if (!preferredLanguage) {
-            sessionStorage.setItem('preferredLanguage', 'it'); // Set Italian as default
-            // Redirect to Italian version if not already there
-            if (!currentUrl.startsWith('/it')) {
-                window.location.href = '/it' + currentUrl; // Redirect to Italian version
-            }
-        } else {
-            // If the preferred language is not in the URL, update the URL
-            if (!currentUrl.startsWith('/' + preferredLanguage)) {
-                window.location.href = '/' + preferredLanguage + currentUrl.substring(3); // Adjust to preferred language
-            }
+        var urlParams = new URLSearchParams(window.location.search);
+    
+        // If there's a language parameter in the URL, prioritize it and update storage
+        if (urlParams.has('lang')) {
+            preferredLanguage = urlParams.get('lang');
+            localStorage.setItem('preferredLanguage', preferredLanguage);
+        }
+    
+        console.log('Current URL:', currentUrl);
+        console.log('Preferred Language:', preferredLanguage);
+    
+        // Ensure special cases like confirmation links are respected
+        if (currentUrl.startsWith('/accounts/confirm-email')) {
+            console.log('Email confirmation page detected. Keeping the current language.');
+            return; // Avoid redirecting on confirmation links
+        }
+    
+        // Remove any existing language prefix from the URL
+        var baseUrl = currentUrl.replace(/^\/(it|en)\//, '/');
+    
+        // Redirect to preferred language if not already set
+        if (!currentUrl.startsWith('/' + preferredLanguage)) {
+            console.log(`Redirecting to ${preferredLanguage} version...`);
+            window.location.href = `/${preferredLanguage}${baseUrl}`;
         }
     });
+    
+    function switchLanguage(langCode) {
+        localStorage.setItem('preferredLanguage', langCode);
+        var currentUrl = window.location.pathname;
+    
+        // Remove any existing language prefix
+        var baseUrl = currentUrl.replace(/^\/(it|en)\//, '/');
+    
+        // Redirect to the selected language
+        window.location.href = `/${langCode}${baseUrl}`;
+    }    
 </script>
     {% block extra_scripts %}{% endblock %}
 </body>

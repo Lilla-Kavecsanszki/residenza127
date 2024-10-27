@@ -137,6 +137,9 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+# settings.py
+ACCOUNT_ADAPTER = 'residenza.adapters.MyAccountAdapter'
+
 # Static files (CSS, JavaScript, Images)
 CLOUDINARY_STORAGE = {
     "CLOUD_NAME": os.environ.get("CLOUDINARY_CLOUD_NAME"),

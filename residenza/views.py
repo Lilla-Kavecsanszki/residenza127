@@ -2,26 +2,31 @@ from django.shortcuts import render, redirect
 from django.core.mail import EmailMultiAlternatives
 from django.contrib import messages
 import os
+import logging
 from django.conf import settings
 from .forms import ContactForm
 from django.utils import translation
+from django.utils.translation import get_language
 from django.utils.translation import gettext as _
 from .models import Contact
 from properties.models import Property
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 def homepage(request):
     """Fetch properties and handle contact form submissions."""
     properties = Property.objects.all()  # Fetch all properties
     form = ContactForm()  # Initialize the contact form
     
-    # Define the canonical URL
-    canonical_url = request.build_absolute_uri('/')  # Get the base URL
+    # Get the current active language code
+    current_language = get_language()  # e.g., 'it' or 'en'
 
-    # Set the canonical URL based on the current language
-    if translation.get_language() == 'en':
-        canonical_url = 'http://www.argicostruzioni.com/en/'
-    else:
-        canonical_url = 'http://www.argicostruzioni.com/'
+    # Construct the canonical URL based on the active language
+    canonical_url = request.build_absolute_uri(f"/{current_language}/")  # e.g., /en/ or /it/
+
+    # Log the canonical URL for debugging purposes
+    logger.info(f"Canonical URL: {canonical_url}")
 
     if request.method == "POST":
         form = ContactForm(request.POST)

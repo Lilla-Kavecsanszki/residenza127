@@ -21,6 +21,7 @@ def language_switch(request, lang_code):
     # Redirect to the previous page
     return redirect(request.META.get("HTTP_REFERER", "/"))
 
+
 # Dynamic robots_txt file generaction
 def robots_txt(request):
     lines = [
