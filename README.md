@@ -562,7 +562,90 @@ Overall, this combination of fonts creates a harmonious balance between elegance
 
 ### F01 Navigation Bar
 
-The navigation bar provides easy access to all active pages for the user.
+The navigation bar offers streamlined access to the primary sections of the site, enabling users to quickly find apartments, learn about the company, or explore additional options.
+
+**Menu Options:**
+
+- **Account Button:** This button allows new users to easily log in or register. Once logged in, users can manage their profile and access additional options through a dropdown menu.
+
+    - **Logged-in User Options:** 
+      - **Profile/Favorites:** A link to the user's profile page where they can view or edit their details and access their list of favorite apartments.
+      - **Log Out:** A quick option to securely log out of their account.
+      
+    - **Admin User Options:** Admin users have access to the same options as regular users (Profile/Favorites and Log Out) plus an additional **Property Management** button. This opens a fully integrated management page designed for ease of use, where admins can quickly add new apartments to the database in a user-friendly interface.
+
+    - **Icon Status:** The Account icon reflects login status. When logged out, it appears as an outlined "Account" icon. Once logged in, it changes to a solid-filled icon displaying the user’s name underneath.
+
+- **Language Switcher (Globe Icon):** Located next to the Account button, the globe icon allows users to toggle between languages. The current language (either “EN” for English or “IT” for Italian) is displayed beneath the icon.
+
+    - **Language Selection:** When users click on the globe icon, a dropdown menu appears, where they can choose their preferred language. This selection updates the entire website’s content to the chosen language, enhancing accessibility for both English and Italian-speaking visitors.
+
+- **Logo:** Serves as both a branding element and a quick link to the homepage for easy navigation back to the main landing page.
+
+- **Search Bar:** Allows users to search for specific apartments by keywords. Results can be further filtered or ordered by various criteria on the Apartments page to help users find their ideal property.
+
+- **Navigation Links:** 
+    - **Home:** Directs users back to the homepage at any time.
+    - **All Apartments:** Leads to a full list of apartments, allowing users to sort and filter by category or other attributes.
+    - **Solutions:** This link directs users to a page that showcases the company’s services, explaining all the solutions and support available to clients.
+    - **About Us:** Provides essential details about the company.
+    - **Contact:** Navigates to the contact form, where users can submit inquiries or feedback.
+
+![Not Logged_In_Account](README_docs/images/not_logged_in_account.png "notlogged_in_account")
+
+![Not Logged_In_Dropdown](README_docs/images/not_logged_in_dropdown.png "notlogged_in_dropdown")
+
+![Logged_In_Account](README_docs/images/logged_in_account.png "logged_in_account")
+
+![Logged_In_Dropdown](README_docs/images/logged_in_dropdown.png "logged_in_dropdown")
+
+![language_dropdown](README_docs/images/language_dropdown.png "language_dropdown")
+
+**Special Case for Administrators**
+
+When the logged-in user is an admin, an additional **Admin** link is displayed. This link provides access to the administrative panel, where they can manage site content, update listings, and perform other administrative functions.
+
+![Logged_In_Admin](README_docs/images/logged_in_admin.png "logged_in_admin")
+
+![Logged_In_Dropdown_Admin](README_docs/images/logged_in_dropdown_admin.png "logged_in_dropdown_admin")
+
+![Admin](README_docs/images/admin.png "admin")
+
+### F02 Hero Video and Overlay Text
+
+Underneath the navbar, the Home page features a relevant video showcasing the interior of one of the apartments. There is also a text overlay on top of the video, displaying the name of the website and the building, which provides a clear idea of its purpose. The smaller text beneath the title sets the mood for potential buyers considering the purchase of these apartments.
+
+![Hero Video and Text](README_docs/images/hero_feature.png "hero_video&text")
+
+### F03 Building Info
+
+The Building Info section provides detailed insights into Residenza 126, an exclusive residential project located in the heart of Oristano. This feature is essential for potential buyers and investors seeking modern living options that prioritize comfort, privacy, and style.
+
+Visual Representation: Includes a rendering of the building's future exterior, allowing users to visualize the completed project and its aesthetic appeal. This visual aid enhances user engagement and provides clarity about what to expect.
+
+![Building Info](README_docs/images/building_info.png "building_info")
+
+### F04 Location
+
+The Location section emphasizes the prime positioning of Residenza 126 in the heart of Oristano, making it an ideal choice for those who desire the best of urban living while enjoying a tranquil retreat.
+
+Visual Representation: The section includes a grid of four images:
+
+  - Local Highlights: Three images showcasing what Oristano is famous for, such as its cultural heritage, scenic beauty, and community events. These visuals help potential residents understand the charm and attractions of the area.
+  - Embedded Map: The fourth image is an embedded map of Oristano, providing context for those unfamiliar with the city. This map helps international buyers or potential residents easily locate the town and understand its surroundings.
+
+This Location feature not only highlights the advantages of living at Residenza 126 but also enhances the user experience by providing valuable insights into the local area, making it easier for potential buyers to envision their new lifestyle.
+
+![Location](README_docs/images/location.png "location")
+
+### F06 Footer
+
+Just like the navigation bar and banner, the footer is consistently displayed on every page. Located at the very bottom, it provides information about the company's social media presence, with a link for users to easily follow. It also includes a link to the company's Privacy Policy and a user-friendly subscription form, allowing users to sign up for the monthly newsletter. The footer ends with a disclaimer, mentioning the website's creator and providing a convenient link to the developer's LinkedIn profile. It also clarifies that the website was created solely for educational purposes.
+
+![Footer](README_docs/images/footer.png "footer")
+
+## Apartments page
+
 
 ## Future ambitions
 
@@ -714,8 +797,57 @@ I asked friends and family to look at the application on their devices, browsers
 
 ## Bugs
 
+This section outlines key issues encountered during development, the underlying problems, and solutions.
 
+#### 1. **Error: Language Redirection Issue on Base URL**
 
+**Problem**: When accessing the base URL of the application, the English version loaded by default instead of Italian. This was particularly problematic for new users who hadn't set a language preference.
+
+**Cause**: The language selection logic failed to handle the base URL properly, leading to inconsistent redirects and a default fallback to English.
+
+**Solution**: A JavaScript function was implemented to check `localStorage` for a preferred language, defaulting to Italian if none was set. The preferred language is then applied to the URL, and users can update it via a dropdown selection.
+
+```javascript
+document.addEventListener('DOMContentLoaded', function() {
+    var preferredLanguage = localStorage.getItem('preferredLanguage') || 'it';
+    var currentUrl = window.location.pathname;
+    
+    if (!currentUrl.startsWith('/' + preferredLanguage)) {
+        window.location.href = `/${preferredLanguage}${currentUrl.replace(/^\/(it|en)\//, '/')}`;
+    }
+});
+
+function switchLanguage(langCode) {
+    localStorage.setItem('preferredLanguage', langCode);
+    window.location.href = `/${langCode}${window.location.pathname.replace(/^\/(it|en)\//, '/')}`;
+}
+```
+
+#### 2. **Error: Duplicate Language Prefix in URL**
+
+**Problem**: Multiple language prefixes appeared in URLs (e.g., `/it/en/properties/`) when users switched languages or accessed specific links.
+
+**Cause**: The redirection logic appended a new language prefix to the URL without checking if one was already present, leading to redundant prefixes.
+
+**Solution**: Updated the JavaScript code to remove any existing language prefix from the URL before appending a new one, which prevented duplicates. Initially, `sessionStorage` was used, but switching to `localStorage` allowed the preferred language to persist better across tabs and sessions. This solution prevents duplicate prefixes and ensures the language choice persists across sessions, even when the system, such as email confirmation link opens up in a new tab for example.
+
+```javascript
+document.addEventListener('DOMContentLoaded', function() {
+    var preferredLanguage = localStorage.getItem('preferredLanguage') || 'it';
+    var currentUrl = window.location.pathname;
+
+    var baseUrl = currentUrl.replace(/^\/(it|en)\//, '/');
+    if (!currentUrl.startsWith('/' + preferredLanguage)) {
+        window.location.href = `/${preferredLanguage}${baseUrl}`;
+    }
+});
+
+function switchLanguage(langCode) {
+    localStorage.setItem('preferredLanguage', langCode);
+    var baseUrl = window.location.pathname.replace(/^\/(it|en)\//, '/');
+    window.location.href = `/${langCode}${baseUrl}`;
+}
+```
 
 # Credits
 
