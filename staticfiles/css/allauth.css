@@ -332,6 +332,25 @@ body {
     margin-top: 20px; /* Space above buttons */
 }
 
+.password_reset {
+    text-align: center;
+    padding-top: 9%;
+}
+
+.password_reset_text {
+    padding-top: 18%;
+}
+
+.password_change{
+    padding-top: 3%;
+    text-align: center;
+}
+
+.password_change_text {
+    text-align: center;
+    padding-top: 1%;
+}
+
 /* Button Styles */
 .primaryAction,
 .home-button {
