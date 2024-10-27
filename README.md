@@ -591,31 +591,31 @@ The navigation bar offers streamlined access to the primary sections of the site
     - **About Us:** Provides essential details about the company.
     - **Contact:** Navigates to the contact form, where users can submit inquiries or feedback.
 
-![Not Logged_In_Account](README_docs/images/not_logged_in_account.png "notlogged_in_account")
+![Not Logged_In_Account](staticfiles/README_docs/images/notlogged_in_account.png "notlogged_in_account")
 
-![Not Logged_In_Dropdown](README_docs/images/not_logged_in_dropdown.png "notlogged_in_dropdown")
+![Not Logged_In_Dropdown](staticfiles/README_docs/images/notlogged_in_dropdown.png "notlogged_in_dropdown")
 
-![Logged_In_Account](README_docs/images/logged_in_account.png "logged_in_account")
+![Logged_In_Account](staticfiles/README_docs/images/logged_in_account.png "logged_in_account")
 
-![Logged_In_Dropdown](README_docs/images/logged_in_dropdown.png "logged_in_dropdown")
+![Logged_In_Dropdown](staticfiles/README_docs/images/logged_in_dropdown.png "logged_in_dropdown")
 
-![language_dropdown](README_docs/images/language_dropdown.png "language_dropdown")
+![language_dropdown](staticfiles/README_docs/images/language_dropdown.png "language_dropdown")
 
 **Special Case for Administrators**
 
 When the logged-in user is an admin, an additional **Admin** link is displayed. This link provides access to the administrative panel, where they can manage site content, update listings, and perform other administrative functions.
 
-![Logged_In_Admin](README_docs/images/logged_in_admin.png "logged_in_admin")
+![Logged_In_Admin](staticfiles/README_docs/images/logged_in_admin.png "logged_in_admin")
 
-![Logged_In_Dropdown_Admin](README_docs/images/logged_in_dropdown_admin.png "logged_in_dropdown_admin")
+![Logged_In_Dropdown_Admin](staticfiles/README_docs/images/logged_in_dropdown_admin.png "logged_in_dropdown_admin")
 
-![Admin](README_docs/images/admin.png "admin")
+![Admin](staticfiles/README_docs/images/admin.png "admin")
 
 ### F02 Hero Video and Overlay Text
 
 Underneath the navbar, the Home page features a relevant video showcasing the interior of one of the apartments. There is also a text overlay on top of the video, displaying the name of the website and the building, which provides a clear idea of its purpose. The smaller text beneath the title sets the mood for potential buyers considering the purchase of these apartments.
 
-![Hero Video and Text](README_docs/images/hero_feature.png "hero_video&text")
+![Hero Video and Text](staticfiles/README_docs/images/hero_feature.png "hero_video&text")
 
 ### F03 Building Info
 
@@ -623,7 +623,7 @@ The Building Info section provides detailed insights into Residenza 126, an excl
 
 Visual Representation: Includes a rendering of the building's future exterior, allowing users to visualize the completed project and its aesthetic appeal. This visual aid enhances user engagement and provides clarity about what to expect.
 
-![Building Info](README_docs/images/building_info.png "building_info")
+![Building Info](staticfiles/README_docs/images/building_info.png "building_info")
 
 ### F04 Location
 
@@ -636,7 +636,7 @@ Visual Representation: The section includes a grid of four images:
 
 This Location feature not only highlights the advantages of living at Residenza 126 but also enhances the user experience by providing valuable insights into the local area, making it easier for potential buyers to envision their new lifestyle.
 
-![Location](README_docs/images/location.png "location")
+![Location](staticfiles/README_docs/images/location.png "location")
 
 ### F06 Footer
 
