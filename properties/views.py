@@ -103,7 +103,6 @@ class AllProperties(View):
             for word in words:
                 queries |= (
                     Q(name__icontains=word) | 
-                    Q(description__icontains=word) | 
                     Q(features__icontains=word) | 
                     Q(location__icontains=word) | 
                     Q(property_type__icontains=word)
