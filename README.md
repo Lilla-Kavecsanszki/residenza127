@@ -638,11 +638,154 @@ This Location feature not only highlights the advantages of living at Residenza 
 
 ![Location](staticfiles/README_docs/images/location.png "location")
 
-### F06 Footer
+### F05 Interactive Buttons
 
-Just like the navigation bar and banner, the footer is consistently displayed on every page. Located at the very bottom, it provides information about the company's social media presence, with a link for users to easily follow. It also includes a link to the company's Privacy Policy and a user-friendly subscription form, allowing users to sign up for the monthly newsletter. The footer ends with a disclaimer, mentioning the website's creator and providing a convenient link to the developer's LinkedIn profile. It also clarifies that the website was created solely for educational purposes.
+The **Interactive Buttons** feature includes two attention-grabbing animated buttons designed to enhance user engagement and provide quick access to key resources.
+
+- **Download Brochure Button:** 
+  - An animated brochure icon labeled **"Download Brochure"** allows users to download the official brochure for **Residenza 126**. The brochure provides comprehensive information about the building, apartments, and design features, offering users a detailed overview of the project. This button makes it easy for users to obtain essential information in one click, serving as a valuable resource for those interested in learning more about the property.
+
+- **Reach Out Button:** 
+  - An animated icon featuring an envelope, ringing phone, and “i” symbol labeled **"Reach Out"** directs users to the contact form. This button encourages potential buyers to connect with the team directly, making it simple to submit inquiries or request additional information. It’s designed to facilitate easy communication, supporting the customer’s journey from interest to direct contact.
+
+These **Interactive Buttons** help capture users' attention and make key resources easily accessible, enhancing the overall user experience and supporting potential buyers in their decision-making process.
+
+![Reach_Out_Buttons](staticfiles/README_docs/images/reach_out_buttons.png "reach_out_buttons")
+
+### F06 Our Apartment Types
+
+The **Our Apartment Types** feature introduces users to the two different apartment layouts available at **Residenza 126**, helping them quickly understand the options and find a home that suits their needs and lifestyle.
+
+- **Tailored Options Overview:**  
+  - Users can easily compare the two apartment types, seeing at a glance which option aligns with their lifestyle—whether it’s a cozy one-bedroom or a spacious two-bedroom layout. This feature provides clarity and supports decision-making for prospective buyers.
+
+- **Visual Aids for Each Type:**  
+  - Each apartment type is paired with a relevant image:
+    - **Two-room apartments** display an image of the terrace featuring a Jacuzzi setup, highlighting relaxation features.
+    - **Three-room apartments** display an image of the spacious open-plan living area, showing the layout’s suitability for families or social gatherings.
+  
+  - These images allow users to visualize the apartments’ unique aspects, helping them envision the space as it will appear upon completion.
+
+- **Lifestyle Fit:**  
+  - By outlining specific features (like the private terrace or expansive living area), this section helps users quickly assess how each apartment type fits different lifestyle needs, aiding in their decision to schedule a visit or request more information.
+
+![Solutions](staticfiles/README_docs/images/solutions.png "solutions")
+
+![Bilocali](staticfiles/README_docs/images/bilocali.png "bilocali")
+
+![Trilocali](staticfiles/README_docs/images/trilocali.png "trilocali")
+
+### F07 Apartment Carousel
+
+The **Apartment Carousel** feature provides an engaging, interactive display of all available apartment floor plans, allowing users to explore different apartment options with ease.
+This feature enhances user engagement by offering a dynamic, intuitive way to browse and learn more about the apartments, while keeping them informed of each unit’s availability.
+
+- **Continuous, Full-Width Display:**  
+  - The carousel presents three slides at a time across the screen, continuously cycling through the apartments. This edge-to-edge layout offers users a seamless and visually rich browsing experience, showcasing each apartment’s floor plan in detail.
+
+- **Apartment Information and Navigation:**  
+  - Each slide displays the apartment’s floor plan image and its name below, providing a clear view of the layout for quick identification.  
+  - Slides are clickable, leading directly to the detailed page for each apartment. This feature allows users to effortlessly explore individual apartment details, aiding their decision-making process.
+
+- **Availability Indication:**  
+  - For apartments that are already sold, a **“SOLD” stamp** is displayed prominently across the image. Sold apartment slides are not clickable, ensuring users don’t encounter unavailable listings. This visual cue helps users focus on available options, saving time and improving navigation efficiency.
+
+![Carousel](staticfiles/README_docs/images/carousel.png "carousel")
+
+### F08 View All Apartments Button
+
+The **View All Apartments Button** is a prominent, interactive element positioned directly under the Apartment Carousel, designed to guide users to the full list of available apartments with ease. This feature serves as a streamlined entry point for users interested in exploring all apartments, improving overall navigation and user engagement.
+
+- **High Visibility and Engaging Design:**  
+  - This large button draws user attention with a **3D effect** and **move-out animation** on hover, making it visually appealing and easy to locate. Its bold design ensures that users can effortlessly spot and interact with it, encouraging them to explore further.
+
+- **Direct Navigation to Full Apartment Listings:**  
+  - By clicking the button, users are redirected to the **Apartments page**, where they can view the complete list of apartments and make a more detailed selection. This direct access supports users in finding all available options, enhancing the ease of browsing and exploration.
+
+![View_Apartments_Button](staticfiles/README_docs/images/view_apartments_button.png "view_apartments_button")
+
+![View_Apartments_Button_Hover](staticfiles/README_docs/images/view_apartments_button_hover.png "view_apartments_button_hover")
+
+### F09 Contact Form
+
+The **Contact Form** feature provides an accessible, reliable way for users to reach out, ask questions, and receive immediate confirmation about their inquiry with **Residenza 126**. This feature integrates database storage, email notifications, and automated responses to ensure efficient communication, prompt follow-up, and a seamless experience for potential clients.
+
+**Form Fields and User-Friendly Features:**
+
+- **Placeholders for Guidance:**  
+  - Each field includes descriptive **placeholders** (e.g., “John Doe” for Name, “example@site.com” for Email), guiding users to complete each field correctly.
+
+- **Form Fields and Validation:**  
+  - **Email**  
+    - Required field with **extra validation to confirm a valid email address**, which helps the system accurately process the inquiry.
+  - **Phone Number**  
+    - Optional field with **validation to confirm a valid phone number format** (e.g., “+12125552368”), preventing incorrect entries and ensuring proper follow-up contact.
+
+- **Validation for Complete Submission:**  
+  - Form validation ensures all required fields are completed before enabling the “Send” button. This prevents incomplete submissions and reduces errors.
+
+**Enhanced Communication and Record-Keeping:**
+
+- **Database Storage:**  
+  - Each form submission is stored in the **database**, allowing the company to keep a complete record of all inquiries and follow-up as needed.
+
+- **Direct Company Email Notification:**  
+  - Upon form submission, a message is automatically sent to the company’s **email address**, ensuring that the owner receives all inquiries immediately.
+
+- **Automatic User Response with Brochure:**  
+  - Users who submit the form receive an **automatic confirmation email** from the company’s address, acknowledging receipt of their message. This email includes a copy of the project brochure, allowing potential clients to review more details about Residenza 126 while awaiting a response.
+
+![Contact_Form](staticfiles/README_docs/images/contact_form.png "contact_form")
+
+![Field_Validation](staticfiles/README_docs/images/field_validation.png "field_validation")
+
+![Email_Validation](staticfiles/README_docs/images/email_validation.png "email_validation")
+
+![Phone_Validation](staticfiles/README_docs/images/phone_validation.png "phone_validation")
+
+### F10 About Section
+
+The **About Section** enhances user understanding of **Ar.Gis.r.l.s.** by providing key information about the company and its location through a visually appealing layout. This feature effectively communicates vital information while using an elegant design and an interactive map to engage users and enhance their experience and trust.
+
+- **Company Details Card:**  
+  This card is designed to resemble a **premium metal (silver/aluminum)** finished name card, giving it a sophisticated look that reflects the quality of the brand. It contains essential details about the company and the owner. The premium design helps convey the brand's commitment to quality and excellence, creating a lasting impression on potential clients.
+
+- **Embedded Map Card:**  
+  The second card features an **embedded map** displaying the exact coordinates of the business address. This interactive map provides a visual representation of the location, enhancing user trust and convenience, and making it easier for potential clients to find and visit the office.
+
+![Company_Details](staticfiles/README_docs/images/company_details.png "company_details")
+
+### F11 Footer
+
+The **Footer** is consistently displayed on every page, ensuring users have easy access to important information at any time. Located at the very bottom of the site, it enhances user navigation and provides essential links and details about the company. The footer serves as a comprehensive resource for users, combining essential company information, navigation links, and contact options, all while maintaining a clean and elegant design.
+
+- **Company Information:**  
+  The footer includes a **Company Details column** with links to relevant sections, such as:
+  - **Building Info**: Quick access to details about Residenza 126.
+  - **View Location**: A link to the location of the apartments, helping users understand the property's setting.
+
+- **Apartment Types:**  
+  Users can explore/revisit the apartment types, such as:
+  - **Two Rooms**
+  - **Three Rooms**  
+  These links guide users to specific sections, making it easier to find suitable living options.
+
+- **Social Media Links:**  
+  The footer features icons linking to the company’s social media platforms (WhatsApp, Instagram, Google Maps). These icons spin and animate on hover, displaying their respective brand colors (green for WhatsApp, pinkish gradial for Instagram, etc.), creating a fun and interactive experience for users. This encourages users to connect and follow the brand, enhancing engagement and visibility.
+
+- **Contact Information:**  
+  Users can easily find essential contact details:
+  - **Phone Number**: Clickable link for direct calls.
+  - **Email Address**: Clickable link for direct emailing.
+  - **Privacy Policy**: A link to the company's privacy policy, ensuring transparency.
+
+- **Creator Information:**  
+  The footer concludes with a disclaimer acknowledging the website's creator, Lilla Kavecsanszki, and providing a clickable link for direct email contact. This adds a personal touch and enhances the website's credibility.
 
 ![Footer](README_docs/images/footer.png "footer")
+
+.
+
 
 ## Apartments page
 
