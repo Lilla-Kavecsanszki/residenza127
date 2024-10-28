@@ -63,14 +63,28 @@ body {
     object-fit: cover; /* Ensure content fits within the container */
 }
 
-.owl-nav button.owl-prev,
-.owl-nav button.owl-next {
-    font-size: 1.5em;
-    color: red;
+/* Style for navigation buttons */
+.owl-dots {
+    text-align: center; /* Center the dots */
+    margin-top: 10px; /* Space between the carousel and the dots */
+}
+
+.owl-dots .owl-dot {
+    display: inline-block; /* Make dots inline elements */
+    margin: 0 5px; /* Add margin for spacing */
+    cursor: pointer; /* Change cursor to pointer for interactivity */
+}
+
+.owl-dots .owl-dot span {
+    width: 10px; /* Width of the dot */
+    height: 10px; /* Height of the dot */
+    background: white; /* Default background color for inactive dot */
+    border-radius: 50%; /* Make it round */
+    display: block; /* Make span block-level for width and height to apply */
+    transition: background 0.3s; /* Smooth transition for hover */
 }
 
 /* Back button */
-
 .back-button {
     text-align: center; /* Center-aligns the text and button inside the container */
     margin-top: 2rem; /* Adjust the space above the button */

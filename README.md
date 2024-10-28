@@ -743,6 +743,8 @@ The **Contact Form** feature provides an accessible, reliable way for users to r
 
 ![Phone_Validation](staticfiles/README_docs/images/phone_validation.png "phone_validation")
 
+![Automated_Email](staticfiles/README_docs/images/automated_email.png "automated_email")
+
 ### F10 About Section
 
 The **About Section** enhances user understanding of **Ar.Gis.r.l.s.** by providing key information about the company and its location through a visually appealing layout. This feature effectively communicates vital information while using an elegant design and an interactive map to engage users and enhance their experience and trust.
@@ -782,12 +784,101 @@ The **Footer** is consistently displayed on every page, ensuring users have easy
 - **Creator Information:**  
   The footer concludes with a disclaimer acknowledging the website's creator, Lilla Kavecsanszki, and providing a clickable link for direct email contact. This adds a personal touch and enhances the website's credibility.
 
-![Footer](README_docs/images/footer.png "footer")
-
-.
-
+![Footer](staticfiles/README_docs/images/footer.png "footer")
 
 ## Apartments page
+
+### F12 List and View of the Apartments
+
+The **List and View of the Apartments** feature allows users to easily navigate the available apartments for purchase through the "Apartments" option in the navigation bar. This feature enhances the user's ability to compare different apartments at a glance, simplifying the decision-making process.
+
+- **Apartment Cards:**  
+  Each apartment is showcased in a visually appealing card format that includes an image, along with key details such as the apartment name, size, number of bedrooms, and bathrooms. These cards are clickable, leading to each apartment's designated detail page for more information.
+
+![Apartment_View](staticfiles/README_docs/images/apartment_view.png "apartment_view")
+
+- **Sold Apartments:**  
+  If an apartment is sold, a "SOLD" stamp is prominently displayed across the image part of the card. In this case, the card is not clickable, preventing users from accessing the detail page.
+
+![Sold_Apartment](staticfiles/README_docs/images/sold_apartment.png "sold_apartment")
+
+- **Like Button:**  
+  In the bottom right corner of each card, there is a golden star that functions as a like button. When untoggled, the star appears as an unfilled outline. Once toggled, it becomes a filled gold star, indicating that the apartment has been saved. Logged-in users can click this star to save the apartment to their profile's favorites section, allowing for easier access later on. If a user is not logged in and attempts to press the star, a pop-up warning will inform them that they need to log in to use this feature.
+
+![Star_Like_Button](staticfiles/README_docs/images/star_like_button.png "star_like_button")
+
+![like_button_notloggedin_warning](staticfiles/README_docs/images/like_button_notloggedin_warning.png "like_button_notloggedin_warning")
+
+![Star_Button_Clicked](staticfiles/README_docs/images/star_button_clicked.png "star_button_clicked")
+
+- **Admin Toggle:**
+  In the bottom left corner of the card, an admin toggle button is available only when an admin user is logged in. This blue toggle provides a simple way for admins to mark an apartment as "SOLD." When toggled on, the "SOLD" stamp appears on the apartment card, and the card becomes non-clickable, preventing users from accessing the detail page. Toggling off the button removes these restrictions, making the apartment available for viewing again.
+
+![Sold_Toggle](staticfiles/README_docs/images/sold_toggle.png "sold_toggle")
+
+![Sold_Untoggle](staticfiles/README_docs/images/sold_untoggle.png "sold_untoggle")
+
+### F13 Information Button
+
+A gold **Information button**, in the bottom right corner, allows quick access to the contact form for any questions that could come up while browsing through the apartments, offering faster solution and better user experience. The button is fixed to the screen, ensuring it remains accessible while the user scrolls up or down on the Apartments page.
+
+![Information_Button](staticfiles/README_docs/images/information_button.png "information_button")
+
+### F14 Filter & Sort
+
+Right under the page title, the **Filter & Sort** functionality significantly enhances user navigation on the property listings page, allowing users to efficiently find their desired apartments based on specific criteria. Overall, this feature streamlines the apartment searching process, making it easy for users to find their ideal property efficiently.
+
+- **Filter Box:**  
+  At the top of the section, there is a user-friendly search box that allows users to filter apartments by location and type. The dropdown menus enable users to select their preferred **location** and **property type** from dynamically generated options, making it easy to narrow down the choices.
+
+- **Filter Button:**  
+  Once the user has made their selections, clicking the **Filter** button will refine the displayed apartments according to the specified criteria. This immediate feedback encourages user engagement by providing relevant results based on their preferences.
+
+- **Sorting Options:**  
+  Below the search box, users can sort the displayed apartments by criteria, such as size. The dropdown menu allows users to choose sorting options like "Size (smaller to larger)" or "Size (larger to smaller)," enabling a customized viewing experience that meets their needs.
+
+- **Results Counter:**  
+  A clear results counter informs users of the total number of properties displayed after filtering. If a user has made specific selections or conducted a search, the count updates accordingly. This feature provides transparency and helps users gauge the available options at a glance.
+
+![Filter_Sort](staticfiles/README_docs/images/filter_sort.png "filter_sort")
+
+![Filter](staticfiles/README_docs/images/filter.png "filter")
+
+![Sorting](staticfiles/README_docs/images/sorting.png "sorting")
+
+### F15 View Apartment Details
+
+The **View Apartment Details** offers an immersive experience for potential buyers, providing comprehensive information and visual media about a specific property. This feature is designed to create an informative and visually appealing experience, helping potential buyers gather all necessary information about a property and encouraging them to consider it seriously.
+
+- **Property Title:**  
+  At the top, the property’s name is prominently displayed as a title, creating an immediate connection for the user with the specific apartment they are viewing.
+
+- **Property Details:**  
+  This section provides essential information about the apartment, including:
+  - **Location:** The exact location of the property.
+  - **Size:** The total area of the apartment in square feet.
+  - **Type:** The classification of the apartment (e.g., bilocali, trilocali).
+  - **Bedrooms and Bathrooms:** The number of each, helping users assess if the property meets their needs.
+
+- **Property Features:**  
+  Below the property details, a list showcases the apartment's features. If available, these are dynamically generated from the property data, allowing for a clear overview of amenities. If no features are listed, a friendly message is displayed to inform users.
+
+- **Media Carousel:**  
+  A visually engaging carousel displays multimedia content related to the apartment, including:
+  - **Main Video:** If available, an autoplaying video gives a virtual tour of the apartment, enhancing user engagement.
+  - **Main Image:** The primary image of the property is displayed prominently.
+  - **Additional Images and Videos:** The carousel also includes supplementary images and videos whe n available, offering users a comprehensive view of the apartment from various angles. The lazy loading feature ensures efficient resource use while browsing.
+  - **Navigation Dots and Controls:** The carousel features navigation dots when multiple items are available, allowing users to easily navigate through the multimedia content. The dots indicate the active slide, providing a clear visual cue for users. If there are multiple items, users can interact with these controls to explore the property seamlessly. When only one media item is present, the dots underneath are hidden. Additionally, the slides are draggable by mouse, regardless of the number of items, offering an intuitive browsing experience. 
+
+- **Back Button:**  
+  A conveniently placed back button at the bottom allows users to return to the main property listings effortlessly, facilitating easy navigation within the site.
+
+![Apartment_Details](staticfiles/README_docs/images/apartment_details.png "apartment_details")
+
+![Apartment_Images](staticfiles/README_docs/images/apartment_images.png "apartment_images")
+
+![Carousel_Dots](staticfiles/README_docs/images/carousel_dots.png "carousel_dots")
+
 
 
 ## Future ambitions
