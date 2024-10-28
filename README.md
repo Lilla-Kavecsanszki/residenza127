@@ -879,11 +879,187 @@ The **View Apartment Details** offers an immersive experience for potential buye
 
 ![Carousel_Dots](staticfiles/README_docs/images/carousel_dots.png "carousel_dots")
 
+## My Favourites page
 
+### F16 Profile Overview and Update Section
+
+The **My Favourites** page begins with a **Profile Overview** that provides logged-in users with a clear, organized layout of their key account information, including:
+
+### Personal Details
+- **Basic Information**: Users can view their essential profile details, including **First Name**, **Last Name**, and **Email**.
+- **Username Display**: The username is prominently displayed as the header, helping users quickly recognize their account.
+
+### Profile Update Form
+Below the displayed information, users can update their profile details. The **Profile Update Form** includes:
+
+- **First Name** and **Last Name** fields: Each field is pre-filled with the current values for easy editing.
+- **Default Phone Number**: Allows users to add or update their contact information as needed. The phone number field includes validation to ensure proper format—**only digits are allowed**, with an optional leading '+' for international numbers.
+
+### Update Action Button
+At the bottom of the form, a prominent **"Update"** button allows users to save any changes to their profile directly on this page. This button provides users with a seamless experience when updating their information.
+
+### Change Password Link
+For additional security, users are provided with a **Change Password** link. Clicking this link redirects them to a 
+dedicated password update page, allowing them to enhance their account security
+
+This layout ensures users have a straightforward, accessible way to view and manage their profile details with the added flexibility to keep their information current.
+
+![Profile](staticfiles/README_docs/images/profile.png "profile")
+
+![Profile_Phone_Validation](staticfiles/README_docs/images/profile_phone_validation.png "profile_phone_validation")
+
+### F17 Favorites Section
+
+Directly below the profile overview, users will find their saved favorite apartments displayed in an engaging, organized layout:
+
+- **Section Header and Icon**: 
+  - The title "My Favorites" is displayed prominently at the top of this section, accompanied by a star icon to reinforce the favorites theme.
+
+- **Liked Apartments Display**:
+  Each saved apartment is showcased in its own card with key information displayed:
+
+  - **Multimedia Preview**:
+    - If an apartment has a video, it automatically plays as a preview on the card, adding an immersive visual element.
+    - If no video is available, the main apartment image is shown.
+    - A fallback image is displayed if neither a video nor image is available.
+
+  - **Apartment Details**:
+    - Key apartment attributes like size (in sq ft), location, bedroom count, and bathroom count are shown with icons for easy readability.
+    - The apartment price, set as "Upon Request" for flexibility, is also displayed.
+
+- **Interactive Like Button**:
+  - **Authenticated Users**: 
+    - The logged-in users can click on a star-shaped button to unlike the apartment, immediately updating their favorites.
+
+- **Empty State Message**:
+  - If there are no apartments saved in the favorites section, a message encourages users to explore listings, with a "View Apartments" button that directs them to the main apartments page.
+
+This feature enables users to manage and browse their saved apartments conveniently, with a clear layout and visually appealing media previews.
+
+![My_Favourites](staticfiles/README_docs/images/my_favourites.png "my_favourites")
+
+![My_Favourites_none](staticfiles/README_docs/images/my_favourites_none.png "my_favourites_none")
+
+## Property Management Page
+
+### F18 Property Management Form
+
+The Property Management Form feature allows admin users to efficiently add new apartments to the database. This feature is designed for inputting essential property details, uploading images, and adding videos through a straightforward form interface. It is only accessible to admin users who are logged in. This feature provides an intuitive and efficient way for admin users to add new apartments to the database, ensuring that all essential information can be entered, validated, and submitted seamlessly.
+
+- **Form Submission**:
+  - The form supports multipart data submission to allow image and video uploads.
+  - CSRF protection is included to enhance security during form submission.
+
+- **Property Details Section**:
+  - This section includes a fieldset labeled "Property Details."
+  - Admin users can fill in various details about the new apartment through a structured form layout.
+  - Any validation errors for individual fields are displayed in red text directly beneath the respective input fields.
+
+![Property_Management](staticfiles/README_docs/images/property_management.png "property_management")
+
+- **Property Images Section**:
+  - This section is designated for uploading images related to the new apartment.
+  - It includes a management form to handle multiple image uploads.
+  - Each image upload field is accompanied by error messages, ensuring users are informed of any issues.
+
+![Property_Images](staticfiles/README_docs/images/property_images.png "property_images")
+
+- **Property Videos Section**:
+  - Similar to the image section, this part allows users to upload videos associated with the new apartment.
+  - It also includes a management form and displays any related errors for the video upload fields.
+- **Save Property Button**:
+  - A prominent "Save Property" button enables admin users to submit their entries.
+  - Clicking this button triggers the form submission, saving all entered data and uploaded files.
+  - Upon successful submission, the new apartment will be listed immediately and available on the Apartments page and in the listings.
+
+![Property_Videos](staticfiles/README_docs/images/property_videos.png "property_videos")
+
+- **Success/Error Messages**:
+  - The feature includes a mechanism to display success or error messages after form submission.
+  - Messages are displayed in an alert container, allowing admin users to quickly understand the outcome of their actions.
+
+## Authentication
+
+### F19 Registration, Login, and Logout Feature
+
+This feature enables users to create accounts, log in to access their profiles, specific features and log out securely. It provides a user-friendly experience, ensuring that account management is straightforward and secure.
+
+- **User Registration**:
+  - New users can easily register by providing necessary information, such as username, email, password.
+  - The registration form includes validations to ensure data integrity, such as checking for existing usernames or email addresses.
+  - Upon successful registration, users receive a confirmation email containing a verification link. Users must click this link to verify their email address before they can log in to their accounts.
+
+![Sign_Up](staticfiles/README_docs/images/sign_up.png "sign_up")
+
+![Verify](staticfiles/README_docs/images/verify.png "verify")
+
+![Confirm](staticfiles/README_docs/images/confirm.png "confirm")
+
+- **User Login**:
+  - Registered users can log in using their username and password.
+  - The login form features input validation to ensure that users enter the correct credentials.
+  - If login fails due to incorrect credentials, an error message is displayed, guiding users to re-enter their information.
+
+![Sign_In](staticfiles/README_docs/images/sign_in.png "sign_in")
+
+- **User Logout**:
+  - Logged-in users can log out of their accounts easily through a dedicated logout button.
+  - Upon logging out, users are redirected to the home page, ensuring a smooth transition.
+
+![Sign_Out](staticfiles/README_docs/images/sign_out.png "sign_out")
+
+- **Session Management**:
+  - User sessions are securely managed, allowing for persistent login until users decide to log out.
+  - Sessions are protected against common vulnerabilities, ensuring that user data remains safe and secure.
+  - This session management is built into Django Allauth by default.
+
+This feature enhances user engagement by providing a secure way to manage accounts, enabling users to access their favorites and personalized content while maintaining the privacy and security of their information.
+
+## Admin
+
+Data management is solely accessible to logged-in administrators (superusers).
+
+### F20 Data Management
+
+Administrators have full access and authority to make changes across all modules of the website. This includes the ability to add new data, modify existing information, delete entries, and utilize the data as necessary. Essentially, administrators hold comprehensive control over the various modules of the website, ensuring efficient management and utilization of its data.
+
+![Admin_Window](staticfiles/README_docs/images/admin_window.png "admin_window")
+
+### F21 Pop-up Messages
+
+### Fully Responsive Design
+
+All features of the application are designed to be fully responsive, ensuring an optimal user experience across various 
+devices and screen sizes. Whether accessed on a desktop, tablet, or mobile phone, users can navigate and utilize the 
+features seamlessly, enhancing accessibility and usability.
+
+[Back to top](https://github.com/Lilla-Kavecsanszki/residenza127#contents)
 
 ## Future ambitions
 
-- Construction page
+### Construction page Feature
+
+The **Construction Page** showcases upcoming construction projects, providing users with a glimpse of future developments. The layout is organized and visually appealing, ensuring users can easily navigate and understand the offerings.
+
+- **Header Section**
+- The page starts with a prominent header titled **"Upcoming Projects,"** helping users immediately understand the content focus.
+
+- **Project Cards**
+- Each upcoming project is displayed in its own card, designed to present essential information clearly. The layout uses a grid system to ensure responsiveness across different screen sizes.
+- The structure allows for easy addition of more projects as needed, maintaining the scalability of the page.
+
+- **Project Details**
+- **Project Image**: Each card features an image representing the project. The images are loaded lazily for better performance, only rendering when they are in the viewport.
+- **Project Title**: The project name is displayed prominently, drawing attention to the specific development.
+- **Project Description**: A brief description accompanies the title, providing context about the project.
+Each project is structured similarly, ensuring a consistent user experience.
+
+- **Information Button**
+- The same gold **Information Button**, same as on the Apartments page, is included to assist users. It is designed to be visually prominent and directs users to the contact form of the website for further inquiries.
+
+As we await these projects, the page is currently hidden from the public and is only accessible to admin users at the client's request.
+
+![Upcoming_Projects](staticfiles/README_docs/images/upcoming_projects.png "upcoming_projects")
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/residenza127#contents)
 
