@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.utils.translation import gettext as _
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
@@ -7,7 +8,6 @@ from django.forms import modelformset_factory
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.views import View
-
 from profiles.models import UserProfile
 
 from .decorators import superuser_required
@@ -71,7 +71,7 @@ class AllProperties(View):
 
             properties = properties.order_by(sortkey)
         else:
-            messages.error(request, "Invalid sort option selected.")
+            messages.error(request, _("Invalid sort option selected."))
 
         # Handle filtering by location
         if locations:
@@ -175,15 +175,15 @@ def property_management(request):
             video_formset.instance = property
             image_formset.save()
             video_formset.save()
-            messages.success(request, "Property has been successfully saved!")
+            messages.success(request, _("Property has been successfully saved!"))
             return redirect(
                 "all_properties"
             )  # Ensure this matches the URL pattern name
         else:
             messages.error(
                 request,
-                "There was an error saving the property. Please check the form for errors.",
-            )
+                _("There was an error saving the property. Please check the form for errors.",
+            ))
 
             # Prepare context with errors
             context = {

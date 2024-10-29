@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
-
+from django.utils.translation import gettext as _
 from .forms import UserProfileForm
 from .models import UserProfile
 
@@ -39,7 +39,7 @@ def update_user_profile(request):
         )
         if form.is_valid():
             form.save()
-            messages.success(request, "Profile updated successfully!")
+            messages.success(request, _("Profile updated successfully!"))
             return redirect("user_profile")
     else:
         form = UserProfileForm(instance=request.user.userprofile, user=request.user)

@@ -5,7 +5,6 @@ import os
 import logging
 from django.conf import settings
 from .forms import ContactForm
-from django.utils import translation
 from django.utils.translation import get_language
 from django.utils.translation import gettext as _
 from .models import Contact
@@ -44,7 +43,7 @@ def homepage(request):
             # Prepare the email to the property owner
             owner_email = EmailMultiAlternatives(
                 subject=form.cleaned_data["subject"],
-                body = (
+                body=(
                     f"Messaggio da {form.cleaned_data['name']} "
                     f"<{form.cleaned_data['email']}>\n\n"
                     f"Telefono: {form.cleaned_data['phone_number']}\n\n"
@@ -56,13 +55,13 @@ def homepage(request):
             try:
                 owner_email.send()
             except Exception as e:
-                messages.error(request, "Failed to send message to the property owner.")
+                messages.error(request, _("Failed to send message to the property owner."))
                 return redirect("home")  # Redirect to the homepage if email fails
 
             # Prepare the email to the user
             user_email = EmailMultiAlternatives(
                 subject="Your Contact Form Submission",
-                body = (
+                body=(
                     f"Gentile {form.cleaned_data['name']},\n\n"
                     "Grazie per averci contattato! Apprezziamo la sua richiesta e le risponderemo al più presto.\n\n"
                     "Nel frattempo, troverà in allegato la brochure per la sua consultazione.\n\n"
@@ -82,11 +81,11 @@ def homepage(request):
             # Send the email to the user
             try:
                 user_email.send()
+                messages.success(request, _("Thank you for submitting! We will be in touch soon!"))
             except Exception as e:
-                messages.error(request, "Failed to send the brochure to your email.")
+                messages.error(request, _("Failed to send the brochure to your email."))
                 return redirect("home")  # Redirect to the homepage if email fails
 
-            messages.success(request, "Thank you for submitting! We will be in touch soon!")
             return redirect("home")  # Redirect to the homepage after successful submission
 
     context = {

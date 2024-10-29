@@ -1027,6 +1027,12 @@ Administrators have full access and authority to make changes across all modules
 
 ### F21 Pop-up Messages
 
+Pop-up messages are utilized to inform users of the results of their interactions with the website, enhancing user experience by providing immediate feedback on actions taken.
+
+- **Dynamic Alert Display:**
+
+Messages are rendered within a responsive alert component, utilizing Bootstrap's alert system. Each alert is styled based on its significance, indicated by relevant tags (e.g., success, error).
+
 ### Fully Responsive Design
 
 All features of the application are designed to be fully responsive, ensuring an optimal user experience across various 

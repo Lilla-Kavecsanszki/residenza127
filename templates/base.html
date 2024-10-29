@@ -193,17 +193,25 @@
                     </ul>                    
                 </div>
             </nav>
-            <div class="col-md-8 offset-md-2">
-                {% for message in messages %}
-                <div class="alert {{ message.tags }} alert-dismissible fade show" role="msg" role="alert">
-                    {{ message | safe }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-                {% endfor %}
-            </div>
         </div>
     </header>
-
+    
+    {% if messages %}
+    <div class="message-container">
+      {% for message in messages %} {% with message.level as level %}
+      <!-- level 40 -->
+      {% if level == 40 %}
+      <!-- level 30 -->
+      {% include 'includes/toasts/toast_error.html' %} {% elif level == 30 %}
+      <!-- level 25 -->
+      {% include 'includes/toasts/toast_warning.html' %} {% elif level == 25 %}
+      <!-- else -->
+      {% include 'includes/toasts/toast_success.html' %} {% else %}
+      <!-- end -->
+      {% include 'includes/toasts/toast_info.html' %} {% endif %} {% endwith %}
+      {% endfor %}
+    </div>
+    {% endif %} {% block page_header %} {% endblock %} 
     <!-- Main content -->
     <main role="main" class="container-fluid p-0">
         <div class="full-width">
@@ -322,14 +330,115 @@
     });
     </script>
 
-    <!-- Custom JavaScript for messages -->
     <script>
-        setTimeout(function() {
-            let messages = document.getElementById("msg");
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 3000);
+    $(document).ready(function() {
+        $(".toast").toast({
+            autohide: true,  // Automatically hide the toast
+            delay: 5000      // Delay of 5000ms (5 seconds)
+        }).toast("show");
+    });
     </script>
+
+    <script>
+    $(document).ready(function() {
+        $(".toast").toast({
+            autohide: true,  // Automatically hide the toast
+            delay: 5000      // Delay of 5000ms (5 seconds)
+        }).toast("show");
+    });
+</script>
+
+    <script>
+    $(document).ready(function() {
+        $(".toast").toast({
+            autohide: true,  // Automatically hide the toast
+            delay: 5000      // Delay of 5000ms (5 seconds)
+        }).toast("show");
+    });
+</script>
+
+    <script>
+    $(document).ready(function() {
+        $(".toast").toast({
+            autohide: true,  // Automatically hide the toast
+            delay: 5000      // Delay of 5000ms (5 seconds)
+        }).toast("show");
+    });
+</script>
+
+
+    <script>
+    $(document).ready(function() {
+        $(".toast").toast({
+            autohide: true,  // Automatically hide the toast
+            delay: 5000      // Delay of 5000ms (5 seconds)
+        }).toast("show");
+    });
+</script>
+
+    <script>
+    $(document).ready(function() {
+        $(".toast").toast({
+            autohide: true,  // Automatically hide the toast
+            delay: 5000      // Delay of 5000ms (5 seconds)
+        }).toast("show");
+    });
+</script>
+
+    <script>
+    $(document).ready(function() {
+        $(".toast").toast({
+            autohide: true,  // Automatically hide the toast
+            delay: 5000      // Delay of 5000ms (5 seconds)
+        }).toast("show");
+    });
+</script>
+
+    <script>
+    $(document).ready(function() {
+        $(".toast").toast({
+            autohide: true,  // Automatically hide the toast
+            delay: 5000      // Delay of 5000ms (5 seconds)
+        }).toast("show");
+    });
+</script>
+
+    <script>
+    $(document).ready(function() {
+        $(".toast").toast({
+            autohide: true,  // Automatically hide the toast
+            delay: 5000      // Delay of 5000ms (5 seconds)
+        }).toast("show");
+    });
+</script>
+
+    <script>
+    $(document).ready(function() {
+        $(".toast").toast({
+            autohide: true,  // Automatically hide the toast
+            delay: 5000      // Delay of 5000ms (5 seconds)
+        }).toast("show");
+    });
+</script>
+
+    <script>
+    $(document).ready(function() {
+        $(".toast").toast({
+            autohide: true,  // Automatically hide the toast
+            delay: 5000      // Delay of 5000ms (5 seconds)
+        }).toast("show");
+    });
+</script>
+
+    <script>
+    $(document).ready(function() {
+        $(".toast").toast({
+            autohide: true,  // Automatically hide the toast
+            delay: 5000      // Delay of 5000ms (5 seconds)
+        }).toast("show");
+    });
+</script>
+
 
 <!-- Custom JavaScript for Language Switching -->
 <script>
