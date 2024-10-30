@@ -264,7 +264,7 @@ In summary, **Residenza126** provides a high-end, user-focused experience for th
 
 ## Epic 5: User Profile Management
 
-### US601: View Profile Details:
+### US501: View Profile Details:
 **As a registered user,** I can view my personal details such as name, email, and phone number, to stay informed about my profile.
 
 #### Acceptance Criteria:
@@ -272,7 +272,7 @@ In summary, **Residenza126** provides a high-end, user-focused experience for th
 - The profile page must show name, email, and phone number.
 - The information must be accurate and up-to-date.
 
-### US602: Update Profile Information:
+### US502: Update Profile Information:
 **As a registered user,** I can update my personal information like name and phone number to keep my profile current.
 
 #### Acceptance Criteria:
@@ -280,7 +280,7 @@ In summary, **Residenza126** provides a high-end, user-focused experience for th
 - The changes must be reflected immediately after saving.
 - A confirmation message must be shown upon successful update.
 
-### US603: Change Password:
+### US503: Change Password:
 **As a user,** I can change my password securely to maintain the privacy and security of my account.
 
 #### Acceptance Criteria:
@@ -288,7 +288,7 @@ In summary, **Residenza126** provides a high-end, user-focused experience for th
 - The new password must meet security criteria.
 - The user must receive a confirmation message upon successful password change.
 
-### US604: View Favourites:
+### US504: View Favourites:
 **As a user,** I can view a list of properties I have marked as favourites, so that I can easily revisit them later.
 
 #### Acceptance Criteria:
@@ -322,7 +322,7 @@ In summary, **Residenza126** provides a high-end, user-focused experience for th
 - The admin must be able to respond to inquiries through the panel.
 - The user must receive a notification when their inquiry is responded to.
 
-## Epic 7: SEO and Web Marketing
+## Epic 7: SEO
 
 ### US701: SEO Optimization:
 **As a site user,** I can easily find the site through web searches, ensuring that prospective buyers can discover the website easily when searching for properties in Oristano.
@@ -873,20 +873,20 @@ The **View Apartment Details** offers an immersive experience for potential buye
 
 The **My Favourites** page begins with a **Profile Overview** that provides logged-in users with a clear, organized layout of their key account information, including:
 
-### Personal Details
-- **Basic Information**: Users can view their essential profile details, including **First Name**, **Last Name**, and **Email**.
-- **Username Display**: The username is prominently displayed as the header, helping users quickly recognize their account.
+- **Personal Details**
+  - **Basic Information**: Users can view their essential profile details, including **First Name**, **Last Name**, and **Email**.
+  - **Username Display**: The username is prominently displayed as the header, helping users quickly recognize their account.
 
-### Profile Update Form
+- **Profile Update Form**
 Below the displayed information, users can update their profile details. The **Profile Update Form** includes:
 
-- **First Name** and **Last Name** fields: Each field is pre-filled with the current values for easy editing.
-- **Default Phone Number**: Allows users to add or update their contact information as needed. The phone number field includes validation to ensure proper format—**only digits are allowed**, with an optional leading '+' for international numbers.
+  - **First Name** and **Last Name** fields: Each field is pre-filled with the current values for easy editing.
+  - **Default Phone Number**: Allows users to add or update their contact information as needed. The phone number field includes validation to ensure proper format—**only digits are allowed**, with an optional leading '+' for international numbers.
 
-### Update Action Button
+- **Update Action Button**
 At the bottom of the form, a prominent **"Update"** button allows users to save any changes to their profile directly on this page. This button provides users with a seamless experience when updating their information.
 
-### Change Password Link
+- **Change Password Link**
 For additional security, users are provided with a **Change Password** link. Clicking this link redirects them to a 
 dedicated password update page, allowing them to enhance their account security
 
@@ -1102,7 +1102,7 @@ features seamlessly, enhancing accessibility and usability.
 
 ## Future ambitions
 
-### Construction page Feature
+### F26 Construction page Feature
 
 The **Construction Page** showcases upcoming construction projects, providing users with a glimpse of future developments. The layout is organized and visually appealing, ensuring users can easily navigate and understand the offerings.
 
@@ -1132,7 +1132,7 @@ As we await these projects, the page is currently hidden from the public and is 
 
 How the Features align with and fulfill the User Stories by providing the necessary functionality and interactions that meet the users' needs and requirements.
 
-[Cross-reference Table](README_docs/us_f_crossreference.pdf "crossreference_table")
+[Cross-reference Table](staticfiles/README_docs/us_f_crossreference_r126.pdf "crossreference_table")
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/residenza127#contents)
 
