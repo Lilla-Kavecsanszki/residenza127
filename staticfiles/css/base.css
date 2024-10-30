@@ -240,6 +240,36 @@ header {
     outline: none;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #control-buttons {
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    #toggle-audio {
+        font-size: 1.25rem; /* Slightly smaller font for mobile */
+        padding: 0.4em 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    #control-buttons {
+        bottom: 10px;
+        left: 10px;
+    }
+    
+    #toggle-audio {
+        font-size: 1rem; /* Further scale down for very small screens */
+        padding: 0.3em 0.6em;
+    }
+}
+
+/* Hide video captions from visual display */
+video::cue {
+    display: none;
+}
+
 /* Main content styles */
 main {
     width: 100%;
