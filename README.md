@@ -380,7 +380,7 @@ In summary, **Residenza126** provides a high-end, user-focused experience for th
 
 The planning process for **Residenza 126** began with identifying the ideal clientele for the properties, which involved creating a Persona Profile using Code Institute's template and applying design thinking principles. This Persona Profile helped us better understand the needs, expectations, and preferences of the potential buyers or investors, allowing us to tailor the website experience specifically to them. The website was designed with these user personas in mind, ensuring the presentation and functionality catered to the right audience.
 
-You can view the detailed persona profile [HERE](README_docs/design_thinking_persona_template.pdf).
+You can view the detailed persona profile [HERE](staticfiles/README_docs/Persona_Template.pdf).
 
 Given the increasing reliance on mobile devices for browsing and searching for properties, designing a responsive and accessible website was a priority. We utilized Bootstrap’s grid system, along with responsive utilities and custom CSS, to ensure that the website provides a seamless experience across various devices, from desktop to mobile, allowing users to explore the Residenza 126 property easily from anywhere.
 
@@ -413,41 +413,29 @@ Wireframes were utilized during the design process, generated with Balsamiq to p
 
 ### Entity Relationship Diagrams
 
+# Residenza 126
+
 To support the functionality of the **Residenza 126** website, the following models have been designed and implemented to store essential property, user, and contact-related information in the database.
 
-The **User** table in the ER diagram serves as a conceptual representation only. It does not directly correspond to the models in `models.py` or the actual physical database tables, but it offers a logical view of how data entities relate to each other. The **User** model handles the management of registered users, including their personal information, preferences, and interactions with the properties.
+The **User** table in the ER diagram serves as a conceptual representation only. It does not directly correspond to the models in `models.py` or the actual physical database tables but offers a logical view of how data entities relate to each other. The **User** model handles the management of registered users, including their personal information, preferences, and interactions with properties.
 
-The **Property** and **Profile** models are designed to handle the details of the properties available for viewing or purchase and the user profiles, respectively. These models store critical details such as property name, price, location, and user preferences for favorite properties.
+The **Property** and **UserProfile** models are designed to handle the details of the properties available for viewing or purchase and the user profiles, respectively. These models store critical details such as property name, features, location, and user preferences for liked properties.
 
-Additionally, the **ContactForm** model captures the information submitted by users via the contact form on the website. This model allows users to reach out with inquiries about the properties or any other questions they may have regarding **Residenza 126**. The form data is stored securely, including fields such as name, email address, message, and the date/time of submission.
+Additionally, the **Contact** model captures the information submitted by users via the contact form on the website. This model allows users to reach out with inquiries about the properties or any other questions they may have regarding **Residenza 126**. The form data is stored securely, including fields such as name, email address, phone number, message, and the date/time of submission.
 
-The **Entity Relationship Diagrams (ERD)** below illustrate how the models are interconnected, showcasing the relationships between users, properties, profiles, and contact forms. This ensures that all relevant data is properly organized and accessible for the various website functionalities, such as property browsing, saving favorites, managing user profiles, and handling contact inquiries.
+The **Entity Relationship Diagrams (ERD)** below illustrate how the models are interconnected, showcasing the relationships between users, properties, user profiles, and contact submissions. This ensures that all relevant data is properly organized and accessible for various website functionalities, such as property browsing, saving favorites, managing user profiles, and handling contact inquiries.
 
-The following models have been designed and implemented to support the functionality of the EarthAlchemy Naturals app. Each model is described with its purpose and relationships with other models.
-
-- UserProfile Model:
-    - It is related to the built-in Django **User** model using a `OneToOneField`. This establishes a one-to-one relationship between user profiles and users, ensuring that each user has one user profile and vice versa.
-    - It also has a `ManyToManyField` to the **Property** model, allowing users to like properties, keeping track of their interests.
-
-- Property Model:
-    - It includes a `ManyToManyField` to the **User** model, which tracks which users have liked each property.
-    - The **Property** model also has fields for details like **price**, **bedrooms**, **bathrooms**, **location**, and **property_type**, along with media fields for **main_image** and **main_video** (stored via **Cloudinary**).
-
-- PropertyImage Model:
-    - This model is related to the **Property** model via a `ForeignKey`, allowing multiple images to be associated with each property.
-
-- PropertyVideo Model:
-    - Like **PropertyImage**, it is related to the **Property** model via a `ForeignKey`, enabling multiple videos to be associated with each property.
-
-- Contact Model:
-    - It is a standalone model used for storing contact form submissions.
-    - It includes fields like **name**, **email**, **phone_number**, **subject**, **message**, and a **created_at** timestamp for when the contact was submitted.
+- UserProfile has a one-to-one relationship with User.
+- UserProfile has a many-to-many relationship with Property through the liked_properties field.
+- Property has a many-to-many relationship with User through the liked_by field.
+- Property has one-to-many relationships with PropertyImage and PropertyVideo.
+- Contact stands alone without direct relationships to the other models.
 
 The following ER diagrams detail these relationships:
 
 <p>
 <details><summary>ER Diagram</summary><br/>
-<img src="README_docs/images/er_diagram.png" alt="ER Diagram">
+<img src="staticfiles/README_docs/images/Residenza126_ERDs.png" alt="ER Diagram">
 </details>
 
 
