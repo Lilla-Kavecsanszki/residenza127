@@ -40,8 +40,6 @@ The platform is built with Django, Python, HTML, Bootstrap, and CSS, ensuring a 
 - [Credits](https://github.com/Lilla-Kavecsanszki/residenza127#credits)
   - [Media and Content](https://github.com/Lilla-Kavecsanszki/residenza127#media-and-content)
   - [Acknowledgments and Code](https://github.com/Lilla-Kavecsanszki/residenza127#acknowledgments-and-code)
-  - [Disclaimer](https://github.com/Lilla-Kavecsanszki/residenza127#disclaimer)
-  - 
 
 # User Experience (UX)
 
@@ -403,7 +401,7 @@ Wireframes were utilized during the design process, generated with Balsamiq to p
 
 [Wireframe - Authentication pages](README_docs/authentication.pdf)
 
-[Wireframe - Property pages](README_docs/product_related.pdf)
+[Wireframe - Apartment pages](README_docs/product_related.pdf)
 
 [Wireframe - My Profile page](README_docs/my_profile.pdf)
 
@@ -1251,6 +1249,20 @@ pip3 freeze --local > requirements.txt
 
 ## Code Validation
 
+The HTML was validated by manually navigating through the application pages and using the W3C Validator. The results:
+
+
+
+To validate all CSS code written and used in this website, W3C CSS Validator was used. The results:
+
+
+Validation for Python was conducted by using the command: python3 -m flake8. No critical errors were detected. Below are messages that are not related to migrations or devcontainer:
+<p>
+<details><summary>Flake8</summary>
+- 
+- 
+</details>
+
 ## Manual Testing
 
 The table provided below presents the test cases that were utilized, with the corresponding results, and references to the corresponding Feature IDs that each test case addressed. These test cases were primarily designed based on the Acceptance Criteria specified for each User Story.
@@ -1268,7 +1280,6 @@ I asked friends and family to look at the application on their devices, browsers
 </details>
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/residenza127#contents)
-
 
 ## Bugs
 
@@ -1349,8 +1360,3 @@ The below websites and Youtube channels have been used to understand the logic o
 
 
 [Back to top](https://github.com/Lilla-Kavecsanszki/residenza127#contents)
-
-
-
-
-•	Data Protection: We must ensure that the website is GDPR-compliant, especially regarding the collection, storage, and processing of personal data. This includes implementing measures such as consent management, data encryption, and user rights management.
