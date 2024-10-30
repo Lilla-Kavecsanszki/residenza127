@@ -216,8 +216,8 @@ header {
 
 #control-buttons {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 60px;
+    left: 10px;
     z-index: 10;
 }
 
@@ -232,7 +232,7 @@ header {
 }
 
 #toggle-audio i {
-    margin-left: 0.5em;
+    margin-left: 0.3em;
 }
 
 #toggle-audio:hover,
@@ -243,19 +243,19 @@ header {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     #control-buttons {
-        bottom: 15px;
-        left: 15px;
+        bottom: 60px;
+        left: 10px;
     }
     
     #toggle-audio {
-        font-size: 1.25rem; /* Slightly smaller font for mobile */
+        font-size: 1.2rem; /* Slightly smaller font for mobile */
         padding: 0.4em 0.8em;
     }
 }
 
 @media (max-width: 480px) {
     #control-buttons {
-        bottom: 10px;
+        bottom: 60px;
         left: 10px;
     }
     
