@@ -1033,6 +1033,77 @@ Pop-up messages are utilized to inform users of the results of their interaction
 
 Messages are rendered within a responsive alert component, utilizing Bootstrap's alert system. Each alert is styled based on its significance, indicated by relevant tags (e.g., success, error).
 
+![Toast](staticfiles/README_docs/images/toast.png "toast")
+
+### F22 Loading Overlay
+
+The Loading Overlay feature enhances the user experience by providing a visual indication of loading processes on the website. This feature ensures that users are aware that content is being loaded, improving engagement and preventing confusion.
+
+- **Visual Feedback**:
+  - A loading overlay is displayed while the webpage is loading, featuring the company's logo. This overlay prevents user interaction with the underlying content until it is fully loaded, ensuring a smooth transition and a cohesive user experience.
+
+- **Fade Out Transition**:
+  - Upon the completion of the page load, the overlay smoothly fades out, enhancing the aesthetic of the site. This transition creates a visually pleasing ans elegant experience for users.
+
+- **Content Reveal**:
+  - After the overlay fades out, the main content of the page is displayed, ensuring that users can engage with the website immediately upon loading completion.
+
+![overlay](staticfiles/README_docs/images/overlay.png "overlay")
+
+### F23 Custom 404 Page
+
+To ensure a consistent user experience and address unexpected events in a user-friendly manner, a custom page is presented for any unanticipated 404 HTTP response codes.
+
+- **User-Friendly Design**:
+  - The custom 404 page is designed to inform users that the requested page could not be found, providing clear messaging to guide them.
+
+- **Return to Homepage Button**:
+  - Below the message, located on the 404 page is a prominent "Return to Homepage" button, allowing users to easily navigate back to the main site without frustration.
+
+This Custom 404 Page feature helps maintain a positive user experience by effectively communicating errors and providing a straightforward path back to familiar content.
+
+![404](staticfiles/README_docs/images/404.png "404")
+
+### F24 Privacy Policy
+
+The Privacy Policy for argicostruzioni outlines how user information is collected, used, and protected while using the service, in compliance with GDPR and other regulations. It ensures adherence to applicable laws and promotes transparency regarding data handling practices.
+
+This Privacy Policy fosters user trust and ensures that all data practices align with legal requirements and best practices in data protection.
+
+![privacy_policy_button](staticfiles/README_docs/images/privacy_policy_button.png "privacy_policy_button")
+
+![privacy_policy](staticfiles/README_docs/images/privacy_policy.png "privacy_policy")
+
+### F25 Site Engine Optimization (SEO)
+
+The website has been optimized for search engines to enhance its visibility and improve discoverability. Key strategies employed include:
+
+- **Meta Tags**: Relevant meta description and meta keyword tags are included in the HTML of each page. The meta descriptions summarize the content, making them appealing in search results, while the keywords align with user search queries to improve ranking potential.
+
+- **Site Title**: The website features a well-informed and trustworthy site title that reflects the content and purpose of the site, contributing positively to SEO rankings.
+
+- **Content Quality**: Trustworthy and informative page contents, .designed to engage users and improve ranking through valuable info.
+
+- **Descriptive Alt Tags**: All images include descriptive alt tags that enhance accessibility and ensure images are indexed by search engines.
+
+- **URL Structure**: Clean and descriptive URLs are used to improve both user experience and search engine indexing.
+
+- **ARIA Attributes**: Accessible Rich Internet Applications (ARIA) attributes are implemented to enhance accessibility for users with disabilities, positively affecting overall SEO.
+
+- **Dynamic Sitemap.xml**: A dynamic sitemap.xml file is automatically generated and updated to provide search engines with a structured overview of the website's content, aiding in efficient crawling.
+
+- **Dynamic Robots.txt**: A dynamic robots.txt file has also been implemented to guide search engine crawlers on which pages to index and which to avoid, optimizing the crawling process.
+
+- **External Links**: The attribute `rel="noopener nofollow"` has been added to the footer and all external links, ensuring that search engines understand which links should not be followed and improving site security.
+
+- **Google Registration**: The website is registered with Google for page indexing, facilitating prompt updates to the search engine's index.
+
+As a result of these optimizations, the website is now searchable on Google and is present in search results, enhancing user accessibility and engagement.
+
+![Lighthouse](staticfiles/README_docs/images/lighthouse.png "lighthouse")
+
+![Google](staticfiles/README_docs/images/google.png "google")
+
 ### Fully Responsive Design
 
 All features of the application are designed to be fully responsive, ensuring an optimal user experience across various 

@@ -2,7 +2,7 @@
 {% url 'home' as homepage_url %}
 
 <!DOCTYPE html>
-<html lang="{% get_current_language as LANGUAGE_CODE %}">
+<html lang="{% get_current_language as LANGUAGE_CODE %}{% if not LANGUAGE_CODE %}en{% endif %}">
 <head>
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
@@ -66,7 +66,7 @@
                         <div class="input-group w-100">
                             <input class="form-control border-1 bg-transparent" type="text" name="q" placeholder="{% trans 'Search' %}" style="border-bottom: 1px solid #051c2c;">
                             <div class="input-group-append">
-                                <button class="form-control btn border-0" type="submit">
+                                <button class="form-control btn border-0" type="submit" aria-label="Search">
                                     <span class="icon"><i class="fas fa-search fa-lg" style="color: #051c2c;"></i></span>
                                 </button>
                             </div>
@@ -260,6 +260,7 @@
                         <a class="links whatsapp" 
                         href="https://wa.me/393333951557" 
                         target="_blank" 
+                        rel="noopener nofollow"
                         aria-label="Contact us on WhatsApp">
                         <i class="fab fa-whatsapp icon" aria-hidden="true"></i>
                         </a>
@@ -267,6 +268,7 @@
                         <a class="links insta" 
                         href="https://www.instagram.com/ar.gi.costruzioni_/?hl=en" 
                         target="_blank" 
+                        rel="noopener"
                         aria-label="Follow us on Instagram">
                         <i class="fab fa-instagram icon" aria-hidden="true"></i>
                         </a>
@@ -274,6 +276,7 @@
                         <a class="links location" 
                         href="https://www.google.com/maps/search/?api=1&query=Via+Cagliari+126,+Oristano" 
                         target="_blank" 
+                        rel="noopener"
                         aria-label="Find us at Via Cagliari 126, Oristano on Google Maps">
                         <i class="fa-solid fa-location-dot icon" aria-hidden="true"></i>
                         </a>
@@ -286,13 +289,13 @@
                 <p class="lilla mb-2"><strong>{% trans 'Contact Information:' %}</strong></p>
                 <p class="mb-1">
                     <strong>{% trans 'Phone:' %}</strong><br> <!-- Added <br> for line break -->
-                    <a href="tel:+393333951557" target="_blank" class="footer-link email-link">+39 333 395 1557</a>
+                    <a href="tel:+393333951557" target="_blank" rel="noopener nofollow" class="footer-link email-link">+39 333 395 1557</a>
                 </p>
                 <p class="mb-1">
                     <strong>{% trans 'Email:' %}</strong><br> <!-- Added <br> for line break -->
-                    <a href="mailto:armando@argicostruzioni.com" target="_blank" class="footer-link email-link">armando@argicostruzioni.com</a>
+                    <a href="mailto:armando@argicostruzioni.com" target="_blank" rel="noopener nofollow" class="footer-link email-link">armando@argicostruzioni.com</a>
                 </p>
-                <p><a class="privacy" href="https://www.freeprivacypolicy.com/live/ef970174-4dba-4a4c-bb24-6cd4d2fa481c" target="_blank">Privacy Policy</a></p>
+                <p><a class="privacy" href="https://www.freeprivacypolicy.com/live/ef970174-4dba-4a4c-bb24-6cd4d2fa481c" target="_blank" rel="noopener nofollow">Privacy Policy</a></p>
             </div>
         </div>
 
@@ -300,7 +303,7 @@
         <div class="row mt-4">
             <div class="col-12 text-center">
                 <p class="lilla mb-1">
-                    <a href="mailto:lilla-kavecsanszki@outlook.com" target="_blank" class="email-link">MADE BY Lilla Kavecsanszki</a>
+                    <a href="mailto:lilla-kavecsanszki@outlook.com" target="_blank" rel="noopener nofollow" class="email-link">MADE BY Lilla Kavecsanszki</a>
                 </p>
                 <p>&copy; 2024 {% trans 'All rights reserved.' %}</p>
             </div>
@@ -329,7 +332,8 @@
         });
     });
     </script>
-
+    
+    <!-- Toasts -->
     <script>
     $(document).ready(function() {
         $(".toast").toast({
@@ -338,107 +342,32 @@
         }).toast("show");
     });
     </script>
-
+    
+    <!-- Audio -->
     <script>
-    $(document).ready(function() {
-        $(".toast").toast({
-            autohide: true,  // Automatically hide the toast
-            delay: 5000      // Delay of 5000ms (5 seconds)
-        }).toast("show");
-    });
-</script>
-
-    <script>
-    $(document).ready(function() {
-        $(".toast").toast({
-            autohide: true,  // Automatically hide the toast
-            delay: 5000      // Delay of 5000ms (5 seconds)
-        }).toast("show");
-    });
-</script>
-
-    <script>
-    $(document).ready(function() {
-        $(".toast").toast({
-            autohide: true,  // Automatically hide the toast
-            delay: 5000      // Delay of 5000ms (5 seconds)
-        }).toast("show");
-    });
-</script>
-
-
-    <script>
-    $(document).ready(function() {
-        $(".toast").toast({
-            autohide: true,  // Automatically hide the toast
-            delay: 5000      // Delay of 5000ms (5 seconds)
-        }).toast("show");
-    });
-</script>
-
-    <script>
-    $(document).ready(function() {
-        $(".toast").toast({
-            autohide: true,  // Automatically hide the toast
-            delay: 5000      // Delay of 5000ms (5 seconds)
-        }).toast("show");
-    });
-</script>
-
-    <script>
-    $(document).ready(function() {
-        $(".toast").toast({
-            autohide: true,  // Automatically hide the toast
-            delay: 5000      // Delay of 5000ms (5 seconds)
-        }).toast("show");
-    });
-</script>
-
-    <script>
-    $(document).ready(function() {
-        $(".toast").toast({
-            autohide: true,  // Automatically hide the toast
-            delay: 5000      // Delay of 5000ms (5 seconds)
-        }).toast("show");
-    });
-</script>
-
-    <script>
-    $(document).ready(function() {
-        $(".toast").toast({
-            autohide: true,  // Automatically hide the toast
-            delay: 5000      // Delay of 5000ms (5 seconds)
-        }).toast("show");
-    });
-</script>
-
-    <script>
-    $(document).ready(function() {
-        $(".toast").toast({
-            autohide: true,  // Automatically hide the toast
-            delay: 5000      // Delay of 5000ms (5 seconds)
-        }).toast("show");
-    });
-</script>
-
-    <script>
-    $(document).ready(function() {
-        $(".toast").toast({
-            autohide: true,  // Automatically hide the toast
-            delay: 5000      // Delay of 5000ms (5 seconds)
-        }).toast("show");
-    });
-</script>
-
-    <script>
-    $(document).ready(function() {
-        $(".toast").toast({
-            autohide: true,  // Automatically hide the toast
-            delay: 5000      // Delay of 5000ms (5 seconds)
-        }).toast("show");
-    });
-</script>
-
+        document.addEventListener("DOMContentLoaded", function () {
+            const audio = document.getElementById('background-audio');
+            const toggleButton = document.getElementById('toggle-audio');
+    
+            // Set the initial button text
+            toggleButton.innerHTML = '<i class="fa-solid fa-volume-xmark fa-xl" style="color: #182d5f;"></i>';
+            let isPlaying = false; // Track the audio state
+    
+            // Function to toggle play/mute
+            toggleButton.addEventListener('click', () => {
+                if (isPlaying) {
+                    audio.pause(); // Pause the audio
+                    toggleButton.textContent = 'Play'; // Update button text
+                    toggleButton.innerHTML = '<i class="fa-solid fa-volume-xmark fa-xl" style="color: #182d5f;"></i> ';
+                } else {
+                    audio.play(); // Play the audio
+                    toggleButton.textContent = 'Mute'; // Update button text
+                    toggleButton.innerHTML = '<i class="fa-solid fa-volume-high fa-xl" style="color: #182d5f;"></i>';
+                }
+                isPlaying = !isPlaying; // Toggle the state
+            });
+        });
+    </script>    
 
 <!-- Custom JavaScript for Language Switching -->
 <script>

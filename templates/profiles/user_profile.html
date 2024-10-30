@@ -43,7 +43,7 @@
                     {{ form.default_phone_number }}
                     {{ form.default_phone_number.errors }}
                 </div>                
-                <button type="submit" class="btn btn-primary">{% trans "Update" %}</button>
+                <button type="submit" aria-label="Update" class="btn btn-primary">{% trans "Update" %}</button>
             </form>
         </div>
     </div>
@@ -115,7 +115,7 @@
                                     {% if user.is_authenticated %}
                                         <form action="{% url 'like_property' property.id %}" method="post" style="display: inline;">
                                             {% csrf_token %}
-                                            <button type="submit" class="btn btn-link" style="border: none; background: none; padding: 0;">
+                                            <button type="submit" aria-label="Like" class="btn btn-link" style="border: none; background: none; padding: 0;">
                                                 <i class="fa-star like {% if user in property.liked_by.all %}fas light-base{% else %}far{% endif %}" id="like-icon-{{ property.id }}"></i>
                                             </button>
                                         </form>

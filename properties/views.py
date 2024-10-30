@@ -29,10 +29,12 @@ def like_property(request, property_id):
             # Unlike the property
             property.liked_by.remove(user)
             user_profile.liked_properties.remove(property)
+            messages.success(request, _("You have removed the apartment successfully!"))
         else:
             # Like the property
             property.liked_by.add(user)
             user_profile.liked_properties.add(property)
+            messages.success(request, _("You have saved the apartment successfully.!"))
 
         # Redirect back to the referring page or home if not available
         return redirect(request.META.get("HTTP_REFERER", reverse("home")))

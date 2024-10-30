@@ -18,13 +18,24 @@
 {% block content %}
 <!-- Hero Section -->
 <section class="hero">
-    <video autoplay muted playsinline loop id="hero-video">
-        <source src="{% static 'videos/hero_video.mp4' %}" type="video/mp4">
+    <video autoplay muted playsinline loop id="hero-video" aria-label="Future Building Visualization">
+        <source src="https://res.cloudinary.com/dyzgwiibx/video/upload/v1730285509/residenza126_kdk8u2.mp4" type="video/mp4">
+        <track kind="captions" src="{% static 'captions/future_building_captions.vtt' %}" srclang="en" label="English">
         {% trans "Your browser does not support HTML5 video." %}
     </video>
+    <audio id="background-audio" loop>
+        <source src="{% static 'audios/residenza126.mp3' %}" type="audio/mpeg">
+        {% trans "Your browser does not support HTML5 audio." %}
+    </audio>
     <div class="hero-content text-center text-white">
         <h1 class="mb-2">{% trans "Residenza 126" %}</h1>
         <p class="hero-text">{% trans "Elegance and Tranquility in the Heart of the City" %}</p><span class="typewriter nocaret"></span>
+        <!-- Mute/Unmute Button -->
+        <div id="control-buttons">
+            <button id="toggle-audio" aria-label="Play/Mute button">
+                Play <i class="fa-solid fa-play"></i>
+            </button>
+        </div>
     </div>
 </section>
 
@@ -118,11 +129,11 @@
             <!-- Brochure Download (Left side) -->
             <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center mb-4 mb-lg-0">
                 <div class="help-button rounded-0" style="width: 120px; height: 120px;">
-                    <a href="{% static 'files/brochure.pdf' %}" class="d-flex h-100" download>
+                    <a href="{% static 'files/brochure.pdf' %}" class="d-flex h-100" download aria-label="Download Brochure">
                         <img src="{% static 'images/brochure.png' %}" loading="lazy" alt="Download Brochure" class="mb-2 img-fluid m-auto brochure-icon">
                     </a>
                 </div>
-                <a href="{% static 'files/brochure.pdf' %}" class="mt-2 text-center" download style="color: #182d5f; text-decoration: none;">
+                <a href="{% static 'files/brochure.pdf' %}" class="mt-2 text-center" download style="color: #182d5f; text-decoration: none;" aria-label="Download Brochure">
                     <p class="mt-2">{% trans "Download Brochure" %}</p>
                 </a>
             </div>
@@ -130,11 +141,11 @@
             <!-- Contact Us Button (Right side) -->
             <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
                 <div class="help-button rounded-0" style="width: 150px; height: 150px;">
-                    <a class="help-link d-flex h-100" href="{% url 'home' %}#contact-us">
+                    <a class="help-link d-flex h-100" href="{% url 'home' %}#contact-us" aria-label="Contact Us">
                         <img src="{% static 'images/contact.png' %}" alt="Contact page" loading="lazy" class="mb-1 img-fluid m-auto contact-icon">
                     </a>
                 </div>
-                <a href="{% url 'home' %}#contact-us" class="mt-2 text-center" style="color: #182d5f; text-decoration: none;">
+                <a href="{% url 'home' %}#contact-us" class="mt-2 text-center" style="color: #182d5f; text-decoration: none;" aria-label="Contact Us">
                     <p>{% trans "Reach Out" %}</p>
                 </a>
             </div>
@@ -253,7 +264,7 @@
 
     <!-- Button to navigate to all properties page -->
     <div class="text-center mt-4">
-        <a href="{% url 'all_properties' %}" class="glass-button">{% trans "View All Apartments" %}</a>
+        <a href="{% url 'all_properties' %}" class="glass-button" aria-label="Apartments Page">{% trans "View All Apartments" %}</a>
     </div>
 </section>
 
@@ -320,7 +331,7 @@
                 </div>
     
                 <!-- Submit Button -->
-                <button type="submit" class="btn btn-primary">{% trans "Send" %}</button>
+                <button type="submit" aria-label="Send" class="btn btn-primary">{% trans "Send" %}</button>
             </form>
         </div>
     </section>
