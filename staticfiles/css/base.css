@@ -817,7 +817,6 @@ p.lilla a.email-link:hover {
 }
 
 /* Social media links styles */
-
 .links {
     width: 50px;
     height: 50px;
@@ -833,13 +832,13 @@ p.lilla a.email-link:hover {
     position: relative;
 }
 
-.links:last-child {
+.location {
     margin-left: 28%;
 }
 
 footer a .icon {
     position: relative;
-    color: #1d220c;
+    color: #182d5f;
     transition: .5s;
     z-index: 3;
 }
@@ -1143,3 +1142,20 @@ body, html {
   .arrow-dark {
     border-bottom-color: #343a40 !important;
   }
+
+.side-buttons {
+    position: fixed;
+    bottom: 40%;
+    right: 1em;
+    z-index: 1000;
+}
+
+.side {
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 30px;
+}
+
+.side i {
+    color: #182d5f;
+}
