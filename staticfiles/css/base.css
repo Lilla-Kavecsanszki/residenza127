@@ -832,7 +832,7 @@ p.lilla a.email-link:hover {
     position: relative;
 }
 
-.location {
+.location-i {
     margin-left: 28%;
 }
 
@@ -1146,7 +1146,7 @@ body, html {
 .side-buttons {
     position: fixed;
     bottom: 40%;
-    right: 1em;
+    right: 0.8em;
     z-index: 1000;
 }
 
@@ -1158,4 +1158,10 @@ body, html {
 
 .side i {
     color: #182d5f;
+}
+
+@media (max-width: 991px) {
+    .side-buttons {
+        right: 0.1em;
+    }
 }
