@@ -1162,6 +1162,6 @@ body, html {
 
 @media (max-width: 991px) {
     .side-buttons {
-        right: 0.1em;
+        right: -0.1em;
     }
 }
