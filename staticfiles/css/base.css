@@ -769,6 +769,8 @@ main {
 .footer-cover {
     background-color: #182d5f;
     padding: 2rem 0; /* Adjust padding as needed */
+    position: relative;  /* Covering the sticky social buttons in case of overlapping */
+    z-index: 1001;
 }
 
 /* Footer content layout */
@@ -887,13 +889,13 @@ footer a .icon {
 }
 
 @media (max-width: 1076px) {
-    .links:last-child {
+    .location-i {
         margin-left: 10px;
     }
 }
 
 @media (max-width: 767px) {
-    .links:last-child {
+    .location-i {
         margin-left: 10px;
     }
 }
@@ -1145,7 +1147,7 @@ body, html {
 
 .side-buttons {
     position: fixed;
-    bottom: 40%;
+    top: 50%;
     right: 0.8em;
     z-index: 1000;
 }
