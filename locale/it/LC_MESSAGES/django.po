@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-22 19:59+0200\n"
+"POT-Creation-Date: 2024-11-05 12:33+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: profiles/views.py:42
+msgid "Profile updated successfully!"
+msgstr "Profilo aggiornato con successo!"
+
+#: properties/views.py:32
+msgid "You have removed the apartment successfully!"
+msgstr "Hai rimosso l'appartamento con successo!"
+
+#: properties/views.py:37
+msgid "You have saved the apartment successfully!"
+msgstr "Hai salvato l'appartamento con successo!"
+
+#: properties/views.py:76
+msgid "Invalid sort option selected."
+msgstr "Opzione di ordinamento non valida selezionata."
+
+#: properties/views.py:180
+#: templates/allauth/account/messages/password_set.txt:2
+msgid "Password successfully set."
+msgstr "Password impostata con successo."
+
+#: properties/views.py:187
+msgid "There was an error saving the property. Please check the form for errors."
+msgstr "Si è verificato un errore durante il salvataggio della proprietà. Per favore controlla il modulo per eventuali errori."
 
 #: properties/widgets.py:6 templates/allauth/account/email.html:52
 #: templates/allauth/socialaccount/connections.html:35
@@ -51,6 +76,18 @@ msgstr "Di cosa vorresti parlare?"
 msgid "Your Message"
 msgstr "Il tuo messaggio"
 
+#: residenza/views.py:58
+msgid "Failed to send message to the property owner."
+msgstr ""
+
+#: residenza/views.py:84
+msgid "Thank you for submitting! We will be in touch soon!"
+msgstr ""
+
+#: residenza/views.py:86
+msgid "Failed to send the brochure to your email."
+msgstr ""
+
 #: templates/allauth/account/account_inactive.html:13
 msgid "Account Inactive"
 msgstr "Account Inattivo"
@@ -59,7 +96,7 @@ msgstr "Account Inattivo"
 msgid "This account is inactive."
 msgstr "Questo account è inattivo."
 
-#: templates/allauth/account/email.html:12 templates/base.html:83
+#: templates/allauth/account/email.html:12 templates/base.html:87
 #: templates/includes/mobile-top-header.html:13
 msgid "Account"
 msgstr "Account"
@@ -202,15 +239,15 @@ msgstr "Conferma"
 
 #: templates/allauth/account/email_confirm.html:34
 msgid "This e-mail confirmation link expired or is invalid. Please "
-msgstr ""
+msgstr "Il link di conferma e-mail è scaduto o non è valido. Per favore "
 
-#: templates/allauth/account/login.html:11
 #: templates/allauth/account/login.html:16
-#: templates/allauth/account/login.html:52 templates/allauth/base.html:29
+#: templates/allauth/account/login.html:21
+#: templates/allauth/account/login.html:57 templates/allauth/base.html:29
 msgid "Sign In"
 msgstr "Accedi"
 
-#: templates/allauth/account/login.html:22
+#: templates/allauth/account/login.html:27
 #, python-format
 msgid ""
 "Please sign in with one of your\n"
@@ -223,12 +260,12 @@ msgstr ""
 "href=\"%(signup_url)s\">registrati</a> per\n"
 "              un account %(site_name)s e accedi qui sotto:"
 
-#: templates/allauth/account/login.html:32
+#: templates/allauth/account/login.html:37
 #: venv/lib/python3.12/site-packages/django/utils/text.py:286
 msgid "or"
 msgstr "oppure"
 
-#: templates/allauth/account/login.html:38
+#: templates/allauth/account/login.html:43
 #, python-format
 msgid ""
 "If you have not created an account yet, then please\n"
@@ -238,7 +275,7 @@ msgstr ""
 "              <a class=\"signin\" href=\"%(signup_url)s\">registrati</a> "
 "prima."
 
-#: templates/allauth/account/login.html:55
+#: templates/allauth/account/login.html:60
 msgid "Forgot Password?"
 msgstr "Hai dimenticato la password?"
 
@@ -251,12 +288,12 @@ msgstr "Esci"
 msgid "Are you sure you want to sign out?"
 msgstr "Sei sicuro di voler uscire?"
 
-#: templates/allauth/account/logout.html:26 templates/base.html:157
-#: templates/base.html:174
+#: templates/allauth/account/logout.html:26 templates/base.html:161
+#: templates/base.html:178
 msgid "Home"
 msgstr "Home"
 
-#: templates/allauth/account/logout.html:27 templates/base.html:98
+#: templates/allauth/account/logout.html:27 templates/base.html:102
 #: templates/includes/mobile-top-header.html:26
 msgid "Logout"
 msgstr "Disconnetti"
@@ -294,10 +331,6 @@ msgstr "Sei uscito."
 msgid "Password successfully changed."
 msgstr "Password cambiata con successo."
 
-#: templates/allauth/account/messages/password_set.txt:2
-msgid "Password successfully set."
-msgstr "Password impostata con successo."
-
 #: templates/allauth/account/messages/primary_email_set.txt:2
 msgid "Primary e-mail address set."
 msgstr "Indirizzo e-mail primario impostato."
@@ -312,7 +345,7 @@ msgstr "Il tuo indirizzo e-mail primario deve essere verificato."
 #: templates/allauth/account/password_reset_from_key.html:13
 #: templates/allauth/account/password_reset_from_key.html:18
 #: templates/allauth/account/password_reset_from_key_done.html:13
-#: templates/allauth/account/password_reset_from_key_done.html:15
+#: templates/allauth/account/password_reset_from_key_done.html:14
 msgid "Change Password"
 msgstr "Cambia Password"
 
@@ -372,7 +405,7 @@ msgid "change password"
 msgstr "cambia password"
 
 #: templates/allauth/account/password_reset_from_key.html:37
-#: templates/allauth/account/password_reset_from_key_done.html:17
+#: templates/allauth/account/password_reset_from_key_done.html:16
 msgid "Your password is now changed."
 msgstr "La tua password è ora cambiata."
 
@@ -382,19 +415,19 @@ msgstr "La tua password è ora cambiata."
 msgid "Set Password"
 msgstr "Imposta Password"
 
-#: templates/allauth/account/signup.html:13
+#: templates/allauth/account/signup.html:18
 #: templates/allauth/socialaccount/signup.html:5
 msgid "Signup"
 msgstr "Registrazione"
 
-#: templates/allauth/account/signup.html:16
-#: templates/allauth/account/signup.html:43 templates/allauth/base.html:30
+#: templates/allauth/account/signup.html:21
+#: templates/allauth/account/signup.html:48 templates/allauth/base.html:30
 #: templates/allauth/socialaccount/signup.html:8
 #: templates/allauth/socialaccount/signup.html:19
 msgid "Sign Up"
 msgstr "Registrati"
 
-#: templates/allauth/account/signup.html:20
+#: templates/allauth/account/signup.html:25
 #, python-format
 msgid ""
 "Already have an account? Then please\n"
@@ -560,94 +593,94 @@ msgstr ""
 msgid "Ar.Gi. Costruzioni"
 msgstr "Ar.Gi. Costruzioni"
 
-#: templates/base.html:46 templates/base.html:55
+#: templates/base.html:50 templates/base.html:59
 msgid "Logo"
 msgstr "Logo"
 
-#: templates/base.html:63 templates/includes/mobile-top-header.html:39
+#: templates/base.html:67 templates/includes/mobile-top-header.html:39
 msgid "Search"
 msgstr "Cerca"
 
-#: templates/base.html:92 templates/includes/mobile-top-header.html:20
+#: templates/base.html:96 templates/includes/mobile-top-header.html:20
 #: templates/properties/property_management.html:11
 msgid "Property Management"
 msgstr "Gestione Immobili"
 
-#: templates/base.html:95 templates/includes/mobile-top-header.html:23
+#: templates/base.html:99 templates/includes/mobile-top-header.html:23
 #: templates/profiles/user_profile.html:53
 msgid "My Favourites"
 msgstr "I Miei Preferiti"
 
-#: templates/base.html:100 templates/includes/mobile-top-header.html:28
+#: templates/base.html:104 templates/includes/mobile-top-header.html:28
 msgid "Register"
 msgstr "Registrati"
 
-#: templates/base.html:101 templates/includes/mobile-top-header.html:29
+#: templates/base.html:105 templates/includes/mobile-top-header.html:29
 msgid "Login"
 msgstr "Accedi"
 
-#: templates/base.html:139
+#: templates/base.html:143
 msgid "Toggle navigation"
 msgstr "Attiva/Disattiva navigazione"
 
-#: templates/base.html:148
+#: templates/base.html:152
 msgid "Admin"
 msgstr "Admin"
 
-#: templates/base.html:152
+#: templates/base.html:156
 msgid "Construction"
 msgstr "Costruzione"
 
-#: templates/base.html:160 templates/base.html:177
+#: templates/base.html:164 templates/base.html:181
 msgid "Solutions"
 msgstr "Soluzioni"
 
-#: templates/base.html:163 templates/base.html:180
-#: templates/properties/properties.html:11
+#: templates/base.html:167 templates/base.html:184
+#: templates/properties/properties.html:17
 msgid "Apartments"
 msgstr "Appartamenti"
 
-#: templates/base.html:166 templates/base.html:183
+#: templates/base.html:170 templates/base.html:187
 msgid "About"
 msgstr "Chi Siamo"
 
-#: templates/base.html:169 templates/base.html:186
+#: templates/base.html:173 templates/base.html:190
 msgid "Contact"
 msgstr "Contatti"
 
-#: templates/base.html:230
+#: templates/base.html:242
 msgid "Building Info"
 msgstr "Informazioni sull'edificio"
 
-#: templates/base.html:231
+#: templates/base.html:243
 msgid "View Location"
 msgstr "Visualizza posizione"
 
-#: templates/base.html:237
+#: templates/base.html:249
 msgid "Apartment Types:"
 msgstr "Tipologie di appartamenti:"
 
-#: templates/base.html:239
+#: templates/base.html:251
 msgid "Two Rooms"
 msgstr "Bilocali"
 
-#: templates/base.html:240
+#: templates/base.html:252
 msgid "Three Rooms"
 msgstr "Trilocali"
 
-#: templates/base.html:274
+#: templates/base.html:289
 msgid "Contact Information:"
 msgstr "Informazioni di contatto:"
 
-#: templates/base.html:276
+#: templates/base.html:291
 msgid "Phone:"
 msgstr "Telefono:"
 
-#: templates/base.html:280 templates/index.html:342
+#: templates/base.html:295 templates/index.html:349
 msgid "Email:"
 msgstr "Email:"
 
-#: templates/base.html:293
+#: templates/base.html:307
 msgid "All rights reserved."
 msgstr "Tutti i diritti riservati."
 
@@ -655,19 +688,19 @@ msgstr "Tutti i diritti riservati."
 msgid "Construction Projects - Building Oristano"
 msgstr "Progetti di Costruzione - Edificio Oristano"
 
-#: templates/construction/construction.html:16
+#: templates/construction/construction.html:21
 msgid "Upcoming Projects"
 msgstr "Progetti Futuri"
 
-#: templates/construction/construction.html:22
+#: templates/construction/construction.html:27
 msgid "Upcoming Building 1"
 msgstr "Prossimo Edificio 1"
 
-#: templates/construction/construction.html:23
+#: templates/construction/construction.html:28
 msgid "Skyline Tower"
 msgstr "Skyline Tower"
 
-#: templates/construction/construction.html:24
+#: templates/construction/construction.html:29
 msgid ""
 "A luxurious skyscraper in the heart of the city, with completion expected by "
 "mid-2025."
@@ -675,15 +708,15 @@ msgstr ""
 "Un lussuoso grattacielo nel cuore della città, con completamento previsto "
 "per metà 2025."
 
-#: templates/construction/construction.html:31
+#: templates/construction/construction.html:36
 msgid "Upcoming Building 2"
 msgstr "Prossimo Edificio 2"
 
-#: templates/construction/construction.html:32
+#: templates/construction/construction.html:37
 msgid "The Green Plaza"
 msgstr "The Green Plaza"
 
-#: templates/construction/construction.html:33
+#: templates/construction/construction.html:38
 msgid ""
 "An eco-friendly residential complex featuring modern amenities. Estimated "
 "launch: Early 2026."
@@ -691,15 +724,15 @@ msgstr ""
 "Un complesso residenziale eco-sostenibile con servizi moderni. Lancio "
 "previsto: inizio 2026."
 
-#: templates/construction/construction.html:40
+#: templates/construction/construction.html:45
 msgid "Upcoming Building 3"
 msgstr "Prossimo Edificio 3"
 
-#: templates/construction/construction.html:41
+#: templates/construction/construction.html:46
 msgid "Oceanview Residences"
 msgstr "Oceanview Residences"
 
-#: templates/construction/construction.html:42
+#: templates/construction/construction.html:47
 msgid ""
 "Luxury apartments with stunning ocean views. Construction begins in late "
 "2024."
@@ -719,25 +752,52 @@ msgstr "Torna alla homepage"
 msgid "Search our site"
 msgstr "Cerca nel nostro sito"
 
-#: templates/index.html:11
+#: templates/includes/toasts/toast_error.html:6
+msgid "Error!"
+msgstr "Errore!"
+
+#: templates/includes/toasts/toast_error.html:7
+#: templates/includes/toasts/toast_info.html:7
+#: templates/includes/toasts/toast_success.html:11
+#: templates/includes/toasts/toast_warning.html:7
+msgid "Close"
+msgstr "Chiudi"
+
+#: templates/includes/toasts/toast_info.html:6
+msgid "Alert!"
+msgstr "Allerta!"
+
+#: templates/includes/toasts/toast_success.html:6
+msgid "Success!"
+msgstr "Successo!"
+
+#: templates/includes/toasts/toast_warning.html:6
+msgid "Warning!"
+msgstr "Attenzione!"
+
+#: templates/index.html:16
 msgid "Homepage"
 msgstr "Homepage"
 
-#: templates/index.html:18
+#: templates/index.html:24
 msgid "Your browser does not support HTML5 video."
 msgstr "Il tuo browser non supporta il video HTML5."
 
-#: templates/index.html:21
+#: templates/index.html:28
+msgid "Your browser does not support HTML5 audio."
+msgstr "Il tuo browser non supporta l'audio HTML5."
+
+#: templates/index.html:31
 msgid "Residenza 126"
 msgstr "Residenza 126"
 
 # No changes needed, this is correct.
-#: templates/index.html:22
+#: templates/index.html:32
 msgid "Elegance and Tranquility in the Heart of the City"
 msgstr "Eleganza e Tranquillità nel Cuore della Città"
 
 # No changes needed, this is correct.
-#: templates/index.html:34
+#: templates/index.html:50
 msgid ""
 "<strong>Residenza 126</strong> is an exclusive project located in the heart "
 "of Oristano, designed for those who want to live in a modern environment "
@@ -753,7 +813,7 @@ msgstr ""
 "tecnologiche all'avanguardia, offrendo un’esperienza personalizzata e di "
 "altissima qualità."
 
-#: templates/index.html:37
+#: templates/index.html:53
 msgid ""
 "Each apartment has been designed to meet the highest standards of design and "
 "functionality, with premium finishes and extensive customization options. "
@@ -769,7 +829,7 @@ msgstr ""
 "comfort, stile e innovazione si fondono per creare spazi abitativi che "
 "rispondano ai tuoi desideri."
 
-#: templates/index.html:40
+#: templates/index.html:56
 msgid ""
 "Schedule a visit and discover why <strong>Residenza 126</strong> is the "
 "perfect choice for your future."
@@ -777,7 +837,7 @@ msgstr ""
 "Prenota una visita e scopri perché <strong>Residenza 126</strong> è la "
 "scelta perfetta per il tuo futuro."
 
-#: templates/index.html:42
+#: templates/index.html:58
 msgid ""
 "Bright environments with top-of-the-range Finstral brand fixtures, airy and "
 "cared for in every detail with the best Made in Italy coverings and high-"
@@ -787,11 +847,11 @@ msgstr ""
 "curati in ogni dettaglio con le migliori coperture Made in Italy e materiali "
 "di alta qualità."
 
-#: templates/index.html:59
+#: templates/index.html:75
 msgid "Living in the heart of the city - Oristano"
 msgstr "Vivere nel cuore della città - Oristano"
 
-#: templates/index.html:61
+#: templates/index.html:77
 msgid ""
 "Just two minutes from the historic center of Oristano, <strong>Residenza "
 "126</strong> combines the best of urban living with an oasis of tranquility."
@@ -799,7 +859,7 @@ msgstr ""
 "A soli due minuti dal centro storico di Oristano, <strong>Residenza 126</"
 "strong> combina il meglio della vita urbana con un’oasi di tranquillità."
 
-#: templates/index.html:64
+#: templates/index.html:80
 msgid ""
 "The building is designed to let you enjoy the convenience of the city "
 "without compromising on peace and privacy."
@@ -807,7 +867,7 @@ msgstr ""
 "La struttura è studiata per farti godere la comodità della città, senza "
 "compromessi in termini di tranquillità e privacy."
 
-#: templates/index.html:67
+#: templates/index.html:83
 msgid ""
 "It's perfect for those seeking a retreat from the hustle and bustle of city "
 "life without sacrificing comfort."
@@ -815,23 +875,23 @@ msgstr ""
 "Perfetto per chi cerca un rifugio dalla frenesia cittadina senza dover "
 "rinunciare alla comodità."
 
-#: templates/index.html:121
+#: templates/index.html:137
 msgid "Download Brochure"
 msgstr "Scarica la Brochure"
 
-#: templates/index.html:133
+#: templates/index.html:149
 msgid "Reach Out"
 msgstr "Contattaci"
 
-#: templates/index.html:143
+#: templates/index.html:159
 msgid "Our Apartment Types"
 msgstr "I Nostri Tipi di Appartamenti"
 
-#: templates/index.html:144
+#: templates/index.html:160
 msgid "Tailored Living Solutions:"
 msgstr "Soluzioni Abitative su Misura:"
 
-#: templates/index.html:146
+#: templates/index.html:162
 msgid ""
 "<strong>Residenza 126</strong> offers two different types of homes to meet "
 "all needs. The one-bedroom and two-bedroom apartments are designed to "
@@ -851,11 +911,11 @@ msgstr ""
 "trilocale spazioso per la tua famiglia, troverai in <strong>Residenza 126</"
 "strong> l'abitazione che fa per te."
 
-#: templates/index.html:153
+#: templates/index.html:169
 msgid "Two-room Apartments"
 msgstr "Bilocali"
 
-#: templates/index.html:155
+#: templates/index.html:171
 msgid ""
 "The <strong>one-bedroom apartments</strong> at <strong>Residenza 126</"
 "strong> are ideal for those seeking a functional apartment without "
@@ -867,7 +927,7 @@ msgstr ""
 "ampio soggiorno con cucina a vista, una camera matrimoniale e un bagno "
 "spazioso e moderno."
 
-#: templates/index.html:158
+#: templates/index.html:174
 msgid ""
 "The real highlight is the 25 sqm private terrace, perfect for outdoor "
 "relaxation or entertaining guests, equipped with a Jacuzzi setup for moments "
@@ -881,7 +941,7 @@ msgstr ""
 "giovani professionisti o investitori, alla ricerca di una proprietà "
 "versatile e di pregio."
 
-#: templates/index.html:161
+#: templates/index.html:177
 msgid ""
 "By choosing a one-bedroom apartment at <strong>Residenza 126</strong>, you "
 "can be sure of a secure investment in an exclusive location."
@@ -889,11 +949,11 @@ msgstr ""
 "Scegliendo un bilocale in <strong>Residenza 126</strong>, avrai la certezza "
 "di un investimento sicuro in una location esclusiva."
 
-#: templates/index.html:174
+#: templates/index.html:190
 msgid "Three-room Apartments"
 msgstr "Trilocali"
 
-#: templates/index.html:176
+#: templates/index.html:192
 msgid ""
 "The <strong>two-bedroom apartments</strong> at <strong>Residenza 126</"
 "strong> offer spacious and bright rooms, designed to meet the needs of "
@@ -907,7 +967,7 @@ msgstr ""
 "mentre le due camere da letto matrimoniali e il bagno spazioso garantiscono "
 "comfort e praticità."
 
-#: templates/index.html:179
+#: templates/index.html:195
 msgid ""
 "Each apartment features a private balcony or terrace, perfect for enjoying "
 "moments of outdoor relaxation. High-end finishes and advanced technologies "
@@ -918,76 +978,76 @@ msgstr ""
 "avanzate completano un'esperienza abitativa che combina eleganza ed "
 "esclusività."
 
-#: templates/index.html:192
+#: templates/index.html:208
 msgid "Property Listings"
 msgstr "Annunci Immobiliari"
 
-#: templates/index.html:204 templates/properties/properties.html:86
+#: templates/index.html:220 templates/properties/properties.html:92
 msgid "SOLD"
 msgstr "VENDUTO"
 
-#: templates/index.html:210 templates/index.html:224
+#: templates/index.html:226 templates/index.html:240
 #: templates/profiles/user_profile.html:63
-#: templates/properties/properties.html:91
-#: templates/properties/properties.html:173
-#: templates/properties/property_details.html:43
-#: templates/properties/property_details.html:61
+#: templates/properties/properties.html:97
+#: templates/properties/properties.html:179
+#: templates/properties/property_details.html:49
+#: templates/properties/property_details.html:67
 msgid "Your browser does not support the video tag."
 msgstr "Il tuo browser non supporta il tag video."
 
-#: templates/index.html:215 templates/index.html:229
+#: templates/index.html:231 templates/index.html:245
 msgid "Placeholder"
 msgstr "Segnaposto"
 
-#: templates/index.html:242
+#: templates/index.html:258
 msgid "No properties available at the moment."
 msgstr "Nessuna proprietà disponibile al momento."
 
-#: templates/index.html:251
+#: templates/index.html:267
 msgid "View All Apartments"
 msgstr "Visualizza Tutti gli Appartamenti"
 
-#: templates/index.html:259
+#: templates/index.html:275
 msgid "Contact Us"
 msgstr "Contattaci"
 
-#: templates/index.html:264
+#: templates/index.html:280
 msgid "Please correct the errors below:"
 msgstr "Per favore correggi gli errori qui sotto:"
 
-#: templates/index.html:293
+#: templates/index.html:300
 msgid "Name"
 msgstr "Nome"
 
-#: templates/index.html:300 templates/profiles/user_profile.html:18
+#: templates/index.html:307 templates/profiles/user_profile.html:18
 msgid "Email"
 msgstr "Email"
 
-#: templates/index.html:307 templates/profiles/user_profile.html:20
+#: templates/index.html:314 templates/profiles/user_profile.html:20
 msgid "Phone Number"
 msgstr "Numero di Telefono"
 
-#: templates/index.html:314
+#: templates/index.html:321
 msgid "Subject"
 msgstr "Oggetto"
 
-#: templates/index.html:321
+#: templates/index.html:328
 msgid "Message"
 msgstr "Messaggio"
 
-#: templates/index.html:327
+#: templates/index.html:334
 msgid "Send"
 msgstr "Invia"
 
-#: templates/index.html:339
+#: templates/index.html:346
 msgid "Address:"
 msgstr "Indirizzo:"
 
-#: templates/index.html:340
+#: templates/index.html:347
 msgid "Tax code:"
 msgstr "Partita iva:"
 
-#: templates/index.html:341
+#: templates/index.html:348
 msgid "Telephone:"
 msgstr "Telefono:"
 
@@ -1036,32 +1096,32 @@ msgid "Update"
 msgstr "Aggiorna"
 
 #: templates/profiles/user_profile.html:82
-#: templates/properties/properties.html:102
-#: templates/properties/properties.html:184
+#: templates/properties/properties.html:108
+#: templates/properties/properties.html:190
 msgid "Price"
 msgstr "Prezzo"
 
 #: templates/profiles/user_profile.html:82
-#: templates/properties/properties.html:102
-#: templates/properties/properties.html:184
+#: templates/properties/properties.html:108
+#: templates/properties/properties.html:190
 msgid "Upon Request"
 msgstr "Su Richiesta"
 
 #: templates/profiles/user_profile.html:90
-#: templates/properties/properties.html:114
-#: templates/properties/properties.html:196
+#: templates/properties/properties.html:120
+#: templates/properties/properties.html:202
 msgid "sq ft"
 msgstr "mq"
 
 #: templates/profiles/user_profile.html:102
-#: templates/properties/properties.html:126
-#: templates/properties/properties.html:208
+#: templates/properties/properties.html:132
+#: templates/properties/properties.html:214
 msgid "Bedrooms"
 msgstr "Camere da Letto"
 
 #: templates/profiles/user_profile.html:107
-#: templates/properties/properties.html:131
-#: templates/properties/properties.html:213
+#: templates/properties/properties.html:137
+#: templates/properties/properties.html:219
 msgid "Bathrooms"
 msgstr "Bagni"
 
@@ -1073,82 +1133,82 @@ msgstr "Nessuna proprietà preferita ancora."
 msgid "View Properties"
 msgstr "Visualizza Proprietà"
 
-#: templates/properties/properties.html:29
+#: templates/properties/properties.html:35
 msgid "Location"
 msgstr "Posizione"
 
-#: templates/properties/properties.html:39
+#: templates/properties/properties.html:45
 msgid "Type"
 msgstr "Tipo"
 
-#: templates/properties/properties.html:47
+#: templates/properties/properties.html:53
 msgid "Filter"
 msgstr "Filtra"
 
-#: templates/properties/properties.html:57
+#: templates/properties/properties.html:63
 msgid "Size (smaller to larger)"
 msgstr "Dimensione (dal più piccolo al più grande)"
 
-#: templates/properties/properties.html:58
+#: templates/properties/properties.html:64
 msgid "Size (larger to smaller)"
 msgstr "Dimensione (dal più grande al più piccolo)"
 
-#: templates/properties/properties.html:68
+#: templates/properties/properties.html:74
 msgid "All Properties"
 msgstr "Tutte le Proprietà"
 
-#: templates/properties/properties.html:70
+#: templates/properties/properties.html:76
 msgid "Properties"
 msgstr "Proprietà"
 
-#: templates/properties/properties.html:70
+#: templates/properties/properties.html:76
 msgid "found for"
 msgstr "trovate per"
 
-#: templates/properties/properties.html:146
-#: templates/properties/properties.html:228
+#: templates/properties/properties.html:152
+#: templates/properties/properties.html:234
 msgid "Mark as Available"
 msgstr ""
 
-#: templates/properties/properties.html:146
-#: templates/properties/properties.html:228
+#: templates/properties/properties.html:152
+#: templates/properties/properties.html:234
 msgid "Mark as SOLD"
 msgstr ""
 
-#: templates/properties/properties.html:308
+#: templates/properties/properties.html:314
 msgid "Please log in to add a property to your favourites."
 msgstr ""
 "Per aggiungere una proprietà ai tuoi preferiti, per favore effettua il login."
 
-#: templates/properties/property_details.html:16
+#: templates/properties/property_details.html:22
 msgid "Location:"
 msgstr "Posizione:"
 
-#: templates/properties/property_details.html:17
+#: templates/properties/property_details.html:23
 msgid "Size:"
 msgstr "Dimensione:"
 
-#: templates/properties/property_details.html:18
+#: templates/properties/property_details.html:24
 msgid "Type:"
 msgstr "Tipo:"
 
-#: templates/properties/property_details.html:19
+#: templates/properties/property_details.html:25
 msgid "Bedrooms:"
 msgstr "Camere da Letto:"
 
-#: templates/properties/property_details.html:20
+#: templates/properties/property_details.html:26
 msgid "Bathrooms:"
 msgstr "Bagni:"
 
-#: templates/properties/property_details.html:25
+#: templates/properties/property_details.html:31
 msgid "Features:"
 msgstr "Caratteristiche:"
 
-#: templates/properties/property_details.html:32
+#: templates/properties/property_details.html:38
 msgid "No features listed."
 msgstr "Nessuna caratteristica elencata."
 
-#: templates/properties/property_details.html:68
+#: templates/properties/property_details.html:74
 msgid "Back to Properties"
 msgstr "Torna alle Proprietà"
 
