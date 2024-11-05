@@ -78,15 +78,15 @@ msgstr "Il tuo messaggio"
 
 #: residenza/views.py:58
 msgid "Failed to send message to the property owner."
-msgstr ""
+msgstr "Invio del messaggio al proprietario della proprietà non riuscito."
 
 #: residenza/views.py:84
 msgid "Thank you for submitting! We will be in touch soon!"
-msgstr ""
+msgstr "Grazie per aver inviato! Ti contatteremo presto!"
 
 #: residenza/views.py:86
 msgid "Failed to send the brochure to your email."
-msgstr ""
+msgstr "Invio della brochure al tuo indirizzo email non riuscito."
 
 #: templates/allauth/account/account_inactive.html:13
 msgid "Account Inactive"
@@ -1168,12 +1168,12 @@ msgstr "trovate per"
 #: templates/properties/properties.html:152
 #: templates/properties/properties.html:234
 msgid "Mark as Available"
-msgstr ""
+msgstr "Segna come Disponibile"
 
 #: templates/properties/properties.html:152
 #: templates/properties/properties.html:234
 msgid "Mark as SOLD"
-msgstr ""
+msgstr "Segna come VENDUTO"
 
 #: templates/properties/properties.html:314
 msgid "Please log in to add a property to your favourites."
