@@ -46,6 +46,7 @@ def homepage(request):
                 body=(
                     f"Messaggio da {form.cleaned_data['name']} "
                     f"<{form.cleaned_data['email']}>\n\n"
+                    f"Email: {form.cleaned_data['email']}\n\n"
                     f"Telefono: {form.cleaned_data['phone_number']}\n\n"
                     f"{form.cleaned_data['message']}"
                 ),

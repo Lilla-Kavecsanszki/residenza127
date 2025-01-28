@@ -5,7 +5,7 @@ from .models import Contact
 
 class ContactForm(forms.ModelForm):
     phone_number = PhoneNumberField(
-        required=False,
+        required=True,
         widget=forms.TextInput(attrs={'placeholder': _('e.g., +39 333 123 4567')})
     )
 
