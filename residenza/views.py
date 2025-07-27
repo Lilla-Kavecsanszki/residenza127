@@ -70,8 +70,7 @@ def homepage(request):
                     "Ar.Gi. Costruzioni"
                 ),
                 from_email=None,  # Default from email
-                to=["kavelilla@gmail.com"]
-                # to=[form.cleaned_data['email']],
+                to=[form.cleaned_data['email']],
             )
 
             # Path to the brochure file
