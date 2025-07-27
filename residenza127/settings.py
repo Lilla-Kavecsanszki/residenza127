@@ -167,7 +167,7 @@ else:
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587
     EMAIL_HOST = "smtp.mailersend.net"
-    EMAIL_HOST_USER = "armando@argicostruzioni.com"
+    EMAIL_HOST_USER = "MS_hLzq9L@argicostruzioni.com"
     EMAIL_HOST_PASSWORD = os.environ.get("MAILERSEND_API_KEY")
     DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL")
 
