@@ -166,9 +166,9 @@ else:
     EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587
-    EMAIL_HOST = "smtp.sendgrid.net"
-    EMAIL_HOST_USER = "apikey"
-    EMAIL_HOST_PASSWORD = os.environ.get("SENDGRID_API_KEY")
+    EMAIL_HOST = "smtp.mailersend.net"
+    EMAIL_HOST_USER = "armando@argicostruzioni.com"
+    EMAIL_HOST_PASSWORD = os.environ.get("MAILERSEND_API_KEY")
     DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL")
 
 CONTACT_EMAIL_RECIPIENT = os.environ.get("CONTACT_EMAIL_RECIPIENT")
