@@ -15,3 +15,5 @@ node_modules/
 cloudinary_python.txt
 
 .history/
+
+venv/
