@@ -10,407 +10,873 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ar.Gi. Costruzioni - Il tuo partner di fiducia per immobili, costruzioni e ristrutturazioni a Oristano. Scopri appartamenti e soluzioni per la tua casa.">
     <meta name="keywords" content="immobiliare Oristano, costruzioni Oristano, nuove costruzioni Oristano, ristrutturazioni Oristano, appartamenti Oristano, Ar.Gi. Costruzioni, Residenza 126, proprietà Sardegna, appartamenti in vendita Oristano, ristrutturazioni casa Sardegna, nuovi appartamenti Oristano, servizi edilizi Sardegna, sviluppo immobiliare Sardegna, appartamenti di lusso Sardegna">
-    {% endblock %} {% block extra_meta %} {% endblock %}
+    {% endblock %}
+    {% block extra_meta %}{% endblock %}
 
     <title>{% block title %}{% trans "Ar.Gi. Costruzioni" %}{% endblock %}</title>
 
     <link rel="canonical" href="{{ canonical_url }}" />
-    
+
     <!-- Hreflang Tags -->
-    <link rel="alternate" href="http://www.argicostruzioni.com/" hreflang="it" />
-    <link rel="alternate" href="http://www.argicostruzioni.com/en/" hreflang="en" />
-    
+    <link rel="alternate" href="https://www.argicostruzioni.com/" hreflang="it" />
+    <link rel="alternate" href="https://www.argicostruzioni.com/en/" hreflang="en" />
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous"
+    >
+
     <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    >
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Italiana&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Italiana&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet"
+    >
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
-    
+
     <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    
-    <!-- Additional CSS from block -->
-    {% block extra_css %}{% endblock %}            
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    >
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    >
+
+    <!-- Additional CSS from child templates -->
+    {% block extra_css %}{% endblock %}
+
+    <!-- Additional head content from child templates -->
+    {% block head %}{% endblock %}
 </head>
+
 <body>
+
     <!-- Loading Overlay -->
     <div id="loading-overlay" class="loading-overlay">
-        <img src="{% static 'images/logo.png' %}" alt="{% trans 'Logo' %}" alt="Logo" loading="lazy" class="loading-logo">
+        <img
+            src="{% static 'images/logo.png' %}"
+            alt="{% trans 'Logo' %}"
+            loading="lazy"
+            class="loading-logo"
+        >
     </div>
+
     <!-- Header Section -->
     <header>
+
         <!-- Main Desktop Header -->
         <div id="topnav" class="row nav-background pt-lg-2 d-none d-lg-flex align-items-center">
+
             <div class="col-lg-6 d-flex justify-content-start align-items-center">
                 <!-- Logo -->
                 <a href="{% url 'home' %}" class="nav-link main-logo-link logo">
-                    <img src="{% static 'images/logo.png' %}" alt="{% trans 'Logo' %}" loading="lazy" class="logo-image">
+                    <img
+                        src="{% static 'images/logo.png' %}"
+                        alt="{% trans 'Logo' %}"
+                        loading="lazy"
+                        class="logo-image"
+                    >
                 </a>
             </div>
+
             <div class="col-lg-6 d-flex justify-content-end">
+
                 <div class="d-flex justify-content-start align-items-center">
+
                     <!-- Search Bar -->
                     <form method="GET" action="{% url 'all_properties' %}" class="w-100">
+
                         <div class="input-group w-100">
-                            <input class="form-control border-1 bg-transparent" type="text" name="q" placeholder="{% trans 'Search' %}" style="border-bottom: 1px solid #051c2c;">
+
+                            <input
+                                class="form-control border-1 bg-transparent"
+                                type="text"
+                                name="q"
+                                placeholder="{% trans 'Search' %}"
+                                style="border-bottom: 1px solid #051c2c;"
+                            >
+
                             <div class="input-group-append">
-                                <button class="form-control btn border-0" type="submit" aria-label="Search">
-                                    <span class="icon"><i class="fas fa-search fa-lg" style="color: #051c2c;"></i></span>
+
+                                <button
+                                    class="form-control btn border-0"
+                                    type="submit"
+                                    aria-label="Search"
+                                >
+                                    <span class="icon">
+                                        <i
+                                            class="fas fa-search fa-lg"
+                                            style="color: #051c2c;"
+                                        ></i>
+                                    </span>
                                 </button>
+
                             </div>
+
                         </div>
+
                     </form>
+
                 </div>
+
+
                 <div class="d-flex justify-content-end align-items-center">
+
                     <!-- Sign-In Link -->
                     <ul class="list-inline mb-0">
+
                         <li class="list-inline-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="user-options"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+
                                 <div class="text-center nav-icon">
+
                                     {% if request.user.is_authenticated %}
-                                    <div><i class="fas fa-solid fa-user fa-lg"></i></div>
-                                    <p class="my-0">{{ request.user.username }}</p>
+
+                                        <div>
+                                            <i class="fas fa-solid fa-user fa-lg"></i>
+                                        </div>
+
+                                        <p class="my-0">
+                                            {{ request.user.username }}
+                                        </p>
+
                                     {% else %}
-                                    <div><i class="far fa-regular fa-user fa-lg"></i></div>
-                                    <p class="my-0">{% trans 'Account' %}</p>
+
+                                        <div>
+                                            <i class="far fa-regular fa-user fa-lg"></i>
+                                        </div>
+
+                                        <p class="my-0">
+                                            {% trans 'Account' %}
+                                        </p>
+
                                     {% endif %}
+
                                 </div>
+
                             </a>
-                            
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+
+
+                            <div
+                                class="dropdown-menu border-0"
+                                aria-labelledby="user-options"
+                            >
+
                                 {% if request.user.is_authenticated %}
-                                    <!-- superuser -->
+
                                     {% if request.user.is_superuser %}
-                                    <a href="{% url 'property_management' %}" class="dropdown-item">{% trans 'Property Management' %}</a>
+
+                                        <a
+                                            href="{% url 'property_management' %}"
+                                            class="dropdown-item"
+                                        >
+                                            {% trans 'Property Management' %}
+                                        </a>
+
                                     {% endif %}
-                                    <a href="{% url 'user_profile' %}" class="dropdown-item">
-                                        {% trans 'My Favourites' %} 
+
+                                    <a
+                                        href="{% url 'user_profile' %}"
+                                        class="dropdown-item"
+                                    >
+                                        {% trans 'My Favourites' %}
                                         <i class="fas fa-star fa-star-base light-base"></i>
                                     </a>
-                                    <a href="{% url 'account_logout' %}" class="dropdown-item">{% trans 'Logout' %}</a>
+
+                                    <a
+                                        href="{% url 'account_logout' %}"
+                                        class="dropdown-item"
+                                    >
+                                        {% trans 'Logout' %}
+                                    </a>
+
                                 {% else %}
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item">{% trans 'Register' %}</a>
-                                    <a href="{% url 'account_login' %}" class="dropdown-item">{% trans 'Login' %}</a>
+
+                                    <a
+                                        href="{% url 'account_signup' %}"
+                                        class="dropdown-item"
+                                    >
+                                        {% trans 'Register' %}
+                                    </a>
+
+                                    <a
+                                        href="{% url 'account_login' %}"
+                                        class="dropdown-item"
+                                    >
+                                        {% trans 'Login' %}
+                                    </a>
+
                                 {% endif %}
+
                             </div>
+
                         </li>
+
                     </ul>
+
                 </div>
-                <!-- Conditionally render the language dropdown only on the homepage -->
+
+
+                <!-- Language Dropdown -->
                 {% if request.path == homepage_url or request.path == '/' %}
-                <div class="d-flex justify-content-end align-items-center">
-                    <!-- Language Dropdown -->
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="language-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <div class="text-center nav-icon">
-                                    <i class="fas fa-globe fa-lg"></i>
-                                    <p class="my-0">{{ LANGUAGE_CODE|upper }}</p>
+
+                    <div class="d-flex justify-content-end align-items-center">
+
+                        <ul class="list-inline mb-0">
+
+                            <li class="list-inline-item dropdown">
+
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="language-options"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                >
+
+                                    <div class="text-center nav-icon">
+                                        <i class="fas fa-globe fa-lg"></i>
+                                        <p class="my-0">
+                                            {{ LANGUAGE_CODE|upper }}
+                                        </p>
+                                    </div>
+
+                                </a>
+
+
+                                <div
+                                    class="dropdown-menu border-0"
+                                    aria-labelledby="language-options"
+                                >
+
+                                    <a
+                                        href="#"
+                                        class="dropdown-item {% if LANGUAGE_CODE == 'it' %}active{% endif %}"
+                                        onclick="switchLanguage('it')"
+                                    >
+                                        IT
+                                    </a>
+
+                                    <a
+                                        href="#"
+                                        class="dropdown-item {% if LANGUAGE_CODE == 'en' %}active{% endif %}"
+                                        onclick="switchLanguage('en')"
+                                    >
+                                        EN
+                                    </a>
+
                                 </div>
-                            </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="language-options">
-                                <a href="#" class="dropdown-item {% if LANGUAGE_CODE == 'it' %}active{% endif %}" onclick="switchLanguage('it')">IT</a>
-                                <a href="#" class="dropdown-item {% if LANGUAGE_CODE == 'en' %}active{% endif %}" onclick="switchLanguage('en')">EN</a>
-                            </div>
-                        </li>
-                    </ul>                                                                               
-                </div>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
                 {% endif %}
+
             </div>
+
         </div>
+
 
         <!-- Mobile Header Section -->
         <div class="d-block d-lg-none">
-            <!-- Include mobile top header -->
             {% include 'includes/mobile-top-header.html' %}
         </div>
 
+
         <!-- Navigation Bar -->
         <div class="row nav-background">
+
             <nav class="navbar navbar-expand-lg w-100 col-lg-12 justify-content-end d-flex">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#main-nav"
+                    aria-controls="main-nav"
+                    aria-expanded="false"
+                    aria-label="{% trans 'Toggle navigation' %}"
+                >
                     <i class="fas fa-bars"></i>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="main-nav">
+
+
+                <div
+                    class="collapse navbar-collapse justify-content-end"
+                    id="main-nav"
+                >
+
                     <ul class="navbar-nav">
+
                         {% if request.user.is_authenticated %}
-                            <!-- Check if user is superuser -->
+
                             {% if request.user.is_superuser %}
+
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'admin:index' %}">{% trans 'Admin' %}</a>
+                                    <a
+                                        class="nav-link"
+                                        href="{% url 'admin:index' %}"
+                                    >
+                                        {% trans 'Admin' %}
+                                    </a>
                                 </li>
-                                <!-- Display Construction link only for superuser -->
+
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'construction' %}">{% trans 'Construction' %}</a>
+                                    <a
+                                        class="nav-link"
+                                        href="{% url 'construction' %}"
+                                    >
+                                        {% trans 'Construction' %}
+                                    </a>
                                 </li>
+
                             {% endif %}
-                            <!-- Always display the following items for authenticated users -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'home' %}">{% trans 'Home' %}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'home' %}#apartment-types">{% trans 'Solutions' %}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'all_properties' %}">{% trans 'Apartments' %}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'home' %}#about">{% trans 'About' %}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'home' %}#contact-us">{% trans 'Contact' %}</a>
-                            </li>
-                        {% else %}
-                            <!-- Display items for non-authenticated users -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'home' %}">{% trans 'Home' %}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'home' %}#apartment-types">{% trans 'Solutions' %}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'all_properties' %}">{% trans 'Apartments' %}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'home' %}#about">{% trans 'About' %}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'home' %}#contact-us">{% trans 'Contact' %}</a>
-                            </li>
+
                         {% endif %}
-                    </ul>                    
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}">
+                                {% trans 'Home' %}
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="{% url 'home' %}#apartment-types"
+                            >
+                                {% trans 'Solutions' %}
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="{% url 'all_properties' %}"
+                            >
+                                {% trans 'Apartments' %}
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="{% url 'home' %}#about"
+                            >
+                                {% trans 'About' %}
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="{% url 'home' %}#contact-us"
+                            >
+                                {% trans 'Contact' %}
+                            </a>
+                        </li>
+
+                    </ul>
+
                 </div>
+
             </nav>
+
         </div>
+
     </header>
-    
+
+
+    <!-- Django Messages / Toasts -->
     {% if messages %}
-    <div class="message-container">
-      {% for message in messages %} {% with message.level as level %}
-      <!-- level 40 -->
-      {% if level == 40 %}
-      <!-- level 30 -->
-      {% include 'includes/toasts/toast_error.html' %} {% elif level == 30 %}
-      <!-- level 25 -->
-      {% include 'includes/toasts/toast_warning.html' %} {% elif level == 25 %}
-      <!-- else -->
-      {% include 'includes/toasts/toast_success.html' %} {% else %}
-      <!-- end -->
-      {% include 'includes/toasts/toast_info.html' %} {% endif %} {% endwith %}
-      {% endfor %}
-    </div>
-    {% endif %} {% block page_header %} {% endblock %} 
-    <!-- Main content -->
-    <main role="main" class="container-fluid p-0">
-        <div class="full-width">
-            {% block content %}
-            <!-- This will render the content of the individual views -->
-            {% endblock %}
+
+        <div class="message-container">
+
+            {% for message in messages %}
+
+                {% with message.level as level %}
+
+                    {% if level == 40 %}
+
+                        {% include 'includes/toasts/toast_error.html' %}
+
+                    {% elif level == 30 %}
+
+                        {% include 'includes/toasts/toast_warning.html' %}
+
+                    {% elif level == 25 %}
+
+                        {% include 'includes/toasts/toast_success.html' %}
+
+                    {% else %}
+
+                        {% include 'includes/toasts/toast_info.html' %}
+
+                    {% endif %}
+
+                {% endwith %}
+
+            {% endfor %}
+
         </div>
+
+    {% endif %}
+
+
+    {% block page_header %}
+    {% endblock %}
+
+
+    <!-- Main Content -->
+    <main role="main" class="container-fluid p-0">
+
+        <div class="full-width">
+
+            {% block content %}
+            <!-- Individual template content renders here -->
+            {% endblock %}
+
+        </div>
+
     </main>
 
-    <!-- Additional JavaScript Files (If any) -->
-    {% block extra_js %}{% endblock %}
 
-<!-- Footer Section -->
-<footer class="footer-cover text-white py-4">
-    <div class="footer-content container-fluid">
-        <div class="row justify-content-between text-center text-md-left"> <!-- Centering text on mobile -->
-            <!-- Column 1: Logo -->
-            <div class="col-md-2 mb-3 mb-md-0"> <!-- Added margin for mobile -->
-                <a href="{% url 'home' %}">
-                    <img src="{% static 'images/logo.png' %}" alt="Logo" loading="lazy" class="footer-logo"> 
-                </a>
-            </div>
+    <!-- Additional JavaScript Files from child templates -->
+    {% block extra_js %}
+    {% endblock %}
 
-            <!-- Column 2: Residenza 126 -->
-            <div class="col-md-2 mb-3 mb-md-0">
-                <p class="lilla mb-2"><strong>Residenza 126:</strong></p>
-                <p>
-                    <a href="{% url 'home' %}#building" class="footer-link building-link">{% trans 'Building Info' %}</a><br>
-                    <a href="{% url 'home' %}#location" class="footer-link location-link">{% trans 'View Location' %}</a>
-                </p>
-            </div>
 
-            <!-- Column 3: Apartment Types -->
-            <div class="col-md-2 mb-3 mb-md-0">
-                <p class="lilla mb-2"><strong>{% trans 'Apartment Types:' %}</strong></p>
-                <ul class="list-unstyled">
-                    <li><a href="{% url 'home' %}#bilocali" class="footer-link apartment-link">{% trans 'Two Rooms' %}</a></li>
-                    <li><a href="{% url 'home' %}#trilocali" class="footer-link apartment-link">{% trans 'Three Rooms' %}</a></li>
-                </ul>
-            </div>
+    <!-- Footer Section -->
+    <footer class="footer-cover text-white py-4">
 
-            <!-- Column 4: Social Media Links -->
-            <div class="col-md-2 mb-3 mb-md-0">
-                <p class="socials mb-3">
-                    <span class="icon-container">
-                        <a class="links whatsapp" 
-                        href="https://wa.me/393333951557" 
-                        target="_blank" 
-                        rel="noopener nofollow"
-                        aria-label="Contact us on WhatsApp">
-                        <i class="fab fa-whatsapp icon" aria-hidden="true"></i>
+        <div class="footer-content container-fluid">
+
+            <div class="row justify-content-between text-center text-md-left">
+
+                <!-- Column 1: Logo -->
+                <div class="col-md-2 mb-3 mb-md-0">
+
+                    <a href="{% url 'home' %}">
+                        <img
+                            src="{% static 'images/logo.png' %}"
+                            alt="Logo"
+                            loading="lazy"
+                            class="footer-logo"
+                        >
+                    </a>
+
+                </div>
+
+
+                <!-- Column 2: Residenza 126 -->
+                <div class="col-md-2 mb-3 mb-md-0">
+
+                    <p class="lilla mb-2">
+                        <strong>Residenza 126:</strong>
+                    </p>
+
+                    <p>
+
+                        <a
+                            href="{% url 'home' %}#building"
+                            class="footer-link building-link"
+                        >
+                            {% trans 'Building Info' %}
                         </a>
 
-                        <a class="links insta" 
-                        href="https://www.instagram.com/ar.gi.costruzioni_/?hl=en" 
-                        target="_blank" 
-                        rel="noopener"
-                        aria-label="Follow us on Instagram">
-                        <i class="fab fa-instagram icon" aria-hidden="true"></i>
+                        <br>
+
+                        <a
+                            href="{% url 'home' %}#location"
+                            class="footer-link location-link"
+                        >
+                            {% trans 'View Location' %}
                         </a>
 
-                        <a class="links location-i location" 
-                        href="https://www.google.com/maps/search/?api=1&query=Via+Cagliari+126,+Oristano" 
-                        target="_blank" 
-                        rel="noopener"
-                        aria-label="Find us at Via Cagliari 126, Oristano on Google Maps">
-                        <i class="fa-solid fa-location-dot icon" aria-hidden="true"></i>
+                    </p>
+
+                </div>
+
+
+                <!-- Column 3: Apartment Types -->
+                <div class="col-md-2 mb-3 mb-md-0">
+
+                    <p class="lilla mb-2">
+                        <strong>
+                            {% trans 'Apartment Types:' %}
+                        </strong>
+                    </p>
+
+                    <ul class="list-unstyled">
+
+                        <li>
+                            <a
+                                href="{% url 'home' %}#bilocali"
+                                class="footer-link apartment-link"
+                            >
+                                {% trans 'Two Rooms' %}
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="{% url 'home' %}#trilocali"
+                                class="footer-link apartment-link"
+                            >
+                                {% trans 'Three Rooms' %}
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Column 4: Social Media Links -->
+                <div class="col-md-2 mb-3 mb-md-0">
+
+                    <p class="socials mb-3">
+
+                        <span class="icon-container">
+
+                            <a
+                                class="links whatsapp"
+                                href="https://wa.me/393333951557"
+                                target="_blank"
+                                rel="noopener nofollow"
+                                aria-label="Contact us on WhatsApp"
+                            >
+                                <i
+                                    class="fab fa-whatsapp icon"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+
+
+                            <a
+                                class="links insta"
+                                href="https://www.instagram.com/ar.gi.costruzioni_/?hl=en"
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="Follow us on Instagram"
+                            >
+                                <i
+                                    class="fab fa-instagram icon"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+
+
+                            <a
+                                class="links location-i location"
+                                href="https://www.google.com/maps/search/?api=1&query=Via+Cagliari+126,+Oristano"
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="Find us at Via Cagliari 126, Oristano on Google Maps"
+                            >
+                                <i
+                                    class="fa-solid fa-location-dot icon"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+
+                        </span>
+
+                    </p>
+
+                </div>
+
+
+                <!-- Column 5: Contact Information -->
+                <div class="col-md-2 mb-3 mb-md-0">
+
+                    <p class="lilla mb-2">
+                        <strong>
+                            {% trans 'Contact Information:' %}
+                        </strong>
+                    </p>
+
+
+                    <p class="mb-1">
+
+                        <strong>
+                            {% trans 'Phone:' %}
+                        </strong>
+
+                        <br>
+
+                        <a
+                            href="tel:+393333951557"
+                            class="footer-link email-link"
+                        >
+                            +39 333 395 1557
                         </a>
-                    </span>
-                </p>
+
+                    </p>
+
+
+                    <p class="mb-1">
+
+                        <strong>
+                            {% trans 'Email:' %}
+                        </strong>
+
+                        <br>
+
+                        <a
+                            href="mailto:info@argicostruzioni.com"
+                            class="footer-link email-link"
+                        >
+                            info@argicostruzioni.com
+                        </a>
+
+                    </p>
+
+
+                    <p>
+
+                        <a
+                            class="privacy"
+                            href="https://www.freeprivacypolicy.com/live/ef970174-4dba-4a4c-bb24-6cd4d2fa481c"
+                            target="_blank"
+                            rel="noopener nofollow"
+                        >
+                            Privacy Policy
+                        </a>
+
+                    </p>
+
+                </div>
+
             </div>
 
-            <!-- Column 5: Contact Information -->
-            <div class="col-md-2 mb-3 mb-md-0">
-                <p class="lilla mb-2"><strong>{% trans 'Contact Information:' %}</strong></p>
-                <p class="mb-1">
-                    <strong>{% trans 'Phone:' %}</strong><br> <!-- Added <br> for line break -->
-                    <a href="tel:+393333951557" target="_blank" rel="noopener nofollow" class="footer-link email-link">+39 333 395 1557</a>
-                </p>
-                <p class="mb-1">
-                    <strong>{% trans 'Email:' %}</strong><br> <!-- Added <br> for line break -->
-                    <a href="mailto:info@argicostruzioni.com" target="_blank" rel="noopener nofollow" class="footer-link email-link">info@argicostruzioni.com</a>
-                </p>
-                <p><a class="privacy" href="https://www.freeprivacypolicy.com/live/ef970174-4dba-4a4c-bb24-6cd4d2fa481c" target="_blank" rel="noopener nofollow">Privacy Policy</a></p>
+
+            <!-- Made By Section -->
+            <div class="row mt-4">
+
+                <div class="col-12 text-center">
+
+                    <p class="lilla mb-1">
+
+                        <a
+                            href="mailto:lilla-kavecsanszki@outlook.com"
+                            class="email-link"
+                        >
+                            MADE BY Lilla Kavecsanszki
+                        </a>
+
+                    </p>
+
+                    <p>
+                        &copy; 2024 {% trans 'All rights reserved.' %}
+                    </p>
+
+                </div>
+
             </div>
+
         </div>
-        <!-- "Made By" Section Below the Columns -->
-        <div class="row mt-4">
-            <div class="col-12 text-center">
-                <p class="lilla mb-1">
-                    <a href="mailto:lilla-kavecsanszki@outlook.com" target="_blank" rel="noopener nofollow" class="email-link">MADE BY Lilla Kavecsanszki</a>
-                </p>
-                <p>&copy; 2024 {% trans 'All rights reserved.' %}</p>
-            </div>
-        </div>
-    </div>
-</footer>
+
+    </footer>
 
 
     <!-- JavaScript Files -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <!-- Custom JavaScript for Loading Overlay -->
-    <script>
-    window.addEventListener('load', function () {
-        var overlay = document.getElementById('loading-overlay');
-        
-        // Fade out the overlay
-        overlay.style.opacity = 0;
-    
-        overlay.addEventListener('transitionend', function() {
-            overlay.style.display = 'none';
-            document.querySelector('.content').style.display = 'block';
-        });
-    });
+    <script
+        src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous">
     </script>
-    
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous">
+    </script>
+
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous">
+    </script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+
+
+    <!-- Loading Overlay -->
+    <script>
+        window.addEventListener('load', function () {
+            const overlay = document.getElementById('loading-overlay');
+
+            if (!overlay) {
+                return;
+            }
+
+            overlay.style.opacity = 0;
+
+            overlay.addEventListener('transitionend', function () {
+                overlay.style.display = 'none';
+
+                const content = document.querySelector('.content');
+
+                if (content) {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+
     <!-- Toasts -->
     <script>
-    $(document).ready(function() {
-        $(".toast").toast({
-            autohide: true,  // Automatically hide the toast
-            delay: 5000      // Delay of 5000ms (5 seconds)
-        }).toast("show");
-    });
+        $(document).ready(function () {
+            $(".toast").toast({
+                autohide: true,
+                delay: 5000
+            }).toast("show");
+        });
     </script>
-    
+
+
     <!-- Audio -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+
             const audio = document.getElementById('background-audio');
             const toggleButton = document.getElementById('toggle-audio');
-    
-            // Set the initial button text
-            toggleButton.innerHTML = '<i class="fa-solid fa-volume-xmark fa-xl" style="color: #182d5f;"></i>';
-            let isPlaying = false; // Track the audio state
-    
-            // Function to toggle play/mute
-            toggleButton.addEventListener('click', () => {
-                if (isPlaying) {
-                    audio.pause(); // Pause the audio
-                    toggleButton.textContent = 'Play'; // Update button text
-                    toggleButton.innerHTML = '<i class="fa-solid fa-volume-xmark fa-xl" style="color: #182d5f;"></i> ';
-                } else {
-                    audio.play(); // Play the audio
-                    toggleButton.textContent = 'Mute'; // Update button text
-                    toggleButton.innerHTML = '<i class="fa-solid fa-volume-high fa-xl" style="color: #182d5f;"></i>';
-                }
-                isPlaying = !isPlaying; // Toggle the state
-            });
-        });
-    </script>    
 
-<!-- Custom JavaScript for Language Switching -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var preferredLanguage = localStorage.getItem('preferredLanguage') || 'it';
-        var currentUrl = window.location.pathname;
-        var urlParams = new URLSearchParams(window.location.search);
-    
-        // If there's a language parameter in the URL, prioritize it and update storage
-        if (urlParams.has('lang')) {
-            preferredLanguage = urlParams.get('lang');
-            localStorage.setItem('preferredLanguage', preferredLanguage);
+            if (!audio || !toggleButton) {
+                return;
+            }
+
+            toggleButton.innerHTML =
+                '<i class="fa-solid fa-volume-xmark fa-xl" style="color: #182d5f;"></i>';
+
+            let isPlaying = false;
+
+            toggleButton.addEventListener('click', () => {
+
+                if (isPlaying) {
+
+                    audio.pause();
+
+                    toggleButton.innerHTML =
+                        '<i class="fa-solid fa-volume-xmark fa-xl" style="color: #182d5f;"></i>';
+
+                } else {
+
+                    audio.play();
+
+                    toggleButton.innerHTML =
+                        '<i class="fa-solid fa-volume-high fa-xl" style="color: #182d5f;"></i>';
+
+                }
+
+                isPlaying = !isPlaying;
+
+            });
+
+        });
+    </script>
+
+
+    <!-- Custom JavaScript for Language Switching -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            let preferredLanguage =
+                localStorage.getItem('preferredLanguage') || 'it';
+
+            const currentUrl = window.location.pathname;
+            const urlParams = new URLSearchParams(window.location.search);
+
+            if (urlParams.has('lang')) {
+
+                preferredLanguage = urlParams.get('lang');
+
+                localStorage.setItem(
+                    'preferredLanguage',
+                    preferredLanguage
+                );
+            }
+
+            console.log('Current URL:', currentUrl);
+            console.log('Preferred Language:', preferredLanguage);
+
+            if (currentUrl.startsWith('/accounts/confirm-email')) {
+                console.log(
+                    'Email confirmation page detected. Keeping the current language.'
+                );
+                return;
+            }
+
+            const baseUrl =
+                currentUrl.replace(/^\/(it|en)\//, '/');
+
+            if (!currentUrl.startsWith('/' + preferredLanguage)) {
+
+                console.log(
+                    `Redirecting to ${preferredLanguage} version...`
+                );
+
+                window.location.href =
+                    `/${preferredLanguage}${baseUrl}`;
+            }
+
+        });
+
+
+        function switchLanguage(langCode) {
+
+            localStorage.setItem(
+                'preferredLanguage',
+                langCode
+            );
+
+            const currentUrl = window.location.pathname;
+
+            const baseUrl =
+                currentUrl.replace(/^\/(it|en)\//, '/');
+
+            window.location.href =
+                `/${langCode}${baseUrl}`;
         }
-    
-        console.log('Current URL:', currentUrl);
-        console.log('Preferred Language:', preferredLanguage);
-    
-        // Ensure special cases like confirmation links are respected
-        if (currentUrl.startsWith('/accounts/confirm-email')) {
-            console.log('Email confirmation page detected. Keeping the current language.');
-            return; // Avoid redirecting on confirmation links
-        }
-    
-        // Remove any existing language prefix from the URL
-        var baseUrl = currentUrl.replace(/^\/(it|en)\//, '/');
-    
-        // Redirect to preferred language if not already set
-        if (!currentUrl.startsWith('/' + preferredLanguage)) {
-            console.log(`Redirecting to ${preferredLanguage} version...`);
-            window.location.href = `/${preferredLanguage}${baseUrl}`;
-        }
-    });
-    
-    function switchLanguage(langCode) {
-        localStorage.setItem('preferredLanguage', langCode);
-        var currentUrl = window.location.pathname;
-    
-        // Remove any existing language prefix
-        var baseUrl = currentUrl.replace(/^\/(it|en)\//, '/');
-    
-        // Redirect to the selected language
-        window.location.href = `/${langCode}${baseUrl}`;
-    }    
-</script>
-    {% block extra_scripts %}{% endblock %}
+    </script>
+
+
+    {% block extra_scripts %}
+    {% endblock %}
+
 </body>
 </html>
