@@ -444,8 +444,7 @@ The following ER diagrams detail these relationships:
 - White - #ffffff
 - Dark Gray - #a9a9a9
 - Goldenrod - #daa520
-- Atlantic Navy - #16357
-- Fibonacci Blue - #182d5f
+- Navy - #051c2c
 
 ![colour_palette](staticfiles/README_docs/images/colorkit.png "colour_palette")
 
@@ -492,7 +491,7 @@ Overall, this combination of fonts creates a harmonious balance between elegance
 - [**Free Privacy Policy Generator**](https://www.freeprivacypolicy.com/free-privacy-policy-generator/) was used to generate the privacy policy for the website.
 - [**Lucid**](https://lucid.app/documents#/documents?folder_id=recent) was used to create the ER diagrams.
 - [**Canva**](https://www.canva.com/) was used to create the brochure and contact buttons/links on the homepage.
-- [**ColorKit**](https://colorkit.co/palette/ffffff-a9a9a9-daa520-163573-182d5f/) was used to create the website's color palette.
+- [**ColorKit**](https://colorkit.co/palette/ffffff-a9a9a9-daa520-163573-182d5f/) was used as a starting point for the website's color palette; the navy shade was later refined to #051c2c in the actual CSS.
 - **GitHub** was used as the repository for the project code after being pushed from Git.
 - **Visual Studio Code** was used for version control, allowing me to commit changes and push them to GitHub directly from the VS Code terminal. It was the primary tool used for creating and editing all the code.
 - [**Google Fonts**](https://fonts.google.com/) was used to source the fonts for the project.

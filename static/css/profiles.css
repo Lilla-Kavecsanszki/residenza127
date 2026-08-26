@@ -1,7 +1,7 @@
 body {
     font-family: "Cormorant Garamond", serif;
     background-color: #fff; 
-    color: #051c2c; 
+    color: var(--color-navy); 
 }
 /* Container Styles */
 .container {
@@ -38,7 +38,7 @@ body {
 h1, h2, h3 {
     text-align: center;
     font-family: "Italiana", sans-serif;
-    color: #051c2c;
+    color: var(--color-navy);
     font-weight: 400;
 }
 
@@ -60,18 +60,18 @@ h2 {
 }
 
 .profile-info strong {
-    color: #051c2c; 
+    color: var(--color-navy); 
     text-shadow: silver 1px 1px;
 }
 
 .small {
     font-size: 1em;
-    color: #051c2c;
+    color: var(--color-navy);
 }
 
 .not-yet {
     font-size: 1.5em;
-    color: #051c2c;
+    color: var(--color-navy);
     font-weight: bolder;
 }
 
@@ -100,16 +100,16 @@ h2 {
     border: 1px solid silver;
     border-radius: 4px;
     font-size: 1em;
-    color: #051c2c; 
+    color: var(--color-navy); 
 }
 
 .user-profile-form .form-control:focus {
-    border-color: #051c2c;
+    border-color: var(--color-navy);
     box-shadow: 0 0 0 3px rgba(221, 221, 221, 0.5);
 }
 
 .btn-primary {
-    background-color: #051c2c;
+    background-color: var(--color-navy);
     color: #fff;
     border: none;
     padding: 0.75em 1.5em;
@@ -120,9 +120,9 @@ h2 {
 }
 
 .btn-primary:hover {
-    background-color: #033b58;
+    background-color: var(--color-navy-hover);
     color: #fff;
-    border-color: #033b58;
+    border-color: var(--color-navy-hover);
 }
 
 /* Liked Properties */
@@ -192,7 +192,7 @@ h2 {
 
 .card-body p {
     margin-bottom: 0.5em;
-    color: #051c2c;
+    color: var(--color-navy);
 }
 
 /* Card footer styles for property details */
@@ -206,11 +206,11 @@ h2 {
 
 .card-footer .property-details p {
     margin-bottom: 0.25em; /* Adjust spacing between property details */
-    color: #051c2c;
+    color: var(--color-navy);
 }
 
 .card-footer .property-details .small {
-    color: #051c2c;
+    color: var(--color-navy);
 }
 
 /* Price styling */

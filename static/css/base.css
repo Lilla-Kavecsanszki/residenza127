@@ -1,3 +1,11 @@
+:root {
+    --color-navy: #051c2c;
+    --color-navy-hover: #033b58;
+    --color-gold: #daa520;
+    --color-gold-light: #d4a256;
+    --color-gold-dark: #b08a45;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,14 +17,14 @@ body {
     margin: 0;
     padding: 0;
     background-color: whitesmoke;
-    color: #ffff;
+    color: var(--color-navy);
 }
 
 /* Header styles */
 header {
     background-color: rgba(255, 255, 255, 0.6);
     font-family: "Playfair Display", serif;
-    color: #051c2c;
+    color: var(--color-navy);
     padding: 0.3em;
     position: fixed;
     width: 100%;
@@ -36,7 +44,7 @@ header {
 .logo-font {
     font-size: 2rem;
     white-space: nowrap;
-    color: #051c2c;
+    color: var(--color-navy);
 }
 
 .logo {
@@ -56,7 +64,7 @@ header {
 }
 
 #user-name {
-    color: #051c2c
+    color: var(--color-navy)
 }
 
 /* Dropdown menu styles */
@@ -68,12 +76,12 @@ header {
 }
 
 .dropdown-item {
-    color: #051c2c; /* Ensure dropdown items have text color */
+    color: var(--color-navy); /* Ensure dropdown items have text color */
 }
 
 .dropdown-item:hover {
     background-color: #f8f9fa; /* Change background color on hover */
-    color: #051c2c; /* Ensure text color remains consistent */
+    color: var(--color-navy); /* Ensure text color remains consistent */
 }
 
 /* Ensure that dropdown toggle is properly displayed */
@@ -82,11 +90,11 @@ header {
 }
 
 #language-options {
-    color: #051c2c;
+    color: var(--color-navy);
 }
 
 .navbar-nav a {
-    color: #051c2c;
+    color: var(--color-navy);
     text-decoration: none;
     font-size: large;
 }
@@ -94,7 +102,7 @@ header {
 /* Icon styles */
 .icon {
     display: inline-block;
-    color: #051c2c;
+    color: var(--color-navy);
 }
 
 .icon:hover {
@@ -207,7 +215,7 @@ main {
 }
 
 .property-listings h2 {
-    color: #051c2c;
+    color: var(--color-navy);
     font-family: "Italiana", sans-serif;
     text-transform: uppercase; 
     margin-bottom: 1em;
@@ -271,7 +279,7 @@ main {
 .property {
     flex: 1 0 33.333%;
     height: 400px;
-    background-color: #051c2c;
+    background-color: var(--color-navy);
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
@@ -310,7 +318,7 @@ main {
 
 .property-details h3 {
     font-family: "Cinzel", serif;
-    color: #051c2c;
+    color: var(--color-navy);
     font-size: 1.2rem;
     margin: 0;
     line-height: 1.2;
@@ -363,8 +371,8 @@ main {
     text-align: center;
     text-transform: uppercase;
     color: #ffffff; /* White text color for contrast */
-    background: #051c2c; /* Light semi-transparent background with #051c2c */
-    border: 1px solid rgba(5, 28, 44, 0.5); /* Slightly opaque border with #051c2c */
+    background: var(--color-navy); /* Light semi-transparent background with var(--color-navy) */
+    border: 1px solid rgba(5, 28, 44, 0.5); /* Slightly opaque border with var(--color-navy) */
     border-radius: 3px;
     backdrop-filter: blur(8px); /* Slight blur effect for the glass look */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
@@ -375,16 +383,16 @@ main {
 
 .glass-button:hover {
     background: #fefefe;
-    color: #051c2c;
+    color: var(--color-navy);
     text-decoration: none;
-    border-color: 3px solid #051c2c;
+    border-color: 3px solid var(--color-navy);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 1); 
     transform: scale(1.05); /* Slight scale-up on hover */
 }
 
 .glass-button:active {
     background: #fefefe; 
-    border-color: 3px solid #051c2c; 
+    border-color: 3px solid var(--color-navy); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 2); 
     transform: scale(0.98); /* Slight scale-down on click */
 }
@@ -392,7 +400,7 @@ main {
 
 /* About Section Styles */
 .about {
-    background-color: #051c2c; 
+    background-color: var(--color-navy); 
     padding: 5em; /* Reduced padding for better responsiveness */
     margin-bottom: 3em;      
     text-align: center;      
@@ -431,7 +439,7 @@ main {
 /* Company Card Styles */
 .company {
     background-color: white;   
-    border: 1px solid #051c2c;
+    border: 1px solid var(--color-navy);
     border-radius: 1px;      
     padding: 1.5em;              /* Increased padding for a more luxurious feel */
     margin: 1.5em;             /* Adjusted margin for spacing between cards */
@@ -453,7 +461,7 @@ main {
 
 /* Description Styling */
 .company-description {
-    color: #051c2c;            
+    color: var(--color-navy);            
     font-size: 1.3em;          
     margin-top: 0.5em;           /* Space above the description */
     font-weight: 500;         
@@ -464,7 +472,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 3px solid #051c2c;
+    border: 3px solid var(--color-navy);
     border-radius: 5px;
 }
 
@@ -474,14 +482,14 @@ main {
 
 .stats-number {
     font-size: 3em;            /* Large font size for numbers */
-    color: #051c2c;            /* Dark color for emphasis */
+    color: var(--color-navy);            /* Dark color for emphasis */
     font-weight: 700;          /* Bold for prominence */
     display: block;            /* Block display for better alignment */
 }
 
 .stats-label {
     font-size: 1.2em;          /* Slightly larger font size for labels */
-    color: #051c2c;            /* Dark color for consistency */
+    color: var(--color-navy);            /* Dark color for consistency */
     font-weight: 400;          /* Normal weight for labels */
     text-transform: uppercase; /* Uppercase for a classic feel */
 }
@@ -495,7 +503,7 @@ main {
 }
 
 .company-story h2 {
-    color: #051c2c;    
+    color: var(--color-navy);    
     font-family: "Cormorant Garamond", serif;    
     text-align: justify;  
     margin-bottom: 1em;        
@@ -504,7 +512,7 @@ main {
 }
 
 .company-story p {
-    color: #051c2c;    
+    color: var(--color-navy);    
     font-family: "Cormorant Garamond", serif; 
     text-align: justify;       
     line-height: 1.6;          
@@ -721,18 +729,18 @@ footer a .icon {
 
 /* Star sign - Gold shimmer - https: //codepen.io/Amarjit/pen/mrbjNy */
 .fa-star-base {
-    color: #daa520;
+    color: var(--color-gold);
 }
 
 .light-base {
     display: inline-block;
     background: linear-gradient(
         135deg,
-        #daa520 0%,
-        #daa520 40%,
+        var(--color-gold) 0%,
+        var(--color-gold) 40%,
         #ffffff 50%,
-        #daa520 60%,
-        #daa520 100%
+        var(--color-gold) 60%,
+        var(--color-gold) 100%
     );
     background-size: 200%;
     background-position: -200%;

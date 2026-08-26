@@ -1,6 +1,6 @@
 body {
     font-family: "Cormorant Garamond", serif;
-    background-color: #051c2c;
+    background-color: var(--color-navy);
     color: whitesmoke;
 }
 
@@ -30,7 +30,7 @@ h1, h2 {
 }
 
 .search-banner {
-    background-color: #051c2c; /* Dark blue background */
+    background-color: var(--color-navy); /* Dark blue background */
     padding: 20px; /* Padding around the content */
     margin-bottom: 20px; /* Space below the banner */
     border-radius: 5px; /* Rounded corners */
@@ -52,7 +52,7 @@ h1, h2 {
 .search-banner .form-control {
     background-color: transparent; /* Transparent background */
     color: #fff; /* White text color */
-    border: 1px solid #d4a256; /* Gold border */
+    border: 1px solid var(--color-gold-light); /* Gold border */
     border-radius: 5px; /* Slightly rounded corners */
     padding: 10px 15px; /* Padding inside inputs */
     margin-right: 10px; /* Space between inputs */
@@ -61,7 +61,7 @@ h1, h2 {
 
 /* Buttons */
 .search-banner .btn {
-    background-color: #d4a256; /* Gold background */
+    background-color: var(--color-gold-light); /* Gold background */
     color: #fff; /* White text color */
     border: none; /* No border */
     padding: 10px 20px; /* Padding inside buttons */
@@ -75,12 +75,12 @@ h1, h2 {
 }
 
 .search-banner .btn:hover {
-    background-color: #b08a45; /* Darker gold on hover */
+    background-color: var(--color-gold-dark); /* Darker gold on hover */
 }
 
 /* Search Icon */
 .search-banner .fa-search {
-    color: #051c2c; /* Dark blue icon color */
+    color: var(--color-navy); /* Dark blue icon color */
     font-size: 16px; /* Icon size */
 }
 
@@ -88,7 +88,7 @@ h1, h2 {
 .search-banner input[type="text"] {
     flex: 1; /* Makes the input take up remaining space */
     max-width: 250px; /* Maximum width for the search input */
-    border-bottom: 1px solid #051c2c; /* Bottom border for the search input */
+    border-bottom: 1px solid var(--color-navy); /* Bottom border for the search input */
     background-color: transparent; /* Transparent background */
     color: #fff; /* White text color */
 }
@@ -119,12 +119,12 @@ h1, h2 {
 .sort-select-wrapper {
     max-width: 100%; /* Ensure select does not exceed its container */
     max-width: 400px;
-    color: #051c2c;
+    color: var(--color-navy);
 }
 
 .custom-select {
     max-width: 400px;
-    color: #051c2c;
+    color: var(--color-navy);
 }
 
 /* Ensure proper alignment of sort-select and text */
@@ -173,7 +173,7 @@ h1, h2 {
 
 .card-body p {
     margin-bottom: 0.5em;
-    color: #051c2c;
+    color: var(--color-navy);
 }
 
 /* Card footer styles for property details */
@@ -187,11 +187,11 @@ h1, h2 {
 
 .card-footer .property-details p {
     margin-bottom: 0.25em; /* Adjust spacing between property details */
-    color: #051c2c;
+    color: var(--color-navy);
 }
 
 .card-footer .property-details .small {
-    color: #051c2c;
+    color: var(--color-navy);
 }
 
 /* Price styling */
@@ -241,7 +241,7 @@ h1, h2 {
 .like {
     cursor: pointer;
     font-size: 1.5em; 
-    color: #daa520; 
+    color: var(--color-gold); 
     transition: color 0.3s ease; /* Smooth color transition */
 }
 
@@ -250,11 +250,11 @@ h1, h2 {
     display: inline-block;
     background: linear-gradient(
         135deg,
-        #daa520 0%,
-        #daa520 40%,
+        var(--color-gold) 0%,
+        var(--color-gold) 40%,
         #ffffff 50%,
-        #daa520 60%,
-        #daa520 100%
+        var(--color-gold) 60%,
+        var(--color-gold) 100%
     );
     background-size: 200%;
     background-position: -200%;
@@ -276,7 +276,7 @@ h1, h2 {
 
 /* Default star color */
 .fa-star {
-    color: #daa520; /* Default color for the star */
+    color: var(--color-gold); /* Default color for the star */
     position: relative;
 }
 
@@ -285,11 +285,11 @@ h1, h2 {
 .fa-star.light-base {
     background: linear-gradient(
         135deg,
-        #daa520 0%,
-        #daa520 40%,
+        var(--color-gold) 0%,
+        var(--color-gold) 40%,
         #ffffff 50%,
-        #daa520 60%,
-        #daa520 100%
+        var(--color-gold) 60%,
+        var(--color-gold) 100%
     );
     background-size: 200%;
     background-position: -200%;
@@ -314,7 +314,7 @@ h1, h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #daa520;
+    color: var(--color-gold);
     text-decoration: none;
 }
 
