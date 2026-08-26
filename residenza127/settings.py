@@ -36,6 +36,20 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
 ]
 
+# DEBUG is hardcoded False (see above), so these are gated on the same
+# DEVELOPMENT env var the EMAIL_BACKEND switch below uses, not on DEBUG -
+# otherwise SECURE_SSL_REDIRECT would break local runserver over plain http.
+if "DEVELOPMENT" not in os.environ:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_HSTS_SECONDS = 60 * 60 * 24 * 7  # 7 days; raise once verified safe
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    # Heroku terminates TLS at the router and forwards over HTTP internally,
+    # signalling the original scheme via this header.
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
 # Application definition
 INSTALLED_APPS = [
     "django.contrib.admin",
