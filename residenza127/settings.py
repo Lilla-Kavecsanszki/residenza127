@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 DEBUG = False
 
-X_FRAME_OPTIONS = "SAMEORIGIN"
+X_FRAME_OPTIONS = "DENY"
 
 ALLOWED_HOSTS = [
     "residenza127-cdaf6f72e867.herokuapp.com",
