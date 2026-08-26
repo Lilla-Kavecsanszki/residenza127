@@ -10,12 +10,21 @@
 
 {% block head %}
     <link rel="canonical" href="{{ canonical_url }}" />
-    {{ block.super }}  <!-- Include any other head tags -->
+
+    <!-- Cloudflare Turnstile -->
+    <script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        async
+        defer>
+    </script>
+
+    {{ block.super }}
 {% endblock %}
 
 {% block title %}{% trans "Homepage" %}{% endblock %}
 
 {% block content %}
+
 <!-- Hero Section -->
 <section class="hero">
     <video autoplay muted playsinline loop id="hero-video" aria-label="Future Building Visualization">
@@ -23,13 +32,21 @@
         <track kind="captions" src="{% static 'captions/future_building_captions.vtt' %}" default="false" srclang="en" label="English">
         {% trans "Your browser does not support HTML5 video." %}
     </video>
+
     <audio id="background-audio" loop>
         <source src="{% static 'audios/residenza126.mp3' %}" type="audio/mpeg">
         {% trans "Your browser does not support HTML5 audio." %}
     </audio>
+
     <div class="hero-content text-center text-white">
         <h1 class="mb-2">{% trans "Residenza 126" %}</h1>
-        <p class="hero-text">{% trans "Elegance and Tranquility in the Heart of the City" %}</p><span class="typewriter nocaret"></span>
+
+        <p class="hero-text">
+            {% trans "Elegance and Tranquility in the Heart of the City" %}
+        </p>
+
+        <span class="typewriter nocaret"></span>
+
         <!-- Mute/Unmute Button -->
         <div id="control-buttons">
             <button id="toggle-audio" aria-label="Play/Mute button">
@@ -39,343 +56,751 @@
     </div>
 </section>
 
+
 <!-- Introduction Section -->
 <section id="building" class="introduction py-5">
     <div class="container position-relative">
         <div class="row align-items-center">
+
             <!-- Right side: Title and Text -->
-            <div class="col-lg-6 order-1 order-lg-2"> <!-- Text column -->
+            <div class="col-lg-6 order-1 order-lg-2">
                 <h2 class="title">Residenza 126</h2>
+
                 <p class="texts">
-                    {% trans "<strong>Residenza 126</strong> is an exclusive project located in the heart of Oristano, designed for those who want to live in a modern environment without giving up peace and privacy. This elegant residential complex, consisting of 8 apartments, combines contemporary architecture with cutting-edge technological solutions, offering a personalized and high-quality experience." %}
+                    {% trans "<strong>Residenza 126</strong> is an exclusive project located in the heart of the city, designed for those who want to live in a modern environment without giving up peace and privacy. This elegant residential complex, consisting of 8 apartments, combines contemporary architecture with cutting-edge technological solutions, offering a personalized and high-quality experience." %}
                 </p>
+
                 <p class="texts">
                     {% trans "Each apartment has been designed to meet the highest standards of design and functionality, with premium finishes and extensive customization options. Whether you are looking for an investment or your new home, <strong>Residenza 126</strong> represents a unique opportunity where comfort, style, and innovation come together to create living spaces that match your desires." %}
                 </p>
+
                 <p class="texts">
                     {% trans "Schedule a visit and discover why <strong>Residenza 126</strong> is the perfect choice for your future." %}
-                </p>                
-                <p class="texts">{% trans "Bright environments with top-of-the-range Finstral brand fixtures, airy and cared for in every detail with the best Made in Italy coverings and high-quality materials." %}</p>
+                </p>
+
+                <p class="texts">
+                    {% trans "Bright environments with top-of-the-range Finstral brand fixtures, airy and cared for in every detail with the best Made in Italy coverings and high-quality materials." %}
+                </p>
             </div>
 
-            <!-- Left side: Photo of Residenza126 -->
-            <div class="col-lg-6 order-2 order-lg-1"> <!-- Image column -->
-                <img src="{% static 'images/courtyard.jpeg' %}" alt="Residenza126 Building" loading="lazy" class="img-fluid img-fluid-residenza page-turn-effect" />
+            <!-- Left side: Photo -->
+            <div class="col-lg-6 order-2 order-lg-1">
+                <img
+                    src="{% static 'images/courtyard.jpeg' %}"
+                    alt="Residenza126 Building"
+                    loading="lazy"
+                    class="img-fluid img-fluid-residenza page-turn-effect"
+                />
             </div>
+
         </div>
     </div>
 </section>
 
-<!-- Location section -->
+
+<!-- Location Section -->
 <section id="location" class="location py-5">
     <div class="container">
         <div class="row">
-            <!-- Left side: Text about Oristano -->
+
+            <!-- Left side -->
             <div class="col-lg-6">
-                <h2 class="mb-4 title">{% trans "Living in the heart of the city - Oristano" %}</h2>
+
+                <h2 class="mb-4 title">
+                    {% trans "Living in the heart of the city - Oristano" %}
+                </h2>
+
                 <p class="texts">
                     {% trans "Just two minutes from the historic center of Oristano, <strong>Residenza 126</strong> combines the best of urban living with an oasis of tranquility." %}
                 </p>
+
                 <p class="texts">
                     {% trans "The building is designed to let you enjoy the convenience of the city without compromising on peace and privacy." %}
                 </p>
+
                 <p class="texts">
                     {% trans "It's perfect for those seeking a retreat from the hustle and bustle of city life without sacrificing comfort." %}
-                </p>                
+                </p>
+
             </div>
 
-            <!-- Right side: 3 photos + Google map in a grid -->
+
+            <!-- Right side: Photos + Map -->
             <div class="col-lg-6">
                 <div class="row">
-                    <!-- Photo 1 -->
+
                     <div class="col-md-6 mb-4">
                         <div class="hover-zoom">
-                            <img src="{% static 'images/4.jpeg' %}" alt="Oristano Carnival" loading="lazy" class="img-fluid img-container">
+                            <img
+                                src="{% static 'images/4.jpeg' %}"
+                                alt="Oristano Carnival"
+                                loading="lazy"
+                                class="img-fluid img-container"
+                            >
                         </div>
                     </div>
-                    <!-- Photo 2 -->
+
                     <div class="col-md-6 mb-4">
                         <div class="hover-zoom">
-                            <img src="{% static 'images/5.jpeg' %}" alt="Oristano" loading="lazy" class="img-fluid img-container flip-horizontal">
+                            <img
+                                src="{% static 'images/5.jpeg' %}"
+                                alt="Oristano"
+                                loading="lazy"
+                                class="img-fluid img-container flip-horizontal"
+                            >
                         </div>
                     </div>
-                    <!-- Photo 3 -->
+
                     <div class="col-md-6 mb-4">
                         <div class="hover-zoom">
-                            <img src="{% static 'images/2.jpeg' %}" alt="Oristano Sea" loading="lazy" class="img-fluid img-container">
+                            <img
+                                src="{% static 'images/2.jpeg' %}"
+                                alt="Oristano Sea"
+                                loading="lazy"
+                                class="img-fluid img-container"
+                            >
                         </div>
                     </div>
-                    <!-- Google Map -->
+
                     <div class="col-md-6 mb-4">
                         <div class="hover-zoom">
                             <div class="map-container">
+
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12297.124960321248!2d8.58252955367728!3d39.90184306563145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c4bff05aaff4d7%3A0x8c017bf383d54b38!2sVia%20Cagliari%2C%2047%2C%2009170%20Oristano%20OR%2C%20Italy!5e0!3m2!1sen!2sus!4v1696570623345!5m2!1sen!2sus"
-                                    title="Google Map of the business" style="border:0;" allowfullscreen="" loading="lazy">
+                                    title="Google Map of the business"
+                                    style="border:0;"
+                                    allowfullscreen=""
+                                    loading="lazy">
                                 </iframe>
+
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
+
         </div>
     </div>
 </section>
+
 
 <!-- Contact Us and Brochure Download Section -->
-<section id="brochure" class="contact-us py-5" style="background-color: #e4e4e4;">
+<section
+    id="brochure"
+    class="contact-us py-5"
+    style="background-color: #e4e4e4;"
+>
+
     <div class="container">
         <div class="row">
-            <!-- Brochure Download (Left side) -->
+
+            <!-- Brochure Download -->
             <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center mb-4 mb-lg-0">
-                <div class="help-button rounded-0" style="width: 120px; height: 120px;">
-                    <a href="{% static 'files/brochure.pdf' %}" class="d-flex h-100" download aria-label="Download Brochure">
-                        <img src="{% static 'images/brochure.png' %}" loading="lazy" alt="Download Brochure" class="mb-2 img-fluid m-auto brochure-icon">
+
+                <div
+                    class="help-button rounded-0"
+                    style="width: 120px; height: 120px;"
+                >
+
+                    <a
+                        href="{% static 'files/brochure.pdf' %}"
+                        class="d-flex h-100"
+                        download
+                        aria-label="Download Brochure"
+                    >
+
+                        <img
+                            src="{% static 'images/brochure.png' %}"
+                            loading="lazy"
+                            alt="Download Brochure"
+                            class="mb-2 img-fluid m-auto brochure-icon"
+                        >
+
                     </a>
+
                 </div>
-                <a href="{% static 'files/brochure.pdf' %}" class="mt-2 text-center" download style="color: #182d5f; text-decoration: none;" aria-label="Download Brochure">
-                    <p class="mt-2">{% trans "Download Brochure" %}</p>
+
+                <a
+                    href="{% static 'files/brochure.pdf' %}"
+                    class="mt-2 text-center"
+                    download
+                    style="color: #182d5f; text-decoration: none;"
+                    aria-label="Download Brochure"
+                >
+                    <p class="mt-2">
+                        {% trans "Download Brochure" %}
+                    </p>
                 </a>
+
             </div>
 
-            <!-- Contact Us Button (Right side) -->
+
+            <!-- Contact Us -->
             <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
-                <div class="help-button rounded-0" style="width: 150px; height: 150px;">
-                    <a class="help-link d-flex h-100" href="{% url 'home' %}#contact-us" aria-label="Contact Us">
-                        <img src="{% static 'images/contact.png' %}" alt="Contact page" loading="lazy" class="mb-1 img-fluid m-auto contact-icon">
+
+                <div
+                    class="help-button rounded-0"
+                    style="width: 150px; height: 150px;"
+                >
+
+                    <a
+                        class="help-link d-flex h-100"
+                        href="{% url 'home' %}#contact-us"
+                        aria-label="Contact Us"
+                    >
+
+                        <img
+                            src="{% static 'images/contact.png' %}"
+                            alt="Contact page"
+                            loading="lazy"
+                            class="mb-1 img-fluid m-auto contact-icon"
+                        >
+
                     </a>
+
                 </div>
-                <a href="{% url 'home' %}#contact-us" class="mt-2 text-center" style="color: #182d5f; text-decoration: none;" aria-label="Contact Us">
-                    <p>{% trans "Reach Out" %}</p>
+
+                <a
+                    href="{% url 'home' %}#contact-us"
+                    class="mt-2 text-center"
+                    style="color: #182d5f; text-decoration: none;"
+                    aria-label="Contact Us"
+                >
+
+                    <p>
+                        {% trans "Reach Out" %}
+                    </p>
+
                 </a>
+
             </div>
+
         </div>
     </div>
 </section>
+
 
 <!-- Apartment Types Section -->
 <section id="apartment-types" class="apartment-types py-5">
+
     <div class="container">
-        <h2 class="mb-4 title mt-4" style="text-align: left;">{% trans "Our Apartment Types" %}</h2>
-        <h3 class="mb-3 apartment_h3">{% trans "Tailored Living Solutions:" %}</h3>
+
+        <h2
+            class="mb-4 title mt-4"
+            style="text-align: left;"
+        >
+            {% trans "Our Apartment Types" %}
+        </h2>
+
+        <h3 class="mb-3 apartment_h3">
+            {% trans "Tailored Living Solutions:" %}
+        </h3>
+
         <p class="texts mb-5">
             {% trans "<strong>Residenza 126</strong> offers two different types of homes to meet all needs. The one-bedroom and two-bedroom apartments are designed to provide maximum comfort and flexibility, with spaces customizable according to your preferences. The apartments feature high-quality finishes, designer accessories, and advanced technological solutions to ensure security and convenience. Whether you're looking for a cozy one-bedroom apartment or a spacious two-bedroom home for your family, you'll find the perfect residence at <strong>Residenza 126</strong>." %}
-        </p>        
+        </p>
+
 
         <!-- First Apartment Type -->
         <div id="bilocali" class="row mb-4">
-            <!-- Text Section (First on small screens) -->
+
             <div class="col-lg-6 col-12 d-flex flex-column justify-content-center order-1 order-lg-1">
-                <h3 class="apartment_h3">{% trans "Two-room Apartments" %}</h3>
+
+                <h3 class="apartment_h3">
+                    {% trans "Two-room Apartments" %}
+                </h3>
+
                 <p class="texts">
-                    {% trans "The <strong>one-bedroom apartments</strong> at <strong>Residenza 126</strong> are ideal for those seeking a functional apartment without compromising on style. Each apartment offers a spacious living room with an open-plan kitchen, a master bedroom, and a large, modern bathroom." %} 
+                    {% trans "The <strong>one-bedroom apartments</strong> at <strong>Residenza 126</strong> are ideal for those seeking a functional apartment without compromising on style. Each apartment offers a spacious living room with an open-plan kitchen, a master bedroom, and a large, modern bathroom." %}
                 </p>
+
                 <p class="texts">
                     {% trans "The real highlight is the 25 sqm private terrace, perfect for outdoor relaxation or entertaining guests, equipped with a Jacuzzi setup for moments of pure relaxation. This type of home is perfect for couples, young professionals, or investors looking for a versatile and high-quality property." %}
                 </p>
+
                 <p class="texts">
                     {% trans "By choosing a one-bedroom apartment at <strong>Residenza 126</strong>, you can be sure of a secure investment in an exclusive location." %}
-                </p>                
+                </p>
+
             </div>
-            <!-- Image Section (Second on small screens) -->
+
+
             <div class="col-lg-6 col-12 d-flex justify-content-center order-2 order-lg-2">
-                <img src="{% static 'images/jacuzzi.jpeg' %}" alt="Apartment Type 1" loading="lazy" class="img-fluid-apartment fade-slide-right">
+
+                <img
+                    src="{% static 'images/jacuzzi.jpeg' %}"
+                    alt="Apartment Type 1"
+                    loading="lazy"
+                    class="img-fluid-apartment fade-slide-right"
+                >
+
             </div>
+
         </div>
+
 
         <!-- Second Apartment Type -->
         <div id="trilocali" class="row mb-4">
-            <!-- Text Section (First on small screens) -->
+
             <div class="col-lg-6 col-12 d-flex flex-column justify-content-center order-1 order-lg-2">
-                <h3 class="apartment_h3">{% trans "Three-room Apartments" %}</h3>
+
+                <h3 class="apartment_h3">
+                    {% trans "Three-room Apartments" %}
+                </h3>
+
                 <p class="texts">
                     {% trans "The <strong>two-bedroom apartments</strong> at <strong>Residenza 126</strong> offer spacious and bright rooms, designed to meet the needs of family life. The large living area with an open-plan kitchen creates a welcoming and functional atmosphere, while the two master bedrooms and the spacious bathroom ensure comfort and convenience." %}
                 </p>
+
                 <p class="texts">
                     {% trans "Each apartment features a private balcony or terrace, perfect for enjoying moments of outdoor relaxation. High-end finishes and advanced technologies complete a living experience that combines elegance and exclusivity." %}
-                </p>                
+                </p>
+
             </div>
-            <!-- Image Section (Second on small screens) -->
+
+
             <div class="col-lg-6 col-12 d-flex justify-content-center order-2 order-lg-1">
-                <img src="{% static 'images/table.jpeg' %}" alt="Apartment Type 2" loading="lazy" class="img-fluid-apartment fade-slide-left">
+
+                <img
+                    src="{% static 'images/table.jpeg' %}"
+                    alt="Apartment Type 2"
+                    loading="lazy"
+                    class="img-fluid-apartment fade-slide-left"
+                >
+
             </div>
+
         </div>
+
     </div>
 </section>
 
+
 <!-- Property Listings Section -->
-<section class="property-listings py-5" style="background-color: #e4e4e4;">
-    <h2 class="text-center title mb-4">{% trans "Property Listings" %}</h2>
+<section
+    class="property-listings py-5"
+    style="background-color: #e4e4e4;"
+>
+
+    <h2 class="text-center title mb-4">
+        {% trans "Property Listings" %}
+    </h2>
+
     <div class="carousel">
         <div class="frames">
             <div class="frame_items">
+
                 {% for property in property_list %}
-                <div class="property">
-                    <!-- Media Container -->
-                    <div class="property-media">
-                        {% if property.is_sold %}
-                        <!-- If property is sold, don't make it a clickable link and show the SOLD label -->
-                        <div class="card-link disabled">
-                            <div class="sold-label">
-                                <span class="sold fa-star-base">{% trans "SOLD" %}</span>
-                            </div>
-                            <!-- Display image or video -->
-                            {% if property.main_video %}
-                            <video class="img-fluid" autoplay muted playsinline loop>
-                                <source src="{{ property.main_video.url }}" type="video/mp4">
-                                {% trans "Your browser does not support the video tag." %}
-                            </video>
-                            {% elif property.main_image %}
-                            <img src="{{ property.main_image.url }}" alt="{{ property.name }}" loading="lazy" class="img-fluid">
+
+                    <div class="property">
+
+                        <div class="property-media">
+
+                            {% if property.is_sold %}
+
+                                <div class="card-link disabled">
+
+                                    <div class="sold-label">
+                                        <span class="sold fa-star-base">
+                                            {% trans "SOLD" %}
+                                        </span>
+                                    </div>
+
+                                    {% if property.main_video %}
+
+                                        <video
+                                            class="img-fluid"
+                                            autoplay
+                                            muted
+                                            playsinline
+                                            loop
+                                        >
+                                            <source
+                                                src="{{ property.main_video.url }}"
+                                                type="video/mp4"
+                                            >
+                                            {% trans "Your browser does not support the video tag." %}
+                                        </video>
+
+                                    {% elif property.main_image %}
+
+                                        <img
+                                            src="{{ property.main_image.url }}"
+                                            alt="{{ property.name }}"
+                                            loading="lazy"
+                                            class="img-fluid"
+                                        >
+
+                                    {% else %}
+
+                                        <img
+                                            src="{% static 'images/noimage.png' %}"
+                                            alt="{% trans 'Placeholder' %}"
+                                            loading="lazy"
+                                            class="img-fluid"
+                                        >
+
+                                    {% endif %}
+
+                                </div>
+
                             {% else %}
-                            <img src="{% static 'images/noimage.png' %}" alt="{% trans 'Placeholder' %}" loading="lazy" class="img-fluid">
+
+                                <a href="{% url 'property_detail' property.id %}">
+
+                                    {% if property.main_video %}
+
+                                        <video
+                                            class="img-fluid"
+                                            autoplay
+                                            muted
+                                            playsinline
+                                            loop
+                                        >
+                                            <source
+                                                src="{{ property.main_video.url }}"
+                                                type="video/mp4"
+                                            >
+
+                                            {% trans "Your browser does not support the video tag." %}
+
+                                        </video>
+
+                                    {% elif property.main_image %}
+
+                                        <img
+                                            src="{{ property.main_image.url }}"
+                                            alt="{{ property.name }}"
+                                            loading="lazy"
+                                            class="img-fluid"
+                                        >
+
+                                    {% else %}
+
+                                        <img
+                                            src="{% static 'images/noimage.png' %}"
+                                            alt="{% trans 'Placeholder' %}"
+                                            loading="lazy"
+                                            class="img-fluid"
+                                        >
+
+                                    {% endif %}
+
+                                </a>
+
                             {% endif %}
+
                         </div>
-                        {% else %}
-                        <!-- If not sold, make it clickable -->
-                        <a href="{% url 'property_detail' property.id %}">
-                            {% if property.main_video %}
-                            <video class="img-fluid" autoplay muted playsinline loop>
-                                <source src="{{ property.main_video.url }}" type="video/mp4">
-                                {% trans "Your browser does not support the video tag." %}
-                            </video>
-                            {% elif property.main_image %}
-                            <img src="{{ property.main_image.url }}" alt="{{ property.name }}" loading="lazy" class="img-fluid">
-                            {% else %}
-                            <img src="{% static 'images/noimage.png' %}" alt="{% trans 'Placeholder' %}" loading="lazy" class="img-fluid">
-                            {% endif %}
-                        </a>
-                        {% endif %}
+
+
+                        <div class="property-details p-3">
+                            <h3 class="text-center">
+                                {{ property.name }}
+                            </h3>
+                        </div>
+
                     </div>
-    
-                    <!-- Property Details -->
-                    <div class="property-details p-3">
-                        <h3 class="text-center">{{ property.name }}</h3>
-                    </div>
-                </div>
+
                 {% empty %}
-                <div>
-                    <p class="text-center">{% trans "No properties available at the moment." %}</p>
-                </div>
+
+                    <div>
+                        <p class="text-center">
+                            {% trans "No properties available at the moment." %}
+                        </p>
+                    </div>
+
                 {% endfor %}
+
             </div>
         </div>
-    </div>    
-
-    <!-- Button to navigate to all properties page -->
-    <div class="text-center mt-4">
-        <a href="{% url 'all_properties' %}" class="glass-button" aria-label="Apartments Page">{% trans "View All Apartments" %}</a>
     </div>
+
+
+    <div class="text-center mt-4">
+
+        <a
+            href="{% url 'all_properties' %}"
+            class="glass-button"
+            aria-label="Apartments Page"
+        >
+            {% trans "View All Apartments" %}
+        </a>
+
+    </div>
+
 </section>
+
 
 <!-- Contact Section -->
 <section id="contact-us" class="company-story py-5">
+
     <div class="container">
+
         <section class="contact-container mirror-silver-background">
-            <h2 class="contact-h1">{% trans "Contact Us" %}</h2>
-    
-        <!-- Display form errors -->
-        {% if form.errors %}
-            <div class="alert alert-danger">
-                <strong>{% trans "Please correct the errors below:" %}</strong>
-                <ul>
-                    {% for field in form %}
-                        {% for error in field.errors %}
+
+            <h2 class="contact-h1">
+                {% trans "Contact Us" %}
+            </h2>
+
+
+            <!-- Display form errors -->
+            {% if form.errors %}
+
+                <div class="alert alert-danger">
+
+                    <strong>
+                        {% trans "Please correct the errors below:" %}
+                    </strong>
+
+                    <ul>
+
+                        {% for field in form %}
+
+                            {% for error in field.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+
+                        {% endfor %}
+
+                        {% for error in form.non_field_errors %}
                             <li>{{ error }}</li>
                         {% endfor %}
-                    {% endfor %}
-                    {% for error in form.non_field_errors %}
-                        <li>{{ error }}</li>
-                    {% endfor %}
-                </ul>
+
+                    </ul>
+
+                </div>
+
+            {% endif %}
+
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+
+                <form method="post">
+
+                    {% csrf_token %}
+
+
+                    <!-- Name Field -->
+                    <div class="form-group">
+
+                        <label for="{{ form.name.id_for_label }}">
+                            {% trans "Name" %}
+                        </label>
+
+                        {{ form.name }}
+
+                        <span class="text-danger">
+                            {{ form.name.errors }}
+                        </span>
+
+                    </div>
+
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+
+                        <label for="{{ form.email.id_for_label }}">
+                            {% trans "Email" %}
+                        </label>
+
+                        {{ form.email }}
+
+                        <span class="text-danger">
+                            {{ form.email.errors }}
+                        </span>
+
+                    </div>
+
+
+                    <!-- Phone Number Field -->
+                    <div class="form-group">
+
+                        <label for="{{ form.phone_number.id_for_label }}">
+                            {% trans "Phone Number" %}
+                        </label>
+
+                        {{ form.phone_number }}
+
+                        <span class="text-danger">
+                            {{ form.phone_number.errors }}
+                        </span>
+
+                    </div>
+
+
+                    <!-- Subject Field -->
+                    <div class="form-group">
+
+                        <label for="{{ form.subject.id_for_label }}">
+                            {% trans "Subject" %}
+                        </label>
+
+                        {{ form.subject }}
+
+                        <span class="text-danger">
+                            {{ form.subject.errors }}
+                        </span>
+
+                    </div>
+
+
+                    <!-- Message Field -->
+                    <div class="form-group">
+
+                        <label for="{{ form.message.id_for_label }}">
+                            {% trans "Message" %}
+                        </label>
+
+                        {{ form.message }}
+
+                        <span class="text-danger">
+                            {{ form.message.errors }}
+                        </span>
+
+                    </div>
+
+
+                    <!-- Cloudflare Turnstile -->
+                    <div class="form-group">
+
+                        <div
+                            class="cf-turnstile"
+                            data-sitekey="{{ turnstile_site_key }}"
+                            data-theme="light">
+                        </div>
+
+                    </div>
+
+
+                    <!-- Submit Button -->
+                    <button
+                        type="submit"
+                        aria-label="Send"
+                        class="btn btn-primary"
+                    >
+                        {% trans "Send" %}
+                    </button>
+
+                </form>
+
             </div>
-        {% endif %}
-    
-        <!-- Contact Form -->
-        <div class="contact-form">
-            <form method="post">
-                {% csrf_token %}
-                <!-- Name Field -->
-                <div class="form-group">
-                    <label for="{{ form.name.id_for_label }}">{% trans "Name" %}</label>
-                    {{ form.name }}
-                    <span class="text-danger">{{ form.name.errors }}</span>
-                </div>
-    
-                <!-- Email Field -->
-                <div class="form-group">
-                    <label for="{{ form.email.id_for_label }}">{% trans "Email" %}</label>
-                    {{ form.email }}
-                    <span class="text-danger">{{ form.email.errors }}</span>
-                </div>
-    
-                <!-- Phone Number Field -->
-                <div class="form-group">
-                    <label for="{{ form.phone_number.id_for_label }}">{% trans "Phone Number" %}</label>
-                    {{ form.phone_number }}
-                    <span class="text-danger">{{ form.phone_number.errors }}</span>
-                </div>
-    
-                <!-- Subject Field -->
-                <div class="form-group">
-                    <label for="{{ form.subject.id_for_label }}">{% trans "Subject" %}</label>
-                    {{ form.subject }}
-                    <span class="text-danger">{{ form.subject.errors }}</span>
-                </div>
-    
-                <!-- Message Field -->
-                <div class="form-group">
-                    <label for="{{ form.message.id_for_label }}">{% trans "Message" %}</label>
-                    {{ form.message }}
-                    <span class="text-danger">{{ form.message.errors }}</span>
-                </div>
-    
-                <!-- Submit Button -->
-                <button type="submit" aria-label="Send" class="btn btn-primary">{% trans "Send" %}</button>
-            </form>
-        </div>
-    </section>
-    
-    <section id="about">
-        <!-- Office Information and Map Wrapper -->
-        <div class="contact-details-map-wrapper">
-            <!-- Office Information -->
-            <div class="contact-details mirror-silver-background">
-                <h3 class="mt-3"><strong>Armando Siuni amministratore</strong></h3>
-                <h3>Ar.Gis.r.l.s.</h3>
-                <p class="mt-3"><strong>{% trans "Address:" %}</strong> Via Cagliari, 47 - Oristano, Sardinia, Italy</p>
-                <p><strong>{% trans "Tax code:" %}</strong> 01236510952</p>
-                <p><strong>{% trans "Telephone:" %}</strong> +39/3333951557</p>
-                <p><strong>{% trans "Email:" %}</strong> armando@argicostruzioni.com</p>
-            </div>
-    
-            <!-- Map -->
-            <div class="map-container">
-                <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12297.124960321248!2d8.58252955367728!3d39.90184306563145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c4bff05aaff4d7%3A0x8c017bf383d54b38!2sVia%20Cagliari%2C%2047%2C%2009170%20Oristano%20OR%2C%20Italy!5e0!3m2!1sen!2sus!4v1696570623345!5m2!1sen!2sus"
-        width="600" height="450" style="border:0;" title="Map of the business" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
+
         </section>
+
+
+        <section id="about">
+
+            <div class="contact-details-map-wrapper">
+
+                <!-- Office Information -->
+                <div class="contact-details mirror-silver-background">
+
+                    <h3 class="mt-3">
+                        <strong>
+                            Armando Siuni amministratore
+                        </strong>
+                    </h3>
+
+                    <h3>
+                        Ar.Gis.r.l.s.
+                    </h3>
+
+                    <p class="mt-3">
+                        <strong>
+                            {% trans "Address:" %}
+                        </strong>
+                        Via Cagliari, 47 - Oristano, Sardinia, Italy
+                    </p>
+
+                    <p>
+                        <strong>
+                            {% trans "Tax code:" %}
+                        </strong>
+                        01236510952
+                    </p>
+
+                    <p>
+                        <strong>
+                            {% trans "Telephone:" %}
+                        </strong>
+                        +39/3333951557
+                    </p>
+
+                    <p>
+                        <strong>
+                            {% trans "Email:" %}
+                        </strong>
+                        armando@argicostruzioni.com
+                    </p>
+
+                </div>
+
+
+                <!-- Map -->
+                <div class="map-container">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12297.124960321248!2d8.58252955367728!3d39.90184306563145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c4bff05aaff4d7%3A0x8c017bf383d54b38!2sVia%20Cagliari%2C%2047%2C%2009170%20Oristano%20OR%2C%20Italy!5e0!3m2!1sen!2sus!4v1696570623345!5m2!1sen!2sus"
+                        width="600"
+                        height="450"
+                        style="border:0;"
+                        title="Map of the business"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </div>
+
 </section>
+
 
 <!-- Buttons on the side -->
 <div class="side-buttons d-flex flex-column">
-    <a class="side links whatsapp mb-2" 
-       href="https://wa.me/393333951557" 
-       target="_blank" 
-       rel="noopener nofollow"
-       aria-label="Contact us on WhatsApp">
-        <i class="fab fa-whatsapp icon" aria-hidden="true"></i> Contact us on WhatsApp
+
+    <a
+        class="side links whatsapp mb-2"
+        href="https://wa.me/393333951557"
+        target="_blank"
+        rel="noopener nofollow"
+        aria-label="Contact us on WhatsApp"
+    >
+
+        <i
+            class="fab fa-whatsapp icon"
+            aria-hidden="true">
+        </i>
+
+        Contact us on WhatsApp
+
     </a>
-    <a class="side links insta" 
-       href="https://www.instagram.com/ar.gi.costruzioni_/?hl=en" 
-       target="_blank" 
-       rel="noopener"
-       aria-label="Follow us on Instagram">
-        <i class="fab fa-instagram icon" aria-hidden="true"></i> Follow us on Instagram
+
+
+    <a
+        class="side links insta"
+        href="https://www.instagram.com/ar.gi.costruzioni_/?hl=en"
+        target="_blank"
+        rel="noopener"
+        aria-label="Follow us on Instagram"
+    >
+
+        <i
+            class="fab fa-instagram icon"
+            aria-hidden="true">
+        </i>
+
+        Follow us on Instagram
+
     </a>
+
 </div>
 
 {% endblock %}
