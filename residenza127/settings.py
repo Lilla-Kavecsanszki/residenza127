@@ -164,12 +164,33 @@ CLOUDINARY_STORAGE = {
 }
 
 MEDIA_URL = "/media/"
-DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
 STATIC_URL = "/static/"
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+# DEFAULT_FILE_STORAGE/STATICFILES_STORAGE were deprecated in Django 4.2 and
+# their compatibility shim was removed in 5.1 - Django itself silently
+# ignores them now (falls back to FileSystemStorage/StaticFilesStorage), so
+# actual storage resolution must use the STORAGES dict instead.
+#
+# STATICFILES_STORAGE is kept below anyway, purely as a compatibility value:
+# django-cloudinary-storage's own collectstatic override
+# (cloudinary_storage/management/commands/collectstatic.py) still reads
+# settings.STATICFILES_STORAGE directly and raises AttributeError if it's
+# absent. Django no longer reads it for real - STORAGES below is what
+# actually takes effect - so this is dead weight for Django itself, but
+# required for that package not to crash.
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+STORAGES = {
+    "default": {
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
